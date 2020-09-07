@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "enhancedcraft",
+  "version": "${version}",
+
+  "name": "EnhancedCraft",
+  "description": "EnhancedCraft brings tons of new and useful tools to Minecraft that makes Minecraft more fun and intuitive, as well as make many tasks that much easier!",
+  "authors": [
+    "Spectr3x"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "cc-by-4.0",
+  "icon": "assets/enhancedcraft/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.spectr3x.enhancedcraft.EnhancedCraft"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
