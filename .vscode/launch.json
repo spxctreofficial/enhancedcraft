@@ -9,7 +9,7 @@
       "console": "internalConsole",
       "stopOnEntry": false,
       "mainClass": "net.fabricmc.devlaunchinjector.Main",
-      "vmArgs": "-Dfabric.dli.config\u003dE:\\Game@@0020Design\\Modding\\Minecraft\\EnhancedCraft\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dclient -Dfabric.dli.main\u003dnet.fabricmc.loader.launch.knot.KnotClient",
+      "vmArgs": "-Dfabric.dli.config\u003dE:\\Game@@0020Design\\Modding\\FabricMC@@0020Modding\\enhancedcraft\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dclient -Dfabric.dli.main\u003dnet.fabricmc.loader.launch.knot.KnotClient",
       "args": ""
     },
     {
@@ -20,7 +20,7 @@
       "console": "internalConsole",
       "stopOnEntry": false,
       "mainClass": "net.fabricmc.devlaunchinjector.Main",
-      "vmArgs": "-Dfabric.dli.config\u003dE:\\Game@@0020Design\\Modding\\Minecraft\\EnhancedCraft\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dserver -Dfabric.dli.main\u003dnet.fabricmc.loader.launch.knot.KnotServer",
+      "vmArgs": "-Dfabric.dli.config\u003dE:\\Game@@0020Design\\Modding\\FabricMC@@0020Modding\\enhancedcraft\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dserver -Dfabric.dli.main\u003dnet.fabricmc.loader.launch.knot.KnotServer",
       "args": ""
     }
   ]
