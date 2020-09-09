@@ -23,6 +23,7 @@
     ]
   },
   "mixins": [
+    "enhancedcraft.mixins.json"
   ],
 
   "depends": {
