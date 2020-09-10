@@ -5,10 +5,10 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 
-public class EtherealOreBlock extends OreBlock {
+public class EtheriumOreBlock extends OreBlock {
 
-	public EtherealOreBlock() {
-		super(FabricBlockSettings.of(Material.METAL).hardness(25f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3));
+	public EtheriumOreBlock() {
+		super(FabricBlockSettings.of(Material.METAL).hardness(25f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4));
 	}
     
 }

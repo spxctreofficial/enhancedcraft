@@ -1,8 +1,11 @@
 {
-    "item.enhancedcraft.ethereal_gem": "Ethereal Gem",
+    "item.enhancedcraft.etherium" : "Etherium",
+    "item.enhancedcraft.etherium_ore" : "Etherium Ore",
 
     "item.enhancedcraft.obsidian_pickaxe" : "Obsidian Pickaxe",
     "item.enhancedcraft.obsidian_axe" : "Obsidian Axe",
     "item.enhancedcraft.obsidian_shovel" : "Obsidian Shovel",
-    "item.enhancedcraft.obsidian_sword" : "Obsidian Sword"
+    "item.enhancedcraft.obsidian_sword" : "Obsidian Sword",
+
+    "item.enhancedcraft.giant_sword" : "Giant Sword"
 }

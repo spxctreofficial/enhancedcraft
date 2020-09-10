@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "enhancedcraft:ethereal_ore",
+              "name": "enhancedcraft:etherium_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "enhancedcraft:ethereal_gem"
+              "name": "enhancedcraft:etherium"
             }
           ]
         }
