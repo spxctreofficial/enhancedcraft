@@ -9,5 +9,8 @@
             "item": "enhancedcraft:etherium"
         }
     },
-    "result": {}
+    "result": {
+        "item": "enhancedcraft:etherium_helmet",
+        "count": 1
+    }
 }
