@@ -14,7 +14,7 @@ import com.spectr3x.enhancedcraft.registry.ModRegistry;
 import java.util.function.Supplier;
 
 public enum CustomArmorMaterials implements ArmorMaterial {
-    EtheriumArmor("etherium", 35, new int[]{3, 8, 6, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F, 0.0F, () -> {
+    EtheriumArmor("etherium", 35, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModRegistry.Etherium);
     });
 

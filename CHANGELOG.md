@@ -26,8 +26,8 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
         - Strongest tools in-game.
         - Etherium Ore spawns under y-level 6, in veins of 2, with only 2 veins per chunk.
         - Etherium Sword: Deals 14 damage with 1.8 swing speed.
-        - Etherium Pickaxe: 27.5f Pickaxe Multiplier. Mining Level of 7. Deals 8 damage with 1.6 swing speed.
-        - Etherium Axe: 27.5f Axe Multiplier. Deals 15 damage with 1.1 swing speed.
-        - Etherium Shovel: 27.5f Shovel Multiplier. Deals 9 damage with 1.3 swing speed.
-        - Etherium Hoe: 27.5f Hoe Multiplier. Deals 2 damage with 4 swing speed.
+        - Etherium Pickaxe: 28f Pickaxe Multiplier. Mining Level of 7. Deals 8 damage with 1.6 swing speed.
+        - Etherium Axe: 28f Axe Multiplier. Deals 15 damage with 1.1 swing speed.
+        - Etherium Shovel: 28f Shovel Multiplier. Deals 9 damage with 1.3 swing speed.
+        - Etherium Hoe: 28f Hoe Multiplier. Deals 2 damage with 4 swing speed.
         - Etherium Set: Same as Netherite armor, 10 armor toughness per piece. Applies Resistance 1 with full set.

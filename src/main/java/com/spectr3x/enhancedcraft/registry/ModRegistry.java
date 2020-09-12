@@ -1,17 +1,18 @@
 package com.spectr3x.enhancedcraft.registry;
 
 import com.spectr3x.enhancedcraft.EnhancedCraft;
-import com.spectr3x.enhancedcraft.registry.tools.EtheriumHoeItem;
-import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
-import com.spectr3x.enhancedcraft.registry.tools.EtheriumShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumAxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumShovelItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumToolMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.GiantSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.GiantToolMaterial;
-import com.spectr3x.enhancedcraft.registry.tools.ObsidianAxeItem;
-import com.spectr3x.enhancedcraft.registry.tools.ObsidianPickaxeItem;
-import com.spectr3x.enhancedcraft.registry.tools.ObsidianShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianSwordItem;
+import com.spectr3x.enhancedcraft.registry.tools.ObsidianPickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.ObsidianAxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.ObsidianShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
@@ -60,7 +61,7 @@ public class ModRegistry {
     public static final Item EtheriumBoots = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumSwordItem = new EtheriumSwordItem(new EtheriumToolMaterial());
     public static final Item EtheriumPickaxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
-    public static final Item EtheriumAxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
+    public static final Item EtheriumAxeItem = new EtheriumAxeItem(new EtheriumToolMaterial());
     public static final Item EtheriumShovelItem = new EtheriumShovelItem(new EtheriumToolMaterial());
     public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
     

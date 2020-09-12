@@ -14,7 +14,7 @@ public class EtheriumToolMaterial implements ToolMaterial {
 
 	@Override
 	public float getMiningSpeedMultiplier() {
-		return 27.5f;
+		return 28f;
 	}
 
 	@Override
