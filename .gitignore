@@ -1,0 +1,5 @@
+# Ignores Caches and Dependency Files
+.gradle/
+.settings/
+build/
+logs/
