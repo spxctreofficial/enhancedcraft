@@ -8,7 +8,7 @@ import net.minecraft.item.ToolMaterial;
 public class ObsidianHoeItem extends HoeItem {
 
 	public ObsidianHoeItem(ToolMaterial material) {
-		super(material, 1, -1.2f, new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+		super(material, 2, -1.2f, new Item.Settings().group(ItemGroup.TOOLS).fireproof());
 	}
     
 }

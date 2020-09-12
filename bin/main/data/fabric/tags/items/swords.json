@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+      "enhancedcraft:etherium_sword",
       "enhancedcraft:obsidian_sword",
       "enhancedcraft:giant_sword"
     ]

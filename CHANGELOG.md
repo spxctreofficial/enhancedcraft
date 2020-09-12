@@ -8,6 +8,7 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
 
     - Added Obsidian Tools:
         - All Obsidian Tools have 9366 durability. (6x Diamond, most durable in the game)
+        - Enchantability of 3. Worst of all tools.
         - Diamond Alternative.
         - Budget Netherite.
         - Slightly slower than Diamond tools.
@@ -20,12 +21,13 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
     - Added Etherium, Etherium Ore & Etherium Tools.
         - New end-game gear set.
         - All Etherium Tools have 1796 durability. (15% more durable than Diamond.)
+        - Enchantability of 35. Best of all tools.
         - Way faster than Gold and Netherite.
         - Strongest tools in-game.
         - Etherium Ore spawns under y-level 6, in veins of 2, with only 2 veins per chunk.
         - Etherium Sword: Deals 14 damage with 1.8 swing speed.
-        - Etherium Pickaxe: 25f Pickaxe Multiplier. Mining Level of 7. Deals 8 damage with 1.6 swing speed.
-        - Etherium Axe: 25f Axe Multiplier. Deals 15 damage with 1.1 swing speed.
-        - Etherium Shovel: 25f Shovel Multiplier. Deals 9.5 damage with 1.1 swing speed.
-        - Etherium Hoe: 25f Hoe Multiplier. Deals 2.5 damage with 4 swing speed.
+        - Etherium Pickaxe: 27.5f Pickaxe Multiplier. Mining Level of 7. Deals 8 damage with 1.6 swing speed.
+        - Etherium Axe: 27.5f Axe Multiplier. Deals 15 damage with 1.1 swing speed.
+        - Etherium Shovel: 27.5f Shovel Multiplier. Deals 9 damage with 1.3 swing speed.
+        - Etherium Hoe: 27.5f Hoe Multiplier. Deals 2 damage with 4 swing speed.
         - Etherium Set: Same as Netherite armor, 10 armor toughness per piece. Applies Resistance 1 with full set.

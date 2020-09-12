@@ -1,7 +1,11 @@
 package com.spectr3x.enhancedcraft.registry;
 
 import com.spectr3x.enhancedcraft.EnhancedCraft;
-
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumHoeItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumShovelItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
+import com.spectr3x.enhancedcraft.registry.tools.EtheriumToolMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.GiantSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.GiantToolMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianAxeItem;
@@ -54,11 +58,16 @@ public class ModRegistry {
     public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumBoots = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item EtheriumSwordItem = new EtheriumSwordItem(new EtheriumToolMaterial());
+    public static final Item EtheriumPickaxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
+    public static final Item EtheriumAxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
+    public static final Item EtheriumShovelItem = new EtheriumShovelItem(new EtheriumToolMaterial());
+    public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
     
+    public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
     public static final Item ObsidianAxeItem = new ObsidianAxeItem(new ObsidianToolMaterial());
     public static final Item ObsidianShovelItem = new ObsidianShovelItem(new ObsidianToolMaterial());
-    public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianHoeItem = new ObsidianHoeItem(new ObsidianToolMaterial());
 
     public static final Item GiantSwordItem = new GiantSwordItem(new GiantToolMaterial());
@@ -89,11 +98,17 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_chestplate"), EtheriumChestplate);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_leggings"), EtheriumLeggings);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_boots"), EtheriumBoots);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_sword"), EtheriumSwordItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_pickaxe"), EtheriumPickaxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_axe"), EtheriumAxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_shovel"), EtheriumShovelItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_hoe"), EtheriumHoeItem);
 
+
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), ObsidianSwordItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_pickaxe"), ObsidianPickaxeItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_axe"), ObsidianAxeItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_shovel"), ObsidianShovelItem);
-        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), ObsidianSwordItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_hoe"), ObsidianHoeItem);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "giant_sword"), GiantSwordItem);

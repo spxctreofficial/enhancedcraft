@@ -8,7 +8,7 @@ import net.minecraft.item.ToolMaterial;
 public class ObsidianShovelItem extends ShovelItem {
 
 	public ObsidianShovelItem(ToolMaterial material) {
-		super(material, 4, -3f, new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+		super(material, 5, -3f, new Item.Settings().group(ItemGroup.TOOLS).fireproof());
 	}
     
 }

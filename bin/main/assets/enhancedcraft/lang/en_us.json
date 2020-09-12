@@ -5,11 +5,16 @@
     "item.enhancedcraft.etherium_chestplate" : "Etherium Chestplate",
     "item.enhancedcraft.etherium_leggings" : "Etherium Leggings",
     "item.enhancedcraft.etherium_boots" : "Etherium Boots",
+    "item.enhancedcraft.etherium_sword" : "Etherium Sword",
+    "item.enhancedcraft.etherium_pickaxe" : "Etherium Pickaxe",
+    "item.enhancedcraft.etherium_axe" : "Etherium Axe",
+    "item.enhancedcraft.etherium_shovel": "Etherium Shovel",
+    "item.enhancedcraft.etherium_hoe" : "Etherium Hoe",
 
+    "item.enhancedcraft.obsidian_sword" : "Obsidian Sword",
     "item.enhancedcraft.obsidian_pickaxe" : "Obsidian Pickaxe",
     "item.enhancedcraft.obsidian_axe" : "Obsidian Axe",
     "item.enhancedcraft.obsidian_shovel" : "Obsidian Shovel",
-    "item.enhancedcraft.obsidian_sword" : "Obsidian Sword",
     "item.enhancedcraft.obsidian_hoe" : "Obsidian Hoe",
 
     "item.enhancedcraft.giant_sword" : "Giant Sword"
