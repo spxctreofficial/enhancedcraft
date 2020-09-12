@@ -1,5 +1,6 @@
 # Ignores Caches and Dependency Files
 .gradle/
+.vscode/
 .settings/
 build/
 logs/
