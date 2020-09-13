@@ -13,7 +13,7 @@
     "sources": ""
   },
 
-  "license": "cc-by-4.0",
+  "license": "gpl-3.0",
   "icon": "assets/enhancedcraft/icon.png",
 
   "environment": "*",
