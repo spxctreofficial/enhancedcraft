@@ -12,7 +12,7 @@ public class EtheriumOreBlock extends OreBlock {
 	public static Material EtheriumOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();  
 
 	public EtheriumOreBlock() {
-		super(FabricBlockSettings.of(EtheriumOreMaterial).hardness(25f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).resistance(1200f).lightLevel(3).requiresTool());
+		super(FabricBlockSettings.of(EtheriumOreMaterial).hardness(25f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).resistance(1200f).requiresTool());
 	}
     
 }
