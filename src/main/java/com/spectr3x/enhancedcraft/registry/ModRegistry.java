@@ -68,6 +68,7 @@ public class ModRegistry {
     public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
 
     public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item GemstoneShard = GenericMaterials;
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -119,6 +120,7 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "giant_sword"), GiantSwordItem);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlockItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_shard"), GemstoneShard);
 
 
         // Block Registry
