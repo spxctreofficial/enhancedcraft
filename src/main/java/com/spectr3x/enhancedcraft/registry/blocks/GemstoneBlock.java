@@ -26,7 +26,7 @@ public class GemstoneBlock extends OreBlock {
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
 		super.onStacksDropped(state, world, pos, stack);
 		if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-		   int i = this.experienceDropped(world.random, 17, 40);
+		   int i = this.experienceDropped(world.random, 9, 16);
 		   if (i > 0) {
 			  this.dropExperience(world, pos, i);
 		   }
