@@ -10,7 +10,7 @@ public class EnhancedCraft implements ModInitializer{
 
 	@Override
 	public void onInitialize() {
-		ModRegistry.Registry();
+		ModRegistry.registry();
 	}
 
 }

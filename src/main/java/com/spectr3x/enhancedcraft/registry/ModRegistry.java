@@ -17,6 +17,7 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
+import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
@@ -50,11 +51,12 @@ public class ModRegistry {
     
     // Block Definitions
     public static final Block EtheriumOreBlock = new EtheriumOreBlock();
+    public static final Block GemstoneBlock = new GemstoneBlock();
 
 
     // Item Definitions
     public static final Item Etherium = GenericMaterials;
-    public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.MISC));
+    public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
@@ -64,6 +66,8 @@ public class ModRegistry {
     public static final Item EtheriumAxeItem = new EtheriumAxeItem(new EtheriumToolMaterial());
     public static final Item EtheriumShovelItem = new EtheriumShovelItem(new EtheriumToolMaterial());
     public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
+
+    public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -89,7 +93,7 @@ public class ModRegistry {
 
 
     // Item Registration Method
-    public static void Registry() {
+    public static void registry() {
 
         
         // Item Registry
@@ -114,9 +118,12 @@ public class ModRegistry {
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "giant_sword"), GiantSwordItem);
 
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlockItem);
+
 
         // Block Registry
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
+        Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlock);
 
 
         // Structure Generation Registry
