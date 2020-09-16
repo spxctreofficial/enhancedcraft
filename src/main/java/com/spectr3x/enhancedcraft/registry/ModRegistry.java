@@ -1,5 +1,7 @@
 package com.spectr3x.enhancedcraft.registry;
 
+import java.util.Random;
+
 import com.spectr3x.enhancedcraft.EnhancedCraft;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
@@ -26,6 +28,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.decorator.Decorator;
@@ -47,6 +50,7 @@ public class ModRegistry {
     public static final Item GenericRedstone = new Item (new Item.Settings().group(ItemGroup.REDSTONE));
     public static final Item GenericTools = new Item (new Item.Settings().group(ItemGroup.TOOLS));
     public static final Item GenericTransport = new Item (new Item.Settings().group(ItemGroup.TRANSPORTATION));
+    public static Random random;
 
     
     // Block Definitions
@@ -80,7 +84,7 @@ public class ModRegistry {
 
 
     // Ore Generation Definitions
-    public static ConfiguredFeature<?, ?> ORE_ETHERIUM = Feature.ORE
+    public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
     .configure(new OreFeatureConfig(
       OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
       ModRegistry.EtheriumOreBlock.getDefaultState(),
@@ -91,6 +95,18 @@ public class ModRegistry {
       9))) // max y level
     .spreadHorizontally()
     .repeat(2); // number of veins per chunk
+
+    public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
+    .configure(new OreFeatureConfig(
+      OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+      ModRegistry.EtheriumOreBlock.getDefaultState(),
+      MathHelper.nextInt(random, 5, 14))) // vein size
+    .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
+      0, // bottom offset
+      10, // min y level
+      27))) // max y level
+    .spreadHorizontally()
+    .repeat(6); // number of veins per chunk
 
 
     // Item Registration Method
@@ -129,6 +145,7 @@ public class ModRegistry {
 
 
         // Structure Generation Registry
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), ORE_ETHERIUM);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "Ore_etherium_overworld"), GemstoneFeature);
     }
 }
