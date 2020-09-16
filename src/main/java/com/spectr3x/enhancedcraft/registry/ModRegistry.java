@@ -102,7 +102,7 @@ public class ModRegistry {
     .configure(new OreFeatureConfig(
       OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
       ModRegistry.EtheriumOreBlock.getDefaultState(),
-      MathHelper.nextInt(random, 5, 14))) // vein size
+      8)) // vein size
     .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
       0, // bottom offset
       10, // min y level
