@@ -21,6 +21,7 @@ import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
@@ -73,6 +74,7 @@ public class ModRegistry {
 
     public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item GemstoneShard = GenericMaterials;
+    public static final Item Gemfuel = GenericMaterials;
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -137,6 +139,11 @@ public class ModRegistry {
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlockItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_shard"), GemstoneShard);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), Gemfuel);
+
+
+        // Fuel Registry
+        FuelRegistry.INSTANCE.add(Gemfuel, 48000);
 
 
         // Block Registry
