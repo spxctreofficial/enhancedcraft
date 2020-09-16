@@ -1,7 +1,5 @@
 package com.spectr3x.enhancedcraft.registry;
 
-import java.util.Random;
-
 import com.spectr3x.enhancedcraft.EnhancedCraft;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
@@ -29,7 +27,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.decorator.Decorator;
@@ -51,7 +48,6 @@ public class ModRegistry {
     public static final Item GenericRedstone = new Item (new Item.Settings().group(ItemGroup.REDSTONE));
     public static final Item GenericTools = new Item (new Item.Settings().group(ItemGroup.TOOLS));
     public static final Item GenericTransport = new Item (new Item.Settings().group(ItemGroup.TRANSPORTATION));
-    public static Random random;
 
     
     // Block Definitions
@@ -60,7 +56,7 @@ public class ModRegistry {
 
 
     // Item Definitions
-    public static final Item Etherium = GenericMaterials;
+    public static final Item Etherium = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
@@ -73,8 +69,8 @@ public class ModRegistry {
     public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
 
     public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item GemstoneShard = GenericMaterials;
-    public static final Item Gemfuel = GenericMaterials;
+    public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -101,7 +97,7 @@ public class ModRegistry {
     public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
     .configure(new OreFeatureConfig(
       OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-      ModRegistry.EtheriumOreBlock.getDefaultState(),
+      ModRegistry.GemstoneBlock.getDefaultState(),
       8)) // vein size
     .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
       0, // bottom offset
@@ -153,6 +149,6 @@ public class ModRegistry {
 
         // Structure Generation Registry
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "Ore_etherium_overworld"), GemstoneFeature);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
     }
 }
