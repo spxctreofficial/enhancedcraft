@@ -22,8 +22,11 @@ import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -70,6 +73,7 @@ public class ModRegistry {
 
     public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item GemstoneApple = new Item (new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
     public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
@@ -136,6 +140,7 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlockItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_shard"), GemstoneShard);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), Gemfuel);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
 
 
         // Fuel Registry

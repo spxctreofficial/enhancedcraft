@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#G#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "enhancedcraft:gemstone_shard"
+        },
+        "G": {
+            "item": "minecraft:apple"
+        }
+    },
+    "result": {
+        "item": "enhancedcraft:gemstone_apple",
+        "count": 1
+    }
+}
