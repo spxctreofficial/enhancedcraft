@@ -31,3 +31,11 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
         - Etherium Shovel: 28f Shovel Multiplier. Deals 9 damage with 1.3 swing speed.
         - Etherium Hoe: 28f Hoe Multiplier. Deals 2 damage with 4 swing speed.
         - Etherium Set: Same as Netherite armor, 10 armor toughness per piece. Applies Resistance 1 with full set.
+
+    - Added Gemstone.
+        - New material that can sometimes give free gems upon mining.
+            - 15% to drop 12 - 29 lapis lazuli or redstone.
+            - 10% to drop 9 - 22 gold ingots.
+            - 8% to drop 8 - 18 diamonds.
+            - 6% to drop 7 - 16 emeralds.
+            - 0.05% to drop one etherium.
