@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#D#",
+        "SEG",
+        "#g#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "S": {
+            "item": "enhancedcraft:gemstone_apple"
+        },
+        "E": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "G": {
+            "item": "minecraft:golden_apple"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "enhancedcraft:primordial_catalyst",
+        "count": 1
+    }
+}

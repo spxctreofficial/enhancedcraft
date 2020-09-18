@@ -18,6 +18,7 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
+import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
@@ -75,6 +76,8 @@ public class ModRegistry {
     public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Item GemstoneApple = new Item (new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
     public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+
+    public static final Item PrimordialCatalyst = new PrimordialCatalyst();
     
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -142,9 +145,11 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), Gemfuel);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
 
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
+
 
         // Fuel Registry
-        FuelRegistry.INSTANCE.add(Gemfuel, 48000);
+        FuelRegistry.INSTANCE.add(Gemfuel, 18000);
 
 
         // Block Registry
