@@ -149,7 +149,7 @@ public class ModRegistry {
 
 
         // Fuel Registry
-        FuelRegistry.INSTANCE.add(Gemfuel, 18000);
+        FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
 
 
         // Block Registry

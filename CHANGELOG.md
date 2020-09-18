@@ -45,7 +45,8 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
             - Can be used to create various powerful items.
                 - Gemstone Apples.
         - Smoked to make Gemfuel.
-            - 18000 fuelpower.
+            - 6000 ticks of burning time (5 minutes, or 300 seconds).
+        - Smelted normally to make Cobblestone, while generating 15.0 experience.
 
     - Re-added the ability to craft Enchanted Golden Apples.
 
