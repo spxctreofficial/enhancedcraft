@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "enhancedcraft:gemstone"
+    },
+    "result": "minecraft:cobblestone",
+    "experience": 15,
+    "cookingtime": 200
+}
