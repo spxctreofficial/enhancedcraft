@@ -39,3 +39,23 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
             - 8% to drop 8 - 18 diamonds.
             - 6% to drop 7 - 16 emeralds.
             - 0.05% to drop one etherium.
+            - Or drops itself.
+
+        - Blasted to make Gemstone Shards.
+            - Can be used to create various powerful items.
+                - Gemstone Apples.
+        - Smoked to make Gemfuel.
+            - 18000 fuelpower.
+
+    - Re-added the ability to craft Enchanted Golden Apples.
+
+    - Added a new, very powerful apple. The Primordial Catalyst.
+        - Restores 10 saturation points.
+        - Regeneration IV for 20 seconds.
+        - Strength II for 20 seconds.
+        - Speed IV for 20 seconds.
+        - Absorption VI for 5 minutes.
+        - Resistance II for 6 minutes.
+        - Fire Resistance for 6 minutes.
+        - Glowing for 6 minutes.
+        - Can be crafted with emeralds, diamonds, gold, a golden apple, a gemstone apple, and an enchanted golden apple.
