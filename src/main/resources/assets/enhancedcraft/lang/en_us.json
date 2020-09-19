@@ -1,28 +1,40 @@
 {
-    "item.enhancedcraft.etherium" : "Etherium",
-    "block.enhancedcraft.etherium_ore" : "Etherium Ore",
-    "item.enhancedcraft.etherium_helmet" : "Etherium Helmet",
-    "item.enhancedcraft.etherium_chestplate" : "Etherium Chestplate",
-    "item.enhancedcraft.etherium_leggings" : "Etherium Leggings",
-    "item.enhancedcraft.etherium_boots" : "Etherium Boots",
-    "item.enhancedcraft.etherium_sword" : "Etherium Sword",
-    "item.enhancedcraft.etherium_pickaxe" : "Etherium Pickaxe",
-    "item.enhancedcraft.etherium_axe" : "Etherium Axe",
-    "item.enhancedcraft.etherium_shovel": "Etherium Shovel",
-    "item.enhancedcraft.etherium_hoe" : "Etherium Hoe",
-
-    "block.enhancedcraft.gemstone": "Gemstone",
-    "item.enhancedcraft.gemstone_shard" : "Gemstone Shard",
-    "item.enhancedcraft.gemfuel" : "Gemfuel",
-    "item.enhancedcraft.gemstone_apple" : "Gemstone Apple",
-
-    "item.enhancedcraft.primordial_catalyst" : "Primordial Catalyst",
-
+    "item.enhancedcraft.Bronze" : "Bronze",
+    "block.enhancedcraft.Bronze_ore" : "Bronze Ore",
+    "item.enhancedcraft.Bronze_helmet" : "Bronze Helmet",
+    "item.enhancedcraft.Bronze_chestplate" : "Bronze Chestplate",
+    "item.enhancedcraft.Bronze_leggings" : "Bronze Leggings",
+    "item.enhancedcraft.Bronze_boots" : "Bronze Boots",
+    "item.enhancedcraft.Bronze_sword" : "Bronze Sword",
+    "item.enhancedcraft.Bronze_pickaxe" : "Bronze Pickaxe",
+    "item.enhancedcraft.Bronze_axe" : "Bronze Axe",
+    "item.enhancedcraft.Bronze_shovel": "Bronze Shovel",
+    "item.enhancedcraft.Bronze_hoe" : "Bronze Hoe",
+    
     "item.enhancedcraft.obsidian_sword" : "Obsidian Sword",
     "item.enhancedcraft.obsidian_pickaxe" : "Obsidian Pickaxe",
     "item.enhancedcraft.obsidian_axe" : "Obsidian Axe",
     "item.enhancedcraft.obsidian_shovel" : "Obsidian Shovel",
     "item.enhancedcraft.obsidian_hoe" : "Obsidian Hoe",
+    
+    "item.enhancedcraft.giant_sword" : "Giant Sword",
+    
+    "block.enhancedcraft.gemstone": "Gemstone",
+    "item.enhancedcraft.gemstone_shard" : "Gemstone Shard",
+    "item.enhancedcraft.gemfuel" : "Gemfuel",
+    "item.enhancedcraft.gemstone_apple" : "Gemstone Apple",
+    
+    "item.enhancedcraft.primordial_catalyst" : "Primordial Catalyst",
 
-    "item.enhancedcraft.giant_sword" : "Giant Sword"
+    "item.enhancedcraft.bronze_ingot" : "Bronze Ingot",
+    "block.enhancedcraft.bronze_ore" : "Bronze Ore",
+    "item.enhancedcraft.bronze_helmet" : "Bronze Helmet",
+    "item.enhancedcraft.bronze_chestplate" : "Bronze Chestplate",
+    "item.enhancedcraft.bronze_leggings" : "Bronze Leggings",
+    "item.enhancedcraft.bronze_boots" : "Bronze Boots",
+    "item.enhancedcraft.bronze_sword" : "Bronze Sword",
+    "item.enhancedcraft.bronze_pickaxe" : "Bronze Pickaxe",
+    "item.enhancedcraft.bronze_axe" : "Bronze Axe",
+    "item.enhancedcraft.bronze_shovel": "Bronze Shovel",
+    "item.enhancedcraft.bronze_hoe" : "Bronze Hoe"
 }

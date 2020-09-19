@@ -1,6 +1,29 @@
 # ENHANCEDCRAFT CHANGELOG
 
-## 1.0.0 Initial Release
+## v0.2.0-alpha
+
+This minor alpha update brings some new features, bug fixes, and changes to the mod.
+
+### Changes
+
+    - Bronze Tools, Ore, Gear.
+        - 200 durability (for tools.)
+        - Base durability multiplier of 12 (for armor.)
+        - Enchantability of 17. (Better than everything in vanilla except for gold.)
+        - Budget Iron.
+        - Bronze Ore spawns anywhere from y-level 0 to 60 in veins of up to 15, 22 times per chunks.
+        - Bronze Sword: Deals 5.5 damage with 1.6 swing speed. Slightly weaker than Iron, but better than Stone.
+        - Bronze Pickaxe: 5f Pickaxe Multiplier. Deals 3.5 damage with 1.2 swing speed. Mining level of 2. Slightly worse than Iron, but better than Stone.
+        - Bronze Axe: 5f Axe Multiplier. Deals 7.5 damage with 1.0 swing speed. Slightly worse than Iron, but better than Stone.
+        - Bronze Shovel: 5f Shovel Multiplier. Deals 3.5 damage with 1.1 swing speed. Slightly worse than Iron, but better than Stone.
+        - Bronze Hoe: 5f Hoe Multiplier.  Deals 1 damage with 2.5 swing speed. Slightly worse than Iron, but better than Stone.
+        - Bronze Set: {1, 5, 5, 2} Leggings as strong as iron, otherwise the same as chain.
+
+    - Etherium Ore changes.
+        - Now spawns from y-level 6 to y-level 9, from veins of up to 2.
+
+
+## v0.1.0-alpha Initial Release
 
 The official EnhancedCraft release! EnhancedCraft brings tons of new and useful tools to Minecraft that makes Minecraft more fun and intuitive, as well as make many tasks that much easier!
 
@@ -21,6 +44,7 @@ The official EnhancedCraft release! EnhancedCraft brings tons of new and useful 
     - Added Etherium, Etherium Ore & Etherium Tools.
         - New end-game gear set.
         - All Etherium Tools have 1796 durability. (15% more durable than Diamond.)
+        - All Etherium armor have a durability base multiplier of 35.
         - Enchantability of 35. Best of all tools.
         - Way faster than Gold and Netherite.
         - Strongest tools in-game.

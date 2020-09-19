@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "###",
+      " / ",
+      " / "
+  ],
+  "key": {
+      "#": {
+          "item": "enhancedcraft:bronze_ingot"
+      },
+      "/": {
+          "item": "minecraft:stick"
+      }
+  },
+  "result": {
+      "item": "enhancedcraft:bronze_pickaxe",
+      "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "enhancedcraft:bronze_ingot"
+        }
+    },
+    "result": {
+        "item": "enhancedcraft:bronze_chestplate",
+        "count": 1
+    }
+}
