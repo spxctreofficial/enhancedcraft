@@ -1,0 +1,57 @@
+{
+  "minecraft:recipes/redstone/dispenser": {
+    "criteria": {
+      "has_bow": "2020-09-07 11:14:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "cooked_beef": "2020-09-07 10:54:48 -0400"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2020-09-07 10:54:48 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2020-09-07 10:48:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:zombie": "2020-09-07 10:54:54 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:skeleton": "2020-09-07 10:55:41 -0400",
+      "minecraft:spider": "2020-09-07 10:55:29 -0400",
+      "minecraft:creeper": "2020-09-07 10:57:25 -0400",
+      "minecraft:witch": "2020-09-07 11:17:33 -0400",
+      "minecraft:enderman": "2020-09-07 11:01:22 -0400",
+      "minecraft:zombie": "2020-09-07 10:54:54 -0400",
+      "minecraft:zombie_villager": "2020-09-07 11:17:22 -0400"
+    },
+    "done": false
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2020-09-07 11:15:01 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:mountains": "2020-09-07 10:48:16 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 2578
+}
