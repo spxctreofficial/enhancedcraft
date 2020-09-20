@@ -3,6 +3,13 @@ package com.spectr3x.enhancedcraft.registry;
 import com.spectr3x.enhancedcraft.EnhancedCraft;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeSwordItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzePickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeAxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeShovelItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeHoeItem;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeToolMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeHoeMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumAxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumHoeItem;
@@ -18,6 +25,7 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
+import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
 import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -41,21 +49,10 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class ModRegistry {
 
-    // Generic Items
-    public static final Item GenericBrewing = new Item (new Item.Settings().group(ItemGroup.BREWING));
-    public static final Item GenericBuilding = new Item (new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item GenericCombat = new Item (new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item GenericDecor = new Item (new Item.Settings().group(ItemGroup.DECORATIONS));
-    public static final Item GenericFood = new Item (new Item.Settings().group(ItemGroup.FOOD));
-    public static final Item GenericMaterials = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
-    public static final Item GenericMisc = new Item (new Item.Settings().group(ItemGroup.MISC));
-    public static final Item GenericRedstone = new Item (new Item.Settings().group(ItemGroup.REDSTONE));
-    public static final Item GenericTools = new Item (new Item.Settings().group(ItemGroup.TOOLS));
-    public static final Item GenericTransport = new Item (new Item.Settings().group(ItemGroup.TRANSPORTATION));
-
     
     // Block Definitions
     public static final Block EtheriumOreBlock = new EtheriumOreBlock();
+    public static final Block BronzeOreBlock = new BronzeOreBlock();
     public static final Block GemstoneBlock = new GemstoneBlock();
 
 
@@ -72,13 +69,6 @@ public class ModRegistry {
     public static final Item EtheriumShovelItem = new EtheriumShovelItem(new EtheriumToolMaterial());
     public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
 
-    public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
-    public static final Item GemstoneApple = new Item (new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
-    public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
-
-    public static final Item PrimordialCatalyst = new PrimordialCatalyst();
-    
     public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
     public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
     public static final Item ObsidianAxeItem = new ObsidianAxeItem(new ObsidianToolMaterial());
@@ -86,6 +76,25 @@ public class ModRegistry {
     public static final Item ObsidianHoeItem = new ObsidianHoeItem(new ObsidianToolMaterial());
 
     public static final Item GiantSwordItem = new GiantSwordItem(new GiantToolMaterial());
+
+    public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item GemstoneApple = new Item (new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
+    public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+
+    public static final Item PrimordialCatalyst = new PrimordialCatalyst();
+    
+    public static final Item BronzeIngot = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item BronzeHelmet = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item BronzeChestplate = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item BronzeLeggings = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item BronzeBoots = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item BronzeSwordItem = new BronzeSwordItem(new BronzeToolMaterial());
+    public static final Item BronzePickaxeItem = new BronzePickaxeItem(new BronzeToolMaterial());
+    public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolMaterial());
+    public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
+    public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
 
 
     // Ore Generation Definitions
@@ -100,6 +109,18 @@ public class ModRegistry {
       9))) // max y level
     .spreadHorizontally()
     .repeat(2); // number of veins per chunk
+
+    public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
+    .configure(new OreFeatureConfig(
+      OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+      ModRegistry.BronzeOreBlock.getDefaultState(),
+      15)) // vein size
+    .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
+      0, // bottom offset
+      0, // min y level
+      60))) // max y level
+    .spreadHorizontally()
+    .repeat(22); // number of veins per chunk
 
     public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
     .configure(new OreFeatureConfig(
@@ -147,6 +168,18 @@ public class ModRegistry {
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
 
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BronzeIngot);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_helmet"), BronzeHelmet);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_chestplate"), BronzeChestplate);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_leggings"), BronzeLeggings);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_boots"), BronzeBoots);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_sword"), BronzeSwordItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_pickaxe"), BronzePickaxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_axe"), BronzeAxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_shovel"), BronzeShovelItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BronzeHoeItem);
+
 
         // Fuel Registry
         FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
@@ -154,11 +187,13 @@ public class ModRegistry {
 
         // Block Registry
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
+        Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlock);
 
 
         // Structure Generation Registry
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), BronzeOreFeature);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
     }
 }

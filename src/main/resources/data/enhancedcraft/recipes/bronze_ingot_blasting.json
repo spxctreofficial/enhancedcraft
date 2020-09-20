@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "enhancedcraft:bronze_ore"
+    },
+    "result": "enhancedcraft:bronze_ingot",
+    "experience": 0.7,
+    "cookingtime": 100
+}
