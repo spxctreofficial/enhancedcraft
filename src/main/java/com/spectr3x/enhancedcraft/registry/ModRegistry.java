@@ -27,6 +27,7 @@ import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
 import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
+import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
@@ -38,7 +39,9 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.decorator.Decorator;
@@ -49,7 +52,11 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class ModRegistry {
 
-    
+    // SoundEvents Registry
+    public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
+    public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
+
+
     // Block Definitions
     public static final Block EtheriumOreBlock = new EtheriumOreBlock();
     public static final Block BronzeOreBlock = new BronzeOreBlock();
@@ -57,7 +64,7 @@ public class ModRegistry {
 
 
     // Item Definitions
-    public static final Item Etherium = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item Etherium = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
     public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
@@ -95,6 +102,8 @@ public class ModRegistry {
     public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolMaterial());
     public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
     public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
+
+    public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
 
 
     // Ore Generation Definitions
@@ -180,6 +189,8 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_shovel"), BronzeShovelItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BronzeHoeItem);
 
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
+
 
         // Fuel Registry
         FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
@@ -189,6 +200,10 @@ public class ModRegistry {
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlock);
+
+
+        // SoundEvents Registry
+        Registry.register(Registry.SOUND_EVENT, EnhancedCraft.MOD_ID, SoakedHandsSoundEvent);
 
 
         // Structure Generation Registry

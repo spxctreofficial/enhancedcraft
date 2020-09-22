@@ -36,5 +36,10 @@
     "item.enhancedcraft.bronze_pickaxe" : "Bronze Pickaxe",
     "item.enhancedcraft.bronze_axe" : "Bronze Axe",
     "item.enhancedcraft.bronze_shovel": "Bronze Shovel",
-    "item.enhancedcraft.bronze_hoe" : "Bronze Hoe"
+    "item.enhancedcraft.bronze_hoe" : "Bronze Hoe",
+
+    "item.enhancedcraft.music_disc_soaked_hands" : "Music Disc",
+    "item.enhancedcraft.music_disc_soaked_hands.desc" : "C418 x Ryn-cord - Soaked Hands (Wet Hands Remix)",
+
+    "subtitles.enhancedcraft.soaked_hands" : "Soaked Hands (C418 - Wet Hands Remix)"
 }

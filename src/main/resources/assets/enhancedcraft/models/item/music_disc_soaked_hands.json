@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "enhancedcraft:items/misc/music_disc_soaked_hands"
+    }
+}
