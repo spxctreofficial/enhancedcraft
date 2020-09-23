@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        {
+            "item": "enhancedcraft:bronze_ingot"
+        }
+    ],
+    "result": {
+        "item": "enhancedcraft:metal_alloy",
+        "count": 2
+    }
+}

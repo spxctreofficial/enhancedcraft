@@ -1,5 +1,23 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.0
+
+The first beta release for EnhancedCraft! Many changes have been implemented, tons of new features are all coming together, and now we are ready to announce that EnhancedCraft is ready and stable enough for its first beta release! Here are some changes.
+
+### Changes
+
+    - Bronze can now create various items that can normally be crafted with iron.
+        - Buckets.
+        - Flint and Steel.
+    - New material: Metal Alloy.
+        - Currently a concept, but will soon have the ability to craft an in-between set of tools and gear between Diamond and Iron.
+        - Crafted using a combination of Gold, Bronze, and Iron ingots.
+    - Brand new music disc now out: Soaked Hands.
+    - Etherium's rarity is now EPIC.
+    - Fixed Bronze Ore not spawning on the sides of mountains.
+    - All ores now have a unique circular spread in a random generation.
+
+
 ## v0.2.0-alpha
 
 This minor alpha update brings some new features, bug fixes, and changes to the mod.
