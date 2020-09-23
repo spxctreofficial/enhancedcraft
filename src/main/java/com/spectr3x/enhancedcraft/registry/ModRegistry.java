@@ -5,6 +5,14 @@ import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzePickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.AlloySwordMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyToolAlternateMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyToolMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.AlloySwordItem;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyPickaxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyAxeItem;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyShovelItem;
+import com.spectr3x.enhancedcraft.registry.tools.AlloyHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeAxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeHoeItem;
@@ -108,6 +116,15 @@ public class ModRegistry {
     public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
 
     public static final Item MetalAlloy = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
+    public static final Item AlloyHelmet = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item AlloyChestplate = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item AlloyLeggings = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item AlloyBoots = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item AlloySwordItem = new AlloySwordItem(new AlloySwordMaterial());
+    public static final Item AlloyPickaxeItem = new AlloyPickaxeItem(new AlloyToolAlternateMaterial());
+    public static final Item AlloyAxeItem = new AlloyAxeItem(new AlloyToolMaterial());
+    public static final Item AlloyShovelItem = new AlloyShovelItem(new AlloyToolMaterial());
+    public static final Item AlloyHoeItem = new AlloyHoeItem(new AlloyToolMaterial());
 
     public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
 
@@ -201,6 +218,15 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BronzeHoeItem);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "metal_alloy"), MetalAlloy);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_helmet"), AlloyHelmet);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_chestplate"), AlloyChestplate);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_leggings"), AlloyLeggings);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_boots"), AlloyBoots);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_sword"), AlloySwordItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_pickaxe"), AlloyPickaxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_axe"), AlloyAxeItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_shovel"), AlloyShovelItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_hoe"), AlloyHoeItem);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
 

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "enhancedcraft:metal_alloy"
+        }
+    },
+    "result": {
+        "item": "enhancedcraft:alloy_chestplate",
+        "count": 1
+    }
+}
