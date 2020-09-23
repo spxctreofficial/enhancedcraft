@@ -103,6 +103,8 @@ public class ModRegistry {
     public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
     public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
 
+    public static final Item MetalAlloy = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
+
     public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
 
 
@@ -191,6 +193,8 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_axe"), BronzeAxeItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_shovel"), BronzeShovelItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BronzeHoeItem);
+
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "metal_alloy"), MetalAlloy);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
 

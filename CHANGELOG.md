@@ -12,7 +12,6 @@ The first beta release for EnhancedCraft! Many changes have been implemented, to
     - New material: Metal Alloy.
         - Currently a concept, but will soon have the ability to craft an in-between set of tools and gear between Diamond and Iron.
         - Crafted using a combination of Gold, Bronze, and Iron ingots.
-        - Currently is unobtainable in survival, and no tools or gear yet. However, they will slowly come together.
     - Brand new music disc now out: Soaked Hands.
     - Etherium's rarity is now EPIC.
     - Fixed Bronze Ore not spawning on the sides of mountains.
