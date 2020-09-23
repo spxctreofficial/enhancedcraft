@@ -15,6 +15,8 @@ The first beta release for EnhancedCraft! Many changes have been implemented, to
         - Currently is unobtainable in survival, and no tools or gear yet. However, they will slowly come together.
     - Brand new music disc now out: Soaked Hands.
     - Etherium's rarity is now EPIC.
+    - Fixed Bronze Ore not spawning on the sides of mountains.
+    - All ores now have an unique circular spread in random generation.
 
 
 ## v0.2.0-alpha

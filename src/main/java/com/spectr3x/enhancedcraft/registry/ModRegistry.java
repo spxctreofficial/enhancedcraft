@@ -117,6 +117,7 @@ public class ModRegistry {
       0, // min y level
       9))) // max y level
     .spreadHorizontally()
+    .method_30377(8) // Circular spread
     .repeat(2); // number of veins per chunk
 
     public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
@@ -127,8 +128,9 @@ public class ModRegistry {
     .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
       0, // bottom offset
       0, // min y level
-      60))) // max y level
+      256))) // max y level
     .spreadHorizontally()
+    .method_30377(100) // Circular spread
     .repeat(22); // number of veins per chunk
 
     public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
@@ -141,6 +143,7 @@ public class ModRegistry {
       10, // min y level
       27))) // max y level
     .spreadHorizontally()
+    .method_30377(32) // Circular spread
     .repeat(6); // number of veins per chunk
 
 
