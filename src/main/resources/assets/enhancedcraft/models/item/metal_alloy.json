@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "enhancedcraft:items/misc/metal_alloy"
+      "layer0": "enhancedcraft:items/materials/metal_alloy"
     }
 }
