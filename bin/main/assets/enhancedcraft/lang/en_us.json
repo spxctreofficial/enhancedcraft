@@ -26,6 +26,8 @@
     
     "item.enhancedcraft.primordial_catalyst" : "Primordial Catalyst",
 
+    "item.enhancedcraft.sword_of_the_night" : "Sword Of The Night",
+
     "item.enhancedcraft.bronze_ingot" : "Bronze Ingot",
     "block.enhancedcraft.bronze_ore" : "Bronze Ore",
     "item.enhancedcraft.bronze_helmet" : "Bronze Helmet",
@@ -37,6 +39,8 @@
     "item.enhancedcraft.bronze_axe" : "Bronze Axe",
     "item.enhancedcraft.bronze_shovel": "Bronze Shovel",
     "item.enhancedcraft.bronze_hoe" : "Bronze Hoe",
+
+    "item.enhancedcraft.metal_alloy" : "Metal Alloy",
 
     "item.enhancedcraft.music_disc_soaked_hands" : "Music Disc",
     "item.enhancedcraft.music_disc_soaked_hands.desc" : "C418 x Ryn-cord - Soaked Hands (Wet Hands Remix)",

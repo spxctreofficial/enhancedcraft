@@ -1,5 +1,18 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.1
+
+This minor beta update brings some new features, bug fixes, additions, and changes to mod.
+
+### Changes
+    - Added "Sword Of The Night".
+        - Same stats as the Iron Sword.
+        - Currently unobtainable.
+        - Planned to give invisibility when holding at night.
+        
+    - Fixed lang file for Metal Alloy.
+
+
 ## beta-1.0
 
 The first beta release for EnhancedCraft! Many changes have been implemented, tons of new features are all coming together, and now we are ready to announce that EnhancedCraft is ready and stable enough for its first beta release! Here are some changes.

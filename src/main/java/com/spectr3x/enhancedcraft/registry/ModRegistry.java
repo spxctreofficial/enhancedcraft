@@ -22,6 +22,8 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianAxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNight;
+import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNightToolMaterial;
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
@@ -90,6 +92,8 @@ public class ModRegistry {
     public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
 
     public static final Item PrimordialCatalyst = new PrimordialCatalyst();
+
+    public static final Item SwordOfTheNight = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
     
     public static final Item BronzeIngot = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
@@ -181,6 +185,8 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
+
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SwordOfTheNight);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BronzeIngot);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreItem);
