@@ -22,6 +22,7 @@ This minor beta update brings some new features, bug fixes, additions, and chang
         - Planned to give invisibility when holding at night.
         
     - Fixed lang file for Metal Alloy.
+    - Fixed texture file for Metal Alloy.
 
 
 ## beta-1.0
