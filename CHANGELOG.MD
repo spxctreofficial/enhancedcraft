@@ -10,6 +10,7 @@ This minor beta update brings some new features, bug fixes, additions, and chang
         - The dirt background in the settings has been changed to a wall of Etherium Ore.
 
     - Fixed Tom Yum Stew's glint not showing.
+    - Fixed a bug where the mixin would not inject server-side.
 
 
 ## beta-1.1
