@@ -37,6 +37,7 @@ import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
 import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
+import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -100,6 +101,7 @@ public class ModRegistry {
     public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
 
     public static final Item PrimordialCatalyst = new PrimordialCatalyst();
+    public static final Item TomYumStew = new TomYumStew();
 
     public static final Item SwordOfTheNight = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
     
@@ -202,6 +204,7 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "tom_yum_stew"), TomYumStew);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SwordOfTheNight);
 

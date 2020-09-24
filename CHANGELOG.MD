@@ -20,6 +20,11 @@ This minor beta update brings some new features, bug fixes, additions, and chang
         - Same stats as the Iron Sword.
         - Currently unobtainable.
         - Planned to give invisibility when holding at night.
+    - Added Tom Yum Stew.
+        - Regeneration 3 for 3 seconds.
+        - 20 saturation points.
+        - Can be crafted with a bowl, a carrot, some dried kelp, a tropical fish, a potato, and tall grass.
+        - When eaten, returns a bowl.
         
     - Fixed lang file for Metal Alloy.
     - Fixed texture file for Metal Alloy.
