@@ -1,5 +1,35 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.1
+
+This minor beta update brings some new features, bug fixes, additions, and changes to mod.
+
+### Changes
+    - Metal Alloy gear and tools are now available!
+        - 750 durability (for tools), 28 base durability multiplier (for armor).
+        - Enchantability of 22 (same as gold).
+        - Iron and Diamond step-in. Very good for getting better-than-Iron protection fairly early in-game, and provides near-Diamond protection until you find Diamond.
+        - Bronze Sword: Deals 6.7 damage with 1.6 swing speed. Slightly weaker than Iron, but better than Stone.
+        - Bronze Pickaxe: 7.5f Pickaxe Multiplier. Deals 4.5 damage with 1.2 swing speed. Mining level of 3. Substantially better than Iron, minusculely worse than Diamond.
+        - Bronze Axe: 7.5f Axe Multiplier. Deals 9 damage with 1.05 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Bronze Shovel: 7.5f Shovel Multiplier. Deals 5 damage with 1.1 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Bronze Hoe: 7.5f Hoe Multiplier.  Deals 1 damage with 2.5 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Bronze Set: {3, 5, 7, 3} Helmet and boots are the same as Diamond. Chestplate and leggings are one armor point lower than Diamond respectively.
+            - Bronze Set includes armor toughness! Armor toughness of 2, same as Diamond.
+    - Added "Sword Of The Night".
+        - Same stats as the Iron Sword.
+        - Currently unobtainable.
+        - Planned to give invisibility when holding at night.
+    - Added Tom Yum Stew.
+        - Regeneration 3 for 3 seconds.
+        - 20 saturation points.
+        - Can be crafted with a bowl, a carrot, some dried kelp, a tropical fish, a potato, and grass.
+        - When eaten, returns a bowl.
+        
+    - Fixed lang file for Metal Alloy.
+    - Fixed texture file for Metal Alloy.
+
+
 ## beta-1.0
 
 The first beta release for EnhancedCraft! Many changes have been implemented, tons of new features are all coming together, and now we are ready to announce that EnhancedCraft is ready and stable enough for its first beta release! Here are some changes.

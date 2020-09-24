@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:grass"
+        },
+        {
+            "item": "minecraft:tropical_fish"
+        },
+        {
+            "item": "minecraft:dried_kelp"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:bowl"
+        },
+        {
+            "item": "minecraft:potato"
+        }
+    ],
+    "result": {
+        "item": "enhancedcraft:tom_yum_stew",
+        "count": 1
+    }
+}
