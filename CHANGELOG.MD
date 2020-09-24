@@ -1,5 +1,13 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.2
+
+This minor beta update brings some new features, bug fixes, additions, and changes to the mod.
+
+### Changes
+    - Fixed Tom Yum Stew's glint not showing.
+
+
 ## beta-1.1
 
 This minor beta update brings some new features, bug fixes, additions, and changes to mod.

@@ -22,7 +22,7 @@ public class TomYumStew extends Item {
         ItemStack itemStack = super.finishUsing(stack, world, user);
         return user instanceof PlayerEntity && ((PlayerEntity)user).abilities.creativeMode ? itemStack : new ItemStack(Items.BOWL);
      }
-    public boolean hasGlint() {
+    public boolean hasGlint(ItemStack stack) {
         return true;
     }
 }
