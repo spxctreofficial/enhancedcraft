@@ -23,7 +23,7 @@ This minor beta update brings some new features, bug fixes, additions, and chang
     - Added Tom Yum Stew.
         - Regeneration 3 for 3 seconds.
         - 20 saturation points.
-        - Can be crafted with a bowl, a carrot, some dried kelp, a tropical fish, a potato, and tall grass.
+        - Can be crafted with a bowl, a carrot, some dried kelp, a tropical fish, a potato, and grass.
         - When eaten, returns a bowl.
         
     - Fixed lang file for Metal Alloy.
