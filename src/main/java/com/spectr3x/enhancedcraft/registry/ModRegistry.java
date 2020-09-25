@@ -40,16 +40,13 @@ import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
 import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -62,6 +59,10 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class ModRegistry {
+    public static final ItemGroup ENHANCED_GROUP = FabricItemGroupBuilder.create(
+        new Identifier(EnhancedCraft.MOD_ID, "group"))
+                                                    .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
+                                                    .build();
 
     // SoundEvents Registry
     public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
@@ -75,12 +76,12 @@ public class ModRegistry {
 
 
     // Item Definitions
-    public static final Item Etherium = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
-    public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item EtheriumBoots = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item Etherium = new Item (new Item.Settings().group(ENHANCED_GROUP).rarity(Rarity.EPIC));
+    public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ENHANCED_GROUP));
+    public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item EtheriumBoots = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.FEET, (new Item.Settings().group(ENHANCED_GROUP)));
     public static final Item EtheriumSwordItem = new EtheriumSwordItem(new EtheriumToolMaterial());
     public static final Item EtheriumPickaxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
     public static final Item EtheriumAxeItem = new EtheriumAxeItem(new EtheriumToolMaterial());
@@ -95,33 +96,33 @@ public class ModRegistry {
 
     public static final Item GiantSwordItem = new GiantSwordItem(new GiantToolMaterial());
 
-    public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item GemstoneShard = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
-    public static final Item GemstoneApple = new Item (new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
-    public static final Item Gemfuel = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
+    public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ENHANCED_GROUP));
+    public static final Item GemstoneShard = new Item (new Item.Settings().group(ENHANCED_GROUP));
+    public static final Item GemstoneApple = new Item (new Item.Settings().group(ENHANCED_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
+    public static final Item Gemfuel = new Item (new Item.Settings().group(ENHANCED_GROUP));
 
     public static final Item PrimordialCatalyst = new PrimordialCatalyst();
     public static final Item TomYumStew = new TomYumStew();
 
     public static final Item SwordOfTheNight = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
-    
-    public static final Item BronzeIngot = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
-    public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Item BronzeHelmet = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item BronzeChestplate = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item BronzeLeggings = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item BronzeBoots = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+
+    public static final Item BronzeIngot = new Item (new Item.Settings().group(ENHANCED_GROUP));
+    public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ENHANCED_GROUP));
+    public static final Item BronzeHelmet = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item BronzeChestplate = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item BronzeLeggings = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item BronzeBoots = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.FEET, (new Item.Settings().group(ENHANCED_GROUP)));
     public static final Item BronzeSwordItem = new BronzeSwordItem(new BronzeToolMaterial());
     public static final Item BronzePickaxeItem = new BronzePickaxeItem(new BronzeToolMaterial());
     public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolMaterial());
     public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
     public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
 
-    public static final Item MetalAlloy = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
-    public static final Item AlloyHelmet = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item AlloyChestplate = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item AlloyLeggings = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item AlloyBoots = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+    public static final Item MetalAlloy = new Item (new Item.Settings().group(ENHANCED_GROUP).rarity(Rarity.UNCOMMON));
+    public static final Item AlloyHelmet = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item AlloyChestplate = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item AlloyLeggings = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ENHANCED_GROUP)));
+    public static final Item AlloyBoots = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.FEET, (new Item.Settings().group(ENHANCED_GROUP)));
     public static final Item AlloySwordItem = new AlloySwordItem(new AlloySwordMaterial());
     public static final Item AlloyPickaxeItem = new AlloyPickaxeItem(new AlloyToolAlternateMaterial());
     public static final Item AlloyAxeItem = new AlloyAxeItem(new AlloyToolMaterial());
@@ -175,7 +176,7 @@ public class ModRegistry {
     // Item Registration Method
     public static void registry() {
 
-        
+
         // Item Registry
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
