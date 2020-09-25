@@ -11,8 +11,9 @@ This is EnhancedCraft: a mod designed to add more powerful weapons and tools, ne
 - Canvas Renderer support! (IN DEVELOPMENT)
 - etc.
 
-
 #### DISCLAIMER
 This mod is officially in Open Beta! You can download this mod at https://www.curseforge.com/minecraft/mc-mods/enhancedcraft/, from our GitHub Releases, or clone the project and build it yourself!
+
+Also, I'm going to be making videos on the mod on my YouTube Channel soon, so stay tuned there! https://www.youtube.com/c/Spectr3x
 
 If you would like to help contribute to the project, please email me at (realspectr3x@vort3xmedia.cf) to be invited to the development of the project. You are free to contribute to the project, but please do not re-distribute this mod or do any other form of piracy, as this mod is free anyways and I am a young programmer who is working hard to make these mods.
