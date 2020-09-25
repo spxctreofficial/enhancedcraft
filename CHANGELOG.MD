@@ -8,6 +8,7 @@ This minor beta update brings some new features, bug fixes, additions, and chang
     - Added a GUI patch that differentiates vanilla Minecraft from having the mod installed.
         - Hearts will look more glossy, and particles will look different.
         - The dirt background in the settings has been changed to a wall of Etherium Ore.
+        - Enchanted Items' glints are different.
 
     - Fixed Tom Yum Stew's glint not showing.
     - Fixed a bug where the mixin would not inject server-side.
