@@ -41,7 +41,7 @@ If you want to check that your mod is installed, you can install the [Mod Menu G
 
 Alternatively, you can look in-game to check your survival hearts.
 
-![Hearts](https://media.forgecdn.net/attachments/314/311/hearts.png "Hearts")
+![Hearts](https://i.imgur.com/BbbeKsL.png "Hearts")
 
 As of Beta-1.2, the hearts and the GUI have been slightly altered. This allows you to differentiate if the mod has been downloaded or not, or have been installed correctly. Also, these glossy hearts look absolutely amazing, and they should never be overwritten.
 
