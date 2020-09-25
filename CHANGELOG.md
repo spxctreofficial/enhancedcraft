@@ -1,5 +1,19 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.2
+
+This minor beta update brings some new features, bug fixes, additions, and changes to the mod.
+
+### Changes
+    - Added a GUI patch that differentiates vanilla Minecraft from having the mod installed.
+        - Hearts will look more glossy, and particles will look different.
+        - The dirt background in the settings has been changed to a wall of Etherium Ore.
+        - Enchanted Items' glints are different.
+
+    - Fixed Tom Yum Stew's glint not showing.
+    - Fixed a bug where the mixin would not inject server-side.
+
+
 ## beta-1.1
 
 This minor beta update brings some new features, bug fixes, additions, and changes to mod.
@@ -9,12 +23,12 @@ This minor beta update brings some new features, bug fixes, additions, and chang
         - 750 durability (for tools), 28 base durability multiplier (for armor).
         - Enchantability of 22 (same as gold).
         - Iron and Diamond step-in. Very good for getting better-than-Iron protection fairly early in-game, and provides near-Diamond protection until you find Diamond.
-        - Bronze Sword: Deals 6.7 damage with 1.6 swing speed. Slightly weaker than Iron, but better than Stone.
-        - Bronze Pickaxe: 7.5f Pickaxe Multiplier. Deals 4.5 damage with 1.2 swing speed. Mining level of 3. Substantially better than Iron, minusculely worse than Diamond.
-        - Bronze Axe: 7.5f Axe Multiplier. Deals 9 damage with 1.05 swing speed. Substantially better than Iron, minusculely worse than Diamond.
-        - Bronze Shovel: 7.5f Shovel Multiplier. Deals 5 damage with 1.1 swing speed. Substantially better than Iron, minusculely worse than Diamond.
-        - Bronze Hoe: 7.5f Hoe Multiplier.  Deals 1 damage with 2.5 swing speed. Substantially better than Iron, minusculely worse than Diamond.
-        - Bronze Set: {3, 5, 7, 3} Helmet and boots are the same as Diamond. Chestplate and leggings are one armor point lower than Diamond respectively.
+        - Alloy Sword: Deals 6.7 damage with 1.6 swing speed. Slightly weaker than Iron, but better than Stone.
+        - Alloy Pickaxe: 7.5f Pickaxe Multiplier. Deals 4.5 damage with 1.2 swing speed. Mining level of 3. Substantially better than Iron, minusculely worse than Diamond.
+        - Alloy Axe: 7.5f Axe Multiplier. Deals 9 damage with 1.05 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Alloy Shovel: 7.5f Shovel Multiplier. Deals 5 damage with 1.1 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Alloy Hoe: 7.5f Hoe Multiplier.  Deals 1 damage with 2.5 swing speed. Substantially better than Iron, minusculely worse than Diamond.
+        - Alloy Set: {3, 5, 7, 3} Helmet and boots are the same as Diamond. Chestplate and leggings are one armor point lower than Diamond respectively.
             - Bronze Set includes armor toughness! Armor toughness of 2, same as Diamond.
     - Added "Sword Of The Night".
         - Same stats as the Iron Sword.
