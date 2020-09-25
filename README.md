@@ -25,7 +25,9 @@ Make sure the [Fabric API](https://gyazo.com/33cc93e6d6e13b3963397a0a3c5e1906 "R
 Next, you'll want to navigate to your `.minecraft\mods` folder. If you're using the Minecraft Launcher, this should be located in your `%appdata%` folder.
 
 Press `Win + R` to open the Run window, type in `%appdata%`, and press enter.
+
 ![Run](https://i.gyazo.com/92427c24b8b1d6ee3b2900ec3c322f03.png "Run")
+
 In the folder that pops up, navigate to the `.minecraft` folder, in the `mods` folder, drag the Fabric API and the mod `.jar` into it.
 ![Appdata Folder](https://i.gyazo.com/06fd462125393d22c9ac6db03e2a40d9.png "Appdata Directory")
 ![.minecraft Folder](https://i.gyazo.com/e735a1f171288c872b4afc385cea1cbe.png ".minecraft Directory")
