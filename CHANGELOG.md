@@ -1,5 +1,16 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.2.1
+
+This minor beta update updates textures... yeah...
+
+### Changes
+    - Changed the Enchantment Glint. The current one looks way better than the golden mess that was beta-1.2.
+    - Added a sky.
+
+    - Fixed Bronze Ingots not crafting a Bucket.
+
+
 ## beta-1.2
 
 This minor beta update brings some new features, bug fixes, additions, and changes to the mod.
