@@ -40,16 +40,13 @@ import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
 import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -62,6 +59,10 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class ModRegistry {
+    public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
+        new Identifier(EnhancedCraft.MOD_ID, "group"))
+                                                    .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
+                                                    .build();
 
     // SoundEvents Registry
     public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
