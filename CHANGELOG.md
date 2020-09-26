@@ -1,5 +1,10 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.3
+
+This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
+
+
 ## beta-1.2.1
 
 This minor beta update updates textures... yeah...
