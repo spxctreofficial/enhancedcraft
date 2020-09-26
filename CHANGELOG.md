@@ -7,6 +7,7 @@ This beta update introduces support for FabricSkyBoxes, as well as some changes 
 ### Changes
     - IMPORTANT: Fixed block madness.
         - All tools previously were broken, in that they were not following block mining level rules. This has been patched.
+    - 1.16.3 is supported alongside 1.16.2. As soon as the optimization mod known as "Sodium" is updated, I will make this mod 1.16.3 only. :)
     - Adds skyboxes dependency.
     - Fixes ModMenu "website" and "sources" buttons.
     - Add custom skybox. (For OptiFine users)
