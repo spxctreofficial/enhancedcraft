@@ -1,5 +1,21 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.3
+
+This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
+
+### Changes
+    - IMPORTANT: Fixed block madness.
+        - All tools previously were broken, in that they were not following block mining level rules. This has been patched.
+    - Adds skyboxes dependency.
+    - Fixes ModMenu "website" and "sources" buttons.
+    - Add custom skybox. (For OptiFine users)
+
+### TODO
+    - Add skyboxes support for FabricSkyboxes
+    - Implement Canvas support.
+    - Add more Features.
+
 ## beta-1.2.1
 
 This minor beta update updates textures... yeah...

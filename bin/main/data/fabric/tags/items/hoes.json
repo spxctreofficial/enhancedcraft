@@ -2,6 +2,8 @@
     "replace": false,
     "values": [
       "enhancedcraft:etherium_hoe",
+      "enhancedcraft:bronze_hoe",
+      "enhancedcraft:alloy_hoe",
       "enhancedcraft:obsidian_hoe"
     ]
   }

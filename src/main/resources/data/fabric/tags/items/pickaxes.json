@@ -2,6 +2,8 @@
     "replace": false,
     "values": [
       "enhancedcraft:etherium_pickaxe",
+      "enhancedcraft:bronze_pickaxe",
+      "enhancedcraft:alloy_pickaxe",
       "enhancedcraft:obsidian_pickaxe"
     ]
   }
