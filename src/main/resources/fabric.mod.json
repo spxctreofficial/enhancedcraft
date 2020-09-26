@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.spectr3x.enhancedcraft.EnhancedCraft"
+    ],
+    "modmenu": [
+      "com.spectr3x.enhancedcraft.ModMenuIntegration"
     ]
   },
   "mixins": [
