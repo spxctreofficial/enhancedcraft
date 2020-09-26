@@ -2,6 +2,8 @@
     "replace": false,
     "values": [
       "enhancedcraft:etherium_axe",
+      "enhancedcraft:bronze_axe",
+      "enhancedcraft:alloy_axe",
       "enhancedcraft:obsidian_axe"
     ]
   }

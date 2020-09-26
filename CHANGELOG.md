@@ -5,6 +5,8 @@
 This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
 
 ### Changes
+    - IMPORTANT: Fixed block madness.
+        - All tools previously were broken, in that they were not following block mining level rules. This has been patched.
     - Adds skyboxes dependency.
     - Fixes ModMenu "website" and "sources" buttons.
     - Add custom skybox. (For OptiFine users)
