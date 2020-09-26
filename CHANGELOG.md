@@ -3,7 +3,13 @@
 ## beta-1.3
 
 This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
-
+### Changes
+    - Adds skyboxes dependency
+    - Fixes ModMenu "website" and "sources" buttons
+### TODO
+    - Add custom skybox
+    - Implement Canvas support
+    - Add more Features
 
 ## beta-1.2.1
 
