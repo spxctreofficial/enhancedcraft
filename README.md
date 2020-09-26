@@ -9,6 +9,7 @@ This is EnhancedCraft: a mod designed to add more powerful weapons and tools, ne
 - New biomes and dimensions! (COMING SOON)
 - New mobs! (COMING SOON)
 - Canvas Renderer support! (IN DEVELOPMENT)
+- Adds Skyboxes support
 - etc.
 #### How To Get Started
 
