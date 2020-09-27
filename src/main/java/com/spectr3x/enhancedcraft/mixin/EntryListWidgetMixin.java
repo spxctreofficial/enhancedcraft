@@ -1,6 +1,5 @@
 package com.spectr3x.enhancedcraft.mixin;
 
-import com.spectr3x.enhancedcraft.EnhancedCraft;
 import com.spectr3x.enhancedcraft.ModConfig;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.minecraft.client.MinecraftClient;

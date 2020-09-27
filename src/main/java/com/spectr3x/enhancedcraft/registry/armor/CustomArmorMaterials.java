@@ -34,7 +34,7 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private CustomArmorMaterials(String string_1, int int_1, int[] ints_1, int int_2, SoundEvent soundEvent_1, float float_1, float float_2, Supplier<Ingredient> supplier_1) {
+    private CustomArmorMaterials(final String string_1, final int int_1, final int[] ints_1, final int int_2, final SoundEvent soundEvent_1, final float float_1, final float float_2, final Supplier<Ingredient> supplier_1) {
         this.name = string_1;
         this.durabilityMultiplier = int_1;
         this.protectionAmounts = ints_1;
@@ -45,11 +45,11 @@ public enum CustomArmorMaterials implements ArmorMaterial {
         this.repairIngredientSupplier = new Lazy(supplier_1);
     }
 
-    public int getDurability(EquipmentSlot equipmentSlot_1) {
+    public int getDurability(final EquipmentSlot equipmentSlot_1) {
         return BASE_DURABILITY[equipmentSlot_1.getEntitySlotId()] * this.durabilityMultiplier;
     }
 
-    public int getProtectionAmount(EquipmentSlot equipmentSlot_1) {
+    public int getProtectionAmount(final EquipmentSlot equipmentSlot_1) {
         return this.protectionAmounts[equipmentSlot_1.getEntitySlotId()];
     }
 
