@@ -1,6 +1,7 @@
 package com.spectr3x.enhancedcraft.registry;
 
 import com.spectr3x.enhancedcraft.EnhancedCraft;
+import com.spectr3x.enhancedcraft.ModConfig;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeSwordItem;
@@ -32,6 +33,10 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNight;
 import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNightToolMaterial;
+
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
+
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
@@ -175,6 +180,9 @@ public class ModRegistry {
 
     // Item Registration Method
     public static void registry() {
+
+        // AutoConfig1u Registry
+        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
 
         
         // Item Registry

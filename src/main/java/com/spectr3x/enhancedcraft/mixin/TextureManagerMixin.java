@@ -1,12 +1,14 @@
 package com.spectr3x.enhancedcraft.mixin;
 
-import com.spectr3x.enhancedcraft.ModConfig;
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.ResourceTexture;
 import net.minecraft.client.texture.TextureManager;
 import net.minecraft.util.Identifier;
+
+import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground;
+import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground.CustomBackgrounds;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,8 +21,13 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
  */
 @Mixin(TextureManager.class)
 public class TextureManagerMixin {
-	private static final Identifier backgroundTexture = new Identifier("enhancedcraft:textures/gui/options_background.png");
-	private static final Identifier defaultTexture = new Identifier("minecraft:textures/gui/options_background.png");
+	private static final Identifier defaultTexture = new Identifier("enhancedcraft:textures/gui/options_background_default.png");
+	private static final Identifier classicTexture = new Identifier("minecraft:textures/gui/options_background.png");
+	private static final Identifier gemstoneTexture = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
+	private static final Identifier diamondBlockTexture = new Identifier("enhancedcraft:textures/gui/options_background_diamondblock.png");
+	private static final Identifier stoneBrickTexture = new Identifier("enhancedcraft:textures/gui/options_background_stonebrick.png");
+
+	CustomBackgrounds customBackgrounds;
 
 	@Inject(
 		at = @At(value = "INVOKE", target = "net/minecraft/client/texture/AbstractTexture.bindTexture()V"),
@@ -29,7 +36,7 @@ public class TextureManagerMixin {
 		cancellable = true
 	)
 	private void redirectBackgroundTexture(Identifier id, CallbackInfo info, AbstractTexture abstractTexture) {
-		ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+		// ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 		/*if (id == DrawableHelper.BACKGROUND_TEXTURE && config.displayBackground) {
 			abstractTexture = new ResourceTexture(backgroundTexture);
 			this.registerTexture(id, abstractTexture);
@@ -40,11 +47,32 @@ public class TextureManagerMixin {
 		}*/
 
 		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
-			if (config.displayBackground) {
-				abstractTexture = new ResourceTexture(backgroundTexture);
-			}
-			else {
-				abstractTexture = new ResourceTexture(defaultTexture);
+			if (DisplayBackground.doCustomBackground) {
+				CustomBackgrounds[] customBackgrounds = CustomBackgrounds.values();
+				for (CustomBackgrounds backgrounds : customBackgrounds) {
+					switch (backgrounds) {
+						case Classic:
+						abstractTexture = new ResourceTexture(classicTexture);
+							break;
+						case Default:
+						abstractTexture = new ResourceTexture(defaultTexture);
+							break;
+						case Diamond:
+						abstractTexture = new ResourceTexture(diamondBlockTexture);
+							break;
+						case Gemstone:
+						abstractTexture = new ResourceTexture(gemstoneTexture);
+							break;
+						case Stone_Bricks:
+						abstractTexture = new ResourceTexture(stoneBrickTexture);
+							break;
+						default:
+						abstractTexture = new ResourceTexture(defaultTexture);
+							break;
+	
+					}
+				}
+				
 			}
 			this.registerTexture(id, abstractTexture);
 			abstractTexture.bindTexture();
