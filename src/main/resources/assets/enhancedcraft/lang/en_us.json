@@ -1,6 +1,6 @@
 {
     "itemGroup.enhancedcraft.group": "EnhancedCraft",
-    "text.autoconfig.enhancedcraft.title": "Enhanced Craft Configuration",
+    "text.autoconfig.enhancedcraft.title": "EnhancedCraft Configuration",
     "text.autoconfig.enhancedcraft.option.displayBackground": "Display Custom Background",
     "text.autoconfig.enhancedcraft.option.enableSkyBox": "Enable Custom Skybox",
     "item.enhancedcraft.etherium" : "Etherium",

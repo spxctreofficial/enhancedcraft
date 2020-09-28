@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "DefaultBiomeFeaturesMixin",
-    "TextureManagerMixin",
+    "TextureManagerMixin"
   ],
   "client": [
   ],

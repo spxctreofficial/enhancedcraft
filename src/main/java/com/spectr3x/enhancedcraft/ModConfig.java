@@ -2,7 +2,6 @@ package com.spectr3x.enhancedcraft;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
 
 @Config(name = EnhancedCraft.MOD_ID)
 public class ModConfig implements ConfigData {

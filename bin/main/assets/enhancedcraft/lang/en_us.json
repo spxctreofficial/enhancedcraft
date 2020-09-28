@@ -1,4 +1,8 @@
 {
+    "itemGroup.enhancedcraft.group": "EnhancedCraft",
+    "text.autoconfig.enhancedcraft.title": "EnhancedCraft Configuration",
+    "text.autoconfig.enhancedcraft.option.displayBackground": "Display Custom Background",
+    "text.autoconfig.enhancedcraft.option.enableSkyBox": "Enable Custom Skybox",
     "item.enhancedcraft.etherium" : "Etherium",
     "block.enhancedcraft.etherium_ore" : "Etherium Ore",
     "item.enhancedcraft.etherium_helmet" : "Etherium Helmet",
