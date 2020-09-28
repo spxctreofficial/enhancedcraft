@@ -8,8 +8,8 @@ This beta update introduces support for FabricSkyBoxes, as well as some changes 
     - Adds a custom attack indicator.
     - Changed the crosshair. Some people stated that they didn't like the FPS-like crosshair, so now it is a minimalistic-default crosshair.
     - Changed the Enchanted Item Glint.
+    - OPTIONS_BACKGROUND is now customizable! We have created a mod menu that allows for configuration.
     - Add custom skybox. (For OptiFine users)
-    - Adds a Mod Menu that is not functional for now. Will be in the near future, but for now, nope.
     - Adds skyboxes dependency.
     - 1.16.3 is supported alongside 1.16.2. As soon as the optimization mod known as "Sodium" is updated, I will make this mod 1.16.3 only. :)
 

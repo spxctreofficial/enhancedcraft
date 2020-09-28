@@ -30,8 +30,22 @@ public class TextureManagerMixin {
 	)
 	private void redirectBackgroundTexture(Identifier id, CallbackInfo info, AbstractTexture abstractTexture) {
 		ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
-		if (id == DrawableHelper.BACKGROUND_TEXTURE && config.displayBackground) {
+		/*if (id == DrawableHelper.BACKGROUND_TEXTURE && config.displayBackground) {
 			abstractTexture = new ResourceTexture(backgroundTexture);
+			this.registerTexture(id, abstractTexture);
+			abstractTexture.bindTexture();
+			info.cancel();
+
+			This doesn't work lol suck it Zero
+		}*/
+
+		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
+			if (config.displayBackground) {
+				abstractTexture = new ResourceTexture(backgroundTexture);
+			}
+			else {
+				abstractTexture = new ResourceTexture(defaultTexture);
+			}
 			this.registerTexture(id, abstractTexture);
 			abstractTexture.bindTexture();
 			info.cancel();
