@@ -15,7 +15,7 @@ This beta update introduces support for FabricSkyBoxes, as well as some changes 
         - Added granite-to-cobble capability without additional mods, for those who don't want granite, diorite, or andesite, (aka the ugly & useless blocks).
         - Added cheap-arrow capability for those who hate flint. Now you can craft an arrow with cobblestone, albeit less efficient.
     - Add custom skybox. (For OptiFine users)
-    - Adds skyboxes dependency.
+    - Adds skybox dependency. (No we're not, we reverted this.)
     - 1.16.3 is supported alongside 1.16.2.
 
     - IMPORTANT: Fixed block madness.

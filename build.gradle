@@ -29,10 +29,6 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Add custom skybox
-    modImplementation "com.github.AMereBagatelle:fabricskyboxes:0.2.0"
-    include "com.github.AMereBagatelle:fabricskyboxes:0.2.0"
-
     // Add ModMenu dependency in-dev to see our config
     modImplementation "com.github.Prospector:ModMenu:1.16-SNAPSHOT"
 
