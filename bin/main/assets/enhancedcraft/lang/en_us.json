@@ -1,8 +1,15 @@
 {
     "itemGroup.enhancedcraft.group": "EnhancedCraft",
     "text.autoconfig.enhancedcraft.title": "EnhancedCraft Configuration",
-    "text.autoconfig.enhancedcraft.option.displayBackground": "Display Custom Background",
+    "text.autoconfig.enhancedcraft.option.displayBackground" : "Option Menu Background",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds" : "Background",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground" : "Default",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground" : "Classic",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground" : "Shiny Diamond",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground" : "Stone Brick (PVP)",
+    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground" : "Gemstone",
     "text.autoconfig.enhancedcraft.option.enableSkyBox": "Enable Custom Skybox",
+    
     "item.enhancedcraft.etherium" : "Etherium",
     "block.enhancedcraft.etherium_ore" : "Etherium Ore",
     "item.enhancedcraft.etherium_helmet" : "Etherium Helmet",
@@ -29,7 +36,7 @@
     "item.enhancedcraft.gemstone_apple" : "Gemstone Apple",
     
     "item.enhancedcraft.primordial_catalyst" : "Primordial Catalyst",
-    "item.enhancedcraft.tom_yum_stew" : "Tom Yum",
+    "item.enhancedcraft.tom_yum_stew" : "Tom Yum Kong",
 
     "item.enhancedcraft.sword_of_the_night" : "Sword Of The Night",
 

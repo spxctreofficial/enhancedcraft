@@ -5,13 +5,18 @@
 This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
 
 ### Changes
-    - Adds a custom attack indicator.
-    - Changed the crosshair. Some people stated that they didn't like the FPS-like crosshair, so now it is a minimalistic-default crosshair.
-    - Changed the Enchanted Item Glint.
     - OPTIONS_BACKGROUND is now customizable! We have created a mod menu that allows for configuration.
+    - Quality-of-Life Changes
+        - Changed the crosshair. Some people didn't want to play Minecraft like an FPS lol.
+        - Changed the Enchanted Item Glint. Now looks epic as fuq
+        - Changed "Tom Yum" to "Tom Yum Kong".
+        - Added a custom attack indicator.
+        - Added flesh-to-leather capability without additional mods, via smelting only.
+        - Added granite-to-cobble capability without additional mods, for those who don't want granite, diorite, or andesite, (aka the ugly & useless blocks).
+        - Added cheap-arrow capability for those who hate flint. Now you can craft an arrow with cobblestone, albeit less efficient.
     - Add custom skybox. (For OptiFine users)
     - Adds skyboxes dependency.
-    - 1.16.3 is supported alongside 1.16.2. As soon as the optimization mod known as "Sodium" is updated, I will make this mod 1.16.3 only. :)
+    - 1.16.3 is supported alongside 1.16.2.
 
     - IMPORTANT: Fixed block madness.
         - All tools previously were broken, in that they were not following block mining level rules. This has been patched.

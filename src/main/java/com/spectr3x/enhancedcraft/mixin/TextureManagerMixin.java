@@ -23,11 +23,9 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 public class TextureManagerMixin {
 	private static final Identifier defaultTexture = new Identifier("enhancedcraft:textures/gui/options_background_default.png");
 	private static final Identifier classicTexture = new Identifier("minecraft:textures/gui/options_background.png");
-	private static final Identifier gemstoneTexture = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
 	private static final Identifier diamondBlockTexture = new Identifier("enhancedcraft:textures/gui/options_background_diamondblock.png");
 	private static final Identifier stoneBrickTexture = new Identifier("enhancedcraft:textures/gui/options_background_stonebrick.png");
-
-	CustomBackgrounds customBackgrounds;
+	private static final Identifier gemstoneTexture = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
 
 	@Inject(
 		at = @At(value = "INVOKE", target = "net/minecraft/client/texture/AbstractTexture.bindTexture()V"),
@@ -47,39 +45,29 @@ public class TextureManagerMixin {
 		}*/
 
 		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
-			if (DisplayBackground.doCustomBackground) {
-				CustomBackgrounds[] customBackgrounds = CustomBackgrounds.values();
-				for (CustomBackgrounds backgrounds : customBackgrounds) {
-					switch (backgrounds) {
-						case Classic:
-						abstractTexture = new ResourceTexture(classicTexture);
-							break;
-						case Default:
-						abstractTexture = new ResourceTexture(defaultTexture);
-							break;
-						case Diamond:
-						abstractTexture = new ResourceTexture(diamondBlockTexture);
-							break;
-						case Gemstone:
-						abstractTexture = new ResourceTexture(gemstoneTexture);
-							break;
-						case Stone_Bricks:
-						abstractTexture = new ResourceTexture(stoneBrickTexture);
-							break;
-						default:
-						abstractTexture = new ResourceTexture(defaultTexture);
-							break;
-	
-					}
-				}
-				
+			if (DisplayBackground.customBackgrounds == CustomBackgrounds.doDefaultBackground) {
+				abstractTexture = new ResourceTexture(defaultTexture);
+			}
+			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doClassicBackground) {
+				abstractTexture = new ResourceTexture(classicTexture);
+			}
+			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doDiamondBackground) {
+				abstractTexture = new ResourceTexture(diamondBlockTexture);
+			}
+			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doStoneBrickBackground) {
+				abstractTexture = new ResourceTexture(stoneBrickTexture);
+			}
+			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doGemstoneBackground) {
+				abstractTexture = new ResourceTexture(gemstoneTexture);
+			}
+			else {
+				abstractTexture = new ResourceTexture(defaultTexture);
 			}
 			this.registerTexture(id, abstractTexture);
 			abstractTexture.bindTexture();
 			info.cancel();
 		}
 	}
-
 	@Shadow
 	public void registerTexture (Identifier id, AbstractTexture abstractTexture) {}
 }
