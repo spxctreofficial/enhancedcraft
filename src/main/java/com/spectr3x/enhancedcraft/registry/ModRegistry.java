@@ -180,11 +180,6 @@ public class ModRegistry {
 
     // Item Registration Method
     public static void registry() {
-
-        // AutoConfig1u Registry
-        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
-
-        
         // Item Registry
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
