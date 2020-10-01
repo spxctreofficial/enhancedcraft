@@ -14,12 +14,14 @@ This beta update introduces support for FabricSkyBoxes, as well as some changes 
         - Added flesh-to-leather capability without additional mods, via smelting only.
         - Added granite-to-cobble capability without additional mods, for those who don't want granite, diorite, or andesite, (aka the ugly & useless blocks).
         - Added cheap-arrow capability for those who hate flint. Now you can craft an arrow with cobblestone, albeit less efficient.
+    - Added Block of Etherium.
     - Add custom skybox. (For OptiFine users)
     - Adds skybox dependency. (No we're not, we reverted this.)
     - 1.16.3 is supported alongside 1.16.2.
 
     - IMPORTANT: Fixed block madness.
         - All tools previously were broken, in that they were not following block mining level rules. This has been patched.
+    - Fixed Etherium's blurry sprite while using OptiFabric and OptiFine in Fabric.
     - Fixes ModMenu "website" and "sources" buttons.
 
 ### TODO
