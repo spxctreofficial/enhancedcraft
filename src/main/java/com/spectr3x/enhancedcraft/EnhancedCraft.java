@@ -10,7 +10,7 @@ public class EnhancedCraft implements ModInitializer {
 	public static final Logger logger = LogManager.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize () {
+	public void onInitialize() {
 		ModRegistry.registry();
 	}
 }
