@@ -21,6 +21,9 @@
     "main": [
       "com.spectr3x.enhancedcraft.EnhancedCraft"
     ],
+    "client": [
+      "com.spectr3x.enhancedcraft.EnhancedCraftCLIENT"
+    ],
     "modmenu": [
       "com.spectr3x.enhancedcraft.ModMenuIntegration"
     ]

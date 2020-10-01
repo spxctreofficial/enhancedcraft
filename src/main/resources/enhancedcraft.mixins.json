@@ -5,9 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "DefaultBiomeFeaturesMixin",
-    "TextureManagerMixin"
   ],
   "client": [
+    "TextureManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
