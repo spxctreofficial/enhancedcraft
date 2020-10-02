@@ -32,10 +32,13 @@ import com.spectr3x.enhancedcraft.registry.tools.ObsidianHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.ObsidianToolMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNight;
 import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNightToolMaterial;
+
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
+import com.spectr3x.enhancedcraft.registry.blocks.EtheriumBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
+import com.spectr3x.enhancedcraft.registry.blocks.BronzeBlock;
 import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
 import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
@@ -74,10 +77,14 @@ public class ModRegistry {
     public static final Block BronzeOreBlock = new BronzeOreBlock();
     public static final Block GemstoneBlock = new GemstoneBlock();
 
+    public static final Block EtheriumBlock = new EtheriumBlock();
+    public static final Block BronzeBlock = new BronzeBlock();
+
 
     // Item Definitions
     public static final Item Etherium = new Item (new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
     public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item EtheriumBlockItem = new BlockItem(EtheriumBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
@@ -108,6 +115,7 @@ public class ModRegistry {
     
     public static final Item BronzeIngot = new Item (new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item BronzeBlockItem = new BlockItem(BronzeBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item BronzeHelmet = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item BronzeChestplate = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
     public static final Item BronzeLeggings = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
@@ -175,11 +183,10 @@ public class ModRegistry {
 
     // Item Registration Method
     public static void registry() {
-
-        
         // Item Registry
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlockItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_helmet"), EtheriumHelmet);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_chestplate"), EtheriumChestplate);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_leggings"), EtheriumLeggings);
@@ -211,6 +218,7 @@ public class ModRegistry {
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BronzeIngot);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreItem);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlockItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_helmet"), BronzeHelmet);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_chestplate"), BronzeChestplate);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_leggings"), BronzeLeggings);
@@ -243,6 +251,9 @@ public class ModRegistry {
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlock);
+
+        Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlock);
+        Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);
 
 
         // SoundEvents Registry
