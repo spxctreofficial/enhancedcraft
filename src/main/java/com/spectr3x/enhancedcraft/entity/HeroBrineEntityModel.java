@@ -4,7 +4,6 @@ import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.mob.MobEntity;
 
 public class HeroBrineEntityModel extends EntityModel<HeroBrineEntity> {
 	private final ModelPart head;

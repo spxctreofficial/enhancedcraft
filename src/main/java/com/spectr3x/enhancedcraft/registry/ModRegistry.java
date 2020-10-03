@@ -1,6 +1,7 @@
 package com.spectr3x.enhancedcraft.registry;
 
 import com.spectr3x.enhancedcraft.EnhancedCraft;
+import com.spectr3x.enhancedcraft.entity.HeroBrineEntity;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeSwordItem;
@@ -44,9 +45,15 @@ import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -181,6 +188,14 @@ public class ModRegistry {
     .repeat(6); // number of veins per chunk
 
 
+    // Entity Definitions
+    public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(EnhancedCraft.MOD_ID, "herobrine"),
+		FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build()
+	);
+
+
     // Item Registration Method
     public static void registry() {
         // Item Registry
@@ -264,5 +279,8 @@ public class ModRegistry {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), BronzeOreFeature);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
+
+        // Entity Registry 
+		    FabricDefaultAttributeRegistry.register(HerobrineEntity, HeroBrineEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 1));
     }
 }

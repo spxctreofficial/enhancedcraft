@@ -1,5 +1,14 @@
 # ENHANCEDCRAFT CHANGELOG
 
+
+## beta-1.3.1
+Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahahhahhaahhahahahha
+
+### Changes
+    - Added a haunted entity to the game, his name we shall not speak of or his bad omens will follow.
+        - When sleeping, he has a 1/100 chance to haunt you, leading to a jumpscare, and Blindness and Nausea for 10 seconds. Also, any Nether Portals within a 16 chunk radius will be broken.
+
+
 ## beta-1.3
 
 This beta update introduces some quality of life changes, a working GUI implementation for Mod Menu, as well as some other changes and bug fixes.
