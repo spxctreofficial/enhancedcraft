@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "enhancedcraft:etherium_block"
+        }
+    ],
+    "result": {
+        "item": "enhancedcraft:etherium",
+        "count": 9
+    }
+}

@@ -4,9 +4,10 @@
   "package": "com.spectr3x.enhancedcraft.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "DefaultBiomeFeaturesMixin"
+    "DefaultBiomeFeaturesMixin",
   ],
   "client": [
+    "TextureManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -2,14 +2,27 @@
 
 ## beta-1.3
 
-This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
+This beta update introduces some quality of life changes, a working GUI implementation for Mod Menu, as well as some other changes and bug fixes.
 
 ### Changes
+    - OPTIONS_BACKGROUND is now customizable! We have created a mod menu that allows for configuration.
+    - Quality-of-Life Changes
+        - Changed the crosshair. Some people didn't want to play Minecraft like an FPS lol.
+        - Changed the Enchanted Item Glint. Now looks epic as fuq
+        - Changed "Tom Yum" to "Tom Yum Kong".
+        - Added a custom attack indicator.
+        - Added flesh-to-leather capability without additional mods, via smelting only.
+        - Added granite-to-cobble capability without additional mods, for those who don't want granite, diorite, or andesite, (aka the ugly & useless blocks).
+        - Added cheap-arrow capability for those who hate flint. Now you can craft an arrow with cobblestone, albeit less efficient.
+    - Added Block of Etherium and Bronze.
+    - Add custom skybox. (For OptiFine users)
+    - Adds skybox dependency. (No we're not, we reverted this.)
+    - 1.16.3 is supported alongside 1.16.2.
+
     - IMPORTANT: Fixed block madness.
         - All tools previously were broken, in that they were not following block mining level rules. This has been patched.
-    - Adds skyboxes dependency.
+    - Fixed Etherium's blurry sprite while using OptiFabric and OptiFine in Fabric.
     - Fixes ModMenu "website" and "sources" buttons.
-    - Add custom skybox. (For OptiFine users)
 
 ### TODO
     - Add skyboxes support for FabricSkyboxes
