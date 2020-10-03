@@ -2,7 +2,7 @@
 
 ## beta-1.3
 
-This beta update introduces support for FabricSkyBoxes, as well as some changes and bug fixes.
+This beta update introduces some quality of life changes, a working GUI implementation for Mod Menu, as well as some other changes and bug fixes.
 
 ### Changes
     - OPTIONS_BACKGROUND is now customizable! We have created a mod menu that allows for configuration.
