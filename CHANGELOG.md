@@ -7,6 +7,17 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
 ### Changes
     - Added a haunted entity to the game, his name we shall not speak of or his bad omens will follow.
         - When sleeping, he has a 1/100 chance to haunt you, leading to a jumpscare, and Blindness and Nausea for 10 seconds. Also, any Nether Portals within a 16 chunk radius will be broken.
+    - Nerfed Bronze spawn mechanics.
+        - Nerfed spawn rate from 22 to 20.
+        - Nerfed vein size from 15 to 12.
+        - Max y level changed to 80.
+        - Circular spread now matches that of coal (128).
+    - Nerfed Gemstone spawn mechanics.
+        - Nerfed spawn rate from 6 to 4.
+        - Changed minimum y level to 6 from 10.
+        - Changed maximum y level from 27 to 20.
+    - Buffed Etherium spawn mechanics.
+        - Buffed minimum y level from 0 to 6.
 
 
 ## beta-1.3

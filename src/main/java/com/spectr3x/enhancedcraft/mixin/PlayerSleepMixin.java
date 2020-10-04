@@ -25,7 +25,7 @@ public class PlayerSleepMixin {
 	@Inject(method = "trySleep(Lnet/minecraft/util/math/BlockPos;)Lcom/mojang/datafixers/util/Either;", at = @At(value = "HEAD"), cancellable = true)
 	private void trySleep (BlockPos pos, CallbackInfoReturnable<Either<PlayerEntity.SleepFailureReason, Unit>> cir) {
 		Random random = new Random();
-		int chance = random.nextInt(2);
+		int chance = random.nextInt(100);
 		ServerPlayerEntity ServerPlayer = (ServerPlayerEntity) player;
 		EnhancedCraft.logger.info("Server Player - Playing Sound");
 		ServerPlayer.playSound(SoundEvents.ITEM_CROSSBOW_SHOOT, 1.0f, 1.0f);

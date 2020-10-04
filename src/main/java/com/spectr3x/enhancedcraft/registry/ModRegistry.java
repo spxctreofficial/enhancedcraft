@@ -69,15 +69,12 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class ModRegistry {
-    public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
-        new Identifier(EnhancedCraft.MOD_ID, "group"))
-                                                    .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
-                                                    .build();
+    public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder
+            .create(new Identifier(EnhancedCraft.MOD_ID, "group")).icon(() -> new ItemStack(Items.NETHERITE_SWORD)).build();
 
     // SoundEvents Registry
     public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
     public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
-
 
     // Block Definitions
     public static final Block EtheriumOreBlock = new EtheriumOreBlock();
@@ -86,7 +83,6 @@ public class ModRegistry {
 
     public static final Block EtheriumBlock = new EtheriumBlock();
     public static final Block BronzeBlock = new BronzeBlock();
-
 
     // Item Definitions
     public static final Item Etherium = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
@@ -112,7 +108,10 @@ public class ModRegistry {
 
     public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Item GemstoneShard = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
-    public static final Item GemstoneApple = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible().statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f).statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
+    public static final Item GemstoneApple = new Item(new Item.Settings().group(ItemGroup.FOOD)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible()
+                    .statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f)
+                    .statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f).build()));
     public static final Item Gemfuel = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
     public static final Item PrimordialCatalyst = new PrimordialCatalyst();
@@ -146,58 +145,48 @@ public class ModRegistry {
 
     public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
 
-
     // Ore Generation Definitions
     public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
-                                                                   .configure(new OreFeatureConfig(
-                                                                       OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                                                                       ModRegistry.EtheriumOreBlock.getDefaultState(),
-                                                                       2)) // vein size
-                                                                   .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
-                                                                       0, // bottom offset
-                                                                       0, // min y level
-                                                                       9))) // max y level
-                                                                   .spreadHorizontally()
-                                                                   .method_30377(8) // Circular spread
-                                                                   .repeat(2); // number of veins per chunk
+            .configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    ModRegistry.EtheriumOreBlock.getDefaultState(),
+                    2)) // vein size
+            .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
+                    0, // bottom offset
+                    6, // min y level
+                    9))) // max y level
+            .spreadHorizontally()
+            .method_30377(8) // Circular spread
+            .repeat(2); // number of veins per chunk
 
     public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
-                                                                 .configure(new OreFeatureConfig(
-                                                                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                                                                     ModRegistry.BronzeOreBlock.getDefaultState(),
-                                                                     15)) // vein size
-                                                                 .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
-                                                                     0, // bottom offset
-                                                                     0, // min y level
-                                                                     256))) // max y level
-                                                                 .spreadHorizontally()
-                                                                 .method_30377(100) // Circular spread
-                                                                 .repeat(22); // number of veins per chunk
+            .configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    ModRegistry.BronzeOreBlock.getDefaultState(),
+                    12)) // vein size
+            .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
+                    0, // bottom offset
+                    0, // min y level
+                    80))) // max y level
+            .spreadHorizontally()
+            .method_30377(128) // Circular spread
+            .repeat(20); // number of veins per chunk
 
     public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
-                                                                .configure(new OreFeatureConfig(
-                                                                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                                                                    ModRegistry.GemstoneBlock.getDefaultState(),
-                                                                    8)) // vein size
-                                                                .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
-                                                                    0, // bottom offset
-                                                                    10, // min y level
-                                                                    27))) // max y level
-                                                                .spreadHorizontally()
-                                                                .method_30377(32) // Circular spread
-                                                                .repeat(6); // number of veins per chunk
-
+            .configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    ModRegistry.GemstoneBlock.getDefaultState(),
+                    8)) // vein size
+            .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
+                    0, // bottom offset
+                    6, // min y level
+                    20))) // max y level
+            .spreadHorizontally()
+            .method_30377(32) // Circular spread
+            .repeat(4); // number of veins per chunk
 
     // Entity Definitions
-    public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(
-        Registry.ENTITY_TYPE,
-        new Identifier(EnhancedCraft.MOD_ID, "herobrine"),
-        FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build()
-    );
-
+    public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(Registry.ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "herobrine"), FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build());
 
     // Item Registration Method
-    public static void registry () {
+    public static void registry() {
         // Item Registry
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
@@ -212,7 +201,6 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_shovel"), EtheriumShovelItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_hoe"), EtheriumHoeItem);
 
-
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), ObsidianSwordItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_pickaxe"), ObsidianPickaxeItem);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_axe"), ObsidianAxeItem);
@@ -226,7 +214,8 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), Gemfuel);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
 
-        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
+        Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"),
+                PrimordialCatalyst);
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "tom_yum_stew"), TomYumStew);
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SwordOfTheNight);
@@ -257,10 +246,8 @@ public class ModRegistry {
 
         Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
 
-
         // Fuel Registry
         FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
-
 
         // Block Registry
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
@@ -270,18 +257,15 @@ public class ModRegistry {
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlock);
         Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);
 
-
         // SoundEvents Registry
         Registry.register(Registry.SOUND_EVENT, EnhancedCraft.MOD_ID, SoakedHandsSoundEvent);
-
 
         // Structure Generation Registry
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), BronzeOreFeature);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
 
-        // Entity Registry 
-
+        // Entity Registry
         FabricDefaultAttributeRegistry.register(HerobrineEntity, HeroBrineEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D));
     }
 }
