@@ -7,6 +7,7 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
 ### Changes
     - Added a haunted entity to the game, his name we shall not speak of or his bad omens will follow.
         - When sleeping, he has a 1/100 chance to haunt you, leading to a jumpscare, and Blindness and Nausea for 10 seconds. Also, any Nether Portals within a 16 chunk radius will be broken.
+    - Added a test dimension called "enhancedcraft:mirrored_dimension" to test and debug dimensions.
     - Nerfed Bronze spawn mechanics.
         - Nerfed spawn rate from 22 to 20.
         - Nerfed vein size from 15 to 12.
