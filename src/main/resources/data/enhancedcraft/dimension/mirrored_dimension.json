@@ -4,9 +4,58 @@
     "type": "minecraft:noise",
     "seed": 954115432,
     "biome_source": {
-      "type": "minecraft:fixed",
+      "type": "minecraft:multi_noise",
       "seed": 954115432,
-      "biome": "minecraft:plains"
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "enhancedcraft:mirrored_spikes",
+          "parameters": {
+            "altitude": 0.25,
+            "temperature": -0.1,
+            "humidity": -0.25,
+            "weirdness": 0.35,
+            "offset": 0.5
+          }
+        },
+        {
+          "biome": "enhancedcraft:mirrored_plains",
+          "parameters": {
+            "altitude": -0.2,
+            "temperature": 0,
+            "humidity": -0.1,
+            "weirdness": 0.25,
+            "offset": 0
+          }
+        }
+      ]
     },
     "settings": {
       "name": "enhancedcraft:mirrored_dimension",

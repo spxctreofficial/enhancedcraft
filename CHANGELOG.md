@@ -50,6 +50,7 @@ This beta update introduces some quality of life changes, a working GUI implemen
     - Implement Canvas support.
     - Add more Features.
 
+
 ## beta-1.2.1
 
 This minor beta update updates textures... yeah...
