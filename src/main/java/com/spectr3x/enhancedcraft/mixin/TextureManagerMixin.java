@@ -28,10 +28,10 @@ public class TextureManagerMixin {
 	private static final Identifier gemstoneTexture = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
 
 	@Inject(
-		at = @At(value = "INVOKE", target = "net/minecraft/client/texture/AbstractTexture.bindTexture()V"),
-		method = "bindTextureInner(Lnet/minecraft/util/Identifier;)V",
-		locals = LocalCapture.CAPTURE_FAILHARD,
-		cancellable = true
+			at = @At(value = "INVOKE", target = "net/minecraft/client/texture/AbstractTexture.bindTexture()V"),
+			method = "bindTextureInner(Lnet/minecraft/util/Identifier;)V",
+			locals = LocalCapture.CAPTURE_FAILHARD,
+			cancellable = true
 	)
 	private void redirectBackgroundTexture(Identifier id, CallbackInfo info, AbstractTexture abstractTexture) {
 		// ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();

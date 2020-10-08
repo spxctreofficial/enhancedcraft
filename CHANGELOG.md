@@ -22,6 +22,8 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
         - Changed maximum y level from 27 to 20.
     - Buffed Etherium spawn mechanics.
         - Buffed minimum y level from 0 to 6.
+    - Buffed Gemstone Apple's effects.
+        - Added Fire Resistance for 30 seconds.
     - Quality of Life Changes:
         - You can now make arrows out of iron ingots instead of flint or cobblestone. Arrows made this way are made in batches of 16.
         - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
