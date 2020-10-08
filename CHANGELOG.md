@@ -31,6 +31,7 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
     - Quality of Life Changes:
         - You can now make arrows out of iron ingots instead of flint or cobblestone. Arrows made this way are made in batches of 16.
         - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
+        - You can now make shields out of bronze and alloy ingots instead of using iron.
         
     - Fixed Bronze Block requiring a Netherite Pickaxe to be broken.
 
