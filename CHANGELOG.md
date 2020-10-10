@@ -9,9 +9,8 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
         - When sleeping, he has a 1/100 chance to haunt you, leading to a jumpscare, and Blindness and Nausea for 10 seconds. Also, any Nether Portals within a 16 chunk radius will be broken.
     - Added a test dimension called "enhancedcraft:mirrored_dimension" to test and debug dimensions.
     - Significantly buffed Etherium Armor.
-        - Double the armor point stats.
+        - All armor points on Etherium armor increased by 2.
         - 20 armor toughness per piece compared to 10.
-        - 100% knockback resistance.
     - Added some custom advancements.
         - Added "The Final Element" advancement acquired by obtaining Etherium.
         - Added "The King of Minecraft" advancement acquired by obtaining full Etherium Gear, an Etherium Pickaxe, and an Etherium Sword.
@@ -34,6 +33,7 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
         - You can now make shields out of bronze and alloy ingots instead of using iron.
         
     - Fixed Bronze Block requiring a Netherite Pickaxe to be broken.
+    - Fixed Metal Alloy not able to be repaired.
 
 
 ## beta-1.3
