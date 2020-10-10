@@ -18,7 +18,7 @@ import com.spectr3x.enhancedcraft.registry.tools.BronzeAxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeHoeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeToolMaterial;
-import com.spectr3x.enhancedcraft.registry.tools.BronzeHoeMaterial;
+import com.spectr3x.enhancedcraft.registry.tools.BronzeToolAlternateMaterial;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumAxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumShovelItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumHoeItem;
@@ -110,7 +110,7 @@ public class ModRegistry {
 	public static final Item GemstoneShard = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item GemstoneApple = new Item(new Item.Settings().group(ItemGroup.FOOD)
 			.food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible()
-					.statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 0)), 1f)
+					.statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 1)), 1f)
 					.statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f)
 					.statusEffect((new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,20 * 30, 0)), 1f)
 					.build()));
@@ -130,9 +130,9 @@ public class ModRegistry {
 	public static final Item BronzeBoots = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item BronzeSwordItem = new BronzeSwordItem(new BronzeToolMaterial());
 	public static final Item BronzePickaxeItem = new BronzePickaxeItem(new BronzeToolMaterial());
-	public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolMaterial());
+	public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolAlternateMaterial());
 	public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
-	public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeHoeMaterial());
+	public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeToolAlternateMaterial());
 
 	public static final Item MetalAlloy = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
 	public static final Item AlloyHelmet = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));

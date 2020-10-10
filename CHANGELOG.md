@@ -27,6 +27,10 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
         - Buffed minimum y level from 0 to 6.
     - Buffed Gemstone Apple's effects.
         - Added Fire Resistance for 30 seconds.
+        - Now gives Regeneration 2.
+    - Buffed Bronze Axe.
+        - Now deals 8 hearts of damage.
+            - This is to make it a competent competitor to the Stone and Iron Axe. It undercuts the Iron and Stone Axe in terms of raw damage, but has higher DPS.
     - Quality of Life Changes:
         - You can now make arrows out of iron ingots instead of flint or cobblestone. Arrows made this way are made in batches of 16.
         - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
