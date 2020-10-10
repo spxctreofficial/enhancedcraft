@@ -1,4 +1,4 @@
-package com.spectr3x.enhancedcraft.registry.materials;
+package com.spectr3x.enhancedcraft.registry.foodstuffs;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

@@ -40,8 +40,8 @@ import com.spectr3x.enhancedcraft.registry.blocks.EtheriumBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
 import com.spectr3x.enhancedcraft.registry.blocks.BronzeBlock;
-import com.spectr3x.enhancedcraft.registry.materials.PrimordialCatalyst;
-import com.spectr3x.enhancedcraft.registry.materials.TomYumStew;
+import com.spectr3x.enhancedcraft.registry.foodstuffs.PrimordialCatalyst;
+import com.spectr3x.enhancedcraft.registry.foodstuffs.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
