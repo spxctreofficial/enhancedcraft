@@ -1,0 +1,51 @@
+{
+    "parent" : "enhancedcraft:the_final_element_advancement",
+    "display": {
+      "icon": {
+        "item": "enhancedcraft:etherium"
+      },
+      "title": "The King of Minecraft",
+      "description": "Obtain a full set of Etherium gear.",
+      "background": "enhancedcraft:etherium_block",
+      "frame": "challenge",
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {}
+            }
+          ],
+          "items": [
+            {
+              "item": "enhancedcraft:etherium_pickaxe"
+            },
+            {
+              "item": "enhancedcraft:etherium_chestplate"
+            },
+            {
+              "item": "enhancedcraft:etherium_leggings"
+            },
+            {
+              "item": "enhancedcraft:etherium_helmet"
+            },
+            {
+              "item": "enhancedcraft:etherium_boots"
+            },
+            {
+              "item": "enhancedcraft:etherium_sword"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "experience": 100
+    }
+  }

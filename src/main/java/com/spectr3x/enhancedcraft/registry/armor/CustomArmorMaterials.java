@@ -14,14 +14,14 @@ import com.spectr3x.enhancedcraft.registry.ModRegistry;
 import java.util.function.Supplier;
 
 public enum CustomArmorMaterials implements ArmorMaterial {
-    EtheriumArmor("etherium", 35, new int[]{3, 6, 8, 3}, 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F, 0.0F, () -> {
+    EtheriumArmor("etherium", 35, new int[]{5, 8, 10, 5}, 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 20.0F, 0.65F, () -> {
         return Ingredient.ofItems(ModRegistry.Etherium);
     }),
     BronzeArmor("bronze", 12, new int[]{1, 5, 5, 2}, 17, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModRegistry.BronzeIngot);
     }),
     AlloyArmor("alloy", 28, new int[]{3, 5, 7, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModRegistry.Etherium);
+        return Ingredient.ofItems(ModRegistry.MetalAlloy);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
@@ -34,7 +34,7 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private CustomArmorMaterials(final String string_1, final int int_1, final int[] ints_1, final int int_2, final SoundEvent soundEvent_1, final float float_1, final float float_2, final Supplier<Ingredient> supplier_1) {
+    CustomArmorMaterials(final String string_1, final int int_1, final int[] ints_1, final int int_2, final SoundEvent soundEvent_1, final float float_1, final float float_2, final Supplier<Ingredient> supplier_1) {
         this.name = string_1;
         this.durabilityMultiplier = int_1;
         this.protectionAmounts = ints_1;
@@ -42,7 +42,7 @@ public enum CustomArmorMaterials implements ArmorMaterial {
         this.equipSound = soundEvent_1;
         this.toughness = float_1;
         this.knockbackResistance = float_2;
-        this.repairIngredientSupplier = new Lazy(supplier_1);
+        this.repairIngredientSupplier = new Lazy<>(supplier_1);
     }
 
     public int getDurability(final EquipmentSlot equipmentSlot_1) {
@@ -62,7 +62,7 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
+        return this.repairIngredientSupplier.get();
     }
 
     @Environment(EnvType.CLIENT)
