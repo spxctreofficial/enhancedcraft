@@ -38,7 +38,6 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
         - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
         - You can now make shields out of bronze and alloy ingots instead of using iron.
     - Added hidden textures for a later release ;)
-        
     - Fixed Bronze Block requiring a Netherite Pickaxe to be broken.
     - Fixed Metal Alloy not able to be repaired.
 
