@@ -1,0 +1,46 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:etherium_helmet",
+	"enhancedcraft:etherium_chestplate",
+	"enhancedcraft:etherium_leggings",
+	"enhancedcraft:etherium_boots",
+
+	"minecraft:netherite_helmet",
+	"minecraft:netherite_chestplate",
+	"minecraft:netherite_leggings",
+	"minecraft:netherite_boots",
+
+	"minecraft:diamond_helmet",
+	"minecraft:diamond_chestplate",
+	"minecraft:diamond_leggings",
+	"minecraft:diamond_boots",
+
+	"enhancedcraft:alloy_helmet",
+	"enhancedcraft:alloy_chestplate",
+	"enhancedcraft:alloy_leggings",
+	"enhancedcraft:alloy_boots",
+
+	"minecraft:turtle_helmet",
+
+	"minecraft:iron_helmet",
+	"minecraft:iron_chestplate",
+	"minecraft:iron_leggings",
+	"minecraft:iron_boots",
+
+	"enhancedcraft:bronze_helmet",
+	"enhancedcraft:bronze_chestplate",
+	"enhancedcraft:bronze_leggings",
+	"enhancedcraft:bronze_boots",
+
+	"minecraft:chainmail_helmet",
+	"minecraft:chainmail_chestplate",
+	"minecraft:chainmail_leggings",
+	"minecraft:chainmail_boots",
+
+	"minecraft:golden_helmet",
+	"minecraft:golden_chestplate",
+	"minecraft:golden_leggings",
+	"minecraft:golden_boots"
+  ]
+}

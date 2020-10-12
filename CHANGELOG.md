@@ -31,6 +31,8 @@ Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahah
     - Buffed Bronze Axe.
         - Now deals 8 hearts of damage.
             - This is to make it a competent competitor to the Stone and Iron Axe. It undercuts the Iron and Stone Axe in terms of raw damage, but has higher DPS.
+    - Tested a concept where entering specific dimensions with specific armor pieces equipped will apply nasty debuffs. Currently functional but still testing.
+    - Tested a concept where holding and using certain tools in certain biomes will grant nasty debuffs. Currently functional but still under testing.
     - Quality of Life Changes:
         - You can now make arrows out of iron ingots instead of flint or cobblestone. Arrows made this way are made in batches of 16.
         - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
