@@ -5,7 +5,7 @@ import com.spectr3x.enhancedcraft.registry.ModRegistry;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class BronzeHoeMaterial implements ToolMaterial {
+public class BronzeToolAlternateMaterial implements ToolMaterial {
 
 	@Override
 	public int getDurability() {

@@ -1,0 +1,35 @@
+{
+  "parent" : "minecraft:story/mine_diamond",
+  "display": {
+    "icon": {
+      "item": "enhancedcraft:etherium"
+    },
+    "title": "The Final Element",
+    "description": "Obtain Etherium.",
+    "background": "enhancedcraft:etherium_block",
+    "frame": "goal",
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {}
+          }
+        ],
+        "items": [
+          {
+            "item": "enhancedcraft:etherium"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

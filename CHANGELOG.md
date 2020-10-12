@@ -1,5 +1,47 @@
 # ENHANCEDCRAFT CHANGELOG
 
+
+## beta-1.3.1
+Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahahhahhaahhahahahha
+
+### Changes
+    - Added a haunted entity to the game, his name we shall not speak of or his bad omens will follow.
+        - When sleeping, he has a 1/100 chance to haunt you, leading to a jumpscare, and Blindness and Nausea for 10 seconds. Also, any Nether Portals within a 16 chunk radius will be broken.
+    - Added a test dimension called "enhancedcraft:mirrored_dimension" to test and debug dimensions.
+    - Significantly buffed Etherium Armor.
+        - All armor points on Etherium armor increased by 2.
+        - 20 armor toughness per piece compared to 10.
+    - Added some custom advancements.
+        - Added "The Final Element" advancement acquired by obtaining Etherium.
+        - Added "The King of Minecraft" advancement acquired by obtaining full Etherium Gear, an Etherium Pickaxe, and an Etherium Sword.
+    - Nerfed Bronze spawn mechanics.
+        - Nerfed spawn rate from 22 to 20.
+        - Nerfed vein size from 15 to 12.
+        - Max y level changed to 80.
+        - Circular spread now matches that of coal (128).
+    - Nerfed Gemstone spawn mechanics.
+        - Nerfed spawn rate from 6 to 4.
+        - Changed minimum y level to 6 from 10.
+        - Changed maximum y level from 27 to 20.
+    - Buffed Etherium spawn mechanics.
+        - Buffed minimum y level from 0 to 6.
+    - Buffed Gemstone Apple's effects.
+        - Added Fire Resistance for 30 seconds.
+        - Now gives Regeneration 2.
+    - Buffed Bronze Axe.
+        - Now deals 8 hearts of damage.
+            - This is to make it a competent competitor to the Stone and Iron Axe. It undercuts the Iron and Stone Axe in terms of raw damage, but has higher DPS.
+    - Tested a concept where entering specific dimensions with specific armor pieces equipped will apply nasty debuffs. Currently functional but still testing.
+    - Tested a concept where holding and using certain tools in certain biomes will grant nasty debuffs. Currently functional but still under testing.
+    - Quality of Life Changes:
+        - You can now make arrows out of iron ingots instead of flint or cobblestone. Arrows made this way are made in batches of 16.
+        - You can now make arrows out of metal alloy instead of flint, cobblestone, or iron. Arrows made this way are made in stacks.
+        - You can now make shields out of bronze and alloy ingots instead of using iron.
+    - Added hidden textures for a later release ;)
+    - Fixed Bronze Block requiring a Netherite Pickaxe to be broken.
+    - Fixed Metal Alloy not able to be repaired.
+
+
 ## beta-1.3
 
 This beta update introduces some quality of life changes, a working GUI implementation for Mod Menu, as well as some other changes and bug fixes.
@@ -28,6 +70,7 @@ This beta update introduces some quality of life changes, a working GUI implemen
     - Add skyboxes support for FabricSkyboxes
     - Implement Canvas support.
     - Add more Features.
+
 
 ## beta-1.2.1
 
