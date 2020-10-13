@@ -1,5 +1,16 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.3.2
+More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+### Changes
+    - Made a ghetto portal mechanic. It kinda sucks, but it works in the meantime.
+    - Verified the concept where entering specific dimensions with specific armor pieces and tools will grant debuffs. This is now officially and internally called "Deterioration".
+        - To avoid "Deterioration", you must quickly swap out of "foreign" tools and armor.
+        - If you do not avoid "deterioration", you will receive the following debuffs.
+            - Withering and Slowness if wearing "foreign" armor.
+            - Mining Fatigue and Weakness if holding "foreign" tools.
+
 
 ## beta-1.3.1
 Oooh, it's Halloween month, and some spooky updates are here! Muahahahhahhahahahhahhaahhahahahha
