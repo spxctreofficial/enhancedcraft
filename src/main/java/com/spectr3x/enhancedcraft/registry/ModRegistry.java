@@ -2,6 +2,7 @@ package com.spectr3x.enhancedcraft.registry;
 
 import com.spectr3x.enhancedcraft.EnhancedCraft;
 import com.spectr3x.enhancedcraft.entity.HeroBrineEntity;
+import com.spectr3x.enhancedcraft.registry.status_effects.DeteriorationStatusEffect;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spectr3x.enhancedcraft.registry.tools.EtheriumPickaxeItem;
 import com.spectr3x.enhancedcraft.registry.tools.BronzeSwordItem;
@@ -55,6 +56,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -195,6 +197,9 @@ public class ModRegistry {
 			.method_30377(32) // Circular spread
 			.repeat(4); // number of veins per chunk
 
+	// Status Effect Definitions
+	public static final StatusEffect DeteriorationStatusEffect = new DeteriorationStatusEffect();
+
 	// Entity Definitions
 	public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(Registry.ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "herobrine"), FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build());
 
@@ -283,6 +288,9 @@ public class ModRegistry {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), BronzeOreFeature);
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
+
+		// Status Effect Registry
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(EnhancedCraft.MOD_ID, "deterioration"), DeteriorationStatusEffect);
 
 		// Entity Registry
 		FabricDefaultAttributeRegistry.register(HerobrineEntity, HeroBrineEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D));

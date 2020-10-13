@@ -8,8 +8,10 @@ More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaa
     - Verified the concept where entering specific dimensions with specific armor pieces and tools will grant debuffs. This is now officially and internally called "Deterioration".
         - To avoid "Deterioration", you must quickly swap out of "foreign" tools and armor.
         - If you do not avoid "deterioration", you will receive the following debuffs.
-            - Withering and Slowness if wearing "foreign" armor.
+            - "Deterioration" and Slowness if wearing "foreign" armor.
             - Mining Fatigue and Weakness if holding "foreign" tools.
+    - Added a new status effect: Deterioration.
+        - Deterioration is just a superiorly nastier withering effect. It will deal 2.5 damage every 0.5 seconds, effectively killing a player in 4 seconds (slower due to natural regeneration and other factors.)
 
 
 ## beta-1.3.1
