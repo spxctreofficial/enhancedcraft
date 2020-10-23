@@ -36,11 +36,7 @@ import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNight;
 import com.spectr3x.enhancedcraft.registry.tools.SwordOfTheNightToolMaterial;
 
 import com.spectr3x.enhancedcraft.registry.armor.CustomArmorMaterials;
-import com.spectr3x.enhancedcraft.registry.blocks.EtheriumOreBlock;
-import com.spectr3x.enhancedcraft.registry.blocks.EtheriumBlock;
-import com.spectr3x.enhancedcraft.registry.blocks.GemstoneBlock;
-import com.spectr3x.enhancedcraft.registry.blocks.BronzeOreBlock;
-import com.spectr3x.enhancedcraft.registry.blocks.BronzeBlock;
+import com.spectr3x.enhancedcraft.registry.blocks.*;
 import com.spectr3x.enhancedcraft.registry.foodstuffs.PrimordialCatalyst;
 import com.spectr3x.enhancedcraft.registry.foodstuffs.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
@@ -90,9 +86,17 @@ public class ModRegistry {
 	public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
 
 	// Block Definitions
+	public static final Block OtherstoneBlock = new OtherstoneBlock();
+	public static final Block EarthstoneBlock = new EarthstoneBlock();
+
 	public static final Block EtheriumOreBlock = new EtheriumOreBlock();
 	public static final Block BronzeOreBlock = new BronzeOreBlock();
 	public static final Block GemstoneBlock = new GemstoneBlock();
+	public static final Block CobaltOreBlock = new CobaltOreBlock();
+	public static final Block FortisteelEarthstoneBlock = new FortisteelEarthstoneBlock();
+	public static final Block FortisteelOtherstoneBlock = new FortisteelOtherstoneBlock();
+	public static final Block PurigoldEarthstoneBlock = new PurigoldEarthstoneBlock();
+	public static final Block PurigoldOtherstoneBlock = new PurigoldOtherstoneBlock();
 
 	public static final Block EtheriumBlock = new EtheriumBlock();
 	public static final Block BronzeBlock = new BronzeBlock();
@@ -160,6 +164,17 @@ public class ModRegistry {
 
 	public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
 
+	public static final Item OtherstoneBlockItem = new BlockItem(OtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item EarthstoneBlockItem = new BlockItem(EarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
+	public static final Item CobaltOreItem = new BlockItem(CobaltOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
+	public static final Item FortisteelEarthstoneItem = new BlockItem(FortisteelEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item FortisteelOtherstoneItem = new BlockItem(FortisteelOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
+	public static final Item PurigoldEarthstoneItem = new BlockItem(PurigoldEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item PurigoldOtherstoneItem = new BlockItem(PurigoldOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -211,7 +226,7 @@ public class ModRegistry {
 	public static final RegistryKey<World> MirroredDimension = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));
 
 	// Item Registration Method
-	public static void registry() {
+	public static void Registry() {
 		// Item Registry
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
@@ -270,13 +285,31 @@ public class ModRegistry {
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OtherstoneBlockItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EarthstoneBlockItem);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), CobaltOreItem);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FortisteelEarthstoneItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FortisteelOtherstoneItem);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneItem);
+
 		// Fuel Registry
 		FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
 
 		// Block Registry
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OtherstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EarthstoneBlock);
+
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), CobaltOreBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FortisteelEarthstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FortisteelOtherstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneBlock);
 
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlock);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);

@@ -12,10 +12,20 @@ More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaa
 			- Mining Fatigue and Weakness if holding "foreign" tools.
 			- Added a new status effect: Deterioration.
 				- Deterioration is just a superiorly nastier withering effect. It will deal 2.5 damage every 0.5 seconds, effectively killing a player in 4 seconds (slower due to natural regeneration and other factors.)
+	- New (albeit experimental) blocks! These blocks have been temporarily added as placeholders for an upcoming dimension update. Currently the blocks don't drop anything are only accessible via creative inventory.
+		- Fortisteel Ore (otherstone and earthstone variant.)
+		- Purigold Ore (otherstone and earthstone variant.)
+		- Cobalt Ore (otherstone exclusive.)
+		- Otherstone.
+		- Earthstone.
 	- Quality of Life Changes:
 		- You can now make arrows out of bronze ingots instead of flint, iron ingots, metal alloy, or cobblestone. Arrows made this way are made in batches of 8.
 		- Shears can now be made from bronze.
 		- Anvils can now be made from bronze.
+		- Changed up the GUI textures. Credits to Lucy, the maker of Nebula 16x for some of the textures :)
+		- Changed all of the Etherium textures. Credits to Lucy, the maker of Nebula 16x for the textures. You really make great packs! :)
+	- Fixes:
+		- Fixed block variants of ores not dropping theirselves when mined.
 
 
 ## beta-1.3.1

@@ -3,11 +3,6 @@ package com.spectr3x.enhancedcraft;
 import com.spectr3x.enhancedcraft.event.DeteriorationEvent;
 import com.spectr3x.enhancedcraft.registry.ModRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +12,7 @@ public class EnhancedCraft implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		ModRegistry.registry();
+		ModRegistry.Registry();
 		DeteriorationEvent.Deterioration();
 	}
 }
