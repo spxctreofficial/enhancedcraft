@@ -24,6 +24,7 @@ More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaa
 		- Anvils can now be made from bronze.
 		- Changed up the GUI textures. Credits to Lucy, the maker of Nebula 16x for some of the textures :)
 		- Changed all of the Etherium textures. Credits to Lucy, the maker of Nebula 16x for the textures. You really make great packs! :)
+		- Changed the icon.png
 	- Fixes:
 		- Fixed block variants of ores not dropping theirselves when mined.
 
