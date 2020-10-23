@@ -61,4 +61,6 @@ If you would like to help contribute to the project, please email me at (spxctre
 
 #### Credits
 
-Credits to the talented Lucy for making some of the amazing textures possible: [YouTube Channel](https://www.youtube.com/channel/UCY8v_OBC-d3jwCFhrr5n-BA "Lucy's YouTube Channel") [All Nebula 16x Pack Variants](http://www.mediafire.com/file/qhhlo0wzmxcs5tj/file "Nebula 16x All Packs")
+Credits to the talented Lucy for making some of the amazing textures possible:
+	[YouTube Channel](https://www.youtube.com/channel/UCY8v_OBC-d3jwCFhrr5n-BA "Lucy's YouTube Channel")
+	[All Nebula 16x Pack Variants](http://www.mediafire.com/file/qhhlo0wzmxcs5tj/file "Nebula 16x All Packs")
