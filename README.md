@@ -43,7 +43,7 @@ If you want to check that your mod is installed, you can install the [Mod Menu G
 Alternatively, you can look in-game to check your survival hearts.
 
 ##### Hearts 2.0
-![Hearts 2.0](https://imgur.com/zN3ieVu "Hearts 2.0, Credits to Lucy and her awesome PVP Pack, Nebula 16x")
+![Hearts 2.0](https://i.imgur.com/zN3ieVu.png "Hearts 2.0, Credits to Lucy and her awesome PVP Pack, Nebula 16x")
 
 As of EnhancedCraft Beta-1.3.2, the hearts and the GUI have been revamped. These new GUI features make the GUI look absolutely amazing, and credits to the talented Lucy for making the Nebula 16x pack!
 
