@@ -15,7 +15,7 @@ execute as @s[tag=!dead] if entity @e[tag=!p1_extra,tag=!portal1,type=#enhancedc
 
 #### Teleport ####
 # Overworld to Custom
-execute as @e[type=#enhancedcraft:p1_can_tp,tag=!p1_teleported] at @s if predicate enhancedcraft:in_overworld if entity @e[tag=p1_extra,distance=..0.8] at @e[tag=portal1,distance=0..2] rotated as @e[tag=portal1,distance=0..2] in test_dimensions:aether_test run function enhancedcraft:portal1/teleport
+execute as @e[type=#enhancedcraft:p1_can_tp,tag=!p1_teleported] at @s if predicate enhancedcraft:in_overworld if entity @e[tag=p1_extra,distance=..0.8] at @e[tag=portal1,distance=0..2] rotated as @e[tag=portal1,distance=0..2] in enhancedcraft:mirrored_dimension run function enhancedcraft:portal1/teleport
 # Custom to Overworld
 execute as @e[type=#enhancedcraft:p1_can_tp,tag=!p1_teleported] at @s if predicate enhancedcraft:in_mirrored_dimension if entity @e[tag=p1_extra,distance=..0.8] at @e[tag=portal1,distance=0..2] rotated as @e[tag=portal1,distance=0..2] in minecraft:overworld run function enhancedcraft:portal1/teleport
 

@@ -18,9 +18,9 @@ public class DeteriorationEvent {
 					}
 					if (armorItem.getItem().isIn(ModRegistry.OverworldArmor)) {
 						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ModRegistry.MirroredDimension) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WITHER, 5, 5)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 5, 4)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 5, 19)));
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ModRegistry.DeteriorationStatusEffect, 2, 0)));
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 4)));
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 2, 19)));
 							break;
 						}
 					}
@@ -31,8 +31,8 @@ public class DeteriorationEvent {
 					}
 					if (mainHandItem.getItem().isIn(ModRegistry.OverworldTools)) {
 						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ModRegistry.MirroredDimension) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 5, 4)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 5, 0)));
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 2, 4)));
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0)));
 						}
 					}
 				}
