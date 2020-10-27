@@ -78,8 +78,7 @@ public class ModRegistry {
 
     	cool guy i509VCB advice
 	 */
-	public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder
-			.create(new Identifier(EnhancedCraft.MOD_ID, "group")).icon(() -> new ItemStack(Items.NETHERITE_SWORD)).build();
+
 
 	// SoundEvents Registry
 	public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
@@ -221,6 +220,7 @@ public class ModRegistry {
 	// Tags Definitions
 	public static final Tag<Item> OverworldArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
 	public static final Tag<Item> OverworldTools = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
+	public static final Tag<Item> EtheriumArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
 
 	// World Definitions
 	public static final RegistryKey<World> MirroredDimension = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));

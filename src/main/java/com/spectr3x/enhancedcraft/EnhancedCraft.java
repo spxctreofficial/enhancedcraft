@@ -1,6 +1,7 @@
 package com.spectr3x.enhancedcraft;
 
 import com.spectr3x.enhancedcraft.event.DeteriorationEvent;
+import com.spectr3x.enhancedcraft.event.EventController;
 import com.spectr3x.enhancedcraft.registry.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
@@ -13,6 +14,6 @@ public class EnhancedCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModRegistry.Registry();
-		DeteriorationEvent.Deterioration();
+		EventController.InitiateEvents();
 	}
 }

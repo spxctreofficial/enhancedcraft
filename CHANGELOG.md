@@ -1,5 +1,20 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.3.3
+Halloween update?
+
+### Changes
+	- Added set bonuses for custom armor!
+		- Etherium Set Bonus:
+			- Killing an entity will grant you strength II and absorption II for 5 seconds.
+			- You get Absorption 2, Speed 3, and Jump Boost 1 if under 4 health (2 hearts).
+			- You get permanent Resistance II and 10 extra hearts.
+			- SoundEvent ques that indicate when a buff has been activated.
+	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
+
+	- Fixes:
+		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
+
 ## beta-1.3.2
 More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
