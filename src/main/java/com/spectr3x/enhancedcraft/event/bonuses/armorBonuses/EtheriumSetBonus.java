@@ -8,6 +8,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 
 import java.util.UUID;
@@ -52,7 +53,15 @@ public class EtheriumSetBonus {
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SPEED, 600, 2)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.JUMP_BOOST, 600, 0)));
 
-							serverPlayerEntity.playSound(SoundEvents.ITEM_TRIDENT_RETURN, 1.0f, 1.0f);
+							serverPlayerEntity.getServerWorld().playSound(
+									null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+									serverPlayerEntity.getBlockPos(), // The position of where the sound will come from
+									SoundEvents.ITEM_TRIDENT_RETURN, // The sound that will play
+									SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+									1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+									1.25f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+							);
+
 						}
 						EtheriumAbsorptionCooldown -= 1;
 					}

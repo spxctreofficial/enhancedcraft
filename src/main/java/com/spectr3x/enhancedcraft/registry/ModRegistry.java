@@ -178,14 +178,12 @@ public class ModRegistry {
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 					ModRegistry.EtheriumOreBlock.getDefaultState(),
-					2)) // vein size
+					5)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
-					6, // min y level
+					0, // min y level
 					9))) // max y level
-			.spreadHorizontally()
-			.method_30377(8) // Circular spread
-			.repeat(2); // number of veins per chunk
+			.spreadHorizontally();
 
 	public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,

@@ -14,6 +14,8 @@ Halloween update?
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
+		- Fixed MAJOR ore-spawning issue, where Etherium wasn't being spawned. You may have to walk into a new chunk you haven't loaded before to find etherium.
+			- Etherium nows spawns up to once per chunk, with up to 5 per vein.
 		- Etherium ore now reacts differently when used with the fortune enchantment.
 			- Fortune II and above will give you a chance to drop 1 - 3 etherium instead of 1.
 			- Fortune I will unfortunately result in no boost in drop rate.
