@@ -9,7 +9,6 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "enhancedcraft:etherium_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -24,10 +23,21 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "name": "enhancedcraft:etherium_ore"
             },
             {
               "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "name": "enhancedcraft:etherium"
             }
           ]

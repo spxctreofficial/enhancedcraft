@@ -14,6 +14,7 @@ Halloween update?
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
+		- Etherium ore now reacts normally when used with the fortune enchantment.
 
 ## beta-1.3.2
 More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
