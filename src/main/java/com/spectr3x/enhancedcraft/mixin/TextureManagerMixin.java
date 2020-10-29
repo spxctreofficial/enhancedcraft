@@ -45,19 +45,19 @@ public class TextureManagerMixin {
 		}*/
 
 		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
-			if (DisplayBackground.customBackgrounds == CustomBackgrounds.doDefaultBackground) {
+			if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground")) {
 				abstractTexture = new ResourceTexture(defaultTexture);
 			}
-			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doClassicBackground) {
+			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground")) {
 				abstractTexture = new ResourceTexture(classicTexture);
 			}
-			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doDiamondBackground) {
+			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground")) {
 				abstractTexture = new ResourceTexture(diamondBlockTexture);
 			}
-			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doStoneBrickBackground) {
+			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground")) {
 				abstractTexture = new ResourceTexture(stoneBrickTexture);
 			}
-			else if (DisplayBackground.customBackgrounds == CustomBackgrounds.doGemstoneBackground) {
+			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground")) {
 				abstractTexture = new ResourceTexture(gemstoneTexture);
 			}
 			else {

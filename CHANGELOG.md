@@ -16,6 +16,7 @@ Halloween update?
 			- You get permanent Resistance II and 10 extra hearts.
 			- SoundEvent ques that indicate when a buff has been activated.
 	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
+	- Quality of Life Changes:
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
