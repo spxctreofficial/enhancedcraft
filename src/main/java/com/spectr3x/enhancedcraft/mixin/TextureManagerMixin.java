@@ -1,5 +1,6 @@
 package com.spectr3x.enhancedcraft.mixin;
 
+import com.spectr3x.enhancedcraft.ModConfig;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.ResourceTexture;
@@ -45,19 +46,19 @@ public class TextureManagerMixin {
 		}*/
 
 		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
-			if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground")) {
+			if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doDefaultBackground.getKey())) {
 				abstractTexture = new ResourceTexture(defaultTexture);
 			}
-			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground")) {
+			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doClassicBackground.getKey())) {
 				abstractTexture = new ResourceTexture(classicTexture);
 			}
-			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground")) {
+			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doDiamondBackground.getKey())) {
 				abstractTexture = new ResourceTexture(diamondBlockTexture);
 			}
-			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground")) {
+			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doStoneBrickBackground.getKey())) {
 				abstractTexture = new ResourceTexture(stoneBrickTexture);
 			}
-			else if (DisplayBackground.customBackgrounds.equals("text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground")) {
+			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doGemstoneBackground.getKey())) {
 				abstractTexture = new ResourceTexture(gemstoneTexture);
 			}
 			else {
