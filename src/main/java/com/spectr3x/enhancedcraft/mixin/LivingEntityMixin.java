@@ -57,7 +57,7 @@ public abstract class LivingEntityMixin {
 		int armorCount = 0;
 		for (ItemStack armorItem : getArmorItems()) {
 			if (armorItem.isEmpty()) {
-				return;
+				continue;
 			}
 			if (armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
 				armorCount++;
