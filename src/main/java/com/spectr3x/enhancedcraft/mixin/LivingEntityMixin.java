@@ -50,24 +50,27 @@ public abstract class LivingEntityMixin {
 	private short EtheriumSetWearingTime = 0;
 	private short EtheriumEnrageLevel = 0;
 
-	private final UUID EtheriumHealthBoostUUID = UUID.fromString("2c1f2d1c-9a8e-4572-8a4e-288ba69d7367");
+	private final UUID EtheriumHealthBoostUUID = UUID.randomUUID(); // hope to god that this works
 
 
 	private void EtheriumSetBonus() {
+		int armorCount = 0;
 		for (ItemStack armorItem : getArmorItems()) {
-			if (armorItem == null || armorItem.isEmpty() || !armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
-				getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).removeModifier(EtheriumHealthBoostUUID);
-				EtheriumSetWearingTime = 0;
+			if (armorItem.isEmpty()) {
 				return;
 			}
-
+			if (armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
+				armorCount++;
+			}
+		}
+		if (armorCount == 4) {
 			if (EtheriumSetWearingTime < 3) {
 				EtheriumSetWearingTime++;
 			}
 			if (EtheriumEnrageLevel > 3) {
 				EtheriumEnrageLevel = 3;
 			}
-			if (hasStatusEffect(StatusEffects.STRENGTH)) {
+			if (!hasStatusEffect(StatusEffects.STRENGTH)) {
 				EtheriumEnrageLevel = 0;
 			}
 
@@ -111,42 +114,53 @@ public abstract class LivingEntityMixin {
 				EtheriumLastBreathCooldown = 600;
 			}
 		}
+		else {
+			getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).removeModifier(EtheriumHealthBoostUUID);
+			EtheriumSetWearingTime = 0;
+		}
 	}
 
 	private void EtheriumEnrageMechanic(DamageSource source) {
+		int armorCount = 0;
+
 		if(source != null) {
 			Entity attacker = source.getAttacker();
 
 			if (attacker != null) {
 				for (ItemStack armorItem : attacker.getArmorItems()) {
-					if (armorItem == null || armorItem.isEmpty() || !armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
-						break;
+					if (armorItem.isEmpty()) {
+						continue;
+					}
+					if (armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
+						armorCount++;
 					}
 				}
 
-				if(!attacker.world.isClient) {
-					int amplifier = 0;
-					EtheriumEnrageLevel++;
+				if(attacker instanceof LivingEntity && !attacker.world.isClient) {
+					if(armorCount >= 4) {
+						int amplifier = 0;
+						EtheriumEnrageLevel++;
 
-					if (EtheriumEnrageLevel >= 2) {
-						amplifier = 1;
-						if (EtheriumEnrageLevel >= 3) {
-							if (EtheriumEnrageLevel == 3) {
-								attacker.world.playSound(
-										null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-										attacker.getBlockPos(), // The position of where the sound will come from
-										SoundEvents.ITEM_TRIDENT_THUNDER, // The sound that will play
-										SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
-										1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
-										0.35f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
-								);
+						if (EtheriumEnrageLevel >= 2) {
+							amplifier = 1;
+							if (EtheriumEnrageLevel >= 3) {
+								if (EtheriumEnrageLevel == 3) {
+									attacker.world.playSound(
+											null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+											attacker.getBlockPos(), // The position of where the sound will come from
+											SoundEvents.ITEM_TRIDENT_THUNDER, // The sound that will play
+											SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+											1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+											0.35f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+									);
+								}
+								((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20 * 5, amplifier));
+								((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20 * 5, amplifier));
 							}
-							((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20 * 5, amplifier));
-							((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20 * 5, amplifier));
 						}
-					}
 
-					((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20 * 5, amplifier));
+						((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20 * 5, amplifier));
+					}
 				}
 			}
 		}
