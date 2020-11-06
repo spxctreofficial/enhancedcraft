@@ -10,8 +10,9 @@ Halloween update?
 				- Killing an entity will grant you one enrage level.
 				- Enrage Level 1: Strength I for 5 seconds.
 				- Enrage Level 2: Strength II for 5 seconds.
-				- Enrage Level 3: Strength III and Absorption II for 5 seconds. Enraged player now glows and plays a SoundEvent.
+				- Enrage Level 3: Strength II and Absorption II for 5 seconds. Enraged player now glows and plays a SoundEvent.
 				- Enrage levels are capped at level 3. If you do not kill an entity within the time strength lasts, your enrage levels will reset.
+				- Huge thanks to sschr15 for many of the code and help! Very appreciate it man, and godspeed to you if you see this!
 			- You get Absorption 2, Speed 3, and Jump Boost 1 if under 4 health (2 hearts).
 			- You get permanent Resistance II and 10 extra hearts.
 			- SoundEvent ques that indicate when a buff has been activated.
