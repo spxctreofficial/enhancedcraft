@@ -33,6 +33,8 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	private short EtheriumEnrageStatus = 0;
 	private short EtheriumEnrageTime = 0;
 
+	private boolean IsEtheriumEnrageMaxed = false;
+
 	private static final UUID EtheriumHealthBoostUUID = UUID.randomUUID();
 
 	@Shadow public abstract EntityAttributeInstance getAttributeInstance(EntityAttribute attribute);
@@ -89,10 +91,21 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 				setEtheriumEnrageTime((short) (getEtheriumEnrageTime() - 1));
 			}
 			else {
+				if (getIsEtheriumEnrageMaxed()) {
+					this.getEntityWorld().playSound(
+							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+							this.getBlockPos(), // The position of where the sound will come from
+							ModRegistry.EtheriumEnragedEndedSoundEvent, // The sound that will play
+							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+					);
+					setIsEtheriumEnrageMaxed(false);
+				}
 				setEtheriumEnrageStatus((short) 0);
 			}
 
-			addStatusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 2, 1, true, false)));
+			this.addStatusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 2, 1, true, false)));
 			if (EtheriumSetWearingTime == 1) {
 				getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).removeModifier(EtheriumHealthBoostUUID);
 				getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).addTemporaryModifier(new EntityAttributeModifier(EtheriumHealthBoostUUID, "Etherium bonus", 20, EntityAttributeModifier.Operation.ADDITION));
@@ -155,6 +168,11 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	}
 
 	@Override
+	public boolean getIsEtheriumEnrageMaxed() {
+		return this.IsEtheriumEnrageMaxed;
+	}
+
+	@Override
 	public void setEtheriumEnrageStatus(short n) {
 		this.EtheriumEnrageStatus = n;
 	}
@@ -162,6 +180,11 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	@Override
 	public void setEtheriumEnrageTime(short n) {
 		this.EtheriumEnrageTime = n;
+	}
+
+	@Override
+	public void setIsEtheriumEnrageMaxed(boolean bool) {
+		this.IsEtheriumEnrageMaxed = bool;
 	}
 
 	@SuppressWarnings("ALL")

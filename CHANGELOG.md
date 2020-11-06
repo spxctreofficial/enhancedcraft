@@ -26,7 +26,7 @@ Halloween update?
 			- Etherium nows spawns up to once per chunk, with up to 5 per vein.
 		- Etherium ore now reacts differently when used with the fortune enchantment.
 			- Fortune II and above will give you a chance to drop 1 - 3 etherium instead of 1.
-			- Fortune I will unfortunately result in no boost in drop rate.
+		    - Fortune I will unfortunately result in no boost in drop rate.
 
 ## beta-1.3.2
 More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

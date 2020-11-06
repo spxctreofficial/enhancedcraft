@@ -41,7 +41,6 @@ import com.spectr3x.enhancedcraft.registry.foodstuffs.PrimordialCatalyst;
 import com.spectr3x.enhancedcraft.registry.foodstuffs.TomYumStew;
 import com.spectr3x.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -80,9 +79,18 @@ public class ModRegistry {
 	 */
 
 
-	// SoundEvents Registry
+	// SoundEvents Definitions
 	public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
+
+	public static final Identifier EtheriumEnragedSound = new Identifier("enhancedcraft:etherium_enraged_sound");
+	public static final Identifier EtheriumEnragedKill = new Identifier("enhancedcraft:etherium_enraged_kill");
+	public static final Identifier EtheriumEnragedEndedSound = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
+
 	public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
+
+	public static SoundEvent EtheriumEnragedSoundEvent = new SoundEvent(EtheriumEnragedSound);
+	public static SoundEvent EtheriumEnragedKillSoundEvent = new SoundEvent(EtheriumEnragedKill);
+	public static SoundEvent EtheriumEnragedEndedSoundEvent = new SoundEvent(EtheriumEnragedEndedSound);
 
 	// Block Definitions
 	public static final Block OtherstoneBlock = new OtherstoneBlock();
@@ -313,7 +321,11 @@ public class ModRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);
 
 		// SoundEvents Registry
-		Registry.register(Registry.SOUND_EVENT, EnhancedCraft.MOD_ID, SoakedHandsSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ModRegistry.SoakedHands, SoakedHandsSoundEvent);
+
+		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedSound, EtheriumEnragedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedKill, EtheriumEnragedKillSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedEndedSound, EtheriumEnragedEndedSoundEvent);
 
 		// Structure Generation Registry
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);

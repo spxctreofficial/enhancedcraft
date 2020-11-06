@@ -1,15 +1,13 @@
 package com.spectr3x.enhancedcraft.mixin;
 
 import com.spectr3x.enhancedcraft.ModConfig;
+import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground;
+import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground.CustomBackgrounds;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.ResourceTexture;
 import net.minecraft.client.texture.TextureManager;
 import net.minecraft.util.Identifier;
-
-import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground;
-import com.spectr3x.enhancedcraft.ModConfig.DisplayBackground.CustomBackgrounds;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -34,7 +32,7 @@ public class TextureManagerMixin {
 			locals = LocalCapture.CAPTURE_FAILHARD,
 			cancellable = true
 	)
-	private void redirectBackgroundTexture(Identifier id, CallbackInfo info, AbstractTexture abstractTexture) {
+	private void redirectTexture(Identifier id, CallbackInfo info) {
 		// ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 		/*if (id == DrawableHelper.BACKGROUND_TEXTURE && config.displayBackground) {
 			abstractTexture = new ResourceTexture(backgroundTexture);
@@ -46,23 +44,9 @@ public class TextureManagerMixin {
 		}*/
 
 		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
-			if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doDefaultBackground.getKey())) {
-				abstractTexture = new ResourceTexture(defaultTexture);
-			}
-			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doClassicBackground.getKey())) {
-				abstractTexture = new ResourceTexture(classicTexture);
-			}
-			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doDiamondBackground.getKey())) {
-				abstractTexture = new ResourceTexture(diamondBlockTexture);
-			}
-			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doStoneBrickBackground.getKey())) {
-				abstractTexture = new ResourceTexture(stoneBrickTexture);
-			}
-			else if (ModConfig.customBackgroundString.equals(CustomBackgrounds.doGemstoneBackground.getKey())) {
-				abstractTexture = new ResourceTexture(gemstoneTexture);
-			}
-			else {
-				abstractTexture = new ResourceTexture(defaultTexture);
+			AbstractTexture abstractTexture;
+			switch (ModConfig.DisplayBackground.customBackgrounds) {
+
 			}
 			this.registerTexture(id, abstractTexture);
 			abstractTexture.bindTexture();

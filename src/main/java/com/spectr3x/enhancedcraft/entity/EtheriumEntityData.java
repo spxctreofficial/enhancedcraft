@@ -10,7 +10,6 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -42,35 +41,40 @@ public class EtheriumEntityData {
 			if (!item.isEmpty() && item.getItem().isIn(ModRegistry.EtheriumArmor)) armorCount.incrementAndGet();
 		});
 
-		if(!attacker.world.isClient) {
-			if(armorCount.get() >= 4) {
+		if(!attacker.world.isClient && armorCount.get() == 4) {
+			entity.setEtheriumEnrageStatus((short) (entity.getEtheriumEnrageStatus() == 3 ? 3 : entity.getEtheriumEnrageStatus() + 1));
+			entity.setEtheriumEnrageTime(EtheriumMaxEnrageTime);
 
-				entity.setEtheriumEnrageStatus((short) (entity.getEtheriumEnrageStatus() == 3 ? 3 : entity.getEtheriumEnrageStatus() + 1));
-				entity.setEtheriumEnrageTime(EtheriumMaxEnrageTime);
 
-				if (entity.getEtheriumEnrageStatus() > 0) {
+			if (entity.getEtheriumEnrageStatus() == 3) {
+				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, EtheriumMaxEnrageTime, 0));
+				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, EtheriumMaxEnrageTime, 1));
 
-					int amplifier;
-
-					if (entity.getEtheriumEnrageStatus() == 3) {
-
-						attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, EtheriumMaxEnrageTime, 0));
-						attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, EtheriumMaxEnrageTime, 1));
-
-						attacker.getEntityWorld().playSound(
-								null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-								attacker.getBlockPos(), // The position of where the sound will come from
-								SoundEvents.ITEM_TRIDENT_THUNDER, // The sound that will play
-								SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
-								1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
-								0.35f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
-						);
-					}
-					amplifier = entity.getEtheriumEnrageStatus() > 1 ? 1 : 0;
-					attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, EtheriumMaxEnrageTime, amplifier));
+				if (!entity.getIsEtheriumEnrageMaxed()) {
+					attacker.getEntityWorld().playSound(
+							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+							attacker.getBlockPos(), // The position of where the sound will come from
+							ModRegistry.EtheriumEnragedSoundEvent, // The sound that will play
+							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+					);
+					entity.setIsEtheriumEnrageMaxed(true);
 				}
-
+				else {
+					attacker.getEntityWorld().playSound(
+							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+							attacker.getBlockPos(), // The position of where the sound will come from
+							ModRegistry.EtheriumEnragedKillSoundEvent, // The sound that will play
+							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+					);
+				}
 			}
+
+			int amplifier = entity.getEtheriumEnrageStatus() > 1 ? 1 : 0;
+			attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, EtheriumMaxEnrageTime, amplifier));
 		}
 
 		armorCount.getAndSet(0);
