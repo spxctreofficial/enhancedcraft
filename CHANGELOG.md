@@ -1,5 +1,53 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.4
+This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
+
+### Changes
+    - Skeletons can now spawn equipped with swords and axes.
+    - There are now different types (classes) of zombies!
+        - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
+            - Hard Classes:
+                - Furious Zombie:
+                    - Netherite Sword with Sharpness 4
+                    - Iron Chestplate
+                    - Strength III
+                - Berserker Zombie:
+                    - Iron Axe with Sharpness 5
+                    - Diamond Helmet and Iron Chestplate
+                - Scout Zombie:
+                    - Speed IV
+                    - Always able to pick up loot
+                - Tank Zombie:
+                    - Enchanted Diamond Sword with Sharpness I - IV
+                    - 3/4 Diamond Set (diamond helmet is excluded)
+                    - Shield with Unbreaking III (cosmetic only)
+                    - Resistance I
+        - In normal mode, zombies will have a 50% chance of spawning with a normal zombie class.
+            - Normal Classes:
+                - Warrior Zombies:
+                    - Warrior Zombie ~
+                        - Iron Helmet and Chestplate
+                        - Stone Sword
+                    - Weak Warrior Zombie ~
+                        - Leather Helmet
+                        - Wooden Sword
+                - Sword Zombies:
+                    - Weak ~ Golden Sword
+                    - Simple ~ Bronze Sword
+                    - Generic ~ Iron Sword
+                    - Strong ~ Alloy Sword
+                - Shovel Zombies:
+                    - Generic ~ Iron Shovel
+                - Axe Zombies:
+                    - Simple ~ Bronze Axe
+                    - Generic ~ Iron Axe
+                - Nitwit Zombie:
+                    - Metal Alloy in off-hand
+        - In easy mode, the chances of spawning with a weapon is the same as vanilla.
+        - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
+    - A easter egg ;)
+
 ## beta-1.3.3
 Halloween update?
 

@@ -13,19 +13,24 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Random;
 import java.util.UUID;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity implements ECLivingEntity {
+
+	Random rand = new Random();
 
 	private short EtheriumLastBreathCooldown = 20 * 30;
 	private short EtheriumSetWearingTime = 0;
@@ -57,6 +62,8 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 					"and fix his fucking code and tell him how much of a cunt meatball he is. Thank you for your continued"+
 					"support. Stay safe and catch corona lol", e);
 		}
+
+		TotallyNotEasterEgg();
 	}
 
 	@Inject(method = "applyDamage", at = @At("HEAD"))
@@ -149,6 +156,13 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 		else {
 			getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).removeModifier(EtheriumHealthBoostUUID);
 			EtheriumSetWearingTime = 0;
+		}
+	}
+	private void TotallyNotEasterEgg() {
+		if (this.getAsEntity() instanceof PlayerEntity && this.getName() == Text.of("Spxctre")) {
+			if (rand.nextInt(100) == 0) {
+				this.dropItem(ModRegistry.PrimordialCatalyst);
+			}
 		}
 	}
 
