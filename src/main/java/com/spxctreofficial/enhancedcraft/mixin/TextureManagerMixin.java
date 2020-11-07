@@ -96,7 +96,7 @@ public class TextureManagerMixin {
 
 	private static final Identifier gradientGlint = new Identifier("enhancedcraft:textures/misc/enchanted_item_glint_gradient.png");
 	private static final Identifier oldGlint = new Identifier("enhancedcraft:textures/misc/enchanted_item_glint_old.png");
-	private static final Identifier classicGlint = new Identifier("minecraft:textures/mic/enchanted_item_glint.png");
+	private static final Identifier classicGlint = new Identifier("minecraft:textures/misc/enchanted_item_glint.png");
 
 
 	@Inject(

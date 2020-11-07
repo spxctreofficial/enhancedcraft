@@ -3,6 +3,8 @@
 ## beta-1.3.3
 Halloween update?
 
+No, actually though, that update took way longer than it should've: almost two weeks instead of a day or two! Anyways, enjoy beta-1.3.3 while I work on beta-1.4.
+
 ### Changes
 	- Added set bonuses for custom armor!
 		- Etherium Set Bonus:
