@@ -19,6 +19,7 @@ Halloween update?
 			- Multiplayer support.
 	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
 	- Quality of Life Changes:
+	    - Options Background, Hotbar Icons, Widgets, Hotbar, and the enchanted item glint can now be changed in the AutoConfig menu accessible via Mod Menu.
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
