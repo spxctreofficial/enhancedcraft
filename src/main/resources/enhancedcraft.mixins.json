@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "DefaultBiomeFeaturesMixin",
-    "PlayerSleepMixin"
+    "PlayerSleepMixin",
+    "LivingEntityMixin"
   ],
   "client": [
     "TextureManagerMixin"

@@ -1,5 +1,33 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.3.3
+Halloween update?
+
+### Changes
+	- Added set bonuses for custom armor!
+		- Etherium Set Bonus:
+			- Set Bonus: Etherium Enrage
+				- Killing an entity will grant you one enrage level.
+				- Enrage Level 1: Strength I for 5 seconds.
+				- Enrage Level 2: Strength II for 5 seconds.
+				- Enrage Level 3: Strength II and Absorption II for 5 seconds. Enraged player now glows and plays a SoundEvent.
+				- Enrage levels are capped at level 3. If you do not kill an entity within the time strength lasts, your enrage levels will reset.
+				- Huge thanks to sschr15 for many of the code and help! Very appreciate it man, and godspeed to you if you see this!
+			- You get Absorption 2, Speed 3, and Jump Boost 1 if under 4 health (2 hearts).
+			- You get permanent Resistance II and 10 extra hearts.
+			- SoundEvent ques that indicate when a buff has been activated.
+			- Multiplayer support.
+	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
+	- Quality of Life Changes:
+
+	- Fixes:
+		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
+		- Fixed MAJOR ore-spawning issue, where Etherium wasn't being spawned. You may have to walk into a new chunk you haven't loaded before to find etherium.
+			- Etherium nows spawns up to once per chunk, with up to 5 per vein.
+		- Etherium ore now reacts differently when used with the fortune enchantment.
+			- Fortune II and above will give you a chance to drop 1 - 3 etherium instead of 1.
+			- Fortune I will unfortunately result in no boost in drop rate.
+
 ## beta-1.3.2
 More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 

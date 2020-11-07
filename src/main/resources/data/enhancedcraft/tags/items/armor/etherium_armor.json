@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:etherium_helmet",
+	"enhancedcraft:etherium_chestplate",
+	"enhancedcraft:etherium_leggings",
+	"enhancedcraft:etherium_boots"
+  ]
+}

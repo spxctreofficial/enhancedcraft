@@ -78,8 +78,7 @@ public class ModRegistry {
 
     	cool guy i509VCB advice
 	 */
-	public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder
-			.create(new Identifier(EnhancedCraft.MOD_ID, "group")).icon(() -> new ItemStack(Items.NETHERITE_SWORD)).build();
+
 
 	// SoundEvents Registry
 	public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
@@ -179,14 +178,12 @@ public class ModRegistry {
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 					ModRegistry.EtheriumOreBlock.getDefaultState(),
-					2)) // vein size
+					5)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
-					6, // min y level
+					0, // min y level
 					9))) // max y level
-			.spreadHorizontally()
-			.method_30377(8) // Circular spread
-			.repeat(2); // number of veins per chunk
+			.spreadHorizontally();
 
 	public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -221,6 +218,7 @@ public class ModRegistry {
 	// Tags Definitions
 	public static final Tag<Item> OverworldArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
 	public static final Tag<Item> OverworldTools = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
+	public static final Tag<Item> EtheriumArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
 
 	// World Definitions
 	public static final RegistryKey<World> MirroredDimension = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));

@@ -12,6 +12,10 @@ import net.fabricmc.api.Environment;
 public class ModConfig implements ConfigData {
 	@ConfigEntry.Gui.CollapsibleObject
 	DisplayBackground displayBackground = new DisplayBackground();
+
+	//@ConfigEntry.Gui.Excluded
+	public static String customBackgroundString = DisplayBackground.CustomBackgrounds.doDefaultBackground.getKey();
+
 	public boolean enableSkyBox = true;
 
 	public static class DisplayBackground {
@@ -20,7 +24,7 @@ public class ModConfig implements ConfigData {
 		 * doClassicBackground = false; public static boolean doDiamondBackground =
 		 * false; public static boolean doStoneBrickBackground = false; public static
 		 * boolean doGemstoneBackground = false;
-		 */
+		*/
 		@Comment("Declares the option menu background screen.")
 		@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
 		public static CustomBackgrounds customBackgrounds = CustomBackgrounds.doDefaultBackground;
@@ -30,31 +34,36 @@ public class ModConfig implements ConfigData {
 			doDefaultBackground {
 					@Override
 					public String getKey() {
-					return "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground";
-				}
+						customBackgroundString = "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground";
+						return customBackgroundString;
+					}
 			},
 			doClassicBackground {
 					@Override
 					public String getKey() {
-					return "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground";
-				}
+						customBackgroundString = "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground";
+						return customBackgroundString;
+					}
 			},
 			doDiamondBackground {
 					@Override
 					public String getKey() {
-					return "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground";
-				}
+						customBackgroundString = "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground";
+						return customBackgroundString;
+					}
 			},
 			doStoneBrickBackground {
 					@Override
 					public String getKey() {
-					return "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground";
-				}
+						customBackgroundString = "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground";
+						return customBackgroundString;
+					}
 			},
 			doGemstoneBackground {
 					@Override
 					public String getKey() {
-					return "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground";
+						customBackgroundString = "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground";
+						return customBackgroundString;
 					}
 			}
 		}
