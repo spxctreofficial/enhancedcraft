@@ -6,11 +6,11 @@
   "name": "EnhancedCraft",
   "description": "This is EnhancedCraft, a mod designed to add more powerful weapons and tools, new blocks, and cool mechanics, whilst still being Minecraft at its core.",
   "authors": [
-    "Spectr3x"
+    "Spxctre"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/enhancedcraft/",
-    "sources": "https://github.com/realspectr3x/enhancedcraft/"
+    "sources": "https://github.com/spxctreofficial/enhancedcraft/"
   },
 
   "license": "gpl-3.0",
@@ -19,13 +19,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.spectr3x.enhancedcraft.EnhancedCraft"
+      "com.spxctreofficial.enhancedcraft.EnhancedCraft"
     ],
     "client": [
-      "com.spectr3x.enhancedcraft.EnhancedCraftCLIENT"
+      "com.spxctreofficial.enhancedcraft.EnhancedCraftCLIENT"
     ],
     "modmenu": [
-      "com.spectr3x.enhancedcraft.ModMenuIntegration"
+      "com.spxctreofficial.enhancedcraft.ModMenuIntegration"
     ]
   },
   "mixins": [

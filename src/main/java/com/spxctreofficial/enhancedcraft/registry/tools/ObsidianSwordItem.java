@@ -1,0 +1,14 @@
+package com.spxctreofficial.enhancedcraft.registry.tools;
+
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ToolMaterial;
+
+public class ObsidianSwordItem extends SwordItem {
+
+	public ObsidianSwordItem(ToolMaterial material) {
+		super(material, 7, -2.65f, new Item.Settings().group(ItemGroup.COMBAT).fireproof());
+	}
+    
+}

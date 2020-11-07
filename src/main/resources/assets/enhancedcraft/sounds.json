@@ -2,7 +2,28 @@
   "soaked_hands": {
     "subtitle": "subtitles.enhancedcraft.soaked_hands",
     "sounds": [
-      "enhancedcraft:soaked_hands"
+      "enhancedcraft:music/soaked_hands"
+    ]
+  },
+  "etherium_enraged_sound": {
+    "subtitle": "subtitles.enhancedcraft.etherium_enraged_sound",
+    "sounds": [
+      "enhancedcraft:misc/etherium_enraged_sound"
+    ]
+  },
+  "etherium_enraged_kill": {
+    "subtitle": "subtitles.enhancedcraft.etherium_enraged_kill",
+    "sounds": [
+      "enhancedcraft:misc/etherium_enraged_kill1",
+      "enhancedcraft:misc/etherium_enraged_kill2",
+      "enhancedcraft:misc/etherium_enraged_kill3",
+      "enhancedcraft:misc/etherium_enraged_kill4"
+    ]
+  },
+  "etherium_enraged_ended_sound": {
+    "subtitle": "subtitles.enhancedcraft.etherium_enraged_ended_sound",
+    "sounds": [
+      "enhancedcraft:misc/etherium_enraged_ended_sound"
     ]
   }
 }

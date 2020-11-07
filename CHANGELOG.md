@@ -3,6 +3,8 @@
 ## beta-1.3.3
 Halloween update?
 
+No, actually though, that update took way longer than it should've: almost two weeks instead of a day or two! Anyways, enjoy beta-1.3.3 while I work on beta-1.4.
+
 ### Changes
 	- Added set bonuses for custom armor!
 		- Etherium Set Bonus:
@@ -19,6 +21,10 @@ Halloween update?
 			- Multiplayer support.
 	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
 	- Quality of Life Changes:
+	    - Options Background, Hotbar Icons, Widgets, Hotbar, and the enchanted item glint can now be changed in the AutoConfig menu accessible via Mod Menu.
+	    - Changed default enchantment glint... again
+	        - Tired of the blinding cyan lightning color that used to be part of EnhancedCraft? Now, it has been replaced with a cool and clean purple/magenta gradient!
+	        - Enchantment glint can, of course, be customized with the config menu available inside of the Mod Menu.
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.
@@ -26,7 +32,7 @@ Halloween update?
 			- Etherium nows spawns up to once per chunk, with up to 5 per vein.
 		- Etherium ore now reacts differently when used with the fortune enchantment.
 			- Fortune II and above will give you a chance to drop 1 - 3 etherium instead of 1.
-			- Fortune I will unfortunately result in no boost in drop rate.
+		    - Fortune I will unfortunately result in no boost in drop rate.
 
 ## beta-1.3.2
 More Halloween updates muahahahhhahahahahahhahahahhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

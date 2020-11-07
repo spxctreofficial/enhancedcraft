@@ -1,14 +1,36 @@
 {
     "itemGroup.enhancedcraft.group": "EnhancedCraft",
     "text.autoconfig.enhancedcraft.title": "EnhancedCraft Configuration",
+
+    "text.autoconfig.enhancedcraft.option.customContainers" : "Containers",
+    "text.autoconfig.enhancedcraft.option.customContainers.doVanillaTweaksContainers" : "Vanilla Tweaks",
+    "text.autoconfig.enhancedcraft.option.customContainers.doClassicContainers" : "Classic",
+
     "text.autoconfig.enhancedcraft.option.displayBackground" : "Option Menu Background",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds" : "Background",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDefaultBackground" : "Default",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doClassicBackground" : "Classic",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doDiamondBackground" : "Shiny Diamond",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doStoneBrickBackground" : "Stone Brick (PVP)",
-    "text.autoconfig.enhancedcraft.option.displayBackground.customBackgrounds.doGemstoneBackground" : "Gemstone",
-    "text.autoconfig.enhancedcraft.option.enableSkyBox": "Enable Custom Skybox",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds" : "Options Menu Background",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds.doDefaultBackground" : "Default",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds.doClassicBackground" : "Classic",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds.doDiamondBackground" : "Shiny Diamond",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds.doStoneBrickBackground" : "Stone Brick (PVP)",
+    "text.autoconfig.enhancedcraft.option.customBackgrounds.doGemstoneBackground" : "Gemstone",
+
+    "text.autoconfig.enhancedcraft.option.customIcons" : "Icons",
+    "text.autoconfig.enhancedcraft.option.customIcons.doNebulaIcons" : "Nebula Icons",
+    "text.autoconfig.enhancedcraft.option.customIcons.doVanillaTweaksIcons" : "Vanilla Tweaks",
+    "text.autoconfig.enhancedcraft.option.customIcons.doOGIcons" :  "OG EnhancedCraft",
+    "text.autoconfig.enhancedcraft.option.customIcons.doClassicIcons" : "Classic",
+
+    "text.autoconfig.enhancedcraft.option.customWidgets" : "Widgets",
+    "text.autoconfig.enhancedcraft.option.customWidgets.doNebulaWidgets" : "Nebula Widgets",
+    "text.autoconfig.enhancedcraft.option.customWidgets.doVanillaTweaksWidgets" : "Vanilla Tweaks",
+    "text.autoconfig.enhancedcraft.option.customWidgets.doTheLegend27Widgets" :  "TheLegend27 Widgets",
+    "text.autoconfig.enhancedcraft.option.customWidgets.doClassicWidgets" : "Classic",
+
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints" : "Enchantment Glints",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doGradientGlint" : "Magenta Gradient",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doOldGlint" : "Bad Preset",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doClassicGlint" : "Classic",
+
     
     "item.enhancedcraft.etherium" : "Etherium",
     "block.enhancedcraft.etherium_ore" : "Etherium Ore",
@@ -69,6 +91,9 @@
     "item.enhancedcraft.music_disc_soaked_hands.desc" : "C418 x Ryn-cord - Soaked Hands (Wet Hands Remix)",
 
     "subtitles.enhancedcraft.soaked_hands" : "Soaked Hands (C418 - Wet Hands Remix)",
+    "subtitles.enhancedcraft.etherium_enraged_sound" : "Etherium-bearer enraged",
+    "subtitles.enhancedcraft.etherium_enraged_kill" : "Enraged Etherium-bearer kills",
+    "subtitles.enhancedcraft.etherium_enraged_ended_sound" : "Enraged Etherium-bearer calms",
 
     "effect.enhancedcraft.deterioration" : "Deterioration"
 }
