@@ -57,6 +57,8 @@ This mod is officially in Open Beta! You can download this mod [from CurseForge]
 
 I will be making content related to the mod on my [YouTube Channel](https://youtube.com/c/Spectr3x "Spectr3x's YouTube Channel"), so you can stay updated by subscribing! Other than that, I will be occasionally live stream to Twitch, so you are free to check there as well. [Twitch](https://www.twitch.tv/realspectr3x "My Inactive Twitch")
 
+If you would like to be involved in the community and the main working environment for the team behind the mod, you can click this [link](https://discord.gg/Yv6zgTt "Discord Server Invite Link").
+
 If you would like to help contribute to the project, please email me at (spxctre@spxct.cf) to be invited to the development of the project. You are free to contribute to the project without being directly invited, but please do not re-distribute this mod or do any other form of piracy, as this mod is free anyways and I am a young programmer who is working hard to make these mods. Feel free to make your own YouTube mod showcases on this mod! You don't have to ask permission; all I ask is that you notify me of it and give credit to me!
 
 #### Credits
