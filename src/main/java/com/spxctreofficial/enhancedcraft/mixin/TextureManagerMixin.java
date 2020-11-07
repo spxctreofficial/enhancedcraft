@@ -5,6 +5,7 @@ import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.widget.AbstractButtonWidget;
+import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.ResourceTexture;
 import net.minecraft.client.texture.TextureManager;
@@ -23,23 +24,6 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 public class TextureManagerMixin {
 	@Shadow
 	public void registerTexture (Identifier id, AbstractTexture abstractTexture) {}
-
-	private static final Identifier defaultTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_default.png");
-	private static final Identifier classicTexture_options = new Identifier("minecraft:textures/gui/options_background.png");
-	private static final Identifier diamondBlockTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_diamondblock.png");
-	private static final Identifier stoneBrickTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_stonebrick.png");
-	private static final Identifier gemstoneTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
-
-	private static final Identifier nebulaIcons = new Identifier("enhancedcraft:textures/gui/icons_nebula.png");
-	private static final Identifier vanillaTweaksIcons = new Identifier("enhancedcraft:textures/gui/icons_vanillatweaks.png");
-	private static final Identifier OGIcons = new Identifier("enhancedcraft:textures/gui/icons_og.png");
-	private static final Identifier classicIcons = new Identifier("minecraft:textures/gui/icons.png");
-
-	private static final Identifier nebulaWidgets = new Identifier("enhancedcraft:textures/gui/widgets_nebula.png");
-	private static final Identifier vanillaTweaksWidgets = new Identifier("enhancedcraft:textures/gui/widgets_vanillatweaks.png");
-	private static final Identifier theLegend27Widgets = new Identifier("enhancedcraft:textures/gui/widgets_legend27.png");
-	private static final Identifier classicWidgets = new Identifier("minecraft:textures/gui/widgets.png");
-
 	private static final Identifier vanillaTweaksInventory = new Identifier("enhancedcraft:textures/gui/containers/vanillatweaks/inventory.png");
 	private static final Identifier vanillaTweaksTabInv = new Identifier("enhancedcraft:textures/gui/containers/vanillatweaks/tab_inventory.png");
 	private static final Identifier vanillaTweaksTabSearch = new Identifier("enhancedcraft:textures/gui/containers/vanillatweaks/tab_item_search.png");
@@ -94,6 +78,27 @@ public class TextureManagerMixin {
 	private static final Identifier classicTabs = new Identifier("minecraft:textures/gui/containers/tabs.png");
 	private static final Identifier classicStatsIcons = new Identifier("minecraft:textures/gui/containers/stats_icons.png");
 
+	private static final Identifier defaultTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_default.png");
+	private static final Identifier classicTexture_options = new Identifier("minecraft:textures/gui/options_background.png");
+	private static final Identifier diamondBlockTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_diamondblock.png");
+	private static final Identifier stoneBrickTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_stonebrick.png");
+	private static final Identifier gemstoneTexture_options = new Identifier("enhancedcraft:textures/gui/options_background_gemstone.png");
+
+	private static final Identifier nebulaIcons = new Identifier("enhancedcraft:textures/gui/icons_nebula.png");
+	private static final Identifier vanillaTweaksIcons = new Identifier("enhancedcraft:textures/gui/icons_vanillatweaks.png");
+	private static final Identifier OGIcons = new Identifier("enhancedcraft:textures/gui/icons_og.png");
+	private static final Identifier classicIcons = new Identifier("minecraft:textures/gui/icons.png");
+
+	private static final Identifier nebulaWidgets = new Identifier("enhancedcraft:textures/gui/widgets_nebula.png");
+	private static final Identifier vanillaTweaksWidgets = new Identifier("enhancedcraft:textures/gui/widgets_vanillatweaks.png");
+	private static final Identifier theLegend27Widgets = new Identifier("enhancedcraft:textures/gui/widgets_legend27.png");
+	private static final Identifier classicWidgets = new Identifier("minecraft:textures/gui/widgets.png");
+
+	private static final Identifier gradientGlint = new Identifier("enhancedcraft:textures/misc/enchanted_item_glint_gradient.png");
+	private static final Identifier oldGlint = new Identifier("enhancedcraft:textures/misc/enchanted_item_glint_old.png");
+	private static final Identifier classicGlint = new Identifier("minecraft:textures/mic/enchanted_item_glint.png");
+
+
 	@Inject(
 			at = @At(value = "INVOKE", target = "net/minecraft/client/texture/AbstractTexture.bindTexture()V"),
 			method = "bindTextureInner(Lnet/minecraft/util/Identifier;)V",
@@ -116,6 +121,7 @@ public class TextureManagerMixin {
 		OptionsBackgroundController(config, id, info);
 		IconsController(config, id, info);
 		WidgetsController(config, id, info);
+		EnchantmentGlintsController(config, id, info);
 	}
 
 	// Private methods to clean-up the code
@@ -198,6 +204,24 @@ public class TextureManagerMixin {
 					break;
 				default:
 					abstractTexture = new ResourceTexture(nebulaWidgets);
+			}
+			this.registerTexture(id, abstractTexture);
+			abstractTexture.bindTexture();
+			info.cancel();
+		}
+	}
+	private void EnchantmentGlintsController(ModConfig config, Identifier id, CallbackInfo info) {
+		if (id == ItemRenderer.ENCHANTED_ITEM_GLINT) {
+			AbstractTexture abstractTexture;
+			switch (config.customEnchantmentGlints) {
+				case doOldGlint:
+					abstractTexture = new ResourceTexture(oldGlint);
+					break;
+				case doClassicGlint:
+					abstractTexture = new ResourceTexture(classicGlint);
+					break;
+				default:
+					abstractTexture = new ResourceTexture(gradientGlint);
 			}
 			this.registerTexture(id, abstractTexture);
 			abstractTexture.bindTexture();

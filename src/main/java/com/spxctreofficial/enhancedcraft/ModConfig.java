@@ -11,7 +11,7 @@ import net.fabricmc.api.Environment;
 @Config(name = EnhancedCraft.MOD_ID)
 public class ModConfig implements ConfigData {
 
-	@Comment("Declares the inventory and block container appearances.")
+	@Comment("Declares the inventory and block container appearances. (currently WIP)")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
 	public CustomContainers customContainers = CustomContainers.doVanillaTweaksContainers;
 	@Comment("Declares the option menu background texture.")
@@ -23,6 +23,9 @@ public class ModConfig implements ConfigData {
 	@Comment("Declares the button widgets and hotbar appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
 	public CustomWidgets customWidgets = CustomWidgets.doNebulaWidgets;
+	@Comment("Declares the button widgets and hotbar appearance.")
+	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
+	public CustomEnchantmentGlints customEnchantmentGlints = CustomEnchantmentGlints.doGradientGlint;
 
 	@Environment(EnvType.CLIENT)
 	public enum CustomContainers implements SelectionListEntry.Translatable {
@@ -131,6 +134,28 @@ public class ModConfig implements ConfigData {
 			@Override
 			public String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customWidgets.doClassicWidgets";
+			}
+		}
+	}
+
+	@Environment(EnvType.CLIENT)
+	public enum CustomEnchantmentGlints implements SelectionListEntry.Translatable {
+		doGradientGlint {
+			@Override
+			public String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doGradientGlint";
+			}
+		},
+		doOldGlint {
+			@Override
+			public String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doOldGlint";
+			}
+		},
+		doClassicGlint {
+			@Override
+			public String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doClassicGlint";
 			}
 		}
 	}

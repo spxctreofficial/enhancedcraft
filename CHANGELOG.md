@@ -20,6 +20,9 @@ Halloween update?
 	- Removed unnecessary ItemGroup. Will be reimplemented in a later patch.
 	- Quality of Life Changes:
 	    - Options Background, Hotbar Icons, Widgets, Hotbar, and the enchanted item glint can now be changed in the AutoConfig menu accessible via Mod Menu.
+	    - Changed default enchantment glint... again
+	        - Tired of the blinding cyan lightning color that used to be part of EnhancedCraft? Now, it has been replaced with a cool and clean purple/magenta gradient!
+	        - Enchantment glint can, of course, be customized with the config menu available inside of the Mod Menu.
 
 	- Fixes:
 		- Fixed MAJOR compatibility issue surrounding creative ItemGroups with other mods.

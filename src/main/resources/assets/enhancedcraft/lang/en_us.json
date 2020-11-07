@@ -26,6 +26,11 @@
     "text.autoconfig.enhancedcraft.option.customWidgets.doTheLegend27Widgets" :  "TheLegend27 Widgets",
     "text.autoconfig.enhancedcraft.option.customWidgets.doClassicWidgets" : "Classic",
 
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints" : "Enchantment Glints",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doGradientGlint" : "Magenta Gradient",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doOldGlint" : "Bad Preset",
+    "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doClassicGlint" : "Classic",
+
     
     "item.enhancedcraft.etherium" : "Etherium",
     "block.enhancedcraft.etherium_ore" : "Etherium Ore",
