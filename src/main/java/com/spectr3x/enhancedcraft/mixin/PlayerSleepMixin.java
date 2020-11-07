@@ -27,7 +27,7 @@ public class PlayerSleepMixin {
 		Random random = new Random();
 		int chance = random.nextInt(100);
 		ServerPlayerEntity ServerPlayer = (ServerPlayerEntity) player;
-		EnhancedCraft.logger.info("Server Player - Playing Sound");
+		EnhancedCraft.LOGGER.info("Server Player - Playing Sound");
 		ServerPlayer.playSound(SoundEvents.ITEM_CROSSBOW_SHOOT, 1.0f, 1.0f);
 		System.out.println(ServerPlayer);
 		if (chance == 1) {
