@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "enhancedcraft-potion-hud",
+  "version": "${version}",
+
+  "name": "EnhancedCraft Potion HUD",
+  "description": "A potion HUD for EnhancedCraft.",
+  "authors": [
+	"Spxctre"
+  ],
+  "contact": {
+	"homepage": "https://www.curseforge.com/minecraft/mc-mods/enhancedcraft/",
+	"sources": "https://github.com/spxctreofficial/enhancedcraft/"
+  },
+
+  "license": "gpl-3.0",
+  "icon": "assets/enhancedcraft-potion-hud/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+	"main": [
+	  "com.spxctreofficial.enhancedcraft.EnhancedCraft"
+	]
+  },
+  "mixins": [
+	"enhancedcraft-potion-hud.mixins.json"
+  ],
+
+  "depends": {
+	"fabricloader": ">=0.7.4",
+	"fabric": "*",
+	"minecraft": "1.16.x"
+  },
+  "suggests": {
+	"flamingo": "*"
+  },
+
+  "custom": {
+	"modmenu:parent": "enhancedcraft"
+  }
+}

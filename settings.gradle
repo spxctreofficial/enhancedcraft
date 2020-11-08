@@ -8,3 +8,8 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+rootProject.name = "enhancedcraft"
+
+include 'enhancedcraft-potion-hud'
+

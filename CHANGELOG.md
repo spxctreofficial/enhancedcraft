@@ -47,6 +47,10 @@ This beta update adds some more config options, features, and applies some fixes
         - In easy mode, the chances of spawning with a weapon is the same as vanilla.
         - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
     - A easter egg ;)
+    - Quality of Life Changes:
+        - Added a better status effect HUD that gives better information.
+        - Credits to Samuel-Martineau's potion HUD code under the MIT License.
+        - EnhancedCraft now uses a module system, that allows for specific features to be distributed as mini-sub-mods. This doesn't impact gameplay in any way, but allows us to organize specific features into smaller sub-mods.
 
 ## beta-1.3.3
 Halloween update?

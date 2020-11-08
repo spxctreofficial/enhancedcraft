@@ -1,0 +1,5 @@
+archivesBaseName = "enhancedcraft-potion-hud"
+version = project.mod_version
+//dependencies {
+//    implementation project(path: ":", configuration: "dev")
+//}
