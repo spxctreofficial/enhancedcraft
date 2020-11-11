@@ -2,6 +2,7 @@ package com.spxctreofficial.enhancedcraft.registry;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntity;
+import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
 import com.spxctreofficial.enhancedcraft.registry.status_effects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumSwordItem;
 import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumPickaxeItem;
@@ -39,7 +40,7 @@ import com.spxctreofficial.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spxctreofficial.enhancedcraft.registry.blocks.*;
 import com.spxctreofficial.enhancedcraft.registry.foodstuffs.PrimordialCatalyst;
 import com.spxctreofficial.enhancedcraft.registry.foodstuffs.TomYumStew;
-import com.spxctreofficial.enhancedcraft.registry.misc.SoakedHandsMusicDisc;
+import com.spxctreofficial.enhancedcraft.registry.misc.*;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -182,6 +183,8 @@ public class ModRegistry {
 	public static final Item PurigoldEarthstoneItem = new BlockItem(PurigoldEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item PurigoldOtherstoneItem = new BlockItem(PurigoldOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
+	public static final Item FireballItem = new FireballItem();
+
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -301,6 +304,8 @@ public class ModRegistry {
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneItem);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneItem);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FireballItem);
 
 		// Fuel Registry
 		FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
