@@ -4,6 +4,12 @@
 This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
 
 ### Changes
+    - New experimental item: fireballs!
+        - Fireballs currently have the same texture as Fire Charges.
+        - Fireballs will soon be obtainable in survival, but is currently limited to the creative mode inventory.
+        - Stackable up to 3!
+        - When right clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
+        - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
     - Skeletons can now spawn equipped with swords and axes.
     - There are now different types (classes) of zombies!
         - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
