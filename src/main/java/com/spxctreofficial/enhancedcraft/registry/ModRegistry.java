@@ -184,6 +184,7 @@ public class ModRegistry {
 	public static final Item PurigoldOtherstoneItem = new BlockItem(PurigoldOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
 	public static final Item FireballItem = new FireballItem();
+	public static final Item GayFireballItem = new GayFireballItem();
 
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
@@ -306,6 +307,7 @@ public class ModRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneItem);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FireballItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "catastrophically_gay_fireball"), GayFireballItem);
 
 		// Fuel Registry
 		FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);

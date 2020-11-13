@@ -14,16 +14,16 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class FireballItem extends Item {
-	public FireballItem() {
-		super(new Item.Settings().group(ItemGroup.COMBAT).rarity(Rarity.UNCOMMON).maxCount(3));
+public class GayFireballItem extends Item {
+	public GayFireballItem() {
+		super(new Settings().group(ItemGroup.COMBAT).rarity(Rarity.UNCOMMON).maxCount(1));
 	}
 
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
-		world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.NEUTRAL, 0.5F, 1F);
+		world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.NEUTRAL, 3.5F, 1F);
 
-		SpawnFireball(world, user, hand);
+		SpawnBarrage(world, user, hand);
 
 		user.incrementStat(Stats.USED.getOrCreateStat(this));
 		if (!user.abilities.creativeMode) {
@@ -33,14 +33,16 @@ public class FireballItem extends Item {
 		return TypedActionResult.method_29237(itemStack, world.isClient());
 	}
 
-	public void SpawnFireball(World world, PlayerEntity user, Hand hand) {
+	public void SpawnBarrage(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
 		if (!world.isClient) {
 			Vec3d vector = user.getRotationVector();
 			FireballEntity fireballEntity = new FireballEntity(user.world, user.getX(), user.getEyeY(), user.getZ(), vector.x, vector.y, vector.z);
 			fireballEntity.setItem(itemStack);
-			fireballEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
-			user.world.spawnEntity(fireballEntity);
+			fireballEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 0.75F, 10F);
+			for (int i = 0; i < 10; i++) {
+				user.world.spawnEntity(fireballEntity);
+			}
 		}
 	}
 }
