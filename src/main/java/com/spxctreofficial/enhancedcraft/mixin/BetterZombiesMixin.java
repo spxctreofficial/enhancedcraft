@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.Random;
 
 @Mixin(ZombieEntity.class)
-public abstract class ZombieEntityMixin extends HostileEntity {
+public abstract class BetterZombiesMixin extends HostileEntity {
 
 	Random rand = new Random();
 
@@ -102,6 +102,13 @@ public abstract class ZombieEntityMixin extends HostileEntity {
 				this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
 				this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
 				this.addStatusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 999999, 0)));
+
+				this.updateDropChancesV2(EquipmentSlot.MAINHAND);
+				this.updateDropChancesV2(EquipmentSlot.OFFHAND);
+
+				this.updateDropChancesV2(EquipmentSlot.CHEST);
+				this.updateDropChancesV2(EquipmentSlot.LEGS);
+				this.updateDropChancesV2(EquipmentSlot.FEET);
 				break;
 			case 1:
 				// Berserker Zombie
@@ -112,6 +119,11 @@ public abstract class ZombieEntityMixin extends HostileEntity {
 				this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
 
 				this.equipStack(EquipmentSlot.MAINHAND, enchantedIronAxe);
+
+				this.updateDropChancesV2(EquipmentSlot.HEAD);
+				this.updateDropChancesV2(EquipmentSlot.CHEST);
+
+				this.updateDropChancesV2(EquipmentSlot.MAINHAND);
 				break;
 			case 2:
 				// Scout Zombie
@@ -127,12 +139,28 @@ public abstract class ZombieEntityMixin extends HostileEntity {
 
 				this.equipStack(EquipmentSlot.MAINHAND, OPNetheriteSword);
 				this.addStatusEffect((new StatusEffectInstance(StatusEffects.STRENGTH, 999999, 2)));
+
+				this.updateDropChancesV2(EquipmentSlot.CHEST);
+
+				this.updateDropChancesV2(EquipmentSlot.MAINHAND);
+				break;
+		}
+	}
+
+	private void updateDropChancesV2(EquipmentSlot slot) {
+		float f = 0.025f;
+		switch (slot.getType()) {
+			case HAND:
+				this.handDropChances[slot.getEntitySlotId()] = f;
+				break;
+			case ARMOR:
+				this.armorDropChances[slot.getEntitySlotId()] = f;
 				break;
 		}
 	}
 
 	@SuppressWarnings("ALL")
-	private ZombieEntityMixin() {
+	private BetterZombiesMixin() {
 		super(null, null);
 	}
 }

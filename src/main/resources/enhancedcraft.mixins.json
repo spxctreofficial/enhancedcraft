@@ -4,11 +4,11 @@
   "package": "com.spxctreofficial.enhancedcraft.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-	"AbstractSkeletonEntityMixin",
+	"BetterZombiesMixin",
+	"BetterSkeletonsMixin",
 	"DefaultBiomeFeaturesMixin",
 	"LivingEntityMixin",
-	"PlayerSleepMixin",
-	"ZombieEntityMixin"
+	"PlayerSleepMixin"
   ],
   "client": [
 	"TextureManagerMixin"

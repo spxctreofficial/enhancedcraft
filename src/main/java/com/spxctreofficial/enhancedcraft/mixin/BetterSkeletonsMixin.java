@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.Random;
 
 @Mixin(AbstractSkeletonEntity.class)
-public abstract class AbstractSkeletonEntityMixin extends HostileEntity {
+public abstract class BetterSkeletonsMixin extends HostileEntity {
 
 	@Shadow public abstract void equipStack(EquipmentSlot slot, ItemStack stack);
 
@@ -42,7 +42,7 @@ public abstract class AbstractSkeletonEntityMixin extends HostileEntity {
 	}
 
 	@SuppressWarnings("ALL")
-	private AbstractSkeletonEntityMixin() {
+	private BetterSkeletonsMixin() {
 		super(null, null);
 	}
 }

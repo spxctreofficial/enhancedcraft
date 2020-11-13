@@ -13,6 +13,7 @@ This beta update adds some more config options, features, and applies some fixes
     - Skeletons can now spawn equipped with swords and axes.
     - There are now different types (classes) of zombies!
         - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
+            - These zombies have lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
             - Hard Classes:
                 - Furious Zombie:
                     - Netherite Sword with Sharpness 4
