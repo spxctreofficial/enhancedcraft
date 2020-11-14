@@ -91,11 +91,13 @@
     "item.enhancedcraft.music_disc_soaked_hands.desc" : "C418 x Ryn-cord - Soaked Hands (Wet Hands Remix)",
 
     "item.enhancedcraft.fireball" : "Fireball",
+    "item.enhancedcraft.smart_pearl" : "Smart Pearl",
 
     "subtitles.enhancedcraft.soaked_hands" : "Soaked Hands (C418 - Wet Hands Remix)",
     "subtitles.enhancedcraft.etherium_enraged_sound" : "Etherium-bearer enraged",
     "subtitles.enhancedcraft.etherium_enraged_kill" : "Enraged Etherium-bearer kills",
     "subtitles.enhancedcraft.etherium_enraged_ended_sound" : "Enraged Etherium-bearer calms",
+    "subtitles.enhancedcraft.smart_pearl_throw" : "Smart Pearl flies",
 
     "effect.enhancedcraft.deterioration" : "Deterioration"
 }

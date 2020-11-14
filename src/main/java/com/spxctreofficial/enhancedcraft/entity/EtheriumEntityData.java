@@ -2,7 +2,7 @@ package com.spxctreofficial.enhancedcraft.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
@@ -38,7 +38,7 @@ public class EtheriumEntityData {
 		LivingEntity attacker = entity.getAsEntity();
 
 		attacker.getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ModRegistry.EtheriumArmor)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.EtheriumArmor)) armorCount.incrementAndGet();
 		});
 
 		if(!attacker.world.isClient && armorCount.get() == 4) {
@@ -54,7 +54,7 @@ public class EtheriumEntityData {
 					attacker.getEntityWorld().playSound(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker.getBlockPos(), // The position of where the sound will come from
-							ModRegistry.EtheriumEnragedSoundEvent, // The sound that will play
+							ECRegistry.EtheriumEnragedSoundEvent, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -65,7 +65,7 @@ public class EtheriumEntityData {
 					attacker.getEntityWorld().playSound(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker.getBlockPos(), // The position of where the sound will come from
-							ModRegistry.EtheriumEnragedKillSoundEvent, // The sound that will play
+							ECRegistry.EtheriumEnragedKillSoundEvent, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -79,7 +79,7 @@ public class EtheriumEntityData {
 
 		armorCount.getAndSet(0);
 		victim.getAsEntity().getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ModRegistry.EtheriumArmor)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.EtheriumArmor)) armorCount.incrementAndGet();
 		});
 		if (armorCount.get() >= 4) {
 			EntityAttributeInstance maxHealth = entity.getAsEntity().getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);

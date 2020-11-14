@@ -2,6 +2,7 @@ package com.spxctreofficial.enhancedcraft.registry;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntity;
+import com.spxctreofficial.enhancedcraft.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
 import com.spxctreofficial.enhancedcraft.registry.status_effects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumSwordItem;
@@ -70,7 +71,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
-public class ModRegistry {
+public class ECRegistry {
 	/*
 	    public static Identifier id(String path) {
         return new Identifier(MOD_ID, path);
@@ -87,11 +88,15 @@ public class ModRegistry {
 	public static final Identifier EtheriumEnragedKill = new Identifier("enhancedcraft:etherium_enraged_kill");
 	public static final Identifier EtheriumEnragedEndedSound = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
 
+	public static final Identifier SmartPearlThrow = new Identifier("enhancedcraft:smart_pearl_throw");
+
 	public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
 
 	public static SoundEvent EtheriumEnragedSoundEvent = new SoundEvent(EtheriumEnragedSound);
 	public static SoundEvent EtheriumEnragedKillSoundEvent = new SoundEvent(EtheriumEnragedKill);
 	public static SoundEvent EtheriumEnragedEndedSoundEvent = new SoundEvent(EtheriumEnragedEndedSound);
+
+	public static SoundEvent SmartPearlThrowSoundEvent = new SoundEvent(SmartPearlThrow);
 
 	// Block Definitions
 	public static final Block OtherstoneBlock = new OtherstoneBlock();
@@ -183,13 +188,14 @@ public class ModRegistry {
 	public static final Item PurigoldEarthstoneItem = new BlockItem(PurigoldEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item PurigoldOtherstoneItem = new BlockItem(PurigoldOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
+	public static final Item SmartPearlItem = new SmartPearlItem();
 	public static final Item FireballItem = new FireballItem();
 	public static final Item GayFireballItem = new GayFireballItem();
 
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ModRegistry.EtheriumOreBlock.getDefaultState(),
+					ECRegistry.EtheriumOreBlock.getDefaultState(),
 					5)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -199,7 +205,7 @@ public class ModRegistry {
 
 	public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ModRegistry.BronzeOreBlock.getDefaultState(),
+					ECRegistry.BronzeOreBlock.getDefaultState(),
 					12)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -211,7 +217,7 @@ public class ModRegistry {
 
 	public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ModRegistry.GemstoneBlock.getDefaultState(),
+					ECRegistry.GemstoneBlock.getDefaultState(),
 					8)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -226,6 +232,11 @@ public class ModRegistry {
 
 	// Entity Definitions
 	public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(Registry.ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "herobrine"), FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build());
+	public static final EntityType<SmartPearlEntity> SmartPearlEntityType = Registry.register(
+			Registry.ENTITY_TYPE,
+			new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"),
+			FabricEntityTypeBuilder.<SmartPearlEntity>create(SpawnGroup.MISC, SmartPearlEntity::new).dimensions(EntityDimensions.fixed(0.25F, 0.25F)).trackRangeBlocks(4).trackedUpdateRate(10).build()
+	);
 
 	// Tags Definitions
 	public static final Tag<Item> OverworldArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
@@ -306,6 +317,7 @@ public class ModRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneItem);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneItem);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"), SmartPearlItem);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FireballItem);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "catastrophically_gay_fireball"), GayFireballItem);
 
@@ -328,11 +340,13 @@ public class ModRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);
 
 		// SoundEvents Registry
-		Registry.register(Registry.SOUND_EVENT, ModRegistry.SoakedHands, SoakedHandsSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SoakedHands, SoakedHandsSoundEvent);
 
-		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedSound, EtheriumEnragedSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedKill, EtheriumEnragedKillSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ModRegistry.EtheriumEnragedEndedSound, EtheriumEnragedEndedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedSound, EtheriumEnragedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedKill, EtheriumEnragedKillSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedEndedSound, EtheriumEnragedEndedSoundEvent);
+
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SmartPearlThrow, SmartPearlThrowSoundEvent);
 
 		// Structure Generation Registry
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);

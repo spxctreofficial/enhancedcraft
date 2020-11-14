@@ -25,5 +25,10 @@
     "sounds": [
       "enhancedcraft:misc/etherium_enraged_ended_sound"
     ]
-  }
+  },
+  "smart_pearl_throw": {
+	"subtitle": "subtitles.enhancedcraft.smart_pearl_throw",
+	"sounds": [
+		"enhancedcraft:misc/smartpearlthrow"
+	]
 }

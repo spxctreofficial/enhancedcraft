@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,8 +15,8 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 public class DefaultBiomeFeaturesMixin {
 	@Inject(method = "addDefaultOres(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V", at = @At("TAIL"))
 	private static void addDefaultOres(GenerationSettings.Builder builder, CallbackInfo ci) {
-		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ModRegistry.EtheriumOreFeature);
-		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ModRegistry.BronzeOreFeature);
-		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ModRegistry.GemstoneFeature);
+		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ECRegistry.EtheriumOreFeature);
+		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ECRegistry.BronzeOreFeature);
+		builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ECRegistry.GemstoneFeature);
 	}
 }

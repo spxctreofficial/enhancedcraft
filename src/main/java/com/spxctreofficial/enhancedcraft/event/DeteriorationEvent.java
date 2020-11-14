@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.event;
 
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -16,9 +16,9 @@ public class DeteriorationEvent {
 					if (armorItem.isEmpty()) {
 						continue;
 					}
-					if (armorItem.getItem().isIn(ModRegistry.OverworldArmor)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ModRegistry.MirroredDimension) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ModRegistry.DeteriorationStatusEffect, 2, 0)));
+					if (armorItem.getItem().isIn(ECRegistry.OverworldArmor)) {
+						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MirroredDimension) {
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ECRegistry.DeteriorationStatusEffect, 2, 0)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 4)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 2, 19)));
 							break;
@@ -29,8 +29,8 @@ public class DeteriorationEvent {
 					if (mainHandItem.isEmpty()) {
 						continue;
 					}
-					if (mainHandItem.getItem().isIn(ModRegistry.OverworldTools)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ModRegistry.MirroredDimension) {
+					if (mainHandItem.getItem().isIn(ECRegistry.OverworldTools)) {
+						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MirroredDimension) {
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 2, 4)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0)));
 						}

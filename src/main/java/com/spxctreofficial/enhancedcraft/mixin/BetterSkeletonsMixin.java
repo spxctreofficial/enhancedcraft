@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.HostileEntity;
@@ -27,7 +27,7 @@ public abstract class BetterSkeletonsMixin extends HostileEntity {
 		int itemChance = rand.nextInt(8);
 		switch (itemChance) {
 			case 0:
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ModRegistry.AlloySwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.AlloySwordItem));
 				break;
 			case 1:
 				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));

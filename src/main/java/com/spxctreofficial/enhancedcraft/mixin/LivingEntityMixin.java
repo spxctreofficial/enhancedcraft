@@ -3,7 +3,7 @@ package com.spxctreofficial.enhancedcraft.mixin;
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.entity.EtheriumEntityData;
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -85,7 +85,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ModRegistry.EtheriumArmor)) {
+			if (armorItem.getItem().isIn(ECRegistry.EtheriumArmor)) {
 				armorCount++;
 			}
 		}
@@ -102,7 +102,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 					this.getEntityWorld().playSound(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							this.getBlockPos(), // The position of where the sound will come from
-							ModRegistry.EtheriumEnragedEndedSoundEvent, // The sound that will play
+							ECRegistry.EtheriumEnragedEndedSoundEvent, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -161,7 +161,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	private void TotallyNotEasterEgg() {
 		if (this.getAsEntity() instanceof PlayerEntity && this.getName() == Text.of("Spxctre")) {
 			if (rand.nextInt(100) == 0) {
-				this.dropItem(ModRegistry.PrimordialCatalyst);
+				this.dropItem(ECRegistry.PrimordialCatalyst);
 			}
 		}
 	}

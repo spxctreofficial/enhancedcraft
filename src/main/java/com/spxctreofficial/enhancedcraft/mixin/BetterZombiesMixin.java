@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -52,11 +52,11 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 2:
 				// Simple Sword Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ModRegistry.BronzeSwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BronzeSwordItem));
 				break;
 			case 3:
 				// Simple Axe Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ModRegistry.BronzeAxeItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BronzeAxeItem));
 				break;
 			case 4:
 				// Generic Axe Zombie
@@ -70,7 +70,7 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 6:
 				// Strong Sword Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ModRegistry.AlloySwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.AlloySwordItem));
 				break;
 			case 7:
 				// Weak Sword Zombie
@@ -82,7 +82,7 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 9:
 				// Nitwit Zombie
-				this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(ModRegistry.MetalAlloy));
+				this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(ECRegistry.MetalAlloy));
 				break;
 		}
 	}
