@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	"#F"
+  ],
+  "key": {
+	"#": {
+	  "item": "minecraft:gunpowder"
+	},
+	"F": {
+	  "item": "minecraft:fire_charge"
+	}
+  },
+  "result": {
+	"item": "enhancedcraft:fireball",
+	"count": 1
+  }
+}

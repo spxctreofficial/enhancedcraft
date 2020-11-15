@@ -10,6 +10,7 @@ This beta update adds some more config options, features, and applies some fixes
         - Stackable up to 3!
         - When right clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
         - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
+        - Crafted by combining fire charges with gunpowder.
     - Another new experimental item: Smart Pearls!
         - Smart Pearls work just like ender pearls, but have some benefits over normal Ender Pearls!
         - Smart Pearls do not deal damage to the user on teleport.
@@ -20,6 +21,7 @@ This beta update adds some more config options, features, and applies some fixes
         - Smart Pearls have a distinct particle when user teleports, to differentiate it from normal Ender Pearls.
         - Smart Pearls have an unique sound effect when user teleporta, to differentiate it from normal Ender Pearls.
         - This item was inspired by the Smart Pearl in Hypixel's Skywars, but I highly doubt the concept is the same as Hypixel's implementation of this item.
+        - Crafted by using ender pearls surrounding a piece of lapis lazuli. Crafted in batches of 2.
     - Skeletons can now spawn equipped with swords and axes.
     - There are now different types (classes) of zombies!
         - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
