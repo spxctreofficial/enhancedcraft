@@ -27,8 +27,9 @@
     ]
   },
   "smart_pearl_throw": {
-	"subtitle": "subtitles.enhancedcraft.smart_pearl_throw",
-	"sounds": [
-		"enhancedcraft:misc/smartpearlthrow"
-	]
+    "subtitle": "subtitles.enhancedcraft.smart_pearl_throw",
+    "sounds": [
+      "enhancedcraft:misc/smartpearlthrow"
+    ]
+  }
 }
