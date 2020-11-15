@@ -7,7 +7,7 @@ This beta update adds some more config options, features, and applies some fixes
     - New experimental item: fireballs!
         - Fireballs currently have the same texture as Fire Charges.
         - Stackable up to 3!
-        - When right clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
+        - When right-clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
         - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
         - Crafted by combining fire charges with gunpowder.
     - Another new experimental item: Smart Pearls!
@@ -17,14 +17,14 @@ This beta update adds some more config options, features, and applies some fixes
         - Smart Pearls never spawn endermites.
         - Smart Pearls have 1/4 the cooldown compared to normal Ender Pearls.
         - Stackable up to 16.
-        - Smart Pearls have a distinct particle when user teleports, to differentiate it from normal Ender Pearls.
-        - Smart Pearls have an unique sound effect when user teleporta, to differentiate it from normal Ender Pearls.
+        - Smart Pearls have a distinct particle when the user teleports, to differentiate it from normal Ender Pearls.
+        - Smart Pearls have a unique sound effect when the user teleports, to differentiate it from normal Ender Pearls.
         - This item was inspired by the Smart Pearl in Hypixel's Skywars, but I highly doubt the concept is the same as Hypixel's implementation of this item.
         - Crafted by using ender pearls surrounding a piece of lapis lazuli. Crafted in batches of 2.
     - Skeletons can now spawn equipped with swords and axes.
     - There are now different types (classes) of zombies!
         - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
-            - These zombies have lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
+            - These zombies have a lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
             - Hard Classes:
                 - Furious Zombie:
                     - Netherite Sword with Sharpness 4
@@ -67,7 +67,7 @@ This beta update adds some more config options, features, and applies some fixes
     - A easter egg ;)
     
     Technical Stuff:
-        - Maven publication has been officially removed, since no one uses it anyways and it's kind of redundant.
+        - Maven publication has been officially removed since no one uses it anyways and it's kind of redundant.
         - ModRegistry has been refactored to ECRegistry.
 
 ## beta-1.3.3
