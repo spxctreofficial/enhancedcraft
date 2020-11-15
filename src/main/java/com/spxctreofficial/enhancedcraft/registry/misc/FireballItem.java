@@ -37,8 +37,9 @@ public class FireballItem extends Item {
 		ItemStack itemStack = user.getStackInHand(hand);
 		if (!world.isClient) {
 			Vec3d vector = user.getRotationVector();
-			FireballEntity fireballEntity = new FireballEntity(user.world, user.getX(), user.getEyeY(), user.getZ(), vector.x, vector.y, vector.z);
+			FireballEntity fireballEntity = new FireballEntity(user.world, user, vector.x, vector.y, vector.z);
 			fireballEntity.setItem(itemStack);
+			fireballEntity.updatePosition(user.getX(), user.getEyeY(), user.getZ());
 			fireballEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
 			user.world.spawnEntity(fireballEntity);
 		}

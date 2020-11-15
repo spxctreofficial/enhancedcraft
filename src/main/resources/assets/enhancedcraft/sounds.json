@@ -31,5 +31,11 @@
     "sounds": [
       "enhancedcraft:misc/smartpearlthrow"
     ]
+  },
+  "smart_pearl_teleport": {
+    "subtitle": "subtitles.enhancedcraft.smart_pearl_teleport",
+    "sounds": [
+      "enhancedcraft:misc/smartpearlteleport"
+    ]
   }
 }

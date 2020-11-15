@@ -3,7 +3,15 @@
 ## beta-1.4
 This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
 
-### Changes
+### beta-1.4-SNAPSHOT-D
+
+#### Changes
+    - Fixed an issue with fireballs crashing a server when used on a server.
+    - Added a teleport-landing sound to Smart Pearls to fill in for the lack of the damage-taking sound that usually gives the feedback of landing with normal Ender Pearls.
+
+### beta-1.4-SNAPSHOT-C & 11.14.2020
+
+#### Changes
     - New experimental item: fireballs!
         - Fireballs currently have the same texture as Fire Charges.
         - Stackable up to 3!

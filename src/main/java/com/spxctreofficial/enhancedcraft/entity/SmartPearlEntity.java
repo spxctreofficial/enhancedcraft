@@ -20,6 +20,8 @@ import net.minecraft.network.Packet;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
@@ -70,6 +72,7 @@ public class SmartPearlEntity extends ThrownItemEntity {
 					}
 					entity.requestTeleport(this.getX(), this.getY(), this.getZ());
 					entity.fallDistance = 0F;
+					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.SmartPearlTeleportSoundEvent, SoundCategory.NEUTRAL, 0.75F, 1F);
 				}
 			} else if (entity != null) {
 				entity.requestTeleport(this.getX(), this.getY(), this.getZ());

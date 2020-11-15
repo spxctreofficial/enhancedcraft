@@ -5,42 +5,11 @@ import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntity;
 import com.spxctreofficial.enhancedcraft.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
 import com.spxctreofficial.enhancedcraft.registry.status_effects.DeteriorationStatusEffect;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumSwordItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumPickaxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeSwordItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzePickaxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloySwordMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyToolAlternateMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyToolMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloySwordItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyPickaxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyAxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyShovelItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.AlloyHoeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeAxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeShovelItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeHoeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeToolMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.BronzeToolAlternateMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumAxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumShovelItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumHoeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumToolMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.GiantSwordItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.GiantToolMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianSwordItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianPickaxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianAxeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianShovelItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianHoeItem;
-import com.spxctreofficial.enhancedcraft.registry.tools.ObsidianToolMaterial;
-import com.spxctreofficial.enhancedcraft.registry.tools.SwordOfTheNight;
-import com.spxctreofficial.enhancedcraft.registry.tools.SwordOfTheNightToolMaterial;
+import com.spxctreofficial.enhancedcraft.registry.tools.*;
 
 import com.spxctreofficial.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spxctreofficial.enhancedcraft.registry.blocks.*;
-import com.spxctreofficial.enhancedcraft.registry.foodstuffs.PrimordialCatalyst;
-import com.spxctreofficial.enhancedcraft.registry.foodstuffs.TomYumStew;
+import com.spxctreofficial.enhancedcraft.registry.foodstuffs.*;
 import com.spxctreofficial.enhancedcraft.registry.misc.*;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -89,6 +58,7 @@ public class ECRegistry {
 	public static final Identifier EtheriumEnragedEndedSound = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
 
 	public static final Identifier SmartPearlThrow = new Identifier("enhancedcraft:smart_pearl_throw");
+	public static final Identifier SmartPearlTeleport = new Identifier("enhancedcraft:smart_pearl_teleport");
 
 	public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
 
@@ -97,6 +67,7 @@ public class ECRegistry {
 	public static SoundEvent EtheriumEnragedEndedSoundEvent = new SoundEvent(EtheriumEnragedEndedSound);
 
 	public static SoundEvent SmartPearlThrowSoundEvent = new SoundEvent(SmartPearlThrow);
+	public static SoundEvent SmartPearlTeleportSoundEvent = new SoundEvent(SmartPearlTeleport);
 
 	// Block Definitions
 	public static final Block OtherstoneBlock = new OtherstoneBlock();
@@ -347,6 +318,7 @@ public class ECRegistry {
 		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedEndedSound, EtheriumEnragedEndedSoundEvent);
 
 		Registry.register(Registry.SOUND_EVENT, ECRegistry.SmartPearlThrow, SmartPearlThrowSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SmartPearlTeleport, SmartPearlTeleportSoundEvent);
 
 		// Structure Generation Registry
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
