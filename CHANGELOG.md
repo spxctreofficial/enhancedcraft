@@ -6,7 +6,6 @@ This beta update adds some more config options, features, and applies some fixes
 ### Changes
     - New experimental item: fireballs!
         - Fireballs currently have the same texture as Fire Charges.
-        - Fireballs will soon be obtainable in survival, but is currently limited to the creative mode inventory.
         - Stackable up to 3!
         - When right clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
         - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
