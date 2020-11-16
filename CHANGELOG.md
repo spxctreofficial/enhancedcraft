@@ -6,6 +6,7 @@ This beta update adds some more config options, features, and applies some fixes
 ### beta-1.4-SNAPSHOT-D
 
 #### Changes
+    - (IMPORTANT) Dropping support for 1.16.2 and 1.16.3. You must update to the latest version of Fabric Loader and Fabric API!
     - Fixed an issue with fireballs crashing a server when used on a server.
     - Added a teleport-landing sound to Smart Pearls to fill in for the lack of the damage-taking sound that usually gives the feedback of landing with normal Ender Pearls.
 
