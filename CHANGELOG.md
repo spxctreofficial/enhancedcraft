@@ -22,6 +22,10 @@ This beta update adds some more config options, features, and applies some fixes
     - Fixed lang files.
     - Quality of Life Changes:
         - Grass now has a 100% chance to 1 to 3 seeds when mined with hoes.
+    
+    - Technical Stuff
+        - Project was updated to JDK 15.0.1.
+        - JIJ for Fabric-ASM.
 
 ### beta-1.4-SNAPSHOT-C & 11.14.2020
 
