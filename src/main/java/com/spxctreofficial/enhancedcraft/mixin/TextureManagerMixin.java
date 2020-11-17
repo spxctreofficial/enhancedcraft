@@ -145,7 +145,7 @@ public class TextureManagerMixin {
 		}
 	}
 	private void OptionsBackgroundController(ModConfig config, Identifier id, CallbackInfo info) {
-		if (id == DrawableHelper.BACKGROUND_TEXTURE) {
+		if (id == DrawableHelper.OPTIONS_BACKGROUND_TEXTURE) {
 			AbstractTexture abstractTexture;
 			switch (config.customBackgrounds) {
 				case doClassicBackground:

@@ -98,6 +98,7 @@
     "subtitles.enhancedcraft.etherium_enraged_kill" : "Enraged Etherium-bearer kills",
     "subtitles.enhancedcraft.etherium_enraged_ended_sound" : "Enraged Etherium-bearer calms",
     "subtitles.enhancedcraft.smart_pearl_throw" : "Smart Pearl flies",
+    "subtitles.enhancedcraft.smart_pearl_teleport" : "Smart Pearl lands",
 
     "effect.enhancedcraft.deterioration" : "Deterioration"
 }

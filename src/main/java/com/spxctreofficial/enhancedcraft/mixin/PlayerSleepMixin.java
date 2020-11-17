@@ -2,7 +2,7 @@ package com.spxctreofficial.enhancedcraft.mixin;
 
 import com.mojang.datafixers.util.Either;
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntity;
+import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

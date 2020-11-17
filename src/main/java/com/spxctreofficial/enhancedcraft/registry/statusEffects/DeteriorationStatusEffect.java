@@ -1,4 +1,4 @@
-package com.spxctreofficial.enhancedcraft.registry.status_effects;
+package com.spxctreofficial.enhancedcraft.registry.statusEffects;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;

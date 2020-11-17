@@ -1,4 +1,4 @@
-package com.spxctreofficial.enhancedcraft.entity;
+package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;

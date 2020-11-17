@@ -1,4 +1,4 @@
-package com.spxctreofficial.enhancedcraft.entity;
+package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.PathAwareEntity;

@@ -7,8 +7,21 @@ This beta update adds some more config options, features, and applies some fixes
 
 #### Changes
     - (IMPORTANT) Dropping support for 1.16.2 and 1.16.3. You must update to the latest version of Fabric Loader and Fabric API!
-    - Fixed an issue with fireballs crashing a server when used on a server.
+    - NEW ENCHANTMENT: Harvester
+        - Harvester is a new enchantment specific to hoes.
+        - Harvester increases harvest amount of crops.
+            - Beetroot crops now drop 4 to 10 beetroots when harvested.
+            - Potato crops now drop an ADDITIONAL 5 to 12 potatoes when harvested. (You're welcome Technoblade)
+            - Carrot crops now drop an ADDITIONAL 7 to 15 carrots when harvested.
+            - Wheat crops now drops 3 to 7 wheat when harvested.
+            - Haybales now have a 50% chance to duplicate themselves when harvested.
+        - Harvester can be obtained with an enchantment table with a level-15 enchantment or better.
+        - Harvester is mutually exclusive with the Fortune enchantment.
     - Added a teleport-landing sound to Smart Pearls to fill in for the lack of the damage-taking sound that usually gives the feedback of landing with normal Ender Pearls.
+    - Fixed an issue with fireballs crashing a server when used on a server.
+    - Fixed lang files.
+    - Quality of Life Changes:
+        - Grass now has a 100% chance to 1 to 3 seeds when mined with hoes.
 
 ### beta-1.4-SNAPSHOT-C & 11.14.2020
 

@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.registry.misc;
 
-import com.spxctreofficial.enhancedcraft.entity.SmartPearlEntity;
+import com.spxctreofficial.enhancedcraft.registry.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -34,6 +34,6 @@ public class SmartPearlItem extends Item {
 			itemStack.decrement(1);
 		}
 
-		return TypedActionResult.method_29237(itemStack, world.isClient());
+		return TypedActionResult.success(itemStack, world.isClient());
 	}
 }

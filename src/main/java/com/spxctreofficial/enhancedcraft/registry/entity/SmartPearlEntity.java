@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.spxctreofficial.enhancedcraft.entity;
+package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
@@ -21,7 +21,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;

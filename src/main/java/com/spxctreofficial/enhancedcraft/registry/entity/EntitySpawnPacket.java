@@ -1,4 +1,4 @@
-package com.spxctreofficial.enhancedcraft.entity;
+package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;

@@ -1,7 +1,7 @@
 package com.spxctreofficial.enhancedcraft;
 
-import com.spxctreofficial.enhancedcraft.entity.EntitySpawnPacket;
-import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntityRenderer;
+import com.spxctreofficial.enhancedcraft.registry.entity.EntitySpawnPacket;
+import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntityRenderer;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;

@@ -1,10 +1,11 @@
 package com.spxctreofficial.enhancedcraft.registry;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.entity.HeroBrineEntity;
-import com.spxctreofficial.enhancedcraft.entity.SmartPearlEntity;
+import com.spxctreofficial.enhancedcraft.registry.enchantments.HarvesterEnchantment;
+import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
+import com.spxctreofficial.enhancedcraft.registry.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
-import com.spxctreofficial.enhancedcraft.registry.status_effects.DeteriorationStatusEffect;
+import com.spxctreofficial.enhancedcraft.registry.statusEffects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.*;
 
 import com.spxctreofficial.enhancedcraft.registry.armor.CustomArmorMaterials;
@@ -17,6 +18,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
@@ -163,6 +165,13 @@ public class ECRegistry {
 	public static final Item FireballItem = new FireballItem();
 	public static final Item GayFireballItem = new GayFireballItem();
 
+	// Enchantment Definitions
+	public static Enchantment HarvesterEnchantment = Registry.register(
+			Registry.ENCHANTMENT,
+			new Identifier(EnhancedCraft.MOD_ID, "harvester"),
+			new HarvesterEnchantment()
+	);
+
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -183,7 +192,7 @@ public class ECRegistry {
 					0, // min y level
 					80))) // max y level
 			.spreadHorizontally()
-			.method_30377(128) // Circular spread
+			.rangeOf(128) // Circular spread
 			.repeat(20); // number of veins per chunk
 
 	public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
@@ -195,7 +204,7 @@ public class ECRegistry {
 					6, // min y level
 					20))) // max y level
 			.spreadHorizontally()
-			.method_30377(32) // Circular spread
+			.rangeOf(32) // Circular spread
 			.repeat(4); // number of veins per chunk
 
 	// Status Effect Definitions

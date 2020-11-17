@@ -1,7 +1,7 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.entity.EtheriumEntityData;
+import com.spxctreofficial.enhancedcraft.registry.entity.EtheriumEntityData;
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.Entity;
@@ -17,7 +17,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -52,16 +54,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 
 	@Inject(method = "onDeath", at = @At("RETURN"))
 	public void onDeath(DamageSource source, CallbackInfo info) {
-		try {
-			LivingEntity attacker = (LivingEntity) source.getAttacker();
-			if (attacker == null) return;
-
-			EtheriumEntityData.getData(attacker).EtheriumEnrageMechanic();
-		} catch (ClassCastException e) {
-			EnhancedCraft.LOGGER.warn("An entity was not the correct type! Tell spxctreofficial to fuck himself " +
-					"and fix his fucking code and tell him how much of a cunt meatball he is. Thank you for your continued"+
-					"support. Stay safe and catch corona lol", e);
-		}
+		EtheriumEnrageInitiate(source);
 
 		TotallyNotEasterEgg();
 	}
@@ -78,6 +71,19 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	}
 
 	// Private voids to clean up the code
+
+	private void EtheriumEnrageInitiate(DamageSource source) {
+		try {
+			LivingEntity attacker = (LivingEntity) source.getAttacker();
+			if (attacker == null) return;
+
+			EtheriumEntityData.getData(attacker).EtheriumEnrageMechanic();
+		} catch (ClassCastException e) {
+			EnhancedCraft.LOGGER.warn("An entity was not the correct type! Tell spxctreofficial to fuck himself " +
+					"and fix his fucking code and tell him how much of a cunt meatball he is. Thank you for your continued"+
+					"support. Stay safe and catch corona lol", e);
+		}
+	}
 
 	private void EtheriumSetBonus() {
 		int armorCount = 0;
