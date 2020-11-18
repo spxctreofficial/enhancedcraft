@@ -20,7 +20,7 @@ public class SmartPearlItem extends Item {
 
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
-		world.playSound(null, user.getX(), user.getY(), user.getZ(), ECRegistry.SmartPearlThrowSoundEvent, SoundCategory.NEUTRAL, 0.5F, 1F);
+		world.playSound(null, user.getX(), user.getY(), user.getZ(), ECRegistry.smartPearlThrowSoundEvent, SoundCategory.NEUTRAL, 0.5F, 1F);
 		user.getItemCooldownManager().set(this, 5);
 		if (!world.isClient) {
 			SmartPearlEntity pearlEntity = new SmartPearlEntity(world, user);

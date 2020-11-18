@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-	"WoW",
 	"WWW",
-	" W "
+	"WoW",
+	"WWW"
   ],
   "key": {
 	"W": {
-	  "tag": "minecraft:planks"
+	  "item": "minecraft:gold_ingot"
 	},
 	"o": {
-	  "item": "enhancedcraft:metal_alloy"
+	  "item": "minecraft:player_head"
 	}
   },
   "result": {
-	"item": "minecraft:shield"
+	"item": "enhancedcraft:golden_head"
   }
 }

@@ -34,7 +34,7 @@ public class AlloyToolAlternateMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(ECRegistry.MetalAlloy);
+		return Ingredient.ofItems(ECRegistry.METAL_ALLOY);
 	}
     
 }

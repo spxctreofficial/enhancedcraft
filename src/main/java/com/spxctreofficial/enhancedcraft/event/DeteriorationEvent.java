@@ -9,16 +9,16 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 public class DeteriorationEvent {
 
-	public static void Deterioration() {
+	public static void deterioration() {
 		ServerTickEvents.END_SERVER_TICK.register((server) -> {
 			for (ServerPlayerEntity serverPlayerEntity : server.getPlayerManager().getPlayerList()) {
 				for (ItemStack armorItem : serverPlayerEntity.getArmorItems()) {
 					if (armorItem.isEmpty()) {
 						continue;
 					}
-					if (armorItem.getItem().isIn(ECRegistry.OverworldArmor)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MirroredDimension) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ECRegistry.DeteriorationStatusEffect, 2, 0)));
+					if (armorItem.getItem().isIn(ECRegistry.OVERWORLD_ARMOR)) {
+						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
+							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ECRegistry.DETERIORATION_STATUS_EFFECT, 2, 0)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 4)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 2, 19)));
 							break;
@@ -29,8 +29,8 @@ public class DeteriorationEvent {
 					if (mainHandItem.isEmpty()) {
 						continue;
 					}
-					if (mainHandItem.getItem().isIn(ECRegistry.OverworldTools)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MirroredDimension) {
+					if (mainHandItem.getItem().isIn(ECRegistry.OVERWORLD_TOOLS)) {
+						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 2, 4)));
 							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0)));
 						}

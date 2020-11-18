@@ -9,9 +9,9 @@ import net.minecraft.block.OreBlock;
 
 public class PurigoldOtherstoneBlock extends OreBlock {
 
-	public static Material PurigoldOtherstoneMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static Material purigoldOtherstoneMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public PurigoldOtherstoneBlock() {
-		super(FabricBlockSettings.of(PurigoldOtherstoneMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+		super(FabricBlockSettings.of(purigoldOtherstoneMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
 	}
 }

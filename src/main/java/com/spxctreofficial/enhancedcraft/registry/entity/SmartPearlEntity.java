@@ -32,16 +32,16 @@ public class SmartPearlEntity extends ThrownItemEntity {
 	}
 
 	public SmartPearlEntity(World world, LivingEntity owner) {
-		super(ECRegistry.SmartPearlEntityType, owner, world);
+		super(ECRegistry.SMART_PEARL_ENTITY_TYPE, owner, world);
 	}
 
 	@Environment(EnvType.CLIENT)
 	public SmartPearlEntity(World world, double x, double y, double z) {
-		super(ECRegistry.SmartPearlEntityType, x, y, z, world);
+		super(ECRegistry.SMART_PEARL_ENTITY_TYPE, x, y, z, world);
 	}
 
 	protected Item getDefaultItem() {
-		return ECRegistry.SmartPearlItem;
+		return ECRegistry.SMART_PEARL;
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class SmartPearlEntity extends ThrownItemEntity {
 					}
 					entity.requestTeleport(this.getX(), this.getY(), this.getZ());
 					entity.fallDistance = 0F;
-					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.SmartPearlTeleportSoundEvent, SoundCategory.NEUTRAL, 0.75F, 1F);
+					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.smartPearlTeleportSoundEvent, SoundCategory.NEUTRAL, 0.75F, 1F);
 				}
 			} else if (entity != null) {
 				entity.requestTeleport(this.getX(), this.getY(), this.getZ());

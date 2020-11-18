@@ -15,6 +15,6 @@ public class EnhancedCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ECRegistry.Registry();
-		EventController.InitiateEvents();
+		EventController.initiateEvents();
 	}
 }

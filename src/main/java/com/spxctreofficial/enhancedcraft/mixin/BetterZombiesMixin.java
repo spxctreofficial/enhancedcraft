@@ -29,18 +29,18 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 		float hardModeWeaponChance = rand.nextFloat();
 		if (this.world.getDifficulty() == Difficulty.HARD) {
 			if (hardModeWeaponChance <= 0.75F) {
-				HardClasses();
+				hardClasses();
 			}
 			else {
-				NormalClasses();
+				normalClasses();
 			}
 		}
 		else if (rand.nextFloat() > (this.world.getDifficulty() == Difficulty.NORMAL ? 0.50F : 0.01F)) {
-			NormalClasses();
+			normalClasses();
 		}
 		info.cancel();
 	}
-	private void NormalClasses() {
+	private void normalClasses() {
 		switch (rand.nextInt(10)) {
 			case 0:
 				// Generic Sword Zombie
@@ -52,11 +52,11 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 2:
 				// Simple Sword Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BronzeSwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BRONZE_SWORD));
 				break;
 			case 3:
 				// Simple Axe Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BronzeAxeItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.BRONZE_AXE));
 				break;
 			case 4:
 				// Generic Axe Zombie
@@ -70,7 +70,7 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 6:
 				// Strong Sword Zombie
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.AlloySwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.ALLOY_SWORD));
 				break;
 			case 7:
 				// Weak Sword Zombie
@@ -82,11 +82,11 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 				break;
 			case 9:
 				// Nitwit Zombie
-				this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(ECRegistry.MetalAlloy));
+				this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(ECRegistry.METAL_ALLOY));
 				break;
 		}
 	}
-	private void HardClasses() {
+	private void hardClasses() {
 		switch (rand.nextInt(4)) {
 			case 0:
 				// Tank Zombie

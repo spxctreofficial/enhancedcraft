@@ -23,7 +23,7 @@ public class GayFireballItem extends Item {
 		ItemStack itemStack = user.getStackInHand(hand);
 		world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.NEUTRAL, 3.5F, 1F);
 
-		SpawnBarrage(world, user, hand);
+		spawnBarrage(world, user, hand);
 
 		user.incrementStat(Stats.USED.getOrCreateStat(this));
 		if (!user.abilities.creativeMode) {
@@ -33,7 +33,7 @@ public class GayFireballItem extends Item {
 		return TypedActionResult.success(itemStack, world.isClient());
 	}
 
-	public void SpawnBarrage(World world, PlayerEntity user, Hand hand) {
+	public void spawnBarrage(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
 		if (!world.isClient) {
 			Vec3d vector = user.getRotationVector();

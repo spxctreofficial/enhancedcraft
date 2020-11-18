@@ -27,7 +27,7 @@ public abstract class BetterSkeletonsMixin extends HostileEntity {
 		int itemChance = rand.nextInt(8);
 		switch (itemChance) {
 			case 0:
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.AlloySwordItem));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.ALLOY_SWORD));
 				break;
 			case 1:
 				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));

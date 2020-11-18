@@ -14,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -22,15 +21,13 @@ public class EtheriumEntityData {
 	private static final Map<UUID, EtheriumEntityData> ENTITY_DATA = new HashMap<>();
 	public static final EtheriumEntityData EMPTY = new EtheriumEntityData();
 
-	public static final short EtheriumMaxEnrageTime = 20 * 5;
-	public static final UUID EtheriumHealthBoostUUID = UUID.randomUUID();
-
-	Random rand = new Random();
+	public static final short ETHERIUM_MAX_ENRAGE_TIME = 20 * 5;
+	public static final UUID ETHERIUM_HEALTH_BOOST_UUID = UUID.randomUUID();
 
 	private final ECLivingEntity user;
 	private final ECLivingEntity victim;
 
-	public void EtheriumEnrageMechanic() {
+	public void etheriumEnrageMechanic() {
 		if (user == null) {
 			EnhancedCraft.LOGGER.warn("A call to the enrage mechanic was called with a nonexistent entity!");
 			return;
@@ -40,23 +37,23 @@ public class EtheriumEntityData {
 		LivingEntity attacker = user.getAsEntity();
 
 		attacker.getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.EtheriumArmor)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
 		});
 
 		if(!attacker.world.isClient && armorCount.get() == 4) {
 			user.setEtheriumEnrageStatus((short) (user.getEtheriumEnrageStatus() == 3 ? 3 : user.getEtheriumEnrageStatus() + 1));
-			user.setEtheriumEnrageTime(EtheriumMaxEnrageTime);
+			user.setEtheriumEnrageTime(ETHERIUM_MAX_ENRAGE_TIME);
 
 
 			if (user.getEtheriumEnrageStatus() == 3) {
-				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, EtheriumMaxEnrageTime, 0));
-				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, EtheriumMaxEnrageTime, 1));
+				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, ETHERIUM_MAX_ENRAGE_TIME, 0));
+				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, ETHERIUM_MAX_ENRAGE_TIME, 1));
 
 				if (!user.getIsEtheriumEnrageMaxed()) {
 					attacker.getEntityWorld().playSound(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker.getBlockPos(), // The position of where the sound will come from
-							ECRegistry.EtheriumEnragedSoundEvent, // The sound that will play
+							ECRegistry.etheriumEnragedSoundEvent, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -67,7 +64,7 @@ public class EtheriumEntityData {
 					attacker.getEntityWorld().playSound(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker.getBlockPos(), // The position of where the sound will come from
-							ECRegistry.EtheriumEnragedKillSoundEvent, // The sound that will play
+							ECRegistry.etheriumEnragedKillSoundEvent, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -76,19 +73,19 @@ public class EtheriumEntityData {
 			}
 
 			int amplifier = user.getEtheriumEnrageStatus() > 1 ? 1 : 0;
-			attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, EtheriumMaxEnrageTime, amplifier));
+			attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, ETHERIUM_MAX_ENRAGE_TIME, amplifier));
 		}
 
 		armorCount.getAndSet(0);
 		victim.getAsEntity().getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.EtheriumArmor)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
 		});
 		if (armorCount.get() >= 4) {
 			EntityAttributeInstance maxHealth = user.getAsEntity().getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
 
 			if (maxHealth == null) throw new RuntimeException("An entity's max health should not be null!");
 
-			maxHealth.removeModifier(EtheriumHealthBoostUUID);
+			maxHealth.removeModifier(ETHERIUM_HEALTH_BOOST_UUID);
 		}
 	}
 

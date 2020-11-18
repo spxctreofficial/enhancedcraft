@@ -9,9 +9,9 @@ import net.minecraft.block.MaterialColor;
 
 public class EtheriumBlock extends Block {
 
-	public static Material EtheriumBlockMaterial = new FabricMaterialBuilder(MaterialColor.DIAMOND).build();  
+	public static Material etheriumBlockMaterial = new FabricMaterialBuilder(MaterialColor.DIAMOND).build();
 
 	public EtheriumBlock() {
-		super(FabricBlockSettings.of(EtheriumBlockMaterial).strength(25f, 1200f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
+		super(FabricBlockSettings.of(etheriumBlockMaterial).strength(25f, 1200f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
 	}
 }

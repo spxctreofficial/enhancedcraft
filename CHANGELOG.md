@@ -3,6 +3,26 @@
 ## beta-1.4
 This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
 
+### beta-1.4-SNAPSHOT-E
+
+#### Changes
+    - Added a new food item: Golden Heads (aka G-Heads)!
+        - Continuing down the Hypixel copy-train, we have created the Golden Head from Hypixel UHC Meet-ups.
+        - Food stats identical to Golden Apple:
+            - Regeneration II for 5 seconds
+            - Absorption I for 2 minutes.
+            - 4 hunger points and 9.6 saturation points restored.
+        - Like Hypixel's G-Heads, they are consumed instantly.
+        - To prevent from accidently eating multiple G-heads, as well as for the sake of balance, we've put a 3-second delay on repeated-head-eating. ;)
+        - They are crafted with golden ingots surrounding a player head, similar to Hypixel's G-Head.
+        - Players now have a 50% chance to drop their own head when they die.
+    - Two new advancements in-game!
+    - Fixed shields not being able to be crafted with metal alloy.
+    - Easter egg ;)
+    
+    - Technical Stuff
+        - Fixed all capitalization to match Java's official capitalization. (Thanks... YTG123 ;[           i cry)
+    
 ### beta-1.4-SNAPSHOT-D
 
 #### Changes

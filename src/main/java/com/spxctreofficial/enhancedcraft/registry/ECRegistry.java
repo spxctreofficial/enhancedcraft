@@ -17,7 +17,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.SkullBlockEntity;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -53,129 +55,135 @@ public class ECRegistry {
 
 
 	// SoundEvents Definitions
-	public static final Identifier SoakedHands = new Identifier("enhancedcraft:soaked_hands");
+	public static final Identifier SOAKED_HANDS = new Identifier("enhancedcraft:soaked_hands");
 
-	public static final Identifier EtheriumEnragedSound = new Identifier("enhancedcraft:etherium_enraged_sound");
-	public static final Identifier EtheriumEnragedKill = new Identifier("enhancedcraft:etherium_enraged_kill");
-	public static final Identifier EtheriumEnragedEndedSound = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
+	public static final Identifier ETHERIUM_ENRAGED_SOUND = new Identifier("enhancedcraft:etherium_enraged_sound");
+	public static final Identifier ETHERIUM_ENRAGED_KILL = new Identifier("enhancedcraft:etherium_enraged_kill");
+	public static final Identifier ETHERIUM_ENRAGED_ENDED_SOUND = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
 
-	public static final Identifier SmartPearlThrow = new Identifier("enhancedcraft:smart_pearl_throw");
-	public static final Identifier SmartPearlTeleport = new Identifier("enhancedcraft:smart_pearl_teleport");
+	public static final Identifier SMART_PEARL_THROW = new Identifier("enhancedcraft:smart_pearl_throw");
+	public static final Identifier SMART_PEARL_TELEPORT = new Identifier("enhancedcraft:smart_pearl_teleport");
 
-	public static SoundEvent SoakedHandsSoundEvent = new SoundEvent(SoakedHands);
+	public static SoundEvent soakedHandsSoundEvent = new SoundEvent(SOAKED_HANDS);
 
-	public static SoundEvent EtheriumEnragedSoundEvent = new SoundEvent(EtheriumEnragedSound);
-	public static SoundEvent EtheriumEnragedKillSoundEvent = new SoundEvent(EtheriumEnragedKill);
-	public static SoundEvent EtheriumEnragedEndedSoundEvent = new SoundEvent(EtheriumEnragedEndedSound);
+	public static SoundEvent etheriumEnragedSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_SOUND);
+	public static SoundEvent etheriumEnragedKillSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_KILL);
+	public static SoundEvent etheriumEnragedEndedSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_ENDED_SOUND);
 
-	public static SoundEvent SmartPearlThrowSoundEvent = new SoundEvent(SmartPearlThrow);
-	public static SoundEvent SmartPearlTeleportSoundEvent = new SoundEvent(SmartPearlTeleport);
+	public static SoundEvent smartPearlThrowSoundEvent = new SoundEvent(SMART_PEARL_THROW);
+	public static SoundEvent smartPearlTeleportSoundEvent = new SoundEvent(SMART_PEARL_TELEPORT);
 
 	// Block Definitions
-	public static final Block OtherstoneBlock = new OtherstoneBlock();
-	public static final Block EarthstoneBlock = new EarthstoneBlock();
+	public static final Block OTHERSTONE_BLOCK = new OtherstoneBlock();
+	public static final Block EARTHSTONE_BLOCK = new EarthstoneBlock();
 
-	public static final Block EtheriumOreBlock = new EtheriumOreBlock();
-	public static final Block BronzeOreBlock = new BronzeOreBlock();
-	public static final Block GemstoneBlock = new GemstoneBlock();
-	public static final Block CobaltOreBlock = new CobaltOreBlock();
-	public static final Block FortisteelEarthstoneBlock = new FortisteelEarthstoneBlock();
-	public static final Block FortisteelOtherstoneBlock = new FortisteelOtherstoneBlock();
-	public static final Block PurigoldEarthstoneBlock = new PurigoldEarthstoneBlock();
-	public static final Block PurigoldOtherstoneBlock = new PurigoldOtherstoneBlock();
+	public static final Block ETHERIUM_ORE_BLOCK = new EtheriumOreBlock();
+	public static final Block BRONZE_ORE_BLOCK = new BronzeOreBlock();
+	public static final Block GEMSTONE_BLOCK = new GemstoneBlock();
+	public static final Block COBALT_ORE_BLOCK = new CobaltOreBlock();
+	public static final Block FORTISTEEL_EARTHSTONE_BLOCK = new FortisteelEarthstoneBlock();
+	public static final Block FORTISTEEL_OTHERSTONE_BLOCK = new FortisteelOtherstoneBlock();
+	public static final Block PURIGOLD_EARTHSTONE_BLOCK = new PurigoldEarthstoneBlock();
+	public static final Block PURIGOLD_OTHERSTONE_BLOCK = new PurigoldOtherstoneBlock();
 
-	public static final Block EtheriumBlock = new EtheriumBlock();
-	public static final Block BronzeBlock = new BronzeBlock();
+	public static final Block ETHERIUM_BLOCK = new EtheriumBlock();
+	public static final Block BRONZE_BLOCK = new BronzeBlock();
+
+	public static final Block GOLDEN_HEAD_BLOCK = new SkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F)) {};
+	public static final Block GOLDEN_HEAD_WALL_BLOCK = new WallSkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F).dropsLike(GOLDEN_HEAD_BLOCK)) {};
 
 	// Item Definitions
-	public static final Item Etherium = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
-	public static final Item EtheriumOreItem = new BlockItem(EtheriumOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item EtheriumBlockItem = new BlockItem(EtheriumBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item EtheriumHelmet = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item EtheriumChestplate = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item EtheriumLeggings = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item EtheriumBoots = new ArmorItem(CustomArmorMaterials.EtheriumArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item EtheriumSwordItem = new EtheriumSwordItem(new EtheriumToolMaterial());
-	public static final Item EtheriumPickaxeItem = new EtheriumPickaxeItem(new EtheriumToolMaterial());
-	public static final Item EtheriumAxeItem = new EtheriumAxeItem(new EtheriumToolMaterial());
-	public static final Item EtheriumShovelItem = new EtheriumShovelItem(new EtheriumToolMaterial());
-	public static final Item EtheriumHoeItem = new EtheriumHoeItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
+	public static final Item ETHERIUM_ORE_ITEM = new BlockItem(ETHERIUM_ORE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item ETHERIUM_BLOCK_ITEM = new BlockItem(ETHERIUM_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item ETHERIUM_HELMET = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ETHERIUM_CHESTPLATE = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ETHERIUM_LEGGINGS = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ETHERIUM_BOOTS = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ETHERIUM_SWORD = new EtheriumSwordItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_PICKAXE = new EtheriumPickaxeItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_AXE = new EtheriumAxeItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_SHOVEL = new EtheriumShovelItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_HOE = new EtheriumHoeItem(new EtheriumToolMaterial());
 
-	public static final Item ObsidianSwordItem = new ObsidianSwordItem(new ObsidianToolMaterial());
-	public static final Item ObsidianPickaxeItem = new ObsidianPickaxeItem(new ObsidianToolMaterial());
-	public static final Item ObsidianAxeItem = new ObsidianAxeItem(new ObsidianToolMaterial());
-	public static final Item ObsidianShovelItem = new ObsidianShovelItem(new ObsidianToolMaterial());
-	public static final Item ObsidianHoeItem = new ObsidianHoeItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_SWORD = new ObsidianSwordItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_PICKAXE = new ObsidianPickaxeItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_AXE = new ObsidianAxeItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_SHOVEL = new ObsidianShovelItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_HOE = new ObsidianHoeItem(new ObsidianToolMaterial());
 
-	public static final Item GiantSwordItem = new GiantSwordItem(new GiantToolMaterial());
+	public static final Item GIANT_SWORD = new GiantSwordItem(new GiantToolMaterial());
 
-	public static final Item GemstoneBlockItem = new BlockItem(GemstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item GemstoneShard = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
-	public static final Item GemstoneApple = new Item(new Item.Settings().group(ItemGroup.FOOD)
+	public static final Item GEMSTONE_BLOCK_ITEM = new BlockItem(GEMSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item GEMSTONE_SHARD = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+	public static final Item GEMSTONE_APPLE = new Item(new Item.Settings().group(ItemGroup.FOOD)
 			.food(new FoodComponent.Builder().hunger(3).saturationModifier(9.6f).alwaysEdible()
 					.statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 20, 1)), 1f)
 					.statusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 30, 0)), 1f)
 					.statusEffect((new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,20 * 30, 0)), 1f)
 					.build()));
-	public static final Item Gemfuel = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+	public static final Item GEMFUEL = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
-	public static final Item PrimordialCatalyst = new PrimordialCatalyst();
-	public static final Item TomYumStew = new TomYumStew();
+	public static final Item PRIMORDIAL_CATALYST = new PrimordialCatalyst();
+	public static final Item TOM_YUM_STEW = new TomYumStew();
+	public static final Item GOLDEN_HEAD = new GoldenHead();
 
-	public static final Item SwordOfTheNight = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
+	public static final Item SWORD_OF_THE_NIGHT = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
 
-	public static final Item BronzeIngot = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
-	public static final Item BronzeOreItem = new BlockItem(BronzeOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item BronzeBlockItem = new BlockItem(BronzeBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item BronzeHelmet = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item BronzeChestplate = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item BronzeLeggings = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item BronzeBoots = new ArmorItem(CustomArmorMaterials.BronzeArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item BronzeSwordItem = new BronzeSwordItem(new BronzeToolMaterial());
-	public static final Item BronzePickaxeItem = new BronzePickaxeItem(new BronzeToolMaterial());
-	public static final Item BronzeAxeItem = new BronzeAxeItem(new BronzeToolAlternateMaterial());
-	public static final Item BronzeShovelItem = new BronzeShovelItem(new BronzeToolMaterial());
-	public static final Item BronzeHoeItem = new BronzeHoeItem(new BronzeToolAlternateMaterial());
+	public static final Item BRONZE_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+	public static final Item BRONZE_ORE_ITEM = new BlockItem(BRONZE_ORE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item BRONZE_BLOCK_ITEM = new BlockItem(BRONZE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item BRONZE_HELMET = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item BRONZE_CHESTPLATE = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item BRONZE_LEGGINGS = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item BRONZE_BOOTS = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item BRONZE_SWORD = new BronzeSwordItem(new BronzeToolMaterial());
+	public static final Item BRONZE_PICKAXE = new BronzePickaxeItem(new BronzeToolMaterial());
+	public static final Item BRONZE_AXE = new BronzeAxeItem(new BronzeToolAlternateMaterial());
+	public static final Item BRONZE_SHOVEL = new BronzeShovelItem(new BronzeToolMaterial());
+	public static final Item BRONZE_HOE = new BronzeHoeItem(new BronzeToolAlternateMaterial());
 
-	public static final Item MetalAlloy = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
-	public static final Item AlloyHelmet = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item AlloyChestplate = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item AlloyLeggings = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item AlloyBoots = new ArmorItem(CustomArmorMaterials.AlloyArmor, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item AlloySwordItem = new AlloySwordItem(new AlloySwordMaterial());
-	public static final Item AlloyPickaxeItem = new AlloyPickaxeItem(new AlloyToolAlternateMaterial());
-	public static final Item AlloyAxeItem = new AlloyAxeItem(new AlloyToolMaterial());
-	public static final Item AlloyShovelItem = new AlloyShovelItem(new AlloyToolMaterial());
-	public static final Item AlloyHoeItem = new AlloyHoeItem(new AlloyToolMaterial());
+	public static final Item METAL_ALLOY = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
+	public static final Item ALLOY_HELMET = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ALLOY_CHESTPLATE = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ALLOY_LEGGINGS = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ALLOY_BOOTS = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item ALLOY_SWORD = new AlloySwordItem(new AlloySwordMaterial());
+	public static final Item ALLOY_PICKAXE = new AlloyPickaxeItem(new AlloyToolAlternateMaterial());
+	public static final Item ALLOY_AXE = new AlloyAxeItem(new AlloyToolMaterial());
+	public static final Item ALLOY_SHOVEL = new AlloyShovelItem(new AlloyToolMaterial());
+	public static final Item ALLOY_HOE = new AlloyHoeItem(new AlloyToolMaterial());
 
-	public static final Item SoakedHandsMusicDisc = new SoakedHandsMusicDisc(0, SoakedHandsSoundEvent);
+	public static final Item SOAKED_HANDS_MUSIC_DISC = new SoakedHandsMusicDisc(0, soakedHandsSoundEvent);
 
-	public static final Item OtherstoneBlockItem = new BlockItem(OtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item EarthstoneBlockItem = new BlockItem(EarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item OTHERSTONE_BLOCK_ITEM = new BlockItem(OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item EARTHSTONE_BLOCK_ITEM = new BlockItem(EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
-	public static final Item CobaltOreItem = new BlockItem(CobaltOreBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item COBALT_ORE_ITEM = new BlockItem(COBALT_ORE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
-	public static final Item FortisteelEarthstoneItem = new BlockItem(FortisteelEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item FortisteelOtherstoneItem = new BlockItem(FortisteelOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item FORTISTEEL_EARTHSTONE_ITEM = new BlockItem(FORTISTEEL_EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item FORTISTEEL_OTHERSTONE_ITEM = new BlockItem(FORTISTEEL_OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
-	public static final Item PurigoldEarthstoneItem = new BlockItem(PurigoldEarthstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-	public static final Item PurigoldOtherstoneItem = new BlockItem(PurigoldOtherstoneBlock, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item PURIGOLD_EARTHSTONE_ITEM = new BlockItem(PURIGOLD_EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item PURIGOLD_OTHERSTONE_ITEM = new BlockItem(PURIGOLD_OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
-	public static final Item SmartPearlItem = new SmartPearlItem();
-	public static final Item FireballItem = new FireballItem();
-	public static final Item GayFireballItem = new GayFireballItem();
+	public static final Item SMART_PEARL = new SmartPearlItem();
+	public static final Item FIREBALL = new FireballItem();
+	public static final Item GAY_FIREBALL = new GayFireballItem();
+
+//	public static final Item GOLDEN_HEAD = new WallStandingBlockItem(GOLDEN_HEAD_BLOCK, GOLDEN_HEAD_WALL_BLOCK, (new Item.Settings()).group(ItemGroup.DECORATIONS).rarity(Rarity.UNCOMMON));
 
 	// Enchantment Definitions
-	public static Enchantment HarvesterEnchantment = Registry.register(
+	public static Enchantment harvesterEnchantment = Registry.register(
 			Registry.ENCHANTMENT,
 			new Identifier(EnhancedCraft.MOD_ID, "harvester"),
 			new HarvesterEnchantment()
 	);
 
 	// Ore Generation Definitions
-	public static ConfiguredFeature<?, ?> EtheriumOreFeature = Feature.ORE
+	public static ConfiguredFeature<?, ?> etheriumOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ECRegistry.EtheriumOreBlock.getDefaultState(),
+					ECRegistry.ETHERIUM_ORE_BLOCK.getDefaultState(),
 					5)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -183,9 +191,9 @@ public class ECRegistry {
 					9))) // max y level
 			.spreadHorizontally();
 
-	public static ConfiguredFeature<?, ?> BronzeOreFeature = Feature.ORE
+	public static ConfiguredFeature<?, ?> bronzeOreFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ECRegistry.BronzeOreBlock.getDefaultState(),
+					ECRegistry.BRONZE_ORE_BLOCK.getDefaultState(),
 					12)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -195,9 +203,9 @@ public class ECRegistry {
 			.rangeOf(128) // Circular spread
 			.repeat(20); // number of veins per chunk
 
-	public static ConfiguredFeature<?, ?> GemstoneFeature = Feature.ORE
+	public static ConfiguredFeature<?, ?> gemstoneFeature = Feature.ORE
 			.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ECRegistry.GemstoneBlock.getDefaultState(),
+					ECRegistry.GEMSTONE_BLOCK.getDefaultState(),
 					8)) // vein size
 			.decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
 					0, // bottom offset
@@ -208,136 +216,144 @@ public class ECRegistry {
 			.repeat(4); // number of veins per chunk
 
 	// Status Effect Definitions
-	public static final StatusEffect DeteriorationStatusEffect = new DeteriorationStatusEffect();
+	public static final StatusEffect DETERIORATION_STATUS_EFFECT = new DeteriorationStatusEffect();
 
 	// Entity Definitions
-	public static final EntityType<HeroBrineEntity> HerobrineEntity = Registry.register(Registry.ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "herobrine"), FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build());
-	public static final EntityType<SmartPearlEntity> SmartPearlEntityType = Registry.register(
+	public static final EntityType<HeroBrineEntity> HEROBRINE_ENTITY_ENTITY_TYPE = Registry.register(Registry.ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "herobrine"), FabricEntityTypeBuilder.<HeroBrineEntity>create(SpawnGroup.CREATURE, HeroBrineEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build());
+	public static final EntityType<SmartPearlEntity> SMART_PEARL_ENTITY_TYPE = Registry.register(
 			Registry.ENTITY_TYPE,
 			new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"),
 			FabricEntityTypeBuilder.<SmartPearlEntity>create(SpawnGroup.MISC, SmartPearlEntity::new).dimensions(EntityDimensions.fixed(0.25F, 0.25F)).trackRangeBlocks(4).trackedUpdateRate(10).build()
 	);
 
+//	public static final BlockEntityType<SkullBlockEntity> CUSTOM_SKULLS =  BlockEntityType.Builder.create(SkullBlockEntity::new, GOLDEN_HEAD_BLOCK, GOLDEN_HEAD_WALL_BLOCK).build(null);
+
 	// Tags Definitions
-	public static final Tag<Item> OverworldArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
-	public static final Tag<Item> OverworldTools = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
-	public static final Tag<Item> EtheriumArmor = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
+	public static final Tag<Item> OVERWORLD_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
+	public static final Tag<Item> OVERWORLD_TOOLS = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
+	public static final Tag<Item> ETHERIUM_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
 
 	// World Definitions
-	public static final RegistryKey<World> MirroredDimension = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));
+	public static final RegistryKey<World> MIRRORED_DIMENSION = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));
 
 	// Item Registration Method
 	public static void Registry() {
 		// Item Registry
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), Etherium);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlockItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_helmet"), EtheriumHelmet);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_chestplate"), EtheriumChestplate);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_leggings"), EtheriumLeggings);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_boots"), EtheriumBoots);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_sword"), EtheriumSwordItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_pickaxe"), EtheriumPickaxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_axe"), EtheriumAxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_shovel"), EtheriumShovelItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_hoe"), EtheriumHoeItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium"), ETHERIUM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), ETHERIUM_ORE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), ETHERIUM_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_helmet"), ETHERIUM_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_chestplate"), ETHERIUM_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_leggings"), ETHERIUM_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_boots"), ETHERIUM_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_sword"), ETHERIUM_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_pickaxe"), ETHERIUM_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_axe"), ETHERIUM_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_shovel"), ETHERIUM_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_hoe"), ETHERIUM_HOE);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), ObsidianSwordItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_pickaxe"), ObsidianPickaxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_axe"), ObsidianAxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_shovel"), ObsidianShovelItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_hoe"), ObsidianHoeItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), OBSIDIAN_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_pickaxe"), OBSIDIAN_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_axe"), OBSIDIAN_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_shovel"), OBSIDIAN_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_hoe"), OBSIDIAN_HOE);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "giant_sword"), GiantSwordItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "giant_sword"), GIANT_SWORD);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GemstoneBlockItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_shard"), GemstoneShard);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), Gemfuel);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GemstoneApple);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GEMSTONE_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_shard"), GEMSTONE_SHARD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemfuel"), GEMFUEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "gemstone_apple"), GEMSTONE_APPLE);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PrimordialCatalyst);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "tom_yum_stew"), TomYumStew);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "primordial_catalyst"), PRIMORDIAL_CATALYST);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "tom_yum_stew"), TOM_YUM_STEW);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "golden_head"), GOLDEN_HEAD);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SwordOfTheNight);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SWORD_OF_THE_NIGHT);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BronzeIngot);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlockItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_helmet"), BronzeHelmet);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_chestplate"), BronzeChestplate);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_leggings"), BronzeLeggings);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_boots"), BronzeBoots);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_sword"), BronzeSwordItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_pickaxe"), BronzePickaxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_axe"), BronzeAxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_shovel"), BronzeShovelItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BronzeHoeItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BRONZE_INGOT);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BRONZE_ORE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BRONZE_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_helmet"), BRONZE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_chestplate"), BRONZE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_leggings"), BRONZE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_boots"), BRONZE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_sword"), BRONZE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_pickaxe"), BRONZE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_axe"), BRONZE_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_shovel"), BRONZE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_hoe"), BRONZE_HOE);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "metal_alloy"), MetalAlloy);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_helmet"), AlloyHelmet);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_chestplate"), AlloyChestplate);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_leggings"), AlloyLeggings);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_boots"), AlloyBoots);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_sword"), AlloySwordItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_pickaxe"), AlloyPickaxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_axe"), AlloyAxeItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_shovel"), AlloyShovelItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_hoe"), AlloyHoeItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "metal_alloy"), METAL_ALLOY);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_helmet"), ALLOY_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_chestplate"), ALLOY_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_leggings"), ALLOY_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_boots"), ALLOY_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_sword"), ALLOY_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_pickaxe"), ALLOY_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_axe"), ALLOY_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_shovel"), ALLOY_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_hoe"), ALLOY_HOE);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SoakedHandsMusicDisc);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SOAKED_HANDS_MUSIC_DISC);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OtherstoneBlockItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EarthstoneBlockItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OTHERSTONE_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EARTHSTONE_BLOCK_ITEM);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), CobaltOreItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), COBALT_ORE_ITEM);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FortisteelEarthstoneItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FortisteelOtherstoneItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FORTISTEEL_EARTHSTONE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FORTISTEEL_OTHERSTONE_ITEM);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PURIGOLD_EARTHSTONE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PURIGOLD_OTHERSTONE_ITEM);
 
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"), SmartPearlItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FireballItem);
-		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "catastrophically_gay_fireball"), GayFireballItem);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"), SMART_PEARL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FIREBALL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "catastrophically_gay_fireball"), GAY_FIREBALL);
 
 		// Fuel Registry
-		FuelRegistry.INSTANCE.add(Gemfuel, 1200 * 5);
+		FuelRegistry.INSTANCE.add(GEMFUEL, 1200 * 5);
 
 		// Block Registry
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OtherstoneBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EarthstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OTHERSTONE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EARTHSTONE_BLOCK);
 
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), EtheriumOreBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BronzeOreBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), CobaltOreBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FortisteelEarthstoneBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FortisteelOtherstoneBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PurigoldEarthstoneBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PurigoldOtherstoneBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), ETHERIUM_ORE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BRONZE_ORE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), COBALT_ORE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FORTISTEEL_EARTHSTONE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FORTISTEEL_OTHERSTONE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PURIGOLD_EARTHSTONE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PURIGOLD_OTHERSTONE_BLOCK);
 
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), EtheriumBlock);
-		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BronzeBlock);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), ETHERIUM_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BRONZE_BLOCK);
+
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head"), GOLDEN_HEAD_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head_wall"), GOLDEN_HEAD_WALL_BLOCK);
 
 		// SoundEvents Registry
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SoakedHands, SoakedHandsSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SOAKED_HANDS, soakedHandsSoundEvent);
 
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedSound, EtheriumEnragedSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedKill, EtheriumEnragedKillSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.EtheriumEnragedEndedSound, EtheriumEnragedEndedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_SOUND, etheriumEnragedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_KILL, etheriumEnragedKillSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_ENDED_SOUND, etheriumEnragedEndedSoundEvent);
 
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SmartPearlThrow, SmartPearlThrowSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SmartPearlTeleport, SmartPearlTeleportSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_THROW, smartPearlThrowSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_TELEPORT, smartPearlTeleportSoundEvent);
 
 		// Structure Generation Registry
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), EtheriumOreFeature);
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), BronzeOreFeature);
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), GemstoneFeature);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), etheriumOreFeature);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), bronzeOreFeature);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), gemstoneFeature);
 
 		// Status Effect Registry
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(EnhancedCraft.MOD_ID, "deterioration"), DeteriorationStatusEffect);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(EnhancedCraft.MOD_ID, "deterioration"), DETERIORATION_STATUS_EFFECT);
 
 		// Entity Registry
-		FabricDefaultAttributeRegistry.register(HerobrineEntity, HeroBrineEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D));
+		FabricDefaultAttributeRegistry.register(HEROBRINE_ENTITY_ENTITY_TYPE, HeroBrineEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D));
+
+//		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(EnhancedCraft.MOD_ID, "custom_skulls"), CUSTOM_SKULLS);
 	}
 }

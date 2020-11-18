@@ -34,7 +34,7 @@ public class BronzeToolAlternateMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(ECRegistry.BronzeIngot);
+		return Ingredient.ofItems(ECRegistry.BRONZE_INGOT);
 	}
     
 }

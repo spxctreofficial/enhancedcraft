@@ -44,7 +44,7 @@ public class PlayerSleepMixin {
 				ServerPlayer.world.spawnEntity(herobrine);
 				System.out.println(herobrine);*/
 
-			HeroBrineEntity witherSkeletonEntity = (HeroBrineEntity) ECRegistry.HerobrineEntity
+			HeroBrineEntity witherSkeletonEntity = (HeroBrineEntity) ECRegistry.HEROBRINE_ENTITY_ENTITY_TYPE
 					.create(ServerPlayer.world);
 			BlockPos playerPos = new BlockPos(ServerPlayer.getPos());
 			witherSkeletonEntity.refreshPositionAndAngles(playerPos, 0.0F, 0.0F);

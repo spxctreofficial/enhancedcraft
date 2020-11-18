@@ -7,154 +7,150 @@ import me.shedaniel.clothconfig2.gui.entries.SelectionListEntry;
 import me.sargunvohra.mcmods.autoconfig1u.shadowed.blue.endless.jankson.Comment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import org.jetbrains.annotations.NotNull;
 
 @Config(name = EnhancedCraft.MOD_ID)
 public class ModConfig implements ConfigData {
 
 	@Comment("Declares the inventory and block container appearances. (currently WIP)")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public CustomContainers customContainers = CustomContainers.doVanillaTweaksContainers;
+	public customContainers containers = customContainers.DO_VANILLA_TWEAKS_CONTAINERS;
 	@Comment("Declares the option menu background texture.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public CustomBackgrounds customBackgrounds = CustomBackgrounds.doDefaultBackground;
+	public customBackgrounds backgrounds = customBackgrounds.DO_DEFAULT_BACKGROUND;
 	@Comment("Declares the survival hotbar icons' appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public CustomIcons customIcons = CustomIcons.doNebulaIcons;
+	public customIcons icons = customIcons.DO_NEBULA_ICONS;
 	@Comment("Declares the button widgets and hotbar appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public CustomWidgets customWidgets = CustomWidgets.doNebulaWidgets;
+	public customWidgets widgets = customWidgets.DO_NEBULA_WIDGETS;
 	@Comment("Declares the button widgets and hotbar appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public CustomEnchantmentGlints customEnchantmentGlints = CustomEnchantmentGlints.doGradientGlint;
+	public customEnchantmentGlints enchantmentGlints = customEnchantmentGlints.DO_GRADIENT_GLINT;
 
 	@Environment(EnvType.CLIENT)
-	public enum CustomContainers implements SelectionListEntry.Translatable {
-		doVanillaTweaksContainers {
+	public enum customContainers implements SelectionListEntry.Translatable {
+		DO_VANILLA_TWEAKS_CONTAINERS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customContainers.doVanillaTweaksContainers";
 			}
 		},
-		doClassicContainers {
+		DO_CLASSIC_CONTAINERS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customContainers.doClassicContainers";
 			}
 		}
 	}
 
 	@Environment(EnvType.CLIENT)
-	public enum CustomBackgrounds implements SelectionListEntry.Translatable {
-		doDefaultBackground {
+	public enum customBackgrounds implements SelectionListEntry.Translatable {
+		DO_DEFAULT_BACKGROUND {
 			@Override
-			public String getKey() {
-				String customBackgroundString = "text.autoconfig.enhancedcraft.option.customBackgrounds.doDefaultBackground";
-				return customBackgroundString;
+			public @NotNull String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doDefaultBackground";
 			}
 		},
-		doClassicBackground {
+		DO_CLASSIC_BACKGROUND {
 			@Override
-			public String getKey() {
-				String customBackgroundString = "text.autoconfig.enhancedcraft.option.customBackgrounds.doClassicBackground";
-				return customBackgroundString;
+			public @NotNull String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doClassicBackground";
 			}
 		},
-		doDiamondBackground {
+		DO_DIAMOND_BACKGROUND {
 			@Override
-			public String getKey() {
-				String customBackgroundString = "text.autoconfig.enhancedcraft.option.customBackgrounds.doDiamondBackground";
-				return customBackgroundString;
+			public @NotNull String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doDiamondBackground";
 			}
 		},
-		doStoneBrickBackground {
+		DO_STONE_BRICK_BACKGROUND {
 			@Override
-			public String getKey() {
-				String customBackgroundString = "text.autoconfig.enhancedcraft.option.customBackgrounds.doStoneBrickBackground";
-				return customBackgroundString;
+			public @NotNull String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doStoneBrickBackground";
 			}
 		},
-		doGemstoneBackground {
+		DO_GEMSTONE_BACKGROUND {
 			@Override
-			public String getKey() {
-				String customBackgroundString = "text.autoconfig.enhancedcraft.option.customBackgrounds.doGemstoneBackground";
-				return customBackgroundString;
+			public @NotNull String getKey() {
+				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doGemstoneBackground";
 			}
 		}
 	}
 	
 	@Environment(EnvType.CLIENT)
-	public enum CustomIcons implements SelectionListEntry.Translatable {
-		doNebulaIcons {
+	public enum customIcons implements SelectionListEntry.Translatable {
+		DO_NEBULA_ICONS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customIcons.doNebulaIcons";
 			}
 		},
-		doVanillaTweaksIcons {
+		DO_VANILLA_TWEAKS_ICONS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customIcons.doVanillaTweaksIcons";
 			}
 		},
-		doOGIcons {
+		DO_OG_ICONS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customIcons.doOGIcons";
 			}
 		},
-		doClassicIcons {
+		DO_CLASSIC_ICONS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customIcons.doClassicIcons";
 			}
 		}
 	}
 
 	@Environment(EnvType.CLIENT)
-	public enum CustomWidgets implements SelectionListEntry.Translatable {
-		doNebulaWidgets {
+	public enum customWidgets implements SelectionListEntry.Translatable {
+		DO_NEBULA_WIDGETS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customWidgets.doNebulaWidgets";
 			}
 		},
-		doVanillaTweaksWidgets {
+		DO_VANILLA_TWEAKS_WIDGETS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customWidgets.doVanillaTweaksWidgets";
 			}
 		},
-		doTheLegend27Widgets {
+		DO_THE_LEGEND_27_WIDGETS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customWidgets.doTheLegend27Widgets";
 			}
 		},
-		doClassicWidgets {
+		DO_CLASSIC_WIDGETS {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customWidgets.doClassicWidgets";
 			}
 		}
 	}
 
 	@Environment(EnvType.CLIENT)
-	public enum CustomEnchantmentGlints implements SelectionListEntry.Translatable {
-		doGradientGlint {
+	public enum customEnchantmentGlints implements SelectionListEntry.Translatable {
+		DO_GRADIENT_GLINT {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doGradientGlint";
 			}
 		},
-		doOldGlint {
+		DO_OLD_GLINT {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doOldGlint";
 			}
 		},
-		doClassicGlint {
+		DO_CLASSIC_GLINT {
 			@Override
-			public String getKey() {
+			public @NotNull String getKey() {
 				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doClassicGlint";
 			}
 		}

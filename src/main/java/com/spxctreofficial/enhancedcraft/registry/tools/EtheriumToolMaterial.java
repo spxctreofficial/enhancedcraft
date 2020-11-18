@@ -34,7 +34,7 @@ public class EtheriumToolMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(ECRegistry.Etherium);
+		return Ingredient.ofItems(ECRegistry.ETHERIUM);
 	}
     
 }
