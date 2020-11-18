@@ -13,7 +13,7 @@ This beta update adds some more config options, features, and applies some fixes
             - Absorption I for 2 minutes.
             - 4 hunger points and 9.6 saturation points restored.
         - Like Hypixel's G-Heads, they are consumed instantly.
-        - To prevent from accidently eating multiple G-heads, as well as for the sake of balance, we've put a 3-second delay on repeated-head-eating. ;)
+        - To prevent from accidentally eating multiple G-heads, as well as for the sake of balance, we've put a 3-second delay on repeated-head-eating. ;)
         - They are crafted with golden ingots surrounding a player head, similar to Hypixel's G-Head.
         - Players now have a 50% chance to drop their own head when they die.
     - Two new advancements in-game!
