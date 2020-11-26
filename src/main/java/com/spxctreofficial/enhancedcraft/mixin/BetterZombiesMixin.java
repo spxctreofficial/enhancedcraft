@@ -28,7 +28,7 @@ public abstract class BetterZombiesMixin extends HostileEntity {
 		super.initEquipment(difficulty);
 		float hardModeWeaponChance = rand.nextFloat();
 		if (this.world.getDifficulty() == Difficulty.HARD) {
-			if (hardModeWeaponChance <= 0.75F) {
+			if (hardModeWeaponChance >= 0.75F) {
 				hardClasses();
 			}
 			else {

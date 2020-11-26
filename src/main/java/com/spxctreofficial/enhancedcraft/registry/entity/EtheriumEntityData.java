@@ -50,10 +50,10 @@ public class EtheriumEntityData {
 				attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, ETHERIUM_MAX_ENRAGE_TIME, 1));
 
 				if (!user.getIsEtheriumEnrageMaxed()) {
-					attacker.getEntityWorld().playSound(
+					attacker.getEntityWorld().playSoundFromEntity(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-							attacker.getBlockPos(), // The position of where the sound will come from
-							ECRegistry.etheriumEnragedSoundEvent, // The sound that will play
+							attacker, // The position of where the sound will come from
+							ECRegistry.ETHERIUM_ENRAGED_SOUND_EVENT, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -61,10 +61,10 @@ public class EtheriumEntityData {
 					user.setIsEtheriumEnrageMaxed(true);
 				}
 				else {
-					attacker.getEntityWorld().playSound(
+					attacker.getEntityWorld().playSoundFromEntity(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-							attacker.getBlockPos(), // The position of where the sound will come from
-							ECRegistry.etheriumEnragedKillSoundEvent, // The sound that will play
+							attacker, // The position of where the sound will come from
+							ECRegistry.ETHERIUM_ENRAGED_KILL_SOUND_EVENT, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:netherrack_sword",
+	"enhancedcraft:netherrack_pickaxe",
+	"enhancedcraft:netherrack_axe",
+	"enhancedcraft:netherrack_shovel",
+	"enhancedcraft:netherrack_hoe"
+  ]
+}

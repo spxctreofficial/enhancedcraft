@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "#",
+      "#",
+      "/"
+  ],
+  "key": {
+      "#": {
+          "item": "minecraft:netherrack"
+      },
+      "/": {
+          "item": "minecraft:stick"
+      }
+  },
+  "result": {
+      "item": "enhancedcraft:netherrack_sword",
+      "count": 1
+  }
+}

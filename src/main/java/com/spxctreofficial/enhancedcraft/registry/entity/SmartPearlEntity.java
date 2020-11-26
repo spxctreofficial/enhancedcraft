@@ -71,7 +71,7 @@ public class SmartPearlEntity extends ThrownItemEntity {
 					}
 					entity.requestTeleport(this.getX(), this.getY(), this.getZ());
 					entity.fallDistance = 0F;
-					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.smartPearlTeleportSoundEvent, SoundCategory.NEUTRAL, 0.75F, 1F);
+					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.SMART_PEARL_TELEPORT_SOUND_EVENT, SoundCategory.NEUTRAL, 0.75F, 1F);
 				}
 			} else if (entity != null) {
 				entity.requestTeleport(this.getX(), this.getY(), this.getZ());

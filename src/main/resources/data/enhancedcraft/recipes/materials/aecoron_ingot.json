@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+	"item": "enhancedcraft:aecoron"
+  },
+  "addition": {
+	"item": "enhancedcraft:metal_alloy"
+  },
+  "result": {
+	"item": "enhancedcraft:aecoron_ingot"
+  }
+}

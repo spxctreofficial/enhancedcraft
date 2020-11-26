@@ -18,8 +18,6 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.entity.SkullBlockEntity;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -56,22 +54,34 @@ public class ECRegistry {
 
 	// SoundEvents Definitions
 	public static final Identifier SOAKED_HANDS = new Identifier("enhancedcraft:soaked_hands");
+	public static final Identifier YEAY_ID = new Identifier("enhancedcraft:yeay");
 
+	public static final Identifier ETHERIUM_ARMOR_EQUIP = new Identifier("enhancedcraft:etherium_armor_equip");
+	public static final Identifier ETHERIUM_BONUS_ACTIVATED = new Identifier("enhancedcraft:etherium_bonus_activated");
 	public static final Identifier ETHERIUM_ENRAGED_SOUND = new Identifier("enhancedcraft:etherium_enraged_sound");
 	public static final Identifier ETHERIUM_ENRAGED_KILL = new Identifier("enhancedcraft:etherium_enraged_kill");
 	public static final Identifier ETHERIUM_ENRAGED_ENDED_SOUND = new Identifier("enhancedcraft:etherium_enraged_ended_sound");
 
+	public static final Identifier AECORON_SIREN = new Identifier("enhancedcraft:aecoron_siren");
+	public static final Identifier AECORON_SIRENS_CALL = new Identifier("enhancedcraft:aecoron_sirens_call");
+
 	public static final Identifier SMART_PEARL_THROW = new Identifier("enhancedcraft:smart_pearl_throw");
 	public static final Identifier SMART_PEARL_TELEPORT = new Identifier("enhancedcraft:smart_pearl_teleport");
 
-	public static SoundEvent soakedHandsSoundEvent = new SoundEvent(SOAKED_HANDS);
+	public static final SoundEvent SOAKED_HANDS_SOUND_EVENT = new SoundEvent(SOAKED_HANDS);
+	public static final SoundEvent YEAY_SOUND_EVENT = new SoundEvent(YEAY_ID);
 
-	public static SoundEvent etheriumEnragedSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_SOUND);
-	public static SoundEvent etheriumEnragedKillSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_KILL);
-	public static SoundEvent etheriumEnragedEndedSoundEvent = new SoundEvent(ETHERIUM_ENRAGED_ENDED_SOUND);
+	public static final SoundEvent ETHERIUM_ARMOR_EQUIP_SOUND_EVENT = new SoundEvent(ETHERIUM_ARMOR_EQUIP);
+	public static final SoundEvent ETHERIUM_BONUS_ACTIVATED_SOUND_EVENT = new SoundEvent(ETHERIUM_BONUS_ACTIVATED);
+	public static final SoundEvent ETHERIUM_ENRAGED_SOUND_EVENT = new SoundEvent(ETHERIUM_ENRAGED_SOUND);
+	public static final SoundEvent ETHERIUM_ENRAGED_KILL_SOUND_EVENT = new SoundEvent(ETHERIUM_ENRAGED_KILL);
+	public static final SoundEvent ETHERIUM_ENRAGED_ENDED_SOUND_EVENT = new SoundEvent(ETHERIUM_ENRAGED_ENDED_SOUND);
 
-	public static SoundEvent smartPearlThrowSoundEvent = new SoundEvent(SMART_PEARL_THROW);
-	public static SoundEvent smartPearlTeleportSoundEvent = new SoundEvent(SMART_PEARL_TELEPORT);
+	public static final SoundEvent AECORON_SIREN_SOUND_EVENT = new SoundEvent(AECORON_SIREN);
+	public static final SoundEvent AECORON_SIRENS_CALL_SOUND_EVENT = new SoundEvent(AECORON_SIRENS_CALL);
+
+	public static final SoundEvent SMART_PEARL_THROW_SOUND_EVENT = new SoundEvent(SMART_PEARL_THROW);
+	public static final SoundEvent SMART_PEARL_TELEPORT_SOUND_EVENT = new SoundEvent(SMART_PEARL_TELEPORT);
 
 	// Block Definitions
 	public static final Block OTHERSTONE_BLOCK = new OtherstoneBlock();
@@ -105,6 +115,7 @@ public class ECRegistry {
 	public static final Item ETHERIUM_AXE = new EtheriumAxeItem(new EtheriumToolMaterial());
 	public static final Item ETHERIUM_SHOVEL = new EtheriumShovelItem(new EtheriumToolMaterial());
 	public static final Item ETHERIUM_HOE = new EtheriumHoeItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_GODSLAYER_PERK = new EtheriumGodslayerPerk();
 
 	public static final Item OBSIDIAN_SWORD = new ObsidianSwordItem(new ObsidianToolMaterial());
 	public static final Item OBSIDIAN_PICKAXE = new ObsidianPickaxeItem(new ObsidianToolMaterial());
@@ -130,6 +141,22 @@ public class ECRegistry {
 
 	public static final Item SWORD_OF_THE_NIGHT = new SwordOfTheNight(new SwordOfTheNightToolMaterial());
 
+	public static final Item QUICK_EQUIP_KIT = new QuickEquipKit();
+
+	public static final Item AECORON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+	public static final Item AECORON_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+	public static final Item AECORON_HELMET = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item AECORON_CHESTPLATE = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item AECORON_LEGGINGS = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item AECORON_BOOTS = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item AECORON_PICKAXE =  new AecoronPickaxeItem(new AecoronToolMaterial());
+	public static final Item AECORON_AXE =  new AecoronAxeItem(new AecoronToolMaterial());
+	public static final Item AECORON_SHOVEL =  new AecoronShovelItem(new AecoronToolAlternateMaterial());
+	public static final Item AECORON_HOE =  new AecoronHoeItem(new AecoronToolMaterial());
+	public static final Item SHATTERED_TRIDENT_MOLD = new TridentMolds.TridentMoldShattered();
+	public static final Item DAMAGED_TRIDENT_MOLD = new TridentMolds.TridentMoldDamaged();
+	public static final Item TRIDENT_MOLD = new TridentMolds.TridentMold();
+
 	public static final Item BRONZE_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item BRONZE_ORE_ITEM = new BlockItem(BRONZE_ORE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item BRONZE_BLOCK_ITEM = new BlockItem(BRONZE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
@@ -154,7 +181,14 @@ public class ECRegistry {
 	public static final Item ALLOY_SHOVEL = new AlloyShovelItem(new AlloyToolMaterial());
 	public static final Item ALLOY_HOE = new AlloyHoeItem(new AlloyToolMaterial());
 
-	public static final Item SOAKED_HANDS_MUSIC_DISC = new SoakedHandsMusicDisc(0, soakedHandsSoundEvent);
+	public static final Item NETHERRACK_SWORD = new NetherrackSwordItem(new NetherrackToolMaterial());
+	public static final Item NETHERRACK_PICKAXE = new NetherrackPickaxeItem(new NetherrackToolMaterial());
+	public static final Item NETHERRACK_AXE = new NetherrackAxeItem(new NetherrackToolAlternateMaterial());
+	public static final Item NETHERRACK_SHOVEL = new NetherrackShovelItem(new NetherrackToolAlternateMaterial());
+	public static final Item NETHERRACK_HOE = new NetherrackHoeItem(new NetherrackToolAlternateMaterial());
+
+	public static final Item SOAKED_HANDS_MUSIC_DISC = new SoakedHandsMusicDisc(0, SOAKED_HANDS_SOUND_EVENT);
+	public static final Item YEAY = new Yeay();
 
 	public static final Item OTHERSTONE_BLOCK_ITEM = new BlockItem(OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item EARTHSTONE_BLOCK_ITEM = new BlockItem(EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
@@ -230,8 +264,14 @@ public class ECRegistry {
 
 	// Tags Definitions
 	public static final Tag<Item> OVERWORLD_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
-	public static final Tag<Item> OVERWORLD_TOOLS = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
 	public static final Tag<Item> ETHERIUM_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
+	public static final Tag<Item> AECORON_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/aecoron_armor"));
+
+	public static final Tag<Item> OVERWORLD_TOOLS = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
+	public static final Tag<Item> EXTENDS_FIRE_DURATION = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/extends_fire_duration"));
+	public static final Tag<Item> IS_WATER_FATIGUE_IMMUNE = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/is_water_fatigue_immune"));
+
+	public static final Tag<Item> TRIDENT_MOLDS = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "misc/trident_molds"));
 
 	// World Definitions
 	public static final RegistryKey<World> MIRRORED_DIMENSION = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));
@@ -251,6 +291,7 @@ public class ECRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_axe"), ETHERIUM_AXE);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_shovel"), ETHERIUM_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_hoe"), ETHERIUM_HOE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "etherium_godslayer_perk"), ETHERIUM_GODSLAYER_PERK);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_sword"), OBSIDIAN_SWORD);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "obsidian_pickaxe"), OBSIDIAN_PICKAXE);
@@ -270,6 +311,22 @@ public class ECRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "golden_head"), GOLDEN_HEAD);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "sword_of_the_night"), SWORD_OF_THE_NIGHT);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "quick_equip_kit"), QUICK_EQUIP_KIT);
+
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron"), AECORON);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_ingot"), AECORON_INGOT);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_helmet"), AECORON_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_chestplate"), AECORON_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_leggings"), AECORON_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_boots"), AECORON_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_pickaxe"), AECORON_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_axe"), AECORON_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_shovel"), AECORON_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "aecoron_hoe"), AECORON_HOE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "trident_mold"), TRIDENT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "trident_mold_damaged"), DAMAGED_TRIDENT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "trident_mold_shattered"), SHATTERED_TRIDENT_MOLD);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ingot"), BRONZE_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BRONZE_ORE_ITEM);
@@ -295,7 +352,14 @@ public class ECRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_shovel"), ALLOY_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "alloy_hoe"), ALLOY_HOE);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "netherrack_sword"), NETHERRACK_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "netherrack_pickaxe"), NETHERRACK_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "netherrack_axe"), NETHERRACK_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "netherrack_shovel"), NETHERRACK_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "netherrack_hoe"), NETHERRACK_HOE);
+
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "music_disc_soaked_hands"), SOAKED_HANDS_MUSIC_DISC);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "yeay"), YEAY);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OTHERSTONE_BLOCK_ITEM);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EARTHSTONE_BLOCK_ITEM);
@@ -334,14 +398,20 @@ public class ECRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head_wall"), GOLDEN_HEAD_WALL_BLOCK);
 
 		// SoundEvents Registry
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SOAKED_HANDS, soakedHandsSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SOAKED_HANDS, SOAKED_HANDS_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.YEAY_ID, YEAY_SOUND_EVENT);
 
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_SOUND, etheriumEnragedSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_KILL, etheriumEnragedKillSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_ENDED_SOUND, etheriumEnragedEndedSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ARMOR_EQUIP, ETHERIUM_ARMOR_EQUIP_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_BONUS_ACTIVATED, ETHERIUM_BONUS_ACTIVATED_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_SOUND, ETHERIUM_ENRAGED_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_KILL, ETHERIUM_ENRAGED_KILL_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.ETHERIUM_ENRAGED_ENDED_SOUND, ETHERIUM_ENRAGED_ENDED_SOUND_EVENT);
 
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_THROW, smartPearlThrowSoundEvent);
-		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_TELEPORT, smartPearlTeleportSoundEvent);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.AECORON_SIREN, AECORON_SIREN_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.AECORON_SIRENS_CALL, AECORON_SIRENS_CALL_SOUND_EVENT);
+
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_THROW, SMART_PEARL_THROW_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_TELEPORT, SMART_PEARL_TELEPORT_SOUND_EVENT);
 
 		// Structure Generation Registry
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), etheriumOreFeature);

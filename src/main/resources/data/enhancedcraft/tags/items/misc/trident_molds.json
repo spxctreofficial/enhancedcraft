@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:trident_mold",
+	"enhancedcraft:trident_mold_damaged",
+	"enhancedcraft:trident_mold_shattered"
+  ]
+}

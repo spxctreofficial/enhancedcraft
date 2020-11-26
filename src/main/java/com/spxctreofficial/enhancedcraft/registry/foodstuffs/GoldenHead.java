@@ -1,6 +1,5 @@
 package com.spxctreofficial.enhancedcraft.registry.foodstuffs;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;

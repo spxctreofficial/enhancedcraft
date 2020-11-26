@@ -13,8 +13,11 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum CustomArmorMaterials implements ArmorMaterial {
-    ETHERIUM_ARMOR("etherium", 35, new int[]{5, 8, 10, 5}, 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 20.0F, 0.65F, () -> {
+    ETHERIUM_ARMOR("etherium", 35, new int[]{5, 8, 10, 5}, 35, ECRegistry.ETHERIUM_ARMOR_EQUIP_SOUND_EVENT, 20.0F, 0.65F, () -> {
         return Ingredient.ofItems(ECRegistry.ETHERIUM);
+    }),
+    AECORON_ARMOR("aecoron", 26, new int[]{3, 6, 8, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ECRegistry.AECORON_INGOT);
     }),
     BRONZE_ARMOR("bronze", 12, new int[]{1, 5, 5, 2}, 17, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ECRegistry.BRONZE_INGOT);
@@ -33,15 +36,15 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    CustomArmorMaterials(final String string_1, final int int_1, final int[] ints_1, final int int_2, final SoundEvent soundEvent_1, final float float_1, final float float_2, final Supplier<Ingredient> supplier_1) {
-        this.name = string_1;
-        this.durabilityMultiplier = int_1;
-        this.protectionAmounts = ints_1;
-        this.enchantability = int_2;
-        this.equipSound = soundEvent_1;
-        this.toughness = float_1;
-        this.knockbackResistance = float_2;
-        this.repairIngredientSupplier = new Lazy<>(supplier_1);
+    CustomArmorMaterials(final String name, final int durabilityMultiplier, final int[] protAmount, final int enchantability, final SoundEvent equipSound, final float toughness, final float kbResistance, final Supplier<Ingredient> ingredientSupplier) {
+        this.name = name;
+        this.durabilityMultiplier = durabilityMultiplier;
+        this.protectionAmounts = protAmount;
+        this.enchantability = enchantability;
+        this.equipSound = equipSound;
+        this.toughness = toughness;
+        this.knockbackResistance = kbResistance;
+        this.repairIngredientSupplier = new Lazy<>(ingredientSupplier);
     }
 
     public int getDurability(final EquipmentSlot equipmentSlot_1) {

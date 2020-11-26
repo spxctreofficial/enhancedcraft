@@ -33,13 +33,13 @@ public class ModConfig implements ConfigData {
 		DO_VANILLA_TWEAKS_CONTAINERS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customContainers.doVanillaTweaksContainers";
+				return "text.autoconfig.enhancedcraft.option.containers.doVanillaTweaksContainers";
 			}
 		},
 		DO_CLASSIC_CONTAINERS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customContainers.doClassicContainers";
+				return "text.autoconfig.enhancedcraft.option.containers.doClassicContainers";
 			}
 		}
 	}
@@ -49,31 +49,31 @@ public class ModConfig implements ConfigData {
 		DO_DEFAULT_BACKGROUND {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doDefaultBackground";
+				return "text.autoconfig.enhancedcraft.option.backgrounds.doDefaultBackground";
 			}
 		},
 		DO_CLASSIC_BACKGROUND {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doClassicBackground";
+				return "text.autoconfig.enhancedcraft.option.backgrounds.doClassicBackground";
 			}
 		},
 		DO_DIAMOND_BACKGROUND {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doDiamondBackground";
+				return "text.autoconfig.enhancedcraft.option.backgrounds.doDiamondBackground";
 			}
 		},
 		DO_STONE_BRICK_BACKGROUND {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doStoneBrickBackground";
+				return "text.autoconfig.enhancedcraft.option.backgrounds.doStoneBrickBackground";
 			}
 		},
 		DO_GEMSTONE_BACKGROUND {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customBackgrounds.doGemstoneBackground";
+				return "text.autoconfig.enhancedcraft.option.backgrounds.doGemstoneBackground";
 			}
 		}
 	}
@@ -83,25 +83,25 @@ public class ModConfig implements ConfigData {
 		DO_NEBULA_ICONS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customIcons.doNebulaIcons";
+				return "text.autoconfig.enhancedcraft.option.icons.doNebulaIcons";
 			}
 		},
 		DO_VANILLA_TWEAKS_ICONS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customIcons.doVanillaTweaksIcons";
+				return "text.autoconfig.enhancedcraft.option.icons.doVanillaTweaksIcons";
 			}
 		},
 		DO_OG_ICONS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customIcons.doOGIcons";
+				return "text.autoconfig.enhancedcraft.option.icons.doOGIcons";
 			}
 		},
 		DO_CLASSIC_ICONS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customIcons.doClassicIcons";
+				return "text.autoconfig.enhancedcraft.option.icons.doClassicIcons";
 			}
 		}
 	}
@@ -111,25 +111,25 @@ public class ModConfig implements ConfigData {
 		DO_NEBULA_WIDGETS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customWidgets.doNebulaWidgets";
+				return "text.autoconfig.enhancedcraft.option.widgets.doNebulaWidgets";
 			}
 		},
 		DO_VANILLA_TWEAKS_WIDGETS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customWidgets.doVanillaTweaksWidgets";
+				return "text.autoconfig.enhancedcraft.option.widgets.doVanillaTweaksWidgets";
 			}
 		},
 		DO_THE_LEGEND_27_WIDGETS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customWidgets.doTheLegend27Widgets";
+				return "text.autoconfig.enhancedcraft.option.widgets.doTheLegend27Widgets";
 			}
 		},
 		DO_CLASSIC_WIDGETS {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customWidgets.doClassicWidgets";
+				return "text.autoconfig.enhancedcraft.option.widgets.doClassicWidgets";
 			}
 		}
 	}
@@ -139,19 +139,19 @@ public class ModConfig implements ConfigData {
 		DO_GRADIENT_GLINT {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doGradientGlint";
+				return "text.autoconfig.enhancedcraft.option.enchantmentGlints.doGradientGlint";
 			}
 		},
 		DO_OLD_GLINT {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doOldGlint";
+				return "text.autoconfig.enhancedcraft.option.enchantmentGlints.doOldGlint";
 			}
 		},
 		DO_CLASSIC_GLINT {
 			@Override
 			public @NotNull String getKey() {
-				return "text.autoconfig.enhancedcraft.option.customEnchantmentGlints.doClassicGlint";
+				return "text.autoconfig.enhancedcraft.option.enchantmentGlints.doClassicGlint";
 			}
 		}
 	}

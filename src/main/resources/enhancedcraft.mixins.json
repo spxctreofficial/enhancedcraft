@@ -10,7 +10,8 @@
 	"LivingEntityMixin",
 	"PlayerEntityMixin",
 	"PlayerSleepMixin",
-	"SkullBlockEntityRendererAccessor"
+	"TridentEntityMixin",
+	"TridentItemMixin"
   ],
   "client": [
 	"TextureManagerMixin"

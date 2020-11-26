@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	" # ",
+	"#D#",
+	" # "
+  ],
+  "key": {
+	"#": {
+	  "item": "enhancedcraft:etherium"
+	},
+	"D": {
+	  "item": "enhancedcraft:etherium_block"
+	}
+  },
+  "result": {
+	"item": "enhancedcraft:etherium_godslayer_perk",
+	"count": 1
+  }
+}

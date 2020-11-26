@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:prismarine_crystals"
+    },
+    "result": "minecraft:charcoal",
+    "experience": 0,
+    "cookingtime": 400
+}

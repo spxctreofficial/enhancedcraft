@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:prismarine_shard"
+    },
+    "result": "enhancedcraft:aecoron",
+    "experience": 1.2,
+    "cookingtime": 100
+}

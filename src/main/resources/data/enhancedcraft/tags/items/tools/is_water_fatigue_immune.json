@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:aecoron_pickaxe",
+	"enhancedcraft:aecoron_axe",
+	"enhancedcraft:aecoron_shovel",
+	"enhancedcraft:aecoron_hoe"
+  ]
+}

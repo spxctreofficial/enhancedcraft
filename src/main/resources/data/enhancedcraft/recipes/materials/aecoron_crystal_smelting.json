@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:prismarine_crystals"
+    },
+    "result": "enhancedcraft:aecoron",
+    "experience": 2,
+    "cookingtime": 40
+}

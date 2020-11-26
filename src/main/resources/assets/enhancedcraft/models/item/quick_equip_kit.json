@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+	"layer0": "enhancedcraft:items/combat/quick_equip_kit"
+  }
+}
