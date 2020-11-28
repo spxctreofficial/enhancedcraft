@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "###",
+      " / ",
+      " / "
+  ],
+  "key": {
+      "#": {
+          "item": "enhancedcraft:aecoron_ingot"
+      },
+      "/": {
+          "item": "minecraft:stick"
+      }
+  },
+  "result": {
+      "item": "enhancedcraft:aecoron_pickaxe",
+      "count": 1
+  }
+}

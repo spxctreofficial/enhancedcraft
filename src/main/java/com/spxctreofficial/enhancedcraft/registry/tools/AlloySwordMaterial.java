@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.registry.tools;
 
-import com.spxctreofficial.enhancedcraft.registry.ModRegistry;
+import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -34,7 +34,7 @@ public class AlloySwordMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(ModRegistry.MetalAlloy);
+		return Ingredient.ofItems(ECRegistry.METAL_ALLOY);
 	}
     
 }

@@ -1,8 +1,0 @@
-{
-	"layers": [
-		{
-			"vertexSource": "canvas:shaders/material/default.vert",
-			"fragmentSource": "canvas:shaders/material/green_glow.frag"
-		}
-	]
-}

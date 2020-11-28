@@ -24,6 +24,9 @@
     "client": [
       "com.spxctreofficial.enhancedcraft.EnhancedCraftCLIENT"
     ],
+    "mm:early_risers": [
+      "com.spxctreofficial.enhancedcraft.EarlyRiser"
+    ],
     "modmenu": [
       "com.spxctreofficial.enhancedcraft.ModMenuIntegration"
     ]

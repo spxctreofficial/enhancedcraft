@@ -5,6 +5,20 @@
       "enhancedcraft:music/soaked_hands"
     ]
   },
+  "etherium_armor_equip": {
+    "subtitle": "subtitles.enhancedcraft.etherium_armor_equip",
+    "sounds": [
+      "enhancedcraft:items/combat/equip_etherium1",
+      "enhancedcraft:items/combat/equip_etherium2",
+      "enhancedcraft:items/combat/equip_etherium3"
+    ]
+  },
+  "etherium_bonus_activated": {
+    "subtitle": "subtitles.enhancedcraft.etherium_bonus_activated",
+    "sounds": [
+      "enhancedcraft:misc/etherium_bonus_activated"
+    ]
+  },
   "etherium_enraged_sound": {
     "subtitle": "subtitles.enhancedcraft.etherium_enraged_sound",
     "sounds": [
@@ -24,6 +38,42 @@
     "subtitle": "subtitles.enhancedcraft.etherium_enraged_ended_sound",
     "sounds": [
       "enhancedcraft:misc/etherium_enraged_ended_sound"
+    ]
+  },
+  "aecoron_siren": {
+    "subtitle": "subtitles.enhancedcraft.aecoron_siren",
+    "sounds": [
+      "enhancedcraft:misc/siren1",
+      "enhancedcraft:misc/siren2",
+      "enhancedcraft:misc/siren3"
+    ]
+  },
+  "aecoron_sirens_call": {
+    "subtitle": "subtitles.enhancedcraft.aecoron_sirens_call",
+    "sounds": [
+      "enhancedcraft:misc/sirenscall"
+    ]
+  },
+  "smart_pearl_throw": {
+    "subtitle": "subtitles.enhancedcraft.smart_pearl_throw",
+    "sounds": [
+      "enhancedcraft:misc/smartpearlthrow"
+    ]
+  },
+  "smart_pearl_teleport": {
+    "subtitle": "subtitles.enhancedcraft.smart_pearl_teleport",
+    "sounds": [
+      "enhancedcraft:misc/smartpearlteleport"
+    ]
+  },
+  
+  "yeay": {
+    "subtitle": "subtitles.enhancedcraft.yeay",
+    "sounds": [
+      "enhancedcraft:misc/screaming_god",
+	  "enhancedcraft:misc/screaming_khalifa",
+	  "enhancedcraft:misc/screaming_roxanne",
+	  "enhancedcraft:misc/screaming_sicko"
     ]
   }
 }

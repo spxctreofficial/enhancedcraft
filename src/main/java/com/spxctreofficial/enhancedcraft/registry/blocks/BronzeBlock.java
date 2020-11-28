@@ -9,9 +9,9 @@ import net.minecraft.block.MaterialColor;
 
 public class BronzeBlock extends Block {
 
-	public static Material BronzeBlockMaterial = new FabricMaterialBuilder(MaterialColor.IRON).build();
+	public static Material bronzeBlockMaterial = new FabricMaterialBuilder(MaterialColor.IRON).build();
 
 	public BronzeBlock() {
-		super(FabricBlockSettings.of(BronzeBlockMaterial).strength(5f, 6f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool());
+		super(FabricBlockSettings.of(bronzeBlockMaterial).strength(5f, 6f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool());
 	}
 }

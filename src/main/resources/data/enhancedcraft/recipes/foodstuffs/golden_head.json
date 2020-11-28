@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	"WWW",
+	"WoW",
+	"WWW"
+  ],
+  "key": {
+	"W": {
+	  "item": "minecraft:gold_ingot"
+	},
+	"o": {
+	  "item": "minecraft:player_head"
+	}
+  },
+  "result": {
+	"item": "enhancedcraft:golden_head"
+  }
+}

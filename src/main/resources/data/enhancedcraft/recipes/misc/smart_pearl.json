@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	" # ",
+	"#L#",
+	" # "
+  ],
+  "key": {
+	"#": {
+	  "item": "minecraft:ender_pearl"
+	},
+	"L": {
+	  "item": "minecraft:lapis_lazuli"
+	}
+  },
+  "result": {
+	"item": "enhancedcraft:smart_pearl",
+	"count": 2
+  }
+}

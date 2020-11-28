@@ -1,0 +1,35 @@
+{
+  "parent" : "minecraft:story/metal_alloy_advancement",
+  "display": {
+	"icon": {
+	  "item": "enhancedcraft:aecoron"
+	},
+	"title": "Fragments of Atlantis",
+	"description": "Obtain a lost fragment of the lost city Atlantis.",
+	"background": "minecraft:sea_lantern",
+	"frame": "goal",
+	"hidden": true
+  },
+  "criteria": {
+	"requirement": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"player": [
+		  {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {}
+		  }
+		],
+		"items": [
+		  {
+			"item": "enhancedcraft:aecoron"
+		  }
+		]
+	  }
+	}
+  },
+  "rewards": {
+	"experience": 20
+  }
+}

@@ -17,10 +17,10 @@ import net.minecraft.util.math.MathHelper;
 
 public class EtheriumOreBlock extends OreBlock {
 
-	public static Material EtheriumOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();  
+	public static Material etheriumOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public EtheriumOreBlock() {
-		super(FabricBlockSettings.of(EtheriumOreMaterial).strength(25f, 1200f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
+		super(FabricBlockSettings.of(etheriumOreMaterial).strength(25f, 1200f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
 	}
 
 	public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {

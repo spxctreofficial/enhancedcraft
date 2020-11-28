@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	"iii",
+	"iSi",
+	"iii"
+  ],
+  "key": {
+	"i": {
+	  "item": "enhancedcraft:aecoron_ingot"
+	},
+	"S": {
+	  "tag": "enhancedcraft:misc/trident_molds"
+	}
+  },
+  "result": {
+	"item": "minecraft:trident",
+	"count": 1
+  }
+}

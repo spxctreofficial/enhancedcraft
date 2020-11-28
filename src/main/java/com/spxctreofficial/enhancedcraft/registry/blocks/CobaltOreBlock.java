@@ -9,9 +9,9 @@ import net.minecraft.block.OreBlock;
 
 public class CobaltOreBlock extends OreBlock {
 
-	public static Material CobaltOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static Material cobaltOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public CobaltOreBlock() {
-		super(FabricBlockSettings.of(CobaltOreMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+		super(FabricBlockSettings.of(cobaltOreMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
 	}
 }

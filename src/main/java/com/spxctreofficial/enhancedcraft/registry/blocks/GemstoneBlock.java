@@ -17,10 +17,10 @@ import net.minecraft.util.math.MathHelper;
 
 public class GemstoneBlock extends OreBlock {
 
-	public static Material GemstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();  
+	public static Material gemstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public GemstoneBlock() {
-		super(FabricBlockSettings.of(GemstoneBlockMaterial).strength(5f, 9f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool());
+		super(FabricBlockSettings.of(gemstoneBlockMaterial).strength(5f, 9f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool());
 	}
 
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {

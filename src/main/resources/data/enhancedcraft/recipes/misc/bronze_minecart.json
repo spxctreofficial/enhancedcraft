@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	"i i",
+	"iii"
+  ],
+  "key": {
+	"i": {
+	  "item": "enhancedcraft:bronze_ingot"
+	}
+  },
+  "result": {
+	"item": "minecraft:minecart",
+	"count": 1
+  }
+}

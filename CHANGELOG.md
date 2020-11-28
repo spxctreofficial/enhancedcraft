@@ -1,5 +1,283 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## beta-1.4
+This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
+
+### beta-1.4 RELEASE
+
+(IMPORTANT) Dropping support for 1.16.2 and 1.16.3. You must update to the latest version of Fabric Loader and Fabric API!
+(ALSO IMPORTANT) One new feature overwrites an entire method related to the Riptide Enchantment. It is recommended to disable any mods that may make changes to the Riptide Enchantment has it might break both mods.
+
+#### Changes
+
+    <New Stuff>
+    - New set: Aecoron (derives from the word "aecor", meaning "ocean" in Latin)
+        - Aecoron crafted by smelting Prismarine Shards / Crystals
+        - Aecoron Ingots crafted by combining Aecoron and Metal Alloy in a Smithing Table
+        - 80% max durability of diamond (1248 for tools, 26 durability multiplier for armor)
+        - Armor:
+            - Same armor points as diamond.
+            - Same toughness as diamond.
+            - Same enchantability as iron (9).
+            - Repaired with Aecoron Ingots.
+            - Aecoron Set Bonus:
+                - You swim significantly faster (up to Dolphin's Grace levels)
+                - Infinite water breathing when in water.
+                - Holding a trident now grants you Strength I.
+                - Throwing a trident now deals 14 damage.
+                - Riptide Buffs:
+                    - Riptide now throws you 2.5 times further and has a faster cooldown.
+                    - Riptide now deals 15 damage on impact.
+                    - You are INVULNERABLE during riptide.
+                    - Launching with Riptide will break your fall.
+                    - After launching with Riptide, you swim EVEN FASTER for 5 seconds.
+                - Loyalty Buffs:
+                    - Loyalty now returns to you 3 times faster.
+                - Siren's Rest:
+                    - This unique ability allows you to heal and regain hunger by "meditating" underwater.
+                    - After meditating, you gain Regeneration I, Resistance I, Speed I, and Absorption X for the next 5 minutes.
+                    - You are invulnerable to damage during meditation.
+                    - You cannot move during meditation.
+        - Tools:
+            - Same overall stats as Diamond.
+            - Suffer no mining speed penalty when touching water.
+        - Trident Mold:
+            - Tridents can now be crafted with trident molds.
+            - A trident mold will still require an existing trident to be created.
+            - A trident mold has three uses before being destroyed.
+                - The state of the mold will be displayed as a condition: New, Damaged, and Shattered.
+    - New set of tools: Netherrack Tools!
+        - Mining level of 1 (same as stone).
+        - Mining speed of 3f.
+        - Durability of 72.
+        - Attacking a player who is lit on fire with a netherrack tool will extend the burning time for 50% longer.
+    - New item: fireballs!
+        - Fireballs currently have the same texture as Fire Charges.
+        - Stackable up to 3!
+        - When right-clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
+        - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
+        - Crafted by combining fire charges with gunpowder.
+    - New item: Smart Pearls!
+        - Smart Pearls work just like ender pearls, but have some benefits over normal Ender Pearls!
+        - Smart Pearls do not deal damage to the user on teleport.
+        - Smart Pearls *does* deal damage to any entities that are hit by the Smart Pearl. Deals 3 damage on impact.
+        - Smart Pearls never spawn endermites.
+        - Smart Pearls have 1/4 the cooldown compared to normal Ender Pearls.
+        - Stackable up to 16.
+        - Smart Pearls have a distinct particle when the user teleports, to differentiate it from normal Ender Pearls.
+        - Smart Pearls have a unique sound effect when the user teleports, to differentiate it from normal Ender Pearls.
+        - This item was inspired by the Smart Pearl in Hypixel's Skywars, but I highly doubt the concept is the same as Hypixel's implementation of this item.
+        - Crafted by using ender pearls surrounding a piece of lapis lazuli. Crafted in batches of 2.
+    - Added a new food item: Golden Heads (aka G-Heads)!
+        - Continuing down the Hypixel copy-train, we have created the Golden Head from Hypixel UHC Meet-ups.
+            - Food stats identical to Golden Apple:
+                - Regeneration II for 5 seconds
+                - Absorption I for 2 minutes.
+                - 4 hunger points and 9.6 saturation points restored.
+        - Like Hypixel's G-Heads, they are consumed instantly.
+        - To prevent from accidently eating multiple G-heads, as well as for the sake of balance, we've put a 3-second delay on repeated-head-eating. ;)
+        - They are crafted with golden ingots surrounding a player head, similar to Hypixel's G-Head.
+        - Players now have a 50% chance to drop their own head when they die.
+    - YEAY
+    - NEW ENCHANTMENT: Harvester
+        - Harvester is a new enchantment specific to hoes.
+            - Harvester increases harvest amount of crops.
+                - Beetroot crops now drop 4 to 10 beetroots when harvested.
+                - Potato crops now drop an ADDITIONAL 5 to 12 potatoes when harvested. (You're welcome Technoblade)
+                - Carrot crops now drop an ADDITIONAL 7 to 15 carrots when harvested.
+                - Wheat crops now drops 3 to 7 wheat when harvested.
+                - Haybales now have a 50% chance to duplicate themselves when harvested.
+        - Harvester can be obtained with an enchantment table with a level-15 enchantment or better.
+        - Harvester is mutually exclusive with the Fortune enchantment.
+    - Two new advancements in-game!
+    
+    <Etherium Set Buffs>
+     - New item: Godslayer (Etherium Perk)
+        - Godslayer perk only works if the user equips a full set of Etherium armor.
+        - On use, the user is granted temporary maximum enrage.
+        - Cooldown for 45 seconds.
+     - New mechanic: Relentless Warrior
+        - When you are fully enraged, your sword will disable the opponent's shield and deal 125 durability to your opponent's shield.
+        - You disable your opponent's shield for twenty seconds instead of ten, and deal full damage towards your opponent.
+    
+    <Better Spawning!>
+    - Skeletons can now spawn equipped with swords and axes.
+    - There are now different types (classes) of zombies!
+        - In hard mode, zombies will always spawn with a class, with a 25% chance to spawn with a hard-mode class.
+            - These zombies have a lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
+            - Hard Classes:
+                - Furious Zombie:
+                    - Netherite Sword with Sharpness 4
+                    - Iron Chestplate
+                    - Strength III
+                - Berserker Zombie:
+                    - Iron Axe with Sharpness 5
+                    - Diamond Helmet and Iron Chestplate
+                - Scout Zombie:
+                    - Speed IV
+                    - Always able to pick up loot
+                - Tank Zombie:
+                    - Enchanted Diamond Sword with Sharpness I - IV
+                    - 3/4 Diamond Set (diamond helmet is excluded)
+                    - Shield with Unbreaking III (cosmetic only)
+                    - Resistance I
+        - In normal mode, zombies will have a 50% chance of spawning with a normal zombie class.
+            - Normal Classes:
+                - Warrior Zombies:
+                    - Warrior Zombie ~
+                        - Iron Helmet and Chestplate
+                        - Stone Sword
+                    - Weak Warrior Zombie ~
+                        - Leather Helmet
+                        - Wooden Sword
+                - Sword Zombies:
+                    - Weak ~ Golden Sword
+                    - Simple ~ Bronze Sword
+                    - Generic ~ Iron Sword
+                    - Strong ~ Alloy Sword
+                - Shovel Zombies:
+                    - Generic ~ Iron Shovel
+                - Axe Zombies:
+                    - Simple ~ Bronze Axe
+                    - Generic ~ Iron Axe
+                - Nitwit Zombie:
+                    - Metal Alloy in off-hand
+        - In easy mode, the chances of spawning with a weapon is the same as vanilla.
+        - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
+        
+    <Quality Of Life Changes>
+    - Minecarts and rails can now be created with bronze ingots instead of iron ingots.
+    
+    <Fixes>
+    - Fixed shields not being able to be crafted with metal alloy.
+    - Etherium armor now has a unique equip sound effect and a unique set bonus activation sound effect.
+    - Etherium sword retextured.
+    - Removed irrelevant recipes JSONs.
+    
+    
+    <Easter Egg?>
+    - A easter egg ;)
+    
+    <Technical Stuff>
+        - Maven publication has been officially removed since no one uses it anyways and it's kind of redundant.
+        - ModRegistry has been refactored to ECRegistry.
+        - Project was updated to JDK 15.0.1.
+        - JIJ for Fabric-ASM.
+        - Fixed all capitalization to match Java's official capitalization. (Thanks... YTG123 ;[           i cry)
+
+### beta-1.4-SNAPSHOT-E
+
+#### Changes
+    - Added a new food item: Golden Heads (aka G-Heads)!
+        - Continuing down the Hypixel copy-train, we have created the Golden Head from Hypixel UHC Meet-ups.
+        - Food stats identical to Golden Apple:
+            - Regeneration II for 5 seconds
+            - Absorption I for 2 minutes.
+            - 4 hunger points and 9.6 saturation points restored.
+        - Like Hypixel's G-Heads, they are consumed instantly.
+        - To prevent from accidentally eating multiple G-heads, as well as for the sake of balance, we've put a 3-second delay on repeated-head-eating. ;)
+        - They are crafted with golden ingots surrounding a player head, similar to Hypixel's G-Head.
+        - Players now have a 50% chance to drop their own head when they die.
+    - Two new advancements in-game!
+    - Fixed shields not being able to be crafted with metal alloy.
+    - Easter egg ;)
+    
+    - Technical Stuff
+        - Fixed all capitalization to match Java's official capitalization. (Thanks... YTG123 ;[           i cry)
+    
+### beta-1.4-SNAPSHOT-D
+
+#### Changes
+    - (IMPORTANT) Dropping support for 1.16.2 and 1.16.3. You must update to the latest version of Fabric Loader and Fabric API!
+    - NEW ENCHANTMENT: Harvester
+        - Harvester is a new enchantment specific to hoes.
+        - Harvester increases harvest amount of crops.
+            - Beetroot crops now drop 4 to 10 beetroots when harvested.
+            - Potato crops now drop an ADDITIONAL 5 to 12 potatoes when harvested. (You're welcome Technoblade)
+            - Carrot crops now drop an ADDITIONAL 7 to 15 carrots when harvested.
+            - Wheat crops now drops 3 to 7 wheat when harvested.
+            - Haybales now have a 50% chance to duplicate themselves when harvested.
+        - Harvester can be obtained with an enchantment table with a level-15 enchantment or better.
+        - Harvester is mutually exclusive with the Fortune enchantment.
+    - Added a teleport-landing sound to Smart Pearls to fill in for the lack of the damage-taking sound that usually gives the feedback of landing with normal Ender Pearls.
+    - Fixed an issue with fireballs crashing a server when used on a server.
+    - Fixed lang files.
+    - Quality of Life Changes:
+        - Grass now has a 100% chance to 1 to 3 seeds when mined with hoes.
+    
+    - Technical Stuff
+        - Project was updated to JDK 15.0.1.
+        - JIJ for Fabric-ASM.
+
+### beta-1.4-SNAPSHOT-C & 11.14.2020
+
+#### Changes
+    - New experimental item: fireballs!
+        - Fireballs currently have the same texture as Fire Charges.
+        - Stackable up to 3!
+        - When right-clicked, fireballs will launch a giant ghast fireball that deals 6 damage on direct contact, and explosion damage if not direct.
+        - This item/concept was inspired by the Fireball in Hypixel's Bedwars.
+        - Crafted by combining fire charges with gunpowder.
+    - Another new experimental item: Smart Pearls!
+        - Smart Pearls work just like ender pearls, but have some benefits over normal Ender Pearls!
+        - Smart Pearls do not deal damage to the user on teleport.
+        - Smart Pearls *does* deal damage to any entities that are hit by the Smart Pearl. Deals 3 damage on impact.
+        - Smart Pearls never spawn endermites.
+        - Smart Pearls have 1/4 the cooldown compared to normal Ender Pearls.
+        - Stackable up to 16.
+        - Smart Pearls have a distinct particle when the user teleports, to differentiate it from normal Ender Pearls.
+        - Smart Pearls have a unique sound effect when the user teleports, to differentiate it from normal Ender Pearls.
+        - This item was inspired by the Smart Pearl in Hypixel's Skywars, but I highly doubt the concept is the same as Hypixel's implementation of this item.
+        - Crafted by using ender pearls surrounding a piece of lapis lazuli. Crafted in batches of 2.
+    - Skeletons can now spawn equipped with swords and axes.
+    - There are now different types (classes) of zombies!
+        - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
+            - These zombies have a lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
+            - Hard Classes:
+                - Furious Zombie:
+                    - Netherite Sword with Sharpness 4
+                    - Iron Chestplate
+                    - Strength III
+                - Berserker Zombie:
+                    - Iron Axe with Sharpness 5
+                    - Diamond Helmet and Iron Chestplate
+                - Scout Zombie:
+                    - Speed IV
+                    - Always able to pick up loot
+                - Tank Zombie:
+                    - Enchanted Diamond Sword with Sharpness I - IV
+                    - 3/4 Diamond Set (diamond helmet is excluded)
+                    - Shield with Unbreaking III (cosmetic only)
+                    - Resistance I
+        - In normal mode, zombies will have a 50% chance of spawning with a normal zombie class.
+            - Normal Classes:
+                - Warrior Zombies:
+                    - Warrior Zombie ~
+                        - Iron Helmet and Chestplate
+                        - Stone Sword
+                    - Weak Warrior Zombie ~
+                        - Leather Helmet
+                        - Wooden Sword
+                - Sword Zombies:
+                    - Weak ~ Golden Sword
+                    - Simple ~ Bronze Sword
+                    - Generic ~ Iron Sword
+                    - Strong ~ Alloy Sword
+                - Shovel Zombies:
+                    - Generic ~ Iron Shovel
+                - Axe Zombies:
+                    - Simple ~ Bronze Axe
+                    - Generic ~ Iron Axe
+                - Nitwit Zombie:
+                    - Metal Alloy in off-hand
+        - In easy mode, the chances of spawning with a weapon is the same as vanilla.
+        - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
+    - A easter egg ;)
+    
+    Technical Stuff:
+        - Maven publication has been officially removed since no one uses it anyways and it's kind of redundant.
+        - ModRegistry has been refactored to ECRegistry.
+
 ## beta-1.3.3
 Halloween update?
 
