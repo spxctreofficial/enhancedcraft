@@ -4,6 +4,7 @@ import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.registry.enchantments.HarvesterEnchantment;
 import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
 import com.spxctreofficial.enhancedcraft.registry.entity.SmartPearlEntity;
+import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
 import com.spxctreofficial.enhancedcraft.registry.statusEffects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.*;
@@ -98,6 +99,8 @@ public class ECRegistry {
 
 	public static final Block ETHERIUM_BLOCK = new EtheriumBlock();
 	public static final Block BRONZE_BLOCK = new BronzeBlock();
+
+	public static final Block TROLL_TNT_BLOCK = new TrollTntBlock();
 
 	public static final Block GOLDEN_HEAD_BLOCK = new SkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F)) {};
 	public static final Block GOLDEN_HEAD_WALL_BLOCK = new WallSkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F).dropsLike(GOLDEN_HEAD_BLOCK)) {};
@@ -204,6 +207,7 @@ public class ECRegistry {
 	public static final Item SMART_PEARL = new SmartPearlItem();
 	public static final Item FIREBALL = new FireballItem();
 	public static final Item GAY_FIREBALL = new GayFireballItem();
+	public static final Item TROLL_TNT_BLOCK_ITEM = new BlockItem(TROLL_TNT_BLOCK, new Item.Settings());
 
 //	public static final Item GOLDEN_HEAD = new WallStandingBlockItem(GOLDEN_HEAD_BLOCK, GOLDEN_HEAD_WALL_BLOCK, (new Item.Settings()).group(ItemGroup.DECORATIONS).rarity(Rarity.UNCOMMON));
 
@@ -258,6 +262,12 @@ public class ECRegistry {
 			Registry.ENTITY_TYPE,
 			new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"),
 			FabricEntityTypeBuilder.<SmartPearlEntity>create(SpawnGroup.MISC, SmartPearlEntity::new).dimensions(EntityDimensions.fixed(0.25F, 0.25F)).trackRangeBlocks(4).trackedUpdateRate(10).build()
+	);
+
+	public static final EntityType<TrollTntEntity> TROLL_TNT_ENTITY_TYPE = Registry.register(
+			Registry.ENTITY_TYPE,
+			new Identifier(EnhancedCraft.MOD_ID, "troll_tnt"),
+			FabricEntityTypeBuilder.<TrollTntEntity>create(SpawnGroup.MISC, TrollTntEntity::new).fireImmune().dimensions(EntityDimensions.fixed(0.98F, 0.98F)).trackRangeBlocks(10).trackedUpdateRate(10).build()
 	);
 
 //	public static final BlockEntityType<SkullBlockEntity> CUSTOM_SKULLS =  BlockEntityType.Builder.create(SkullBlockEntity::new, GOLDEN_HEAD_BLOCK, GOLDEN_HEAD_WALL_BLOCK).build(null);
@@ -375,6 +385,7 @@ public class ECRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"), SMART_PEARL);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FIREBALL);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "catastrophically_gay_fireball"), GAY_FIREBALL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "troll_tnt"), TROLL_TNT_BLOCK_ITEM);
 
 		// Fuel Registry
 		FuelRegistry.INSTANCE.add(GEMFUEL, 1200 * 5);
@@ -393,6 +404,8 @@ public class ECRegistry {
 
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_block"), ETHERIUM_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_block"), BRONZE_BLOCK);
+
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "troll_tnt"), TROLL_TNT_BLOCK);
 
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head"), GOLDEN_HEAD_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head_wall"), GOLDEN_HEAD_WALL_BLOCK);

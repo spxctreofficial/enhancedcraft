@@ -2,7 +2,7 @@
     "parent" : "enhancedcraft:the_final_element_advancement",
     "display": {
       "icon": {
-        "item": "enhancedcraft:etherium"
+        "item": "enhancedcraft:etherium_godslayer_perk"
       },
       "title": "The King of Minecraft",
       "description": "Obtain a full set of Etherium gear.",
@@ -24,9 +24,6 @@
           ],
           "items": [
             {
-              "item": "enhancedcraft:etherium_pickaxe"
-            },
-            {
               "item": "enhancedcraft:etherium_chestplate"
             },
             {
@@ -37,9 +34,6 @@
             },
             {
               "item": "enhancedcraft:etherium_boots"
-            },
-            {
-              "item": "enhancedcraft:etherium_sword"
             }
           ]
         }

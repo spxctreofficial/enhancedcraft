@@ -5,6 +5,7 @@ package com.spxctreofficial.enhancedcraft;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import com.spxctreofficial.enhancedcraft.registry.entity.EntitySpawnPacket;
 import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntityRenderer;
+import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntityRenderer;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
@@ -32,6 +33,9 @@ public class EnhancedCraftCLIENT implements ClientModInitializer {
 				new HeroBrineEntityRenderer(dispatcher));
 		EntityRendererRegistry.INSTANCE.register(ECRegistry.SMART_PEARL_ENTITY_TYPE, (dispatcher, context) ->
 				new FlyingItemEntityRenderer(dispatcher, context.getItemRenderer()));
+
+		EntityRendererRegistry.INSTANCE.register(ECRegistry.TROLL_TNT_ENTITY_TYPE, (dispatcher, context) ->
+				new TrollTntEntityRenderer(dispatcher));
 		receiveEntityPacket();
 		// AutoConfig1u Registry
 		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);

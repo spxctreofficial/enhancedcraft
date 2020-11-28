@@ -1,0 +1,32 @@
+{
+  "display": {
+	"icon": {
+	  "item": "enhancedcraft:metal_alloy"
+	},
+	"title": "Elite Blacksmithing",
+	"description": "Craft a strong and durable metal alloy.",
+	"frame": "task",
+	"hidden": true
+  },
+  "parent": "minecraft:story/iron_tools",
+  "criteria": {
+	"requirement": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"player": [
+		  {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {}
+		  }
+		],
+		"items": [
+		  {
+			"item": "enhancedcraft:metal_alloy"
+		  }
+		]
+	  }
+	}
+  },
+  "rewards": {}
+}

@@ -103,7 +103,7 @@ This beta update adds some more config options, features, and applies some fixes
     <Better Spawning!>
     - Skeletons can now spawn equipped with swords and axes.
     - There are now different types (classes) of zombies!
-        - In hard mode, zombies will always spawn with a class, with a 7.5% chance to spawn with a hard-mode class.
+        - In hard mode, zombies will always spawn with a class, with a 25% chance to spawn with a hard-mode class.
             - These zombies have a lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
             - Hard Classes:
                 - Furious Zombie:
@@ -144,6 +144,9 @@ This beta update adds some more config options, features, and applies some fixes
                     - Metal Alloy in off-hand
         - In easy mode, the chances of spawning with a weapon is the same as vanilla.
         - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
+        
+    <Quality Of Life Changes>
+    - Minecarts and rails can now be created with bronze ingots instead of iron ingots.
     
     <Fixes>
     - Fixed shields not being able to be crafted with metal alloy.

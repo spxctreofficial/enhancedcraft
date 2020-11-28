@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+	"top": "enhancedcraft:block/troll_tnt_top",
+	"bottom": "enhancedcraft:block/troll_tnt_bottom",
+	"side": "enhancedcraft:block/troll_tnt_side"
+  }
+}
