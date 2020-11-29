@@ -9,12 +9,16 @@ import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntityRenderer;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
+import net.fabricmc.fabric.impl.client.rendering.ColorProviderRegistryImpl;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 
@@ -39,6 +43,16 @@ public class EnhancedCraftCLIENT implements ClientModInitializer {
 		receiveEntityPacket();
 		// AutoConfig1u Registry
 		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+
+		// Block Layer Maps
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ECRegistry.CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());//transulcent
+		ColorProviderRegistryImpl.BLOCK.register((state, world, pos, tintIndex) -> {
+			if (world != null && pos != null) {
+				return DyeColor.PINK.getMaterialColor().color;//this should be the what you specified as the last arg in `CustomPortalApiRegistry#addPortal
+			}
+			return DyeColor.PINK.getMaterialColor().color;//color change
+		}, ECRegistry.CUSTOM_PORTAL_BLOCK);
 	}
 
 //	public void customSkullModels() {
