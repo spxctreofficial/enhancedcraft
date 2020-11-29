@@ -18,9 +18,7 @@ public class DeteriorationEvent {
 					}
 					if (armorItem.getItem().isIn(ECRegistry.OVERWORLD_ARMOR)) {
 						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ECRegistry.DETERIORATION_STATUS_EFFECT, 2, 0)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 4)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 2, 19)));
+							armorDeterioriate(serverPlayerEntity);
 							break;
 						}
 					}
@@ -31,12 +29,22 @@ public class DeteriorationEvent {
 					}
 					if (mainHandItem.getItem().isIn(ECRegistry.OVERWORLD_TOOLS)) {
 						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 2, 4)));
-							serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0)));
+							itemDeterioriate(serverPlayerEntity);
 						}
 					}
 				}
 			}
 		});
+	}
+
+	private static void armorDeterioriate(ServerPlayerEntity serverPlayerEntity) {
+		serverPlayerEntity.addStatusEffect((new StatusEffectInstance(ECRegistry.DETERIORATION_STATUS_EFFECT, 2, 0)));
+		serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 4)));
+		serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.HUNGER, 2, 19)));
+	}
+
+	private static void itemDeterioriate(ServerPlayerEntity serverPlayerEntity) {
+		serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 2, 4)));
+		serverPlayerEntity.addStatusEffect((new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0)));
 	}
 }

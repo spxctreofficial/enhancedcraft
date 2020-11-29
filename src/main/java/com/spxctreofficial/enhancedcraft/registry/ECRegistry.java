@@ -6,6 +6,7 @@ import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
 import com.spxctreofficial.enhancedcraft.registry.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
+import com.spxctreofficial.enhancedcraft.registry.portal.ECPortalRegistry;
 import com.spxctreofficial.enhancedcraft.registry.statusEffects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.*;
 
@@ -29,6 +30,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
@@ -104,6 +106,8 @@ public class ECRegistry {
 
 	public static final Block GOLDEN_HEAD_BLOCK = new SkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F)) {};
 	public static final Block GOLDEN_HEAD_WALL_BLOCK = new WallSkullBlock(CustomSkullType.GOLDEN_HEAD, AbstractBlock.Settings.of(Material.SUPPORTED).strength(1.0F).dropsLike(GOLDEN_HEAD_BLOCK)) {};
+
+	public static final CustomPortalBlock CUSTOM_PORTAL_BLOCK = new CustomPortalBlock(Block.Settings.of(Material.PORTAL).noCollision().strength(-1).sounds(BlockSoundGroup.GLASS).luminance(state -> 11));
 
 	// Item Definitions
 	public static final Item ETHERIUM = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.EPIC));
@@ -395,6 +399,7 @@ public class ECRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EARTHSTONE_BLOCK);
 
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "etherium_ore"), ETHERIUM_ORE_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "gemstone"), GEMSTONE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "bronze_ore"), BRONZE_ORE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), COBALT_ORE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FORTISTEEL_EARTHSTONE_BLOCK);
@@ -409,6 +414,8 @@ public class ECRegistry {
 
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head"), GOLDEN_HEAD_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "golden_head_wall"), GOLDEN_HEAD_WALL_BLOCK);
+
+		Registry.register(Registry.BLOCK, new Identifier(EnhancedCraft.MOD_ID, "custom_portal_block"), CUSTOM_PORTAL_BLOCK);
 
 		// SoundEvents Registry
 		Registry.register(Registry.SOUND_EVENT, ECRegistry.SOAKED_HANDS, SOAKED_HANDS_SOUND_EVENT);
@@ -430,6 +437,9 @@ public class ECRegistry {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), etheriumOreFeature);
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), bronzeOreFeature);
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), gemstoneFeature);
+
+		// Portal Registry
+		ECPortalRegistry.registerPortals();
 
 		// Status Effect Registry
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(EnhancedCraft.MOD_ID, "deterioration"), DETERIORATION_STATUS_EFFECT);
