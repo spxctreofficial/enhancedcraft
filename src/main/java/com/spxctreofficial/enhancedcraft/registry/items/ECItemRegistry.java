@@ -27,18 +27,18 @@ public class ECItemRegistry {
 	public static final Item ETHERIUM_CHESTPLATE = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item ETHERIUM_LEGGINGS = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item ETHERIUM_BOOTS = new ArmorItem(CustomArmorMaterials.ETHERIUM_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item ETHERIUM_SWORD = new EtheriumSwordItem(new EtheriumToolMaterial());
-	public static final Item ETHERIUM_PICKAXE = new EtheriumPickaxeItem(new EtheriumToolMaterial());
-	public static final Item ETHERIUM_AXE = new EtheriumAxeItem(new EtheriumToolMaterial());
-	public static final Item ETHERIUM_SHOVEL = new EtheriumShovelItem(new EtheriumToolMaterial());
-	public static final Item ETHERIUM_HOE = new EtheriumHoeItem(new EtheriumToolMaterial());
+	public static final Item ETHERIUM_SWORD = new EtheriumTools.EtheriumSwordItem(new EtheriumTools.EtheriumToolMaterial());
+	public static final Item ETHERIUM_PICKAXE = new EtheriumTools.EtheriumPickaxeItem(new EtheriumTools.EtheriumToolMaterial());
+	public static final Item ETHERIUM_AXE = new EtheriumTools.EtheriumAxeItem(new EtheriumTools.EtheriumToolMaterial());
+	public static final Item ETHERIUM_SHOVEL = new EtheriumTools.EtheriumShovelItem(new EtheriumTools.EtheriumToolMaterial());
+	public static final Item ETHERIUM_HOE = new EtheriumTools.EtheriumHoeItem(new EtheriumTools.EtheriumToolMaterial());
 	public static final Item ETHERIUM_GODSLAYER_PERK = new EtheriumGodslayerPerk();
 
-	public static final Item OBSIDIAN_SWORD = new ObsidianSwordItem(new ObsidianToolMaterial());
-	public static final Item OBSIDIAN_PICKAXE = new ObsidianPickaxeItem(new ObsidianToolMaterial());
-	public static final Item OBSIDIAN_AXE = new ObsidianAxeItem(new ObsidianToolMaterial());
-	public static final Item OBSIDIAN_SHOVEL = new ObsidianShovelItem(new ObsidianToolMaterial());
-	public static final Item OBSIDIAN_HOE = new ObsidianHoeItem(new ObsidianToolMaterial());
+	public static final Item OBSIDIAN_SWORD = new ObsidianTools.ObsidianSwordItem(new ObsidianTools.ObsidianToolMaterial());
+	public static final Item OBSIDIAN_PICKAXE = new ObsidianTools.ObsidianPickaxeItem(new ObsidianTools.ObsidianToolMaterial());
+	public static final Item OBSIDIAN_AXE = new ObsidianTools.ObsidianAxeItem(new ObsidianTools.ObsidianToolMaterial());
+	public static final Item OBSIDIAN_SHOVEL = new ObsidianTools.ObsidianShovelItem(new ObsidianTools.ObsidianToolMaterial());
+	public static final Item OBSIDIAN_HOE = new ObsidianTools.ObsidianHoeItem(new ObsidianTools.ObsidianToolMaterial());
 
 	public static final Item GIANT_SWORD = new GiantSwordItem(new GiantToolMaterial());
 
@@ -66,10 +66,10 @@ public class ECItemRegistry {
 	public static final Item AECORON_CHESTPLATE = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item AECORON_LEGGINGS = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item AECORON_BOOTS = new ArmorItem(CustomArmorMaterials.AECORON_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item AECORON_PICKAXE =  new AecoronPickaxeItem(new AecoronToolMaterial());
-	public static final Item AECORON_AXE =  new AecoronAxeItem(new AecoronToolMaterial());
-	public static final Item AECORON_SHOVEL =  new AecoronShovelItem(new AecoronToolAlternateMaterial());
-	public static final Item AECORON_HOE =  new AecoronHoeItem(new AecoronToolMaterial());
+	public static final Item AECORON_PICKAXE =  new AecoronTools.AecoronPickaxeItem(new AecoronTools.AecoronToolMaterial());
+	public static final Item AECORON_AXE =  new AecoronTools.AecoronAxeItem(new AecoronTools.AecoronToolMaterial());
+	public static final Item AECORON_SHOVEL =  new AecoronTools.AecoronShovelItem(new AecoronTools.AecoronToolAlternateMaterial());
+	public static final Item AECORON_HOE =  new AecoronTools.AecoronHoeItem(new AecoronTools.AecoronToolMaterial());
 	public static final Item SHATTERED_TRIDENT_MOLD = new TridentMolds.TridentMoldShattered();
 	public static final Item DAMAGED_TRIDENT_MOLD = new TridentMolds.TridentMoldDamaged();
 	public static final Item TRIDENT_MOLD = new TridentMolds.TridentMold();
@@ -81,28 +81,28 @@ public class ECItemRegistry {
 	public static final Item BRONZE_CHESTPLATE = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item BRONZE_LEGGINGS = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item BRONZE_BOOTS = new ArmorItem(CustomArmorMaterials.BRONZE_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item BRONZE_SWORD = new BronzeSwordItem(new BronzeToolMaterial());
-	public static final Item BRONZE_PICKAXE = new BronzePickaxeItem(new BronzeToolMaterial());
-	public static final Item BRONZE_AXE = new BronzeAxeItem(new BronzeToolAlternateMaterial());
-	public static final Item BRONZE_SHOVEL = new BronzeShovelItem(new BronzeToolMaterial());
-	public static final Item BRONZE_HOE = new BronzeHoeItem(new BronzeToolAlternateMaterial());
+	public static final Item BRONZE_SWORD = new BronzeTools.BronzeSwordItem(new BronzeTools.BronzeToolMaterial());
+	public static final Item BRONZE_PICKAXE = new BronzeTools.BronzePickaxeItem(new BronzeTools.BronzeToolMaterial());
+	public static final Item BRONZE_AXE = new BronzeTools.BronzeAxeItem(new BronzeTools.BronzeToolAlternateMaterial());
+	public static final Item BRONZE_SHOVEL = new BronzeTools.BronzeShovelItem(new BronzeTools.BronzeToolMaterial());
+	public static final Item BRONZE_HOE = new BronzeTools.BronzeHoeItem(new BronzeTools.BronzeToolAlternateMaterial());
 
 	public static final Item METAL_ALLOY = new Item(new Item.Settings().group(ItemGroup.MATERIALS).rarity(Rarity.UNCOMMON));
 	public static final Item ALLOY_HELMET = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item ALLOY_CHESTPLATE = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item ALLOY_LEGGINGS = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
 	public static final Item ALLOY_BOOTS = new ArmorItem(CustomArmorMaterials.ALLOY_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
-	public static final Item ALLOY_SWORD = new AlloySwordItem(new AlloySwordMaterial());
-	public static final Item ALLOY_PICKAXE = new AlloyPickaxeItem(new AlloyToolAlternateMaterial());
-	public static final Item ALLOY_AXE = new AlloyAxeItem(new AlloyToolMaterial());
-	public static final Item ALLOY_SHOVEL = new AlloyShovelItem(new AlloyToolMaterial());
-	public static final Item ALLOY_HOE = new AlloyHoeItem(new AlloyToolMaterial());
+	public static final Item ALLOY_SWORD = new AlloyTools.AlloySwordItem(new AlloyTools.AlloySwordMaterial());
+	public static final Item ALLOY_PICKAXE = new AlloyTools.AlloyPickaxeItem(new AlloyTools.AlloyToolAlternateMaterial());
+	public static final Item ALLOY_AXE = new AlloyTools.AlloyAxeItem(new AlloyTools.AlloyToolMaterial());
+	public static final Item ALLOY_SHOVEL = new AlloyTools.AlloyShovelItem(new AlloyTools.AlloyToolMaterial());
+	public static final Item ALLOY_HOE = new AlloyTools.AlloyHoeItem(new AlloyTools.AlloyToolMaterial());
 
-	public static final Item NETHERRACK_SWORD = new NetherrackSwordItem(new NetherrackToolMaterial());
-	public static final Item NETHERRACK_PICKAXE = new NetherrackPickaxeItem(new NetherrackToolMaterial());
-	public static final Item NETHERRACK_AXE = new NetherrackAxeItem(new NetherrackToolAlternateMaterial());
-	public static final Item NETHERRACK_SHOVEL = new NetherrackShovelItem(new NetherrackToolAlternateMaterial());
-	public static final Item NETHERRACK_HOE = new NetherrackHoeItem(new NetherrackToolAlternateMaterial());
+	public static final Item NETHERRACK_SWORD = new NetherrackTools.NetherrackSwordItem(new NetherrackTools.NetherrackToolMaterial());
+	public static final Item NETHERRACK_PICKAXE = new NetherrackTools.NetherrackPickaxeItem(new NetherrackTools.NetherrackToolMaterial());
+	public static final Item NETHERRACK_AXE = new NetherrackTools.NetherrackAxeItem(new NetherrackTools.NetherrackToolAlternateMaterial());
+	public static final Item NETHERRACK_SHOVEL = new NetherrackTools.NetherrackShovelItem(new NetherrackTools.NetherrackToolAlternateMaterial());
+	public static final Item NETHERRACK_HOE = new NetherrackTools.NetherrackHoeItem(new NetherrackTools.NetherrackToolAlternateMaterial());
 
 	public static final Item SOAKED_HANDS_MUSIC_DISC = new SoakedHandsMusicDisc(0, ECSoundRegistry.SOAKED_HANDS_SOUND_EVENT);
 	public static final Item YEAY = new Yeay();
