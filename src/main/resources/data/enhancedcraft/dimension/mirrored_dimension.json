@@ -54,6 +54,16 @@
             "weirdness": 0.25,
             "offset": 0
           }
+        },
+        {
+          "biome": "enhancedcraft:test_biome",
+          "parameters": {
+            "altitude": 0,
+            "temperature": 0,
+            "humidity": 0.35,
+            "weirdness": 0.55,
+            "offset": 0
+          }
         }
       ]
     },

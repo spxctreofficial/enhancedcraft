@@ -113,6 +113,17 @@
     "item.enhancedcraft.netherrack_shovel": "Netherrack Shovel",
     "item.enhancedcraft.netherrack_hoe" : "Netherrack Hoe",
 
+    "block.enhancedcraft.earthstone" : "Earthstone",
+    "block.enhancedcraft.otherstone" : "Otherstone",
+
+    "block.enhancedcraft.cobalt_ore" : "Cobalt Ore",
+
+    "block.enhancedcraft.fortisteel_ore_otherstone" : "Fortisteel Ore (Otherstone Variant)",
+    "block.enhancedcraft.fortisteel_ore_earthstone" : "Fortisteel Ore (Earthstone Variant)",
+
+    "block.enhancedcraft.purigold_ore_otherstone" : "Purigold Ore (Otherstone Variant)",
+    "block.enhancedcraft.purigold_ore_earthstone" : "Purigold Ore (Earthstone Variant)",
+
     "item.enhancedcraft.music_disc_soaked_hands" : "Music Disc",
     "item.enhancedcraft.music_disc_soaked_hands.desc" : "C418 x Ryn-cord - Soaked Hands (Wet Hands Remix)",
     "item.enhancedcraft.yeay" : "yeay",
@@ -121,6 +132,7 @@
     "item.enhancedcraft.smart_pearl" : "Smart Pearl",
 
     "enchantment.enhancedcraft.harvester" : "Harvester",
+    "enchantment.enhancedcraft.purified" : "Purified",
 
     "subtitles.enhancedcraft.soaked_hands" : "Soaked Hands (C418 - Wet Hands Remix)",
     "subtitles.enhancedcraft.etherium_armor_equip" : "Etherium armor equipped",

@@ -1,5 +1,12 @@
 # ENHANCEDCRAFT CHANGELOG
 
+## v1.0 Official Release
+I cannot express how excited I am to be releasing this mod and moving this mod out of beta. There are so many new additions and changes, that it deserves a recap of all of the changes so far added. Thank you all for the continued support!
+
+#### Changes
+
+
+
 ## beta-1.4
 This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.
 

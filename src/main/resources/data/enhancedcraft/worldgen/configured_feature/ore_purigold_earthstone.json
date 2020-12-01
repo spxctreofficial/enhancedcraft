@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+	"target": {
+	  "predicate_type": "block_match",
+	  "block": "enhancedcraft:earthstone"
+	},
+	"state": {
+	  "Name": "enhancedcraft:purigold_ore_earthstone",
+	  "Properties": {
+		"distance": "0"
+	  }
+	},
+	"size": 9
+  }
+}

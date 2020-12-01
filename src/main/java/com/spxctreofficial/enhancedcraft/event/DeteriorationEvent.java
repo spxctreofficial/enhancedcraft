@@ -2,6 +2,8 @@ package com.spxctreofficial.enhancedcraft.event;
 
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
@@ -13,24 +15,23 @@ public class DeteriorationEvent {
 		ServerTickEvents.END_SERVER_TICK.register((server) -> {
 			for (ServerPlayerEntity serverPlayerEntity : server.getPlayerManager().getPlayerList()) {
 				for (ItemStack armorItem : serverPlayerEntity.getArmorItems()) {
-					if (armorItem.isEmpty()) {
+					if (armorItem.isEmpty() || EnchantmentHelper.getLevel(ECRegistry.purifiedEnchantment, armorItem) > 0) {
 						continue;
 					}
-					if (armorItem.getItem().isIn(ECRegistry.OVERWORLD_ARMOR)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
-							armorDeterioriate(serverPlayerEntity);
-							break;
-						}
+					if (armorItem.getItem().isIn(ECRegistry.OVERWORLD_ARMOR)
+							&& serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
+						armorDeterioriate(serverPlayerEntity);
+						break;
 					}
 				}
 				for (ItemStack mainHandItem : serverPlayerEntity.getItemsHand()) {
-					if (mainHandItem.isEmpty()) {
+					if (mainHandItem.isEmpty() || EnchantmentHelper.getLevel(ECRegistry.purifiedEnchantment, mainHandItem) > 0) {
 						continue;
 					}
-					if (mainHandItem.getItem().isIn(ECRegistry.OVERWORLD_TOOLS)) {
-						if (serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
-							itemDeterioriate(serverPlayerEntity);
-						}
+					if (mainHandItem.getItem().isIn(ECRegistry.OVERWORLD_TOOLS)
+							&& serverPlayerEntity.getServerWorld().getRegistryKey() == ECRegistry.MIRRORED_DIMENSION) {
+						itemDeterioriate(serverPlayerEntity);
+						break;
 					}
 				}
 			}

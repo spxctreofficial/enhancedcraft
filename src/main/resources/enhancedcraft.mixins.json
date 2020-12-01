@@ -6,7 +6,6 @@
   "mixins": [
 	"BetterSkeletonsMixin",
 	"BetterZombiesMixin",
-	"DefaultBiomeFeaturesMixin",
 	"LivingEntityMixin",
 	"PlayerEntityMixin",
 	"PlayerSleepMixin",

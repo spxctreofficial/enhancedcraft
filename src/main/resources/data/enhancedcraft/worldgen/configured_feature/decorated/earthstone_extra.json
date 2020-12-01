@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:decorated",
+  "config": {
+	"decorator": {
+	  "type": "minecraft:decorated",
+	  "config": {
+		"outer": {
+		  "type": "minecraft:count",
+		  "config": {
+			"count": 64
+		  }
+		},
+		"inner": {
+		  "type": "minecraft:decorated",
+		  "config": {
+			"outer": {
+			  "type": "minecraft:range",
+			  "config": {
+				"maximum": 128,
+				"bottom_offset": 0,
+				"top_offset": 0
+			  }
+			},
+			"inner": {
+			  "type": "minecraft:square",
+			  "config": {}
+			}
+		  }
+		}
+	  }
+	},
+	"feature": "enhancedcraft:earthstone_extra"
+  }
+}

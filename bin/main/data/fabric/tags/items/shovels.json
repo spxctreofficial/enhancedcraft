@@ -2,6 +2,10 @@
     "replace": false,
     "values": [
       "enhancedcraft:etherium_shovel",
-      "enhancedcraft:obsidian_shovel"
+      "enhancedcraft:aecoron_shovel",
+      "enhancedcraft:alloy_shovel",
+      "enhancedcraft:bronze_shovel",
+      "enhancedcraft:obsidian_shovel",
+      "enhancedcraft:netherrack_shovel"
     ]
   }

@@ -15,6 +15,8 @@ repositories {
 	// REI, odds and ends
     // Testament of god (aka portal api)
     maven { url "https://dl.bintray.com/kyrptonaught/customportalapi" }
+    // Seedy Behavior
+    maven { url "https://hephaestus.dev/release" }
 	maven {
 		name = "CurseForge"
 		url = "https://minecraft.curseforge.com/api/maven"
@@ -40,10 +42,16 @@ dependencies {
     include "com.github.Chocohead:Fabric-ASM:v2.1"
 
     // CustomPortalAPI Dependency
-    modImplementation("net.kyrptonaught:customportalapi:0.0.1-beta13-1.16") {
+    modImplementation("net.kyrptonaught:customportalapi:0.0.1-beta14-1.16") {
         exclude (group: "net.fabricmc.fabric-api")
     }
-    include 'net.kyrptonaught:customportalapi:0.0.1-beta13-1.16'
+    include "net.kyrptonaught:customportalapi:0.0.1-beta14-1.16"
+
+    // Seedy Behavior
+    modImplementation("dev.hephaestus:seedy-behavior:1.0.1") {
+        exclude (group: "net.fabricmc.fabric-api")
+    }
+    include "dev.hephaestus:seedy-behavior:1.0.1"
 
     // Add ModMenu dependency in-dev to see our config
     modImplementation("com.github.Prospector:ModMenu:1.16-SNAPSHOT") {

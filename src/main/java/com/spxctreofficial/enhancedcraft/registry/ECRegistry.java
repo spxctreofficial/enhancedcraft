@@ -2,11 +2,12 @@ package com.spxctreofficial.enhancedcraft.registry;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.registry.enchantments.HarvesterEnchantment;
+import com.spxctreofficial.enhancedcraft.registry.enchantments.PurifiedEnchantment;
 import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
 import com.spxctreofficial.enhancedcraft.registry.entity.SmartPearlEntity;
 import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntity;
 import com.spxctreofficial.enhancedcraft.registry.misc.FireballItem;
-import com.spxctreofficial.enhancedcraft.registry.portal.ECPortalRegistry;
+import com.spxctreofficial.enhancedcraft.registry.portals.ECPortalRegistry;
 import com.spxctreofficial.enhancedcraft.registry.statusEffects.DeteriorationStatusEffect;
 import com.spxctreofficial.enhancedcraft.registry.tools.*;
 
@@ -15,6 +16,8 @@ import com.spxctreofficial.enhancedcraft.registry.blocks.*;
 import com.spxctreofficial.enhancedcraft.registry.foodstuffs.*;
 import com.spxctreofficial.enhancedcraft.registry.misc.*;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -32,6 +35,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -39,6 +43,7 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -221,6 +226,11 @@ public class ECRegistry {
 			new Identifier(EnhancedCraft.MOD_ID, "harvester"),
 			new HarvesterEnchantment()
 	);
+	public static Enchantment purifiedEnchantment = Registry.register(
+			Registry.ENCHANTMENT,
+			new Identifier(EnhancedCraft.MOD_ID, "purified"),
+			new PurifiedEnchantment()
+	);
 
 	// Ore Generation Definitions
 	public static ConfiguredFeature<?, ?> etheriumOreFeature = Feature.ORE
@@ -257,6 +267,12 @@ public class ECRegistry {
 			.rangeOf(32) // Circular spread
 			.repeat(4); // number of veins per chunk
 
+	public static ConfiguredFeature<?, ?> earthstoneFeatureOtherworld = Feature.ORE
+			.configure(new OreFeatureConfig(new BlockMatchRuleTest(ECRegistry.OTHERSTONE_BLOCK),
+					ECRegistry.EARTHSTONE_BLOCK.getDefaultState(),
+					128)) // vein size
+			.repeat(32); // number of veins per chunk
+
 	// Status Effect Definitions
 	public static final StatusEffect DETERIORATION_STATUS_EFFECT = new DeteriorationStatusEffect();
 
@@ -289,6 +305,7 @@ public class ECRegistry {
 
 	// World Definitions
 	public static final RegistryKey<World> MIRRORED_DIMENSION = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "mirrored_dimension"));
+	public static final RegistryKey<World> OTHERWORLD = RegistryKey.of(Registry.DIMENSION, new Identifier(EnhancedCraft.MOD_ID, "otherworld"));
 
 	// Item Registration Method
 	public static void Registry() {
@@ -434,12 +451,28 @@ public class ECRegistry {
 		Registry.register(Registry.SOUND_EVENT, ECRegistry.SMART_PEARL_TELEPORT, SMART_PEARL_TELEPORT_SOUND_EVENT);
 
 		// Structure Generation Registry
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"), etheriumOreFeature);
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"), bronzeOreFeature);
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"), gemstoneFeature);
+		RegistryKey<ConfiguredFeature<?, ?>> oreEtheriumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+				new Identifier(EnhancedCraft.MOD_ID, "ore_etherium_overworld"));
+		RegistryKey<ConfiguredFeature<?, ?>> oreBronzeOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+				new Identifier(EnhancedCraft.MOD_ID, "ore_bronze_overworld"));
+		RegistryKey<ConfiguredFeature<?, ?>> oreGemstoneOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+				new Identifier(EnhancedCraft.MOD_ID, "ore_gemstone_overworld"));
+
+		RegistryKey<ConfiguredFeature<?, ?>> oreEarthstoneOtherworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+				new Identifier(EnhancedCraft.MOD_ID, "ore_earthstone_otherworld"));
+
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreEtheriumOverworld.getValue(), etheriumOreFeature);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreBronzeOverworld.getValue(), bronzeOreFeature);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreGemstoneOverworld.getValue(), gemstoneFeature);
+
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreEarthstoneOtherworld.getValue(), earthstoneFeatureOtherworld);
+
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreEtheriumOverworld);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreBronzeOverworld);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreGemstoneOverworld);
 
 		// Portal Registry
-		ECPortalRegistry.registerPortals();
+		ECPortalRegistry.register();
 
 		// Status Effect Registry
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(EnhancedCraft.MOD_ID, "deterioration"), DETERIORATION_STATUS_EFFECT);
