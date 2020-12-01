@@ -2,7 +2,8 @@ package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.sounds.ECSoundRegistry;
+import com.spxctreofficial.enhancedcraft.registry.tags.ECTagRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
@@ -37,7 +38,7 @@ public class EtheriumEntityData {
 		LivingEntity attacker = user.getAsEntity();
 
 		attacker.getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECTagRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
 		});
 
 		if(!attacker.world.isClient && armorCount.get() == 4) {
@@ -53,7 +54,7 @@ public class EtheriumEntityData {
 					attacker.getEntityWorld().playSoundFromEntity(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker, // The position of where the sound will come from
-							ECRegistry.ETHERIUM_ENRAGED_SOUND_EVENT, // The sound that will play
+							ECSoundRegistry.ETHERIUM_ENRAGED_SOUND_EVENT, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -64,7 +65,7 @@ public class EtheriumEntityData {
 					attacker.getEntityWorld().playSoundFromEntity(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							attacker, // The position of where the sound will come from
-							ECRegistry.ETHERIUM_ENRAGED_KILL_SOUND_EVENT, // The sound that will play
+							ECSoundRegistry.ETHERIUM_ENRAGED_KILL_SOUND_EVENT, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -78,7 +79,7 @@ public class EtheriumEntityData {
 
 		armorCount.getAndSet(0);
 		victim.getAsEntity().getArmorItems().forEach(item -> {
-			if (!item.isEmpty() && item.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
+			if (!item.isEmpty() && item.getItem().isIn(ECTagRegistry.ETHERIUM_ARMOR)) armorCount.incrementAndGet();
 		});
 		if (armorCount.get() >= 4) {
 			EntityAttributeInstance maxHealth = user.getAsEntity().getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);

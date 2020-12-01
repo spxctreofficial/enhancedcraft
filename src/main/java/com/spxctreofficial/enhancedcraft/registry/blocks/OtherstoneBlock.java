@@ -9,7 +9,7 @@ import net.minecraft.block.OreBlock;
 
 public class OtherstoneBlock extends OreBlock {
 
-	public static Material otherstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static final Material otherstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public OtherstoneBlock() {
 		super(FabricBlockSettings.of(otherstoneBlockMaterial).strength(3f, 9f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());

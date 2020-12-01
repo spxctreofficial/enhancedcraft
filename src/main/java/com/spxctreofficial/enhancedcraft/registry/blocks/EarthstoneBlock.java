@@ -9,7 +9,7 @@ import net.minecraft.block.OreBlock;
 
 public class EarthstoneBlock extends OreBlock {
 
-	public static Material earthstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static final Material earthstoneBlockMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public EarthstoneBlock() {
 		super(FabricBlockSettings.of(earthstoneBlockMaterial).strength(1.5f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());

@@ -9,7 +9,7 @@ import net.minecraft.block.OreBlock;
 
 public class FortisteelOtherstoneBlock extends OreBlock {
 
-	public static Material fortisteelOtherstoneMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static final Material fortisteelOtherstoneMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public FortisteelOtherstoneBlock() {
 		super(FabricBlockSettings.of(fortisteelOtherstoneMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());

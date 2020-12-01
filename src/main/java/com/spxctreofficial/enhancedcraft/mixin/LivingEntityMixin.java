@@ -2,8 +2,9 @@ package com.spxctreofficial.enhancedcraft.mixin;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import com.spxctreofficial.enhancedcraft.registry.entity.EtheriumEntityData;
+import com.spxctreofficial.enhancedcraft.registry.sounds.ECSoundRegistry;
+import com.spxctreofficial.enhancedcraft.registry.tags.ECTagRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -105,7 +106,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -146,7 +147,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.ETHERIUM_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -163,7 +164,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 					this.getEntityWorld().playSoundFromEntity(
 							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 							this, // The position of where the sound will come from
-							ECRegistry.ETHERIUM_ENRAGED_ENDED_SOUND_EVENT, // The sound that will play
+							ECSoundRegistry.ETHERIUM_ENRAGED_ENDED_SOUND_EVENT, // The sound that will play
 							SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 							1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -181,7 +182,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 				this.getEntityWorld().playSoundFromEntity(
 						null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 						this, // The position of where the sound will come from
-						ECRegistry.ETHERIUM_BONUS_ACTIVATED_SOUND_EVENT, // The sound that will play
+						ECSoundRegistry.ETHERIUM_BONUS_ACTIVATED_SOUND_EVENT, // The sound that will play
 						SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 						1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 						1.5f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -242,7 +243,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -257,7 +258,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 				this.getEntityWorld().playSoundFromEntity(
 						null, // Player - if non-null, will play sound for every nearby player *except* the specified player
 						this, // The position of where the sound will come from
-						ECRegistry.AECORON_SIREN_SOUND_EVENT, // The sound that will play
+						ECSoundRegistry.AECORON_SIREN_SOUND_EVENT, // The sound that will play
 						SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
 						0.45f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
 						1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
@@ -288,7 +289,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 						PlayerEntity playerEntity = (PlayerEntity) this.getAsEntity();
 
 						if (aecoronTimeToHeal == 20 * 5) {
-							world.playSoundFromEntity(null, this, ECRegistry.AECORON_SIRENS_CALL_SOUND_EVENT, SoundCategory.HOSTILE, 1f, 1f);
+							world.playSoundFromEntity(null, this, ECSoundRegistry.AECORON_SIRENS_CALL_SOUND_EVENT, SoundCategory.HOSTILE, 1f, 1f);
 							aecoronStartPos = new Vec3d(this.getX(), this.getY(), this.getZ());
 						}
 
@@ -332,7 +333,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -367,7 +368,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 				if (mainHandItem.isEmpty()) {
 					continue;
 				}
-				if (mainHandItem.getItem().isIn(ECRegistry.EXTENDS_FIRE_DURATION) && this.isOnFire() && !this.isFireImmune()) {
+				if (mainHandItem.getItem().isIn(ECTagRegistry.EXTENDS_FIRE_DURATION) && this.isOnFire() && !this.isFireImmune()) {
 					this.setOnFireFor(getFireTicks() + (getFireTicks() / 2));
 				}
 			}

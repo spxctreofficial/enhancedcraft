@@ -17,7 +17,7 @@ import net.minecraft.util.math.MathHelper;
 
 public class EtheriumOreBlock extends OreBlock {
 
-	public static Material etheriumOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
+	public static final Material etheriumOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public EtheriumOreBlock() {
 		super(FabricBlockSettings.of(etheriumOreMaterial).strength(25f, 1200f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
@@ -26,14 +26,14 @@ public class EtheriumOreBlock extends OreBlock {
 	public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
 		super.onStacksDropped(state, world, pos, stack);
 		if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-		   int i = this.experienceDropped(world.random, 17, 40);
+		   int i = this.experienceDropped(world.random);
 		   if (i > 0) {
 			  this.dropExperience(world, pos, i);
 		   }
 		}
 	 }
 
-	 protected int experienceDropped(Random random, int xpMin, int xpMax) {
-		return MathHelper.nextInt(random, xpMin, xpMax);
+	 protected int experienceDropped(Random random) {
+		return MathHelper.nextInt(random, 17, 40);
 	} 
 }

@@ -1,8 +1,8 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
 import com.spxctreofficial.enhancedcraft.interfaces.ECLivingEntity;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
-import com.spxctreofficial.enhancedcraft.registry.tools.EtheriumSwordItem;
+import com.spxctreofficial.enhancedcraft.registry.items.ECItemRegistry;
+import com.spxctreofficial.enhancedcraft.registry.tags.ECTagRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
@@ -15,17 +15,15 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import javax.security.auth.callback.Callback;
 import java.util.Random;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin {
 
-	Random rand = new Random();
+	final Random rand = new Random();
 
 	@Shadow public abstract String getEntityName();
 
@@ -52,7 +50,7 @@ public abstract class PlayerEntityMixin {
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.ETHERIUM_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.ETHERIUM_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -76,7 +74,7 @@ public abstract class PlayerEntityMixin {
 		ItemStack itemStack = playerEntity.getMainHandStack();
 		float breakingSpeed = playerEntity.inventory.getBlockBreakingSpeed(blockState);
 
-		if (playerEntity.isTouchingWater() && itemStack.getItem().isIn(ECRegistry.IS_WATER_FATIGUE_IMMUNE)) {
+		if (playerEntity.isTouchingWater() && itemStack.getItem().isIn(ECTagRegistry.IS_WATER_FATIGUE_IMMUNE)) {
 			callbackInfoReturnable.setReturnValue(breakingSpeed);
 		}
 	}
@@ -102,7 +100,7 @@ public abstract class PlayerEntityMixin {
 		Entity entity = (LivingEntity) (Object) this;
 		String entityName = entity.getEntityName();
 		if (entityName.equals("Spxctre") && rand.nextFloat() == 1F) {
-			ItemEntity itemEntity = new ItemEntity(entity.world, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(ECRegistry.PRIMORDIAL_CATALYST));
+			ItemEntity itemEntity = new ItemEntity(entity.world, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(ECItemRegistry.PRIMORDIAL_CATALYST));
 			itemEntity.setToDefaultPickupDelay();
 			entity.world.spawnEntity(itemEntity);
 		}

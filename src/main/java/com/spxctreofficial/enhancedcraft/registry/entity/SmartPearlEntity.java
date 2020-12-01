@@ -6,7 +6,8 @@
 package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.items.ECItemRegistry;
+import com.spxctreofficial.enhancedcraft.registry.sounds.ECSoundRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
@@ -32,16 +33,16 @@ public class SmartPearlEntity extends ThrownItemEntity {
 	}
 
 	public SmartPearlEntity(World world, LivingEntity owner) {
-		super(ECRegistry.SMART_PEARL_ENTITY_TYPE, owner, world);
+		super(ECEntityRegistry.SMART_PEARL_ENTITY_TYPE, owner, world);
 	}
 
 	@Environment(EnvType.CLIENT)
 	public SmartPearlEntity(World world, double x, double y, double z) {
-		super(ECRegistry.SMART_PEARL_ENTITY_TYPE, x, y, z, world);
+		super(ECEntityRegistry.SMART_PEARL_ENTITY_TYPE, x, y, z, world);
 	}
 
 	protected Item getDefaultItem() {
-		return ECRegistry.SMART_PEARL;
+		return ECItemRegistry.SMART_PEARL;
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class SmartPearlEntity extends ThrownItemEntity {
 					}
 					entity.requestTeleport(this.getX(), this.getY(), this.getZ());
 					entity.fallDistance = 0F;
-					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECRegistry.SMART_PEARL_TELEPORT_SOUND_EVENT, SoundCategory.NEUTRAL, 0.75F, 1F);
+					world.playSound(null, this.getX(), this.getY(), this.getZ(), ECSoundRegistry.SMART_PEARL_TELEPORT_SOUND_EVENT, SoundCategory.NEUTRAL, 0.75F, 1F);
 				}
 			} else if (entity != null) {
 				entity.requestTeleport(this.getX(), this.getY(), this.getZ());
@@ -96,7 +97,7 @@ public class SmartPearlEntity extends ThrownItemEntity {
 	public Entity moveToWorld(ServerWorld destination) {
 		Entity entity = this.getOwner();
 		if (entity != null && entity.world.getRegistryKey() != destination.getRegistryKey()) {
-			this.setOwner((Entity)null);
+			this.setOwner(null);
 		}
 		return super.moveToWorld(destination);
 	}

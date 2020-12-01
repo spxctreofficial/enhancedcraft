@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.tags.ECTagRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
@@ -29,7 +29,7 @@ public class TridentEntityMixin {
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}
@@ -48,7 +48,7 @@ public class TridentEntityMixin {
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}

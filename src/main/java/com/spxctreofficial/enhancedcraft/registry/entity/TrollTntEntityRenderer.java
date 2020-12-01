@@ -1,7 +1,6 @@
 package com.spxctreofficial.enhancedcraft.registry.entity;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
-import net.minecraft.block.Blocks;
+import com.spxctreofficial.enhancedcraft.registry.blocks.ECBlockRegistry;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -33,7 +32,7 @@ public class TrollTntEntityRenderer extends EntityRenderer<TrollTntEntity> {
 		matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(-90.0F));
 		matrixStack.translate(-0.5D, -0.5D, 0.5D);
 		matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(90.0F));
-		TntMinecartEntityRenderer.renderFlashingBlock(ECRegistry.TROLL_TNT_BLOCK.getDefaultState(), matrixStack, vertexConsumerProvider, i, tntEntity.getFuseTimer() % 2 == 0);
+		TntMinecartEntityRenderer.renderFlashingBlock(ECBlockRegistry.TROLL_TNT_BLOCK.getDefaultState(), matrixStack, vertexConsumerProvider, i, tntEntity.getFuseTimer() % 2 == 0);
 		matrixStack.pop();
 		super.render(tntEntity, f, g, matrixStack, vertexConsumerProvider, i);
 	}

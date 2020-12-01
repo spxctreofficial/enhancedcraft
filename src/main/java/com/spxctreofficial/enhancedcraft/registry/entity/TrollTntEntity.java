@@ -1,7 +1,6 @@
 package com.spxctreofficial.enhancedcraft.registry.entity;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -31,7 +30,7 @@ public class TrollTntEntity extends Entity {
 	}
 
 	public TrollTntEntity(World world, double x, double y, double z, @Nullable LivingEntity igniter) {
-		this(ECRegistry.TROLL_TNT_ENTITY_TYPE, world);
+		this(ECEntityRegistry.TROLL_TNT_ENTITY_TYPE, world);
 		this.updatePosition(x, y, z);
 		double d = world.random.nextDouble() * 6.2831854820251465D;
 		this.setVelocity(-Math.sin(d) * 0.02D, 0.20000000298023224D, -Math.cos(d) * 0.02D);

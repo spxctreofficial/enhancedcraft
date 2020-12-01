@@ -9,7 +9,7 @@ import net.minecraft.block.OreBlock;
 
 public class BronzeOreBlock extends OreBlock {
 
-	public static Material BronzeOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();  
+	public static final Material BronzeOreMaterial = new FabricMaterialBuilder(MaterialColor.STONE).build();
 
 	public BronzeOreBlock() {
 		super(FabricBlockSettings.of(BronzeOreMaterial).strength(3f, 3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
