@@ -17,16 +17,16 @@ public class ModConfig implements ConfigData {
 	public customContainers containers = customContainers.DO_VANILLA_TWEAKS_CONTAINERS;
 	@Comment("Declares the option menu background texture.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public customBackgrounds backgrounds = customBackgrounds.DO_DEFAULT_BACKGROUND;
+	public final customBackgrounds backgrounds = customBackgrounds.DO_DEFAULT_BACKGROUND;
 	@Comment("Declares the survival hotbar icons' appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public customIcons icons = customIcons.DO_NEBULA_ICONS;
+	public final customIcons icons = customIcons.DO_NEBULA_ICONS;
 	@Comment("Declares the button widgets and hotbar appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public customWidgets widgets = customWidgets.DO_NEBULA_WIDGETS;
+	public final customWidgets widgets = customWidgets.DO_NEBULA_WIDGETS;
 	@Comment("Declares the button widgets and hotbar appearance.")
 	@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-	public customEnchantmentGlints enchantmentGlints = customEnchantmentGlints.DO_GRADIENT_GLINT;
+	public final customEnchantmentGlints enchantmentGlints = customEnchantmentGlints.DO_GRADIENT_GLINT;
 
 	@Environment(EnvType.CLIENT)
 	public enum customContainers implements SelectionListEntry.Translatable {

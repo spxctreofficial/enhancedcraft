@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.items.ECItemRegistry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.HostileEntity;
@@ -20,14 +20,14 @@ public abstract class BetterSkeletonsMixin extends HostileEntity {
 
 	@Shadow public abstract void equipStack(EquipmentSlot slot, ItemStack stack);
 
-	Random rand = new Random();
+	final Random rand = new Random();
 
 	@Inject(method = "initEquipment", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/AbstractSkeletonEntity;equipStack(Lnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/item/ItemStack;)V"), cancellable = true)
 	private void changeEquipment(LocalDifficulty difficulty, CallbackInfo info) {
 		int itemChance = rand.nextInt(8);
 		switch (itemChance) {
 			case 0:
-				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECRegistry.ALLOY_SWORD));
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ECItemRegistry.ALLOY_SWORD));
 				break;
 			case 1:
 				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));

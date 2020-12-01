@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft;
 
-import com.spxctreofficial.enhancedcraft.event.EventController;
+import com.spxctreofficial.enhancedcraft.registry.event.EventController;
 import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -14,7 +14,7 @@ public class EnhancedCraft implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		ECRegistry.Registry();
+		ECRegistry.register();
 		EventController.initiateEvents();
 	}
 }

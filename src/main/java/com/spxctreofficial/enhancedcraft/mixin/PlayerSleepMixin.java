@@ -2,8 +2,8 @@ package com.spxctreofficial.enhancedcraft.mixin;
 
 import com.mojang.datafixers.util.Either;
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
+import com.spxctreofficial.enhancedcraft.registry.entity.ECEntityRegistry;
 import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntity;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,7 +20,7 @@ import java.util.Random;
 
 @Mixin(PlayerEntity.class)
 public class PlayerSleepMixin {
-	PlayerEntity player = (PlayerEntity) (Object) this;
+	final PlayerEntity player = (PlayerEntity) (Object) this;
 
 	@Inject(method = "trySleep(Lnet/minecraft/util/math/BlockPos;)Lcom/mojang/datafixers/util/Either;", at = @At(value = "HEAD"), cancellable = true)
 	private void trySleep (BlockPos pos, CallbackInfoReturnable<Either<PlayerEntity.SleepFailureReason, Unit>> cir) {
@@ -44,7 +44,7 @@ public class PlayerSleepMixin {
 				ServerPlayer.world.spawnEntity(herobrine);
 				System.out.println(herobrine);*/
 
-			HeroBrineEntity witherSkeletonEntity = (HeroBrineEntity) ECRegistry.HEROBRINE_ENTITY_ENTITY_TYPE
+			HeroBrineEntity witherSkeletonEntity = ECEntityRegistry.HEROBRINE_ENTITY_ENTITY_TYPE
 					.create(ServerPlayer.world);
 			BlockPos playerPos = new BlockPos(ServerPlayer.getPos());
 			witherSkeletonEntity.refreshPositionAndAngles(playerPos, 0.0F, 0.0F);

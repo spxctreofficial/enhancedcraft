@@ -1,6 +1,6 @@
 package com.spxctreofficial.enhancedcraft.mixin;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.tags.ECTagRegistry;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
@@ -109,7 +109,7 @@ public abstract class TridentItemMixin {
 			if (armorItem.isEmpty()) {
 				break;
 			}
-			if (armorItem.getItem().isIn(ECRegistry.AECORON_ARMOR)) {
+			if (armorItem.getItem().isIn(ECTagRegistry.AECORON_ARMOR)) {
 				armorCount++;
 			}
 		}

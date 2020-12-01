@@ -1,7 +1,7 @@
 package com.spxctreofficial.enhancedcraft.registry.portals;
 
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.blocks.ECBlockRegistry;
 import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.DyeColor;
@@ -14,7 +14,7 @@ public class ECPortalRegistry {
 
 	// Portal Registry
 	public static void register() {
-		CustomPortalApiRegistry.addPortal(ECRegistry.GEMSTONE_BLOCK, Blocks.FIRE, ECRegistry.CUSTOM_PORTAL_BLOCK, MIRRORED_DIMENSION, DyeColor.PINK.getMaterialColor().color);
+		CustomPortalApiRegistry.addPortal(ECBlockRegistry.GEMSTONE_BLOCK, Blocks.FIRE, ECBlockRegistry.CUSTOM_PORTAL_BLOCK, MIRRORED_DIMENSION, DyeColor.PINK.getMaterialColor().color);
 		CustomPortalApiRegistry.addPortal(Blocks.POLISHED_ANDESITE, Blocks.FIRE, OTHERWORLD, DyeColor.BROWN.getMaterialColor().color);
 	}
 }

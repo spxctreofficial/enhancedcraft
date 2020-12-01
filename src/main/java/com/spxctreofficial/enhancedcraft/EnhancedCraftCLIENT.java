@@ -2,7 +2,8 @@ package com.spxctreofficial.enhancedcraft;
 
 //import com.spxctreofficial.enhancedcraft.mixin.SkullBlockEntityRendererAccessor;
 
-import com.spxctreofficial.enhancedcraft.registry.ECRegistry;
+import com.spxctreofficial.enhancedcraft.registry.blocks.ECBlockRegistry;
+import com.spxctreofficial.enhancedcraft.registry.entity.ECEntityRegistry;
 import com.spxctreofficial.enhancedcraft.registry.entity.EntitySpawnPacket;
 import com.spxctreofficial.enhancedcraft.registry.entity.HeroBrineEntityRenderer;
 import com.spxctreofficial.enhancedcraft.registry.entity.TrollTntEntityRenderer;
@@ -24,6 +25,7 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.UUID;
 
+@SuppressWarnings("unchecked")
 public class EnhancedCraftCLIENT implements ClientModInitializer {
 
 	@Override
@@ -33,12 +35,12 @@ public class EnhancedCraftCLIENT implements ClientModInitializer {
 //		customSkullTextures();
 
 		// Entity Registration
-		EntityRendererRegistry.INSTANCE.register(ECRegistry.HEROBRINE_ENTITY_ENTITY_TYPE, (dispatcher, context) ->
+		EntityRendererRegistry.INSTANCE.register(ECEntityRegistry.HEROBRINE_ENTITY_ENTITY_TYPE, (dispatcher, context) ->
 				new HeroBrineEntityRenderer(dispatcher));
-		EntityRendererRegistry.INSTANCE.register(ECRegistry.SMART_PEARL_ENTITY_TYPE, (dispatcher, context) ->
+		EntityRendererRegistry.INSTANCE.register(ECEntityRegistry.SMART_PEARL_ENTITY_TYPE, (dispatcher, context) ->
 				new FlyingItemEntityRenderer(dispatcher, context.getItemRenderer()));
 
-		EntityRendererRegistry.INSTANCE.register(ECRegistry.TROLL_TNT_ENTITY_TYPE, (dispatcher, context) ->
+		EntityRendererRegistry.INSTANCE.register(ECEntityRegistry.TROLL_TNT_ENTITY_TYPE, (dispatcher, context) ->
 				new TrollTntEntityRenderer(dispatcher));
 		receiveEntityPacket();
 		// AutoConfig1u Registry
@@ -46,13 +48,13 @@ public class EnhancedCraftCLIENT implements ClientModInitializer {
 
 		// Block Layer Maps
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ECRegistry.CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());//transulcent
+		BlockRenderLayerMap.INSTANCE.putBlock(ECBlockRegistry.CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());//transulcent
 		ColorProviderRegistryImpl.BLOCK.register((state, world, pos, tintIndex) -> {
 			if (world != null && pos != null) {
 				return DyeColor.PINK.getMaterialColor().color;//this should be the what you specified as the last arg in `CustomPortalApiRegistry#addPortal
 			}
 			return DyeColor.PINK.getMaterialColor().color;//color change
-		}, ECRegistry.CUSTOM_PORTAL_BLOCK);
+		}, ECBlockRegistry.CUSTOM_PORTAL_BLOCK);
 	}
 
 //	public void customSkullModels() {
