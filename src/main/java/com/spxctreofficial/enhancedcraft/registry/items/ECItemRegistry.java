@@ -3,9 +3,7 @@ package com.spxctreofficial.enhancedcraft.registry.items;
 import com.spxctreofficial.enhancedcraft.EnhancedCraft;
 import com.spxctreofficial.enhancedcraft.registry.armor.CustomArmorMaterials;
 import com.spxctreofficial.enhancedcraft.registry.blocks.ECBlockRegistry;
-import com.spxctreofficial.enhancedcraft.registry.items.foodstuffs.GoldenHead;
-import com.spxctreofficial.enhancedcraft.registry.items.foodstuffs.PrimordialCatalyst;
-import com.spxctreofficial.enhancedcraft.registry.items.foodstuffs.TomYumStew;
+import com.spxctreofficial.enhancedcraft.registry.items.foodstuffs.*;
 import com.spxctreofficial.enhancedcraft.registry.items.misc.*;
 import com.spxctreofficial.enhancedcraft.registry.items.tools.*;
 import com.spxctreofficial.enhancedcraft.registry.sounds.ECSoundRegistry;
@@ -110,13 +108,33 @@ public class ECItemRegistry {
 	public static final Item OTHERSTONE_BLOCK_ITEM = new BlockItem(ECBlockRegistry.OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item EARTHSTONE_BLOCK_ITEM = new BlockItem(ECBlockRegistry.EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
+	public static final Item COBALT_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item COBALT_ORE_ITEM = new BlockItem(ECBlockRegistry.COBALT_ORE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item COBALT_HELMET = new ArmorItem(CustomArmorMaterials.COBALT_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item COBALT_CHESTPLATE = new ArmorItem(CustomArmorMaterials.COBALT_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item COBALT_LEGGINGS = new ArmorItem(CustomArmorMaterials.COBALT_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item COBALT_BOOTS = new ArmorItem(CustomArmorMaterials.COBALT_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item COBALT_SWORD = new CobaltTools.CobaltSwordItem(new CobaltTools.CobaltToolAlternateMaterial());
+	public static final Item COBALT_PICKAXE = new CobaltTools.CobaltPickaxeItem(new CobaltTools.CobaltToolAlternateMaterial());
+	public static final Item COBALT_AXE = new CobaltTools.CobaltAxeItem(new CobaltTools.CobaltToolMaterial());
+	public static final Item COBALT_SHOVEL = new CobaltTools.CobaltShovelItem(new CobaltTools.CobaltToolMaterial());
+	public static final Item COBALT_HOE = new CobaltTools.CobaltHoeItem(new CobaltTools.CobaltToolMaterial());
 
+	public static final Item FORTISTEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item FORTISTEEL_EARTHSTONE_ITEM = new BlockItem(ECBlockRegistry.FORTISTEEL_EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item FORTISTEEL_OTHERSTONE_ITEM = new BlockItem(ECBlockRegistry.FORTISTEEL_OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item FORTISTEEL_HELMET = new ArmorItem(CustomArmorMaterials.FORTISTEEL_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item FORTISTEEL_CHESTPLATE = new ArmorItem(CustomArmorMaterials.FORTISTEEL_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item FORTISTEEL_LEGGINGS = new ArmorItem(CustomArmorMaterials.FORTISTEEL_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item FORTISTEEL_BOOTS = new ArmorItem(CustomArmorMaterials.FORTISTEEL_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
 
+	public static final Item PURIGOLD_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item PURIGOLD_EARTHSTONE_ITEM = new BlockItem(ECBlockRegistry.PURIGOLD_EARTHSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 	public static final Item PURIGOLD_OTHERSTONE_ITEM = new BlockItem(ECBlockRegistry.PURIGOLD_OTHERSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+	public static final Item PURIGOLD_HELMET = new ArmorItem(CustomArmorMaterials.PURIGOLD_ARMOR, EquipmentSlot.HEAD, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item PURIGOLD_CHESTPLATE = new ArmorItem(CustomArmorMaterials.PURIGOLD_ARMOR, EquipmentSlot.CHEST, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item PURIGOLD_LEGGINGS = new ArmorItem(CustomArmorMaterials.PURIGOLD_ARMOR, EquipmentSlot.LEGS, (new Item.Settings().group(ItemGroup.COMBAT)));
+	public static final Item PURIGOLD_BOOTS = new ArmorItem(CustomArmorMaterials.PURIGOLD_ARMOR, EquipmentSlot.FEET, (new Item.Settings().group(ItemGroup.COMBAT)));
 
 	public static final Item SMART_PEARL = new SmartPearlItem();
 	public static final Item FIREBALL = new FireballItem();
@@ -212,13 +230,33 @@ public class ECItemRegistry {
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "otherstone"), OTHERSTONE_BLOCK_ITEM);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "earthstone"), EARTHSTONE_BLOCK_ITEM);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ingot"), COBALT_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_ore"), COBALT_ORE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_helmet"), COBALT_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_chestplate"), COBALT_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_leggings"), COBALT_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_boots"), COBALT_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_sword"), COBALT_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_pickaxe"), COBALT_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_axe"), COBALT_AXE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_shovel"), COBALT_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "cobalt_hoe"), COBALT_HOE);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ingot"), FORTISTEEL_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_earthstone"), FORTISTEEL_EARTHSTONE_ITEM);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_ore_otherstone"), FORTISTEEL_OTHERSTONE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_helmet"), FORTISTEEL_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_chestplate"), FORTISTEEL_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_leggings"), FORTISTEEL_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fortisteel_boots"), FORTISTEEL_BOOTS);
 
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ingot"), PURIGOLD_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_earthstone"), PURIGOLD_EARTHSTONE_ITEM);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_ore_otherstone"), PURIGOLD_OTHERSTONE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_helmet"), PURIGOLD_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_chestplate"), PURIGOLD_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_leggings"), PURIGOLD_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "purigold_boots"), PURIGOLD_BOOTS);
 
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "smart_pearl"), SMART_PEARL);
 		Registry.register(Registry.ITEM, new Identifier(EnhancedCraft.MOD_ID, "fireball"), FIREBALL);

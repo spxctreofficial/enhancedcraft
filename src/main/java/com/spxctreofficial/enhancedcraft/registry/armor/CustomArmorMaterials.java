@@ -25,7 +25,19 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     }),
     ALLOY_ARMOR("alloy", 28, new int[]{3, 5, 7, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
         return Ingredient.ofItems(ECItemRegistry.METAL_ALLOY);
+    }),
+
+    COBALT_ARMOR("cobalt", 28, new int[]{3, 6, 8, 3}, 17, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ECItemRegistry.COBALT_INGOT);
+    }),
+    FORTISTEEL_ARMOR("fortisteel", 23, new int[]{3, 5, 7, 3}, 13, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ECItemRegistry.FORTISTEEL_INGOT);
+    }),
+    PURIGOLD_ARMOR("purigold", 4, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ECItemRegistry.PURIGOLD_INGOT);
     });
+
+
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;
