@@ -39,7 +39,7 @@ public enum CustomArmorMaterials implements ArmorMaterial {
         return Ingredient.ofItems(ECItemRegistry.PURIGOLD_INGOT);
     }),
     STUDDED_ARMOR("studded", 7, new int[]{2, 3, 4, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER, Items.IRON_NUGGET, ECItemRegistry.BRONZE_INGOT});
+        return Ingredient.ofItems(Items.LEATHER, Items.IRON_NUGGET, ECItemRegistry.BRONZE_INGOT);
     });
 
 

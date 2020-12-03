@@ -74,8 +74,6 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 
 	// Mixin Methods
 
-	@Shadow public abstract ItemStack getStackInHand(Hand hand);
-
 	@Shadow public abstract ItemStack getMainHandStack();
 
 	@Shadow protected abstract void attackLivingEntity(LivingEntity target);

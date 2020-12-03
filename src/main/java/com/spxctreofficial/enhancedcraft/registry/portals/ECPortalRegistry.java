@@ -14,7 +14,7 @@ public class ECPortalRegistry {
 
 	// Portal Registry
 	public static void register() {
-		CustomPortalApiRegistry.addPortal(ECBlockRegistry.GEMSTONE_BLOCK, Blocks.FIRE, ECBlockRegistry.CUSTOM_PORTAL_BLOCK, MIRRORED_DIMENSION, DyeColor.PINK.getMaterialColor().color);
+//		CustomPortalApiRegistry.addPortal(ECBlockRegistry.GEMSTONE_BLOCK, Blocks.FIRE, ECBlockRegistry.CUSTOM_PORTAL_BLOCK, MIRRORED_DIMENSION, DyeColor.PINK.getMaterialColor().color);
 		CustomPortalApiRegistry.addPortal(Blocks.POLISHED_ANDESITE, Blocks.FIRE, OTHERWORLD, DyeColor.BROWN.getMaterialColor().color);
 	}
 }

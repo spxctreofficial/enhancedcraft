@@ -42,10 +42,10 @@ dependencies {
     include "com.github.Chocohead:Fabric-ASM:v2.1"
 
     // CustomPortalAPI Dependency
-    modImplementation("net.kyrptonaught:customportalapi:0.0.1-beta14-1.16") {
+    modImplementation("net.kyrptonaught:customportalapi:0.0.1-beta15-1.16") {
         exclude (group: "net.fabricmc.fabric-api")
     }
-    include "net.kyrptonaught:customportalapi:0.0.1-beta14-1.16"
+    include "net.kyrptonaught:customportalapi:0.0.1-beta15-1.16"
 
     // Seedy Behavior
     modImplementation("dev.hephaestus:seedy-behavior:1.0.1") {

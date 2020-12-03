@@ -5,6 +5,117 @@ I cannot express how excited I am to be releasing this mod and moving this mod o
 
 #### Changes
 
+	<New Items>
+	- Etherium.
+        - The ultimate element that every player of EnhancedCraft will strive for, Etherium creates some of the best tools in the game, as well as being the material that creates one of the most devastating and powerful armor sets.
+        - Found in the overworld below y - 9, a max of once per chunk, in a maximum vein of 5.
+        - Requires a Netherite Pickaxe to mine.
+        - Takes long as hell to mine. ;)
+        Tools & Weapons:
+            - Durability of 1796 (in-between Diamond and Netherite)
+            - Mining speed multiplier of 28f. (2.3x speed of Gold)
+            - Mining level of 7. (Overkill, can mine basically anything)
+            - Enchantability of 35. (About 1.6x better than Gold)
+            - Sword deals 14 hitpoints of damage, with a swing speed of 1.8.
+            - Axe deals 15 hitpoints of damage, with a swing speed of 1.1.
+        Armor:
+            - Durability multiplier of 35. (in-between Diamond and Netherite)
+            - 20 toughness points per piece.
+            - Enchantability of 35. (very damn good)
+            - Helmet: 5 defense points
+            - Armor: 10 defense points
+            - Leggings: 8 defense points
+            - Boots: 5 defense points
+            - SPECIAL SET BONUS:
+                - Etherium armor's set bonus allows players to rip through opponents and tear through enemy frontlines, with little weaknesses or ways to exploit and take advantage of Etherium armor.
+                - Permanent Resistance II and extra bar of hearts.
+                - Last Breath:
+                    - Activated under 2 hearts.
+                    - You gain Absorption II for 5 seconds, and Speed III & Jump Boost as long as you're under 2 hearts.
+                    - Absorption will reset every 30 seconds as long as you're under 2 hearts.
+                - Godslayer:
+                    - Charged by killing mobs and monsters.
+                    - Can alternatively be manually charged by using the Godslayer item.
+                    - To continue charging Godslayer, you must consecutively kill mobs before your Strength runs out.
+                    - A sound will play when Godslayer is fully charged, in which you get Absorption II and Strength II for 5 seconds.
+                    - Godslayer can be continuously recharged by continuing to consecutively kill mobs and monsters.
+                    - You will glow if Godslayer is fully charged, allowing your opponents to know and cower in fear as they are hunted.
+                    - When Godslayer is fully charged, shields are disabled regardless if the Etherium wearer uses an axe or not, dealing full damage through shield.
+                    - Big thanks to sschr15 for the help making this possible. Your help is appreciated, and an item has been made to commemorate your assistance.
+    - Aecoron.
+        - The lost fragments of Atlantis has been uncovered and used to its greatest potential. Forge weapons and tools of great power, and master the ocean with the Aecoron armor set.
+        - To get the ingot-type for this material, you must smelt prismarine crystals and shards, and then combining the result with metal alloy.
+        Tools & Weapons:
+            - Durability of 1248.
+            - Mining speed multiplier of 8f. (Equivalent to Netherite)
+            - Mining level of 3. (Diamond-level)
+            - Enchantability of 14. (Equivalent to Iron)
+            - Axe has identical stats compared to Diamond.
+            - Aecoron ingots can create trident molds with existing tridents, that are used to  forge more tridents. (investonk)
+        Armor:
+            - Durability multiplier of 26.
+            - 2 toughness points per piece.
+            - Enchantability of 9. (Equivalent to Iron)
+            - Armor set has identical defense point stats compared to Diamond.
+            - SPECIAL SET BONUS:
+                - Aecoron armor's set bonuses allow for increased movement and expertise in water, dominating in navy battle in large bodies of water.
+                - You gain permanent Water Breathing.
+                - Tridents now deal 12 hitpoints of damage.
+                - Thrown tridents now deal 14 hitpoints of damage.
+                - Descendant of the Sea:
+                    - Swimming speed is increased drastically. (Rivals Dolphin's Grace)
+                    - Riptide now deals 15 hitpoints of damage.
+                    - You now riptide significantly further in bodies of water. (:concern: this is no joke, significantly is VERY VERY significant)
+                    - You gain Resistance while in riptide.
+                    - After riptide, you swim even faster for the next five seconds.
+                    - Loyalty now returns faster.
+                - Siren's Call:
+                    - When standing still on stone bricks with a trident in the main-hand, you can enter a "meditation state".
+                    - In this meditation state, you cannot move but is invulnerable to damage. You also slowly regain hunger points and heal.
+                    - Very awesome music plays in the background (credit goes to DMDokuro's "Siren's Call" song for Terraria's Calamity Mod).
+                    - After meditating has finished, you gain Regeneration, Resistance, Speed, and 2 extra bars of Absorption hearts for the next five minutes.
+    - Metal Alloy.
+        - Metal alloy is a strong material created by combining three diverse metals.
+        - Crafted by combining iron, gold, and bronze ingots in a crafting grid.
+        Tools & Weapons:
+            - Durability of 750 (A little below half of the durability of Diamond)
+            - Mining speed multiplier of 7.5F. (Slightly slower than Diamond)
+            - Mining level of 3. (Same as Diamond)
+            - Enchantability of 22. (Equivalent to Gold)
+            - Sword deals 6.7 hitpoints of damage, with a swing speed of 1.6.
+            - Axe deals 9 hitpoints of damage, with a swing speed of 0.95.
+            - Could potentially be used to skip Diamond, although there'd be no point since you'd need Diamond anyways to upgrade to Netherite tools.
+        Armor:
+            - Durability multiplier of 28.
+            - 2 toughness points per piece.
+            - Enchantability of 22. (close to Gold)
+            - Helmet: 3 defense points
+            - Armor: 7 defense points
+            - Leggings: 5 defense points
+            - Boots: 3 defense points
+            - Overall, the armor set is slightly worse than Diamond, with a better chance of getting a good enchantment.
+    - Bronze.
+        - Bronze is a cheap material, that can be used to create some Iron tools for cheap. It is, you guessed it, canonically the little brother of Iron.
+        - Found below y - 80, a max of twenty times per chunk, and in a maximum vein of 12. (Very common.)
+        - Requires a Stone Pickaxe or better to mine.
+        Tools & Weapons:
+            - Durability of 200. (20% worse than Iron)
+            - Mining speed multiplier of 5F. (Slightly slower than Iron)
+            - Mining level of 2. (Same as Iron)
+            - Enchantability of 17. (Very good, only beaten by Gold in vanilla)
+            - Sword deals 5.5 hitpoints of damage, with a swing speed of 1.6.
+            - Axe deals 8 hitpoints of damage, with a swing speed of 1.
+            - Could potentially be used to skip Iron, but Iron is still noticeably better than Bronze.
+        Armor:
+            - Durability multiplier of 28.
+            - 2 toughness points per piece.
+            - Enchantability of 22. (close to Gold)
+            - Helmet: 3 defense points
+            - Armor: 7 defense points
+            - Leggings: 5 defense points
+            - Boots: 3 defense points
+        
+
 
 
 ## beta-1.4
