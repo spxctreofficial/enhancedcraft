@@ -25,10 +25,6 @@ public abstract class PlayerEntityMixin {
 
 	final Random rand = new Random();
 
-	@Shadow public abstract String getEntityName();
-
-	@Shadow public abstract void disableShield(boolean sprinting);
-
 	@Shadow protected abstract void damageShield(float amount);
 
 	@Shadow public abstract boolean damage(DamageSource source, float amount);

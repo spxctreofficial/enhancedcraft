@@ -6,6 +6,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -33,8 +35,11 @@ public enum CustomArmorMaterials implements ArmorMaterial {
     FORTISTEEL_ARMOR("fortisteel", 23, new int[]{3, 5, 7, 3}, 13, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F, 0.0F, () -> {
         return Ingredient.ofItems(ECItemRegistry.FORTISTEEL_INGOT);
     }),
-    PURIGOLD_ARMOR("purigold", 4, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
+    PURIGOLD_ARMOR("purigold", 14, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ECItemRegistry.PURIGOLD_INGOT);
+    }),
+    STUDDED_ARMOR("studded", 7, new int[]{2, 3, 4, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0F, 0.0F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER, Items.IRON_NUGGET, ECItemRegistry.BRONZE_INGOT});
     });
 
 

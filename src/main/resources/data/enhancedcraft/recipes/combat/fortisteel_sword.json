@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "#",
+      "#",
+      "/"
+  ],
+  "key": {
+      "#": {
+          "item": "enhancedcraft:fortisteel_ingot"
+      },
+      "/": {
+          "item": "minecraft:stick"
+      }
+  },
+  "result": {
+      "item": "enhancedcraft:fortisteel_sword",
+      "count": 1
+  }
+}

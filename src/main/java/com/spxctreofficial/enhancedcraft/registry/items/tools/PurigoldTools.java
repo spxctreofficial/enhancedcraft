@@ -4,18 +4,18 @@ import com.spxctreofficial.enhancedcraft.registry.items.ECItemRegistry;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 
-public class CobaltTools {
+public class PurigoldTools {
 
 	// Tool Materials
-	public static class CobaltToolMaterial implements ToolMaterial {
+	public static class PurigoldToolMaterial implements ToolMaterial {
 		@Override
 		public int getDurability() {
-			return 650;
+			return 172;
 		}
 
 		@Override
 		public float getMiningSpeedMultiplier() {
-			return 8.25F;
+			return 12F;
 		}
 
 		@Override
@@ -25,12 +25,12 @@ public class CobaltTools {
 
 		@Override
 		public int getMiningLevel() {
-			return 3;
+			return 2;
 		}
 
 		@Override
 		public int getEnchantability() {
-			return 17;
+			return 22;
 		}
 
 		@Override
@@ -38,15 +38,15 @@ public class CobaltTools {
 			return Ingredient.ofItems(ECItemRegistry.COBALT_INGOT);
 		}
 	}
-	public static class CobaltToolAlternateMaterial implements ToolMaterial {
+	public static class PurigoldToolAlternateMaterial implements ToolMaterial {
 		@Override
 		public int getDurability() {
-			return 650;
+			return 172;
 		}
 
 		@Override
 		public float getMiningSpeedMultiplier() {
-			return 8.25F;
+			return 12F;
 		}
 
 		@Override
@@ -56,12 +56,12 @@ public class CobaltTools {
 
 		@Override
 		public int getMiningLevel() {
-			return 3;
+			return 2;
 		}
 
 		@Override
 		public int getEnchantability() {
-			return 17;
+			return 22;
 		}
 
 		@Override
@@ -71,29 +71,29 @@ public class CobaltTools {
 	}
 
 	// Tools
-	public static class CobaltSwordItem extends SwordItem {
-		public CobaltSwordItem(ToolMaterial material) {
+	public static class PurigoldSwordItem extends SwordItem {
+		public PurigoldSwordItem(ToolMaterial material) {
 			super(material, 6, -2.4f, new Settings().group(ItemGroup.COMBAT));
 		}
 	}
-	public static class CobaltPickaxeItem extends PickaxeItem {
-		public CobaltPickaxeItem(ToolMaterial material) {
-			super(material, 4, -2.8f, new Settings().group(ItemGroup.TOOLS));
+	public static class PurigoldPickaxeItem extends PickaxeItem {
+		public PurigoldPickaxeItem(ToolMaterial material) {
+			super(material, 3, -2.8f, new Settings().group(ItemGroup.TOOLS));
 		}
 	}
-	public static class CobaltAxeItem extends AxeItem {
-		public CobaltAxeItem(ToolMaterial material) {
-			super(material, 8, -2.95f, new Settings().group(ItemGroup.TOOLS));
+	public static class PurigoldAxeItem extends AxeItem {
+		public PurigoldAxeItem(ToolMaterial material) {
+			super(material, 8, -2.9f, new Settings().group(ItemGroup.TOOLS));
 		}
 	}
-	public static class CobaltShovelItem extends ShovelItem {
-		public CobaltShovelItem(ToolMaterial material) {
-			super(material, 5, -3f, new Settings().group(ItemGroup.TOOLS));
+	public static class PurigoldShovelItem extends ShovelItem {
+		public PurigoldShovelItem(ToolMaterial material) {
+			super(material, 3, -3f, new Settings().group(ItemGroup.TOOLS));
 		}
 	}
-	public static class CobaltHoeItem extends HoeItem {
-		public CobaltHoeItem(ToolMaterial material) {
-			super(material, 0, 0f, new Settings().group(ItemGroup.TOOLS));
+	public static class PurigoldHoeItem extends HoeItem {
+		public PurigoldHoeItem(ToolMaterial material) {
+			super(material, 0, -1f, new Settings().group(ItemGroup.TOOLS));
 		}
 	}
 }

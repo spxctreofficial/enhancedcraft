@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "enhancedcraft:purigold_ingot"
+        }
+    },
+    "result": {
+        "item": "enhancedcraft:purigold_chestplate",
+        "count": 1
+    }
+}
