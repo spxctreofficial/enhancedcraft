@@ -107,16 +107,127 @@ I cannot express how excited I am to be releasing this mod and moving this mod o
             - Axe deals 8 hitpoints of damage, with a swing speed of 1.
             - Could potentially be used to skip Iron, but Iron is still noticeably better than Bronze.
         Armor:
-            - Durability multiplier of 28.
-            - 2 toughness points per piece.
-            - Enchantability of 22. (close to Gold)
-            - Helmet: 3 defense points
-            - Armor: 7 defense points
+            - Durability multiplier of 12. (20% worse than Iron)
+            - No toughness.
+            - Enchantability of 17. (slightly better than Iron and Chain)
+            - Helmet: 2 defense points
+            - Armor: 5 defense points
             - Leggings: 5 defense points
-            - Boots: 3 defense points
+            - Boots: 1 defense points
+            - Overall, this armor is good for early-game protection, although it should be noted that you're better off saving bronze for making metal alloy later down the line.
+    - Gemstone.
+        - Rare ingredient found underground that can be used to create unique items and unobtainable materials in vanilla Minecraft.
+        - Found below y - 20, a max of four times per chunk, in a maximum vein of 4. (medium-rare)
+        - Can be blasted into gemstone shards, smoked into gemfuel, or smelted in cobblestone for Xp.
+        - Gemstone Shards:
+			- Gemstone shards are used to create miscellaneous items and uncraftable materials from vanilla.
+			- Currently can create one item, but will be expanded later on.
+			- Gemstone Apple:
+				- 3 hunger points and 9.6f saturation modifier. (same as Gapples)
+				- Grants Regeneration II, Fire Resistance, and Resistance for 30 seconds.
+				- Can be used to craft God Apples in survival.
+		- Gemfuel:
+			- An alternative fuel source to coal and lava, able to power a furnace or smoker for 6000 ticks, or 1200 seconds, or 20 minutes with just one piece of gemfuel
+	- New batch of Hypixel-inspired items!
+		- Fireball:
+			- Same texture as the Fire Charge.
+			- Stackable up to 3.
+			- Craftable with Fire Charges and gunpowder.
+			- When right-clicked, Fireballs will launch a giant ghast fireball that will explode on contact.
+			- If used correctly, and if the player has the appropriate equipment, fireballs can be used to launch players into the air, whether for mobility or for trolling.
+			- Inspired by the item of identical name in Hypixel's Bedwars.
+		- Smart Pearl:
+			- Uses the pearl texture from the infamous "TheLegend27" PVP texture pack.
+			- Stackable up to 16.
+			- Crafted with lapis lazuli and ender pearls.
+			- Launches a pearl, similar to ender pearls, that have a custom flying and landing sound.
+			- Unlike normal Ender Pearls, Smart Pearls do not deal damage to the teleporting players on teleport.
+			- Instead, the Smart Pearl will deal damage (3 hitpoints) to any entity that is hit by the pearl projectile.
+			- Inspired by the item of identical name in Hypixel's Skywars, albeit the concept is different.
+		- Golden Heads (aka G-Heads):
+			- Uses a custom-made gapple-like texture with a golden steve head overlayed and "engraved" in the gapple.
+			- Stackable up to 64.
+			- Crafted in the same manner as Gapples are crafted, but with the apple omitted and a player head replaced.
+			- (Speaking of which, players now have a 50% chance to drop their own heads on death.)
+			- Grants identical stats compared to Gapples, but is eaten instantly.
+			- To prevent from eating multiple consecutively, there is a 3-second cooldown before you can eat another golden head.  (Shouldn't be a big deal, but could also double as a nerf for the item)
+			- Heavily inspired by the item of identical name in Hypixel's UHC Deathmatch.
+	- New food items!
+		- Primordial Catalyst:
+			- A new tier of apples that ascend a player temporarily into an unstoppable force.
+			- 10 hunger points and 20f saturation modifier.
+			- Grants Absorption VI for 5 minutes, Regeneration IV for 20 seconds, Speed IV for 20 seconds, Strength II for 20 seconds, and Resistance II and Fire Resistance for 7 minutes.
+			- Makes the player glow.
+			- Crafted with emeralds, diamonds, Gemstone Apples, Notch Apples, Gapples, and gold ingots.
+		- Tom Yum Stew:
+			- A new stew-type, alternative to Gapples, and can be obtained without relying on luck.
+			- Grants 20 hunger points (the entire bar) and 50f saturation modifier. (The best in the game)
+			- Grants Regeneration III for 3 seconds.
+			- Crafted with grass, kelp, tropical fish, carrots, potatoes, and a bowl.
+			- A bowl, as always, will be returned when consumed.
+			
+	- New enchantments.
+		- Harvester Enchantment:
+			- Allows for absurd yields on fully mature crops.
+                - Beetroot crops now drop 4 to 10 beetroots when harvested.
+                - Potato crops now drop an ADDITIONAL 5 to 12 potatoes when harvested. (You're welcome Technoblade)
+                - Carrot crops now drop an ADDITIONAL 7 to 15 carrots when harvested.
+                - Wheat crops now drops 3 to 7 wheat when harvested.
+                - Haybales now have a 50% chance to duplicate themselves when harvested.
+        	- Harvester can be obtained with an enchantment table with a level-15 enchantment or better.
+        	- Harvester is mutually exclusive with the Fortune enchantment.
+		- Purified Enchantment:
+			- Enchantment for any tool or armor.
+			- Allows for wearer to enter certain dimensions with deteroriating. (more on this later)
+
+	<Better Monster Spawning>
+	- Skeletons can now spawn equipped with swords and axes.
+    - There are now different types (classes) of zombies!
+        - In hard mode, zombies will always spawn with a class, with a 25% chance to spawn with a hard-mode class.
+            - These zombies have a lowered chance to drop their hard-mode-only gear (2.5% chance instead of 8.5%).
+            - Hard Classes:
+                - Furious Zombie:
+                    - Netherite Sword with Sharpness 4
+                    - Iron Chestplate
+                    - Strength III
+                - Berserker Zombie:
+                    - Iron Axe with Sharpness 5
+                    - Diamond Helmet and Iron Chestplate
+                - Scout Zombie:
+                    - Speed IV
+                    - Always able to pick up loot
+                - Tank Zombie:
+                    - Enchanted Diamond Sword with Sharpness I - IV
+                    - 3/4 Diamond Set (diamond helmet is excluded)
+                    - Shield with Unbreaking III (cosmetic only)
+                    - Resistance I
+        - In normal mode, zombies will have a 50% chance of spawning with a normal zombie class.
+            - Normal Classes:
+                - Warrior Zombies:
+                    - Warrior Zombie ~
+                        - Iron Helmet and Chestplate
+                        - Stone Sword
+                    - Weak Warrior Zombie ~
+                        - Leather Helmet
+                        - Wooden Sword
+                - Sword Zombies:
+                    - Weak ~ Golden Sword
+                    - Simple ~ Bronze Sword
+                    - Generic ~ Iron Sword
+                    - Strong ~ Alloy Sword
+                - Shovel Zombies:
+                    - Generic ~ Iron Shovel
+                - Axe Zombies:
+                    - Simple ~ Bronze Axe
+                    - Generic ~ Iron Axe
+                - Nitwit Zombie:
+                    - Metal Alloy in off-hand
+        - In easy mode, the chances of spawning with a weapon is the same as vanilla.
+        - The point of this change was to make normal zombies a more annoying-to-deal-with mob, than just a mere punching bag. Now, you're forced to deal with large groups of zombies with more skill required, than just slaying them in one hit with your smite 5 netherite sword.
+
+	<GUI Changes>
+	- The EnhancedCraft mod currently comes with a custom GUI pre-configured, but it can be customized via the options inside of the Mod Menu config.
         
-
-
 
 ## beta-1.4
 This beta update adds some more config options, features, and applies some fixes to the mod for a better experience.

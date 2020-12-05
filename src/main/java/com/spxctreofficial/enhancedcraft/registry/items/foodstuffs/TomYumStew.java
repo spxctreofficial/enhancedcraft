@@ -15,7 +15,9 @@ import net.minecraft.world.World;
 public class TomYumStew extends Item {
 
     public TomYumStew() {
-        super(new Item.Settings().group(ItemGroup.FOOD).maxCount(1).rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(20).saturationModifier(50f).statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 3, 2)), 1f).build()));
+        super(new Item.Settings().group(ItemGroup.FOOD).maxCount(1).rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(20).saturationModifier(50f)
+                .statusEffect((new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 3, 2)), 1f)
+                .build()));
     }
     
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {

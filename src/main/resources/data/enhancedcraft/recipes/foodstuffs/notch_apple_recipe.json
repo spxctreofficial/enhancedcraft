@@ -10,7 +10,7 @@
             "item": "minecraft:gold_block"
         },
         "A": {
-            "item": "minecraft:apple"
+            "item": "enhancedcraft:gemstone_apple"
         }
     },
     "result": {
