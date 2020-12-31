@@ -14,6 +14,7 @@ public class ECTagRegistry {
 	public static final Tag<Item> OVERWORLD_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/overworld_armor"));
 	public static final Tag<Item> ETHERIUM_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/etherium_armor"));
 	public static final Tag<Item> AECORON_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/aecoron_armor"));
+	public static final Tag<Item> COBALT_ARMOR = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "armor/cobalt_armor"));
 
 	public static final Tag<Item> OVERWORLD_TOOLS = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/overworld_tools"));
 	public static final Tag<Item> EXTENDS_FIRE_DURATION = TagRegistry.item(new Identifier(EnhancedCraft.MOD_ID, "tools/extends_fire_duration"));

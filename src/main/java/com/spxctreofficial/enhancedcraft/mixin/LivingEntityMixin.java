@@ -18,9 +18,9 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
@@ -30,6 +30,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 import java.util.UUID;
@@ -52,13 +53,20 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 	// Aecoron Variables
 
 	private short aecoronRiptideSwimSpeedBonus = 0;
-	private static final short AECORON_RIPTIDE_MAX_SWIM_BONUS = 20 * 5;
+	private static final short aecoronRiptideMaxSwimSpeedBonus = 20 * 5;
 
 	private short aecoronSetWearingTime = 0;
 
 	private short aecoronTimeToHeal = 0;
-	private static final short AECORON_TIME_TO_HEAL_MAX = 20  * 37;
+	private static final short aecoronTimeToHealMax = 20  * 37;
 	private Vec3d aecoronStartPos;
+
+	// Cobalt Variables
+
+	private short cobaltSetWearingTime = 0;
+
+	private short cobaltShieldTick = 0;
+	private static final short cobaltShieldMaxTick = 20 * 7;
 
 	// Shadows
 
@@ -85,16 +93,22 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 		etheriumEnrageInitiate(source);
 	}
 
-	@Inject(method = "applyDamage", at = @At("HEAD"))
-	private void addEntityData(DamageSource source, float amount, CallbackInfo info) {
+	@Inject(method = "applyDamage", at = @At("HEAD"), cancellable = true)
+	private void applyDamage(DamageSource source, float amount, CallbackInfo info) {
 		applyEtheriumEntityData(source);
 		extendFireDuration(source);
+	}
+
+	@Inject(method = "damage", at = @At("HEAD"), cancellable = true)
+	private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> info) {
+		cobaltShieldMechanic(source, amount, info);
 	}
 
 	@Inject(method = "tick", at = @At("HEAD"))
 	private void tick(CallbackInfo info) {
 		etheriumSetBonus();
 		aecoronSetBonus();
+		cobaltSetBonus();
 	}
 
 	@Inject(method = "tickRiptide", at = @At("HEAD"), cancellable = true)
@@ -265,7 +279,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 
 			if (this.riptideTicks != 0) {
 				if (this.riptideTicks == 1) {
-					aecoronRiptideSwimSpeedBonus = AECORON_RIPTIDE_MAX_SWIM_BONUS;
+					aecoronRiptideSwimSpeedBonus = aecoronRiptideMaxSwimSpeedBonus;
 				}
 				this.fallDistance = 0.00000001F;
 				this.addStatusEffect((new StatusEffectInstance(StatusEffects.RESISTANCE, 2, 4)));
@@ -282,7 +296,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 					aecoronTimeToHeal++;
 					System.out.println(aecoronTimeToHeal);
 
-					if (aecoronTimeToHeal >= 20 * 5 && aecoronTimeToHeal < AECORON_TIME_TO_HEAL_MAX) {
+					if (aecoronTimeToHeal >= 20 * 5 && aecoronTimeToHeal < aecoronTimeToHealMax) {
 
 						PlayerEntity playerEntity = (PlayerEntity) this.getAsEntity();
 
@@ -301,7 +315,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 							playerEntity.teleport(aecoronStartPos.getX(), aecoronStartPos.getY(), aecoronStartPos.getZ());
 						}
 					}
-					else if (aecoronTimeToHeal == AECORON_TIME_TO_HEAL_MAX) {
+					else if (aecoronTimeToHeal == aecoronTimeToHealMax) {
 						aecoronStartPos = null;
 						aecoronTimeToHeal = -(20 * 300);
 
@@ -358,6 +372,60 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 		}
 	}
 
+	private void cobaltSetBonus() {
+		int armorCount = 0;
+		for (ItemStack armorItem : getArmorItems()) {
+			if (armorItem.isEmpty()) {
+				break;
+			}
+			if (armorItem.getItem().isIn(ECTagRegistry.COBALT_ARMOR)) {
+				armorCount++;
+			}
+		}
+		if (armorCount == 4) {
+			if (getCobaltShieldTick() < getCobaltShieldMaxTick()) {
+
+				this.world.addParticle(ParticleTypes.SPLASH, this.getX(), this.getY() + this.random.nextDouble() * 2.0D, this.getZ(), this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
+
+				if (getCobaltShieldTick() == getCobaltShieldMaxTick() - 1) {
+					this.getEntityWorld().playSoundFromEntity(
+							null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+							this, // The position of where the sound will come from
+							ECSoundRegistry.COBALT_SHIELD_ACTIVATED_SOUND_EVENT, // The sound that will play
+							SoundCategory.NEUTRAL, // This determines which of the volume sliders affect this sound
+							0.75f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+							1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+					);
+				}
+
+				cobaltShieldTick++;
+			}
+		}
+		else {
+			setCobaltShieldTick((short) 0);
+		}
+	}
+
+	private void cobaltShieldMechanic(DamageSource source, float amount, CallbackInfo info) {
+
+		if (source.getAttacker() == null || amount <= 2 || getCobaltShieldTick() != getCobaltShieldMaxTick()) return;
+
+		this.getEntityWorld().playSoundFromEntity(
+				null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+				this, // The position of where the sound will come from
+				ECSoundRegistry.COBALT_SHIELD_BREAK_SOUND_EVENT, // The sound that will play
+				SoundCategory.MASTER, // This determines which of the volume sliders affect this sound
+				0.75f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
+				1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+		);
+
+		source.getAttacker().damage(DamageSource.mob((LivingEntity)(Object) this), 0.05F);
+		this.damage(DamageSource.mob((LivingEntity) source.getAttacker()), 0.05F);
+
+		setCobaltShieldTick((short) 0);
+		info.cancel();
+	}
+
 	private void extendFireDuration(DamageSource source) {
 		if (source.getAttacker() != null) {
 			Entity attacker = source.getAttacker();
@@ -380,35 +448,77 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 		return (LivingEntity) (Object) this;
 	}
 
+
+	// Etherium Getters & Setters
 	@Override
 	public short getEtheriumEnrageStatus() {
 		return this.etheriumEnrageStatus;
 	}
-
 	@Override
 	public short getEtheriumEnrageTime() {
 		return this.etheriumEnrageTime;
 	}
-
 	@Override
 	public boolean getIsEtheriumEnrageMaxed() {
 		return this.isEtheriumEnrageMaxed;
 	}
-
 	@Override
 	public void setEtheriumEnrageStatus(short n) {
 		this.etheriumEnrageStatus = n;
 	}
-
 	@Override
 	public void setEtheriumEnrageTime(short n) {
 		this.etheriumEnrageTime = n;
 	}
-
 	@Override
 	public void setIsEtheriumEnrageMaxed(boolean bool) {
 		this.isEtheriumEnrageMaxed = bool;
 	}
+
+	// Aecoron Getters & Setters
+	@Override
+	public short getAecoronRiptideSwimSpeedBonus() {
+		return this.aecoronRiptideSwimSpeedBonus;
+	}
+	@Override
+	public short getAecoronRiptideMaxSwimSpeedBonus() {
+		return aecoronRiptideMaxSwimSpeedBonus;
+	}
+	@Override
+	public short getAecoronTimeToHeal() {
+		return this.aecoronTimeToHeal;
+	}
+	@Override
+	public short getAecoronTimeToHealMax() {
+		return aecoronTimeToHealMax;
+	}
+	@Override
+	public void setAecoronRiptideSwimSpeedBonus(short n) {
+		this.aecoronRiptideSwimSpeedBonus = n;
+	}
+	@Override
+	public void setAecoronTimeToHeal(short n) {
+		this.aecoronTimeToHeal = n;
+	}
+	@Override
+	public void setAecoronStartPos(Vec3d vec3d) {
+		this.aecoronStartPos = vec3d;
+	}
+
+	// Cobalt Getters & Setters
+	@Override
+	public short getCobaltShieldTick() {
+		return this.cobaltShieldTick;
+	}
+	@Override
+	public short getCobaltShieldMaxTick() {
+		return cobaltShieldMaxTick;
+	}
+	@Override
+	public void setCobaltShieldTick(short n) {
+		this.cobaltShieldTick = n;
+	}
+
 
 	// Useless Constructor
 

@@ -1,5 +1,6 @@
 package com.spxctreofficial.enhancedcraft.registry.sounds;
 
+import net.minecraft.client.sound.Sound;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -18,6 +19,9 @@ public class ECSoundRegistry {
 	public static final Identifier AECORON_SIREN = new Identifier("enhancedcraft:aecoron_siren");
 	public static final Identifier AECORON_SIRENS_CALL = new Identifier("enhancedcraft:aecoron_sirens_call");
 
+	public static final Identifier COBALT_SHIELD_ACTIVATED = new Identifier("enhancedcraft:cobalt_shield_activated");
+	public static final Identifier COBALT_SHIELD_BREAK = new Identifier("enhancedcraft:cobalt_shield_break");
+
 	public static final Identifier SMART_PEARL_THROW = new Identifier("enhancedcraft:smart_pearl_throw");
 	public static final Identifier SMART_PEARL_TELEPORT = new Identifier("enhancedcraft:smart_pearl_teleport");
 
@@ -32,6 +36,9 @@ public class ECSoundRegistry {
 
 	public static final SoundEvent AECORON_SIREN_SOUND_EVENT = new SoundEvent(AECORON_SIREN);
 	public static final SoundEvent AECORON_SIRENS_CALL_SOUND_EVENT = new SoundEvent(AECORON_SIRENS_CALL);
+
+	public static final SoundEvent COBALT_SHIELD_ACTIVATED_SOUND_EVENT = new SoundEvent(COBALT_SHIELD_ACTIVATED);
+	public static final SoundEvent COBALT_SHIELD_BREAK_SOUND_EVENT = new SoundEvent(COBALT_SHIELD_BREAK);
 
 	public static final SoundEvent SMART_PEARL_THROW_SOUND_EVENT = new SoundEvent(SMART_PEARL_THROW);
 	public static final SoundEvent SMART_PEARL_TELEPORT_SOUND_EVENT = new SoundEvent(SMART_PEARL_TELEPORT);
@@ -49,6 +56,9 @@ public class ECSoundRegistry {
 
 		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.AECORON_SIREN, AECORON_SIREN_SOUND_EVENT);
 		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.AECORON_SIRENS_CALL, AECORON_SIRENS_CALL_SOUND_EVENT);
+
+		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.COBALT_SHIELD_ACTIVATED, COBALT_SHIELD_ACTIVATED_SOUND_EVENT);
+		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.COBALT_SHIELD_BREAK, COBALT_SHIELD_BREAK_SOUND_EVENT);
 
 		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.SMART_PEARL_THROW, SMART_PEARL_THROW_SOUND_EVENT);
 		Registry.register(Registry.SOUND_EVENT, ECSoundRegistry.SMART_PEARL_TELEPORT, SMART_PEARL_TELEPORT_SOUND_EVENT);

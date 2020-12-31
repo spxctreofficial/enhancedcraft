@@ -54,6 +54,18 @@
       "enhancedcraft:misc/sirenscall"
     ]
   },
+  "cobalt_shield_activated": {
+    "subtitle": "subtitles.enhancedcraft.cobalt_shield_activated",
+    "sounds": [
+      "enhancedcraft:misc/cobalt_shield_activated"
+    ]
+  },
+  "cobalt_shield_break": {
+    "subtitle": "subtitles.enhancedcraft.cobalt_shield_break",
+    "sounds": [
+      "enhancedcraft:misc/cobalt_shield_break"
+    ]
+  },
   "smart_pearl_throw": {
     "subtitle": "subtitles.enhancedcraft.smart_pearl_throw",
     "sounds": [

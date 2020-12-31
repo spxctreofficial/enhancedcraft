@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"enhancedcraft:cobalt_helmet",
+	"enhancedcraft:cobalt_chestplate",
+	"enhancedcraft:cobalt_leggings",
+	"enhancedcraft:cobalt_boots"
+  ]
+}

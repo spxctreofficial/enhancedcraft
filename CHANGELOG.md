@@ -3,6 +3,10 @@
 ## v1.0 Official Release
 I cannot express how excited I am to be releasing this mod and moving this mod out of beta. There are so many new additions and changes, that it deserves a recap of all of the changes so far added. Thank you all for the continued support!
 
+Supported Version: 1.16.4
+Required Fabric Loader Version: 0.10.8
+Required Fabric API Version: 0.25.1+build.416-1.16
+
 #### Changes
 
 	<New Items>
