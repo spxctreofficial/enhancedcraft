@@ -63,7 +63,7 @@ public abstract class LivingEntityMixin extends Entity implements ECLivingEntity
 
 	// Cobalt Variables
 
-	private short cobaltSetWearingTime = 0;
+//	private short cobaltSetWearingTime = 0;
 
 	private short cobaltShieldTick = 0;
 	private static final short cobaltShieldMaxTick = 20 * 7;
