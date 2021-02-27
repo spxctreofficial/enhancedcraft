@@ -26,11 +26,13 @@ public class QuickEquipKit extends Item {
 			itemStack.decrement(1);
 		}
 
-		user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_HELMET));
-		user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_CHESTPLATE));
-		user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_LEGGINGS));
-		user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_BOOTS));
-		user.inventory.insertStack(new ItemStack(Items.IRON_SWORD));
+		if (!world.isClient) {
+			user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_HELMET));
+			user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_CHESTPLATE));
+			user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_LEGGINGS));
+			user.inventory.insertStack(new ItemStack(Items.CHAINMAIL_BOOTS));
+			user.inventory.insertStack(new ItemStack(Items.IRON_SWORD));
+		}
 
 		return TypedActionResult.success(itemStack, world.isClient());
 	}
